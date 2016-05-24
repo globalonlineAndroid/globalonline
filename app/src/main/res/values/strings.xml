@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">环球在线</string>
+    <string name="view_titleView_fanhui">返回</string>
+
+    <string name="act_user_login_phone">手机号码／用户名</string>
+    <string name="act_user_login_pwd">密码</string>
+    <string name="act_user_login_title">登陆</string>
+    <string name="act_user_login_opera">注册</string>
+    <string name="act_user_login_loging">登陆</string>
+    <string name="act_user_login_kefuphone">客服电话：400－888－8888</string>
+    <string name="act_user_login_wangjipwd">忘记密码</string>
+
+
+    <string name="act_user_registered_zhuce">注册</string>
+    <string name="act_user_registered_phone">手机号码</string>
+    <string name="act_user_registered_yanzhengma">请输入验证码</string>
+    <string name="act_user_registered_getyanzhengma">获取验证码</string>
+    <string name="act_user_registered_pwd">登陆密码</string>
+    <string name="act_user_registered_repwd">确认密码</string>
+    <string name="act_user_registered_guojia">国家</string>
+    <string name="act_user_registered_tuijianren">推荐人ID(非必填)</string>
+    <string name="act_user_registered_text">我已阅读并同意</string>
+    <string name="act_user_registered_xieyi">《环球在线服务协议》</string>
+
+
+    <string name="act_user_changeloginpassword_tijiao">保存修改</string>
+    <string name="act_user_changeloginpassword_oldpwd">旧密码</string>
+    <string name="act_user_changeloginpassword_newpwd">新密码</string>
+    <string name="act_user_changeloginpassword_repwd">确认新密码</string>
+    <string name="act_user_changeloginpassword_title">修改登陆密码</string>
+
+    <string name="act_user_changetradepassword_tijiao">保存修改</string>
+    <string name="act_user_changetradepassword_oldpwd">旧密码</string>
+    <string name="act_user_changetradepassword_newpwd">新密码</string>
+    <string name="act_user_changetradepassword_repwd">确认新密码</string>
+    <string name="act_user_changetradepassword_title">修改交易密码</string>
+
+    <string name="act_user_forgotaepassword_tijiao">确认</string>
+    <string name="act_user_forgotaepassword_phone">手机号码</string>
+    <string name="act_user_forgotaepassword_yanzhengma">请输入验证码</string>
+    <string name="act_user_forgotaepassword_logpwd">登陆密码</string>
+    <string name="act_user_forgotaepassword_relogpwd">确认登陆密码</string>
+    <string name="act_user_forgotaepassword_title">忘记密码</string>
+
+
+    <string name="act_myMenu_myact_title">我的</string>
+    <string name="act_myMenu_myact_login">登录名：</string>
+    <string name="act_myMenu_myact_loginNike">名称：</string>
+    <string name="act_myMenu_myact_assets">总资产</string>
+    <string name="act_myMenu_myact_RMBPay">人民币充值</string>
+    <string name="act_myMenu_myact_RMBWithdraw">人民币提现</string>
+    <string name="act_myMenu_myact_virtualPay">虚拟币充值</string>
+    <string name="act_myMenu_myact_virtualWithdraw">虚拟币提现</string>
+    <string name="act_myMenu_myact_entrustManager">委托管理</string>
+    <string name="act_myMenu_myact_transaction">交易流水</string>
+    <string name="act_myMenu_myact_shoukuan">我要收款</string>
+    <string name="act_myMenu_myact_fukuan">我要付款</string>
+    <string name="act_myMenu_myact_renzheng">实名认证</string>
+    <string name="act_myMenu_myact_updateDLPwd">修改登陆密码</string>
+    <string name="act_myMenu_myact_updateJYPwd">修改交易密码</string>
+    <string name="act_myMenu_myact_messge">消息中心</string>
+    <string name="act_myMenu_myact_GuanYuWoMen">关于我们</string>
+    <string name="act_myMenu_myact_exit">安全退出</string>
+
+
+</resources>

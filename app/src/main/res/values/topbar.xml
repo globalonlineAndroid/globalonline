@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <declare-styleable name="topBarView">
+        <attr name="titletxt" format="string" />
+        <attr name="back_bground" format="string" />
+        <attr name="backtxt" format="string" />
+        <attr name="operationtxt" format="string" />
+        <attr name="oper_bground" format="string"></attr>
+        <attr name="oper_size" format="integer"></attr>
+    </declare-styleable>
+</resources>

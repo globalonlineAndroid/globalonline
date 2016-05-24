@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:myxmlns="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/ac_user_login"
+    tools:context="com.global.globalonline.activities.user.ForgotaPsswordActivity">
+    <com.global.globalonline.view.TitleView_
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        myxmlns:titletxt="@string/act_user_forgotaepassword_title"
+
+        />
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_phone"
+            />
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/act_user_forgotaepassword_phone"
+            android:textColor="@color/white"
+            android:textColorHint="@color/ac_user_registerd_hint"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/act_regidtered_getyanzhengma"
+            android:text="@string/act_user_registered_getyanzhengma"
+            android:textColor="@color/view_titleview_fanhui"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/act_user_registered_yanzhengma"
+            android:textColor="@color/white"
+            android:textColorHint="@color/ac_user_registerd_hint"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/act_user_forgotaepassword_logpwd"
+            android:textColor="@color/ac_user_registerd_hint"
+            android:textColorHint="@color/ac_user_registerd_hint"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/act_user_forgotaepassword_relogpwd"
+            android:textColor="@color/white"
+            android:textColorHint="@color/ac_user_registerd_hint"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/act_user_forgotaepassword_tijiao"
+            android:textColor="@color/white"
+            android:background="@drawable/act_login_loging"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

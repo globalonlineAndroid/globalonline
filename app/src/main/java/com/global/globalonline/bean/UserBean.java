@@ -11,6 +11,12 @@ public class UserBean {
        private   String token ;
        private   String userid ;
        private   String username ;
+
+       private IdentifyBean identity_info;
+
+
+
+    private   String auth_key ;
        private   String mobile ;
        private   String timestamp ;
 
@@ -70,4 +76,21 @@ public class UserBean {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+
+    public String getAuth_key() {
+        return auth_key;
+    }
+
+    public void setAuth_key(String auth_key) {
+        this.auth_key = auth_key;
+    }
+
+    public IdentifyBean getIdentity_info() {
+        return identity_info;
+    }
+
+    public void setIdentity_info(IdentifyBean identity_info) {
+        this.identity_info = identity_info;
+    }
 }
+

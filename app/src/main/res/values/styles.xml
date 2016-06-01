@@ -13,6 +13,22 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="dialog_sel">
+
+        <!--<item name="android:colorBackgroundCacheHint">@null</item>-->
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
 
     <style name="ButtomBar">
         <item name="android:layout_height">60dp</item>
@@ -27,4 +43,11 @@
         <item name="android:layout_centerInParent">true</item>
     </style>
     <!--end-->
+
+    <style name="editText">
+        <item name="android:textColorHint">@color/ac_user_registerd_hint</item>
+        <item name="android:textColor">@color/ac_user_registerd_hint</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+    </style>
 </resources>

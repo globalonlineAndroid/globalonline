@@ -29,8 +29,6 @@ public class TitleView extends LinearLayout {
     private int oper_size;
     private int back_bground,oper_bground;
 
-
-
     private Context context;
 
 

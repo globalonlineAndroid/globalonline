@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:myxmlns="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/ac_base_backgroud"
+    tools:context="com.global.globalonline.activities.user.CertificationActivity">
+
+    <com.global.globalonline.view.TitleView_
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        myxmlns:titletxt="@string/act_user_certification_title"
+
+        />
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_phone"
+            />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/editText"
+            android:hint="@string/act_user_certification_name"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <TextView
+            android:id="@+id/et_cardtype"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/editText"
+            android:textSize="18dp"
+            android:hint="@string/act_user_certification_cardtype"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <EditText
+            android:id="@+id/et_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/editText"
+            android:hint="@string/act_user_certification_idCard"
+           />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+        <Button
+            android:id="@+id/bt_tijiao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/act_user_certification_sub"
+            android:textColor="@color/white"
+            android:background="@drawable/act_login_loging"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -179,10 +179,19 @@
     <color name="tv_jine">#46a9c9</color>
 
 
+
+
+    <color name="ac_base_backgroud">#0e1820</color>
+    <color name="ac_base_hint">#0e1821</color>
+    <color name="ac_base_fenGeXian">#242b33</color>
+    <color name="ac_base_ziti_hui">#8e8f93</color>
+    <color name="ac_base_llbackgroud_hui">#373f45</color>
+    <color name="btn_queding">#3e8de9</color>
+
     <color name="view_titleview">#1d2228</color>
     <color name="view_titleview_fanhui">#4398ff</color>
     <color name="ac_user_login">#0e1821</color>
-    <color name="ac_user_login_phone">#373e44</color>
+    <color name="ac_user_login_phone">#373f45</color>
     <color name="ac_user_login_loging">#3e8de9</color>
     <color name="ac_user_login_hint">#979ca2</color>
 
@@ -191,6 +200,17 @@
     <color name="ac_user_registerd_bankgroud">#979ca2</color>
 
     <color name="ac_mymenu_my_bankgroud">#111c24</color>
+    <color name="ac_mymenu_my_fengexian">#242b33</color>
+
+    <color name="ac_mainTab_bottom">#1d2228</color>
+
+    <color name="ac_baseAct_cretificationResults_text">#8e8f93</color>
+    <color name="ac_list_item_background">#111c24</color>
+
+    <color name="ac_virtual_chunk">#111c24</color>
+    <color name="ac_virtual_xian">#213340</color>
+
+
 
 
 

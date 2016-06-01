@@ -18,7 +18,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
+
 }
 
 def Dagger2_Version = '2.0'
@@ -32,25 +34,32 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.5'
 
 
-    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
-    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
-    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.0.1'
 
     apt "com.google.dagger:dagger-compiler:$Dagger2_Version"
     compile "com.google.dagger:dagger:$Dagger2_Version"
-
-
     /*AndroidAnnotations 注解 lijl  */
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
-
-
     //compile 'org.glassfish:javax.annotation:10.0-b28'
 
+    compile 'com.bigkoo:convenientbanner:2.0.5'
 
     //compile 'com.jakewharton:butterknife:8.0.1'
 
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'org.greenrobot:greendao:2.2.1'
+    compile 'com.bigkoo:pickerview:2.0.8'
+
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+
 }
+
+
 apt {
     /*AndroidAnnotations 注解 lijl */
     arguments {

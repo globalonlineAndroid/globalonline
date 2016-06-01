@@ -2,7 +2,8 @@
     <string name="app_name">环球在线</string>
     <string name="view_titleView_fanhui">返回</string>
 
-    <string name="act_user_login_phone">手机号码／用户名</string>
+    <!--登陆-->
+    <string name="act_user_login_phone">手机号码</string>
     <string name="act_user_login_pwd">密码</string>
     <string name="act_user_login_title">登陆</string>
     <string name="act_user_login_opera">注册</string>
@@ -10,7 +11,7 @@
     <string name="act_user_login_kefuphone">客服电话：400－888－8888</string>
     <string name="act_user_login_wangjipwd">忘记密码</string>
 
-
+    <!--注册-->
     <string name="act_user_registered_zhuce">注册</string>
     <string name="act_user_registered_phone">手机号码</string>
     <string name="act_user_registered_yanzhengma">请输入验证码</string>
@@ -22,19 +23,21 @@
     <string name="act_user_registered_text">我已阅读并同意</string>
     <string name="act_user_registered_xieyi">《环球在线服务协议》</string>
 
-
+    <!--修改登陆密码-->
     <string name="act_user_changeloginpassword_tijiao">保存修改</string>
     <string name="act_user_changeloginpassword_oldpwd">旧密码</string>
     <string name="act_user_changeloginpassword_newpwd">新密码</string>
     <string name="act_user_changeloginpassword_repwd">确认新密码</string>
     <string name="act_user_changeloginpassword_title">修改登陆密码</string>
 
+    <!--修改交易密码-->
     <string name="act_user_changetradepassword_tijiao">保存修改</string>
-    <string name="act_user_changetradepassword_oldpwd">旧密码</string>
-    <string name="act_user_changetradepassword_newpwd">新密码</string>
-    <string name="act_user_changetradepassword_repwd">确认新密码</string>
-    <string name="act_user_changetradepassword_title">修改交易密码</string>
+    <string name="act_user_changetradepassword_oldpwd">交易密码</string>
+    <string name="act_user_changetradepassword_newpwd">确认交易密码</string>
+    <string name="act_user_changetradepassword_repwd">请输入验证码</string>
+    <string name="act_user_changetradepassword_title">设置/修改交易密码</string>
 
+    <!--忘记密码-->
     <string name="act_user_forgotaepassword_tijiao">确认</string>
     <string name="act_user_forgotaepassword_phone">手机号码</string>
     <string name="act_user_forgotaepassword_yanzhengma">请输入验证码</string>
@@ -42,7 +45,7 @@
     <string name="act_user_forgotaepassword_relogpwd">确认登陆密码</string>
     <string name="act_user_forgotaepassword_title">忘记密码</string>
 
-
+    <!--我的-->
     <string name="act_myMenu_myact_title">我的</string>
     <string name="act_myMenu_myact_login">登录名：</string>
     <string name="act_myMenu_myact_loginNike">名称：</string>
@@ -61,6 +64,40 @@
     <string name="act_myMenu_myact_messge">消息中心</string>
     <string name="act_myMenu_myact_GuanYuWoMen">关于我们</string>
     <string name="act_myMenu_myact_exit">安全退出</string>
+
+
+    <string name="act_user_certification_title">实名认证</string>
+    <string name="act_user_certification_name">请输入姓名</string>
+    <string name="act_user_certification_cardtype">请选择身份证类型</string>
+    <string name="act_user_certification_idCard">请输入身份证号码</string>
+    <string name="act_user_certification_sub">提交</string>
+
+
+    <string name="act_baseAct_certificationResults_title">实名认证</string>
+    <string name="act_baseAct_certificationResults_tex">您的身份信息</string>
+    <string name="act_baseAct_certificationResults_name">姓名:</string>
+    <string name="act_baseAct_certificationResults_type">证件类型:</string>
+    <string name="act_baseAct_certificationResults_idCard">证件号:</string>
+    <string name="act_baseAct_certificationResults_date">认证时间:</string>
+
+    <string name="act_mainTab_tradingFloor_chengjiaoe">成交额</string>
+    <string name="act_mainTab_tradingFloor_chengjiaoliang">成交量</string>
+    <string name="act_mainTab_tradingFloor_minprice">最低价</string>
+    <string name="act_mainTab_tradingFloor_maxprice">最高价</string>
+
+
+    <!--虚拟币交易-->
+    <string name="act_virtualcurrency_maiyijia">买一价:</string>
+    <string name="act_virtualcurrency_sellyijia">卖一价:</string>
+    <string name="act_virtualcurrency_mairu">买入</string>
+    <string name="act_virtualcurrency_sellru">卖出</string>
+    <string name="act_virtualcurrency_chedan">撤单</string>
+
+    <string name="act_mainTab_homepage_title">环球在线</string>
+    <string name="act_mainTab_tradingFloor_title">交易大厅</string>
+
+
+    <string name="act_base_serviceAgreement_title">环球在线服务协议</string>
 
 
 </resources>

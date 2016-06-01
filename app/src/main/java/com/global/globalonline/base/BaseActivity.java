@@ -5,12 +5,16 @@ import android.os.Bundle;
 
 import com.global.globalonline.control.ActivityCollector;
 
+
 public class BaseActivity extends Activity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityCollector.addActivity(this);
+
     }
 
 
@@ -20,4 +24,10 @@ public class BaseActivity extends Activity {
         super.onDestroy();
         ActivityCollector.removeActivity(this);
     }
+
+
+
+
+
+
 }

@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.global.globalonline.R;
 
@@ -18,6 +19,8 @@ public class MainActivity extends FragmentActivity {
 
     @ViewById
     ImageButton ibtn_homepage,ibtn_tradingfloor,ibtn_my;
+    @ViewById
+    TextView title;
 
 
 
@@ -40,7 +43,7 @@ public class MainActivity extends FragmentActivity {
         ibtn_homepage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                title.setText("环球在线");
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);
@@ -61,7 +64,7 @@ public class MainActivity extends FragmentActivity {
         ibtn_tradingfloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                title.setText("交易大厅");
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);
@@ -79,7 +82,7 @@ public class MainActivity extends FragmentActivity {
         ibtn_my.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                title.setText("我的");
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);

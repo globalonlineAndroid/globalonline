@@ -11,17 +11,13 @@
     android:orientation="vertical"
     android:background="@color/ac_user_login"
     tools:context=".activities.mainTab.MyFrament">
-    <com.global.globalonline.view.TitleView_
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        myxmlns:backtxt="no"
-        myxmlns:titletxt="@string/act_user_login_title"
-        />
+
     
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -29,6 +25,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_marginTop="30dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@color/ac_mymenu_my_bankgroud"
@@ -62,6 +59,7 @@
                             android:textColor="@color/white"
                             />
                         <TextView
+                            android:id="@+id/tv_loginName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="18633492927"
@@ -81,6 +79,7 @@
                             android:textColor="@color/white"
                             />
                         <TextView
+                            android:id="@+id/tv_ename"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="张三"
@@ -103,6 +102,8 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -165,6 +166,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_RMBPay"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -185,7 +187,6 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
-
                     android:gravity="center_vertical"
                     >
 
@@ -228,7 +229,13 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_RMBTiXian"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -292,7 +299,13 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_XuNiPay"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -356,7 +369,13 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_XuNiTiXian"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -417,6 +436,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_weiTuoManager"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -480,7 +500,13 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_jiaoYiLiuShui"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -541,6 +567,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_shouKuan"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -604,7 +631,13 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_fuKuan"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -665,6 +698,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_renZheng"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -711,6 +745,15 @@
                         android:gravity="right"
 
                         >
+                        <TextView
+                            android:id="@+id/tv_isRenZheng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/limegreen"
+
+
+
+                            />
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -728,7 +771,13 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_updateLoginPWD"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -787,12 +836,18 @@
 
 
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="1dp"
+                android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
+                android:id="@+id/ll_updateJiaoYiPWD"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -853,6 +908,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_message"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -918,11 +974,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_woMen"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
+
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -978,11 +1036,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_exit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginTop="1dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
                 <TextView

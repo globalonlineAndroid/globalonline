@@ -28,6 +28,7 @@
         android:layout_marginLeft="8dp"
         android:gravity="center"
         android:text="@string/view_titleView_fanhui"
+        android:textSize="18sp"
         android:textColor="@color/view_titleview_fanhui"
         android:drawableLeft="@drawable/btn_back_title"
         style="@style/header_style"
@@ -41,7 +42,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
     <TextView
         android:id="@+id/operation"
         android:layout_width="wrap_content"
@@ -51,15 +52,11 @@
         android:gravity="center_vertical"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textColor="@color/view_titleview_fanhui"
         android:layout_alignTop="@+id/title"
         android:layout_alignRight="@+id/add"
         android:layout_alignEnd="@+id/add"
         />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_alignParentBottom="true"
-        android:background="@color/light_gray"/>
+
 </RelativeLayout>

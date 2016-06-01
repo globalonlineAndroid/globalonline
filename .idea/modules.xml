@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/globalonline.iml" filepath="$PROJECT_DIR$/globalonline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greenDao/greenDao.iml" filepath="$PROJECT_DIR$/greenDao/greenDao.iml" />
     </modules>
   </component>
 </project>

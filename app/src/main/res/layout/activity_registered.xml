@@ -15,12 +15,37 @@
     <com.global.globalonline.view.TitleView_
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        myxmlns:titletxt="@string/act_user_login_title"
+        myxmlns:titletxt="@string/act_user_registered_zhuce"
 
         />
 
+
     <LinearLayout
         android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <TextView
+            android:id="@+id/tv_guojia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18dp"
+            android:hint="@string/act_user_registered_guojia"
+            style="@style/editText"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="2dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
@@ -35,15 +60,17 @@
             />
 
         <EditText
+            android:id="@+id/et_phone"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@null"
             android:hint="@string/act_user_registered_phone"
-            android:textColor="@color/white"
-            android:textColorHint="@color/ac_user_registerd_hint"
+            android:inputType="number"
+            android:maxLength="11"
+            style="@style/editText"
             />
         <Button
+            android:id="@+id/btn_send_code"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:gravity="center"
@@ -69,13 +96,11 @@
             />
 
         <EditText
+            android:id="@+id/et_yanzhengma"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
             android:hint="@string/act_user_registered_yanzhengma"
-            android:textColor="@color/white"
-            android:textColorHint="@color/ac_user_registerd_hint"
-
+            style="@style/editText"
             />
     </LinearLayout>
     <LinearLayout
@@ -94,13 +119,11 @@
             />
 
         <EditText
+            android:id="@+id/et_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
             android:hint="@string/act_user_registered_pwd"
-            android:textColor="@color/ac_user_registerd_hint"
-            android:textColorHint="@color/ac_user_registerd_hint"
-
+            style="@style/editText"
             />
     </LinearLayout>
     <LinearLayout
@@ -119,15 +142,15 @@
             />
 
         <EditText
+            android:id="@+id/et_rePwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
             android:hint="@string/act_user_registered_repwd"
-            android:textColor="@color/white"
-            android:textColorHint="@color/ac_user_registerd_hint"
+            style="@style/editText"
 
             />
     </LinearLayout>
+
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -144,38 +167,11 @@
             />
 
         <EditText
+            android:id="@+id/et_tuijianren"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
-            android:hint="@string/act_user_registered_guojia"
-            android:textColor="@color/white"
-            android:textColorHint="@color/ac_user_registerd_hint"
-
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        >
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"
             android:hint="@string/act_user_registered_tuijianren"
-            android:textColor="@color/white"
-            android:textColorHint="@color/ac_user_registerd_hint"
-
+            style="@style/editText"
             />
     </LinearLayout>
 
@@ -186,9 +182,17 @@
         android:orientation="horizontal"
         android:gravity="center"
         >
-        <CheckBox
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_agree"
+
+            />
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/act_registered_higth"
+            android:layout_marginLeft="4dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:text="@string/act_user_registered_text"
             android:textColor="@color/ac_user_registerd_hint"
             />
@@ -212,9 +216,10 @@
         android:paddingRight="20dp"
         >
         <Button
+            android:id="@+id/btn_tijiao"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/act_user_login_loging"
+            android:text="@string/act_user_registered_zhuce"
             android:textColor="@color/white"
             android:background="@drawable/act_login_loging"
             />

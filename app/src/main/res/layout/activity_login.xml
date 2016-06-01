@@ -37,12 +37,13 @@
             />
 
         <EditText
+            android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
+            android:inputType="number"
+            android:maxLength="11"
+            style="@style/editText"
             android:hint="@string/act_user_login_phone"
-            android:textColor="@color/ac_user_login_hint"
-            android:textColorHint="@color/ac_user_login_hint"
             />
     </LinearLayout>
     <LinearLayout
@@ -61,13 +62,13 @@
             />
 
         <EditText
+            android:id="@+id/et_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
+            style="@style/editText"
+            android:minLines="6"
+            android:maxLength="18"
             android:hint="@string/act_user_login_pwd"
-            android:textColor="@color/ac_user_login_hint"
-            android:textColorHint="@color/ac_user_login_hint"
-
             />
     </LinearLayout>
 
@@ -99,6 +100,7 @@
         />
 
     <TextView
+        android:id="@+id/tv_wangJiPWD"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"

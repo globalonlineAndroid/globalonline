@@ -3,10 +3,12 @@ package com.global.globalonline.activities.user;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.global.globalonline.R;
+import com.global.globalonline.activities.BaseActivie.ServiceAgreementActivity_;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.CodeBean;
@@ -17,6 +19,7 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
@@ -48,12 +51,15 @@ public class RegisteredActivity extends BaseActivity {
     @ViewById
     Button btn_send_code,btn_tijiao;
     @ViewById
-    TextView tv_guojia;
+    TextView tv_guojia,tv_xieyi;
+    @ViewById
+    ImageView iv_queren;
 
     UserService userService;
     Map<String, String> stringMap;
     TimeCount time;
     CodeBean codeBean;
+    boolean b = true;
 
     @AfterViews
     void init(){
@@ -61,7 +67,7 @@ public class RegisteredActivity extends BaseActivity {
         GetSelectBouncedUtil.get(this,tv_guojia, StaticBase.COUTRY,"0");
     }
 
-    @Click({R.id.btn_send_code,R.id.btn_tijiao})
+    @Click({R.id.btn_send_code,R.id.btn_tijiao,R.id.iv_queren,R.id.tv_xieyi})
     void click(View view){
         switch (view.getId()){
             case R.id.btn_send_code:
@@ -69,7 +75,24 @@ public class RegisteredActivity extends BaseActivity {
                 send_code();
                 break;
             case R.id.btn_tijiao:
-                tijiao();
+                if(b) {
+                    tijiao();
+                }else {
+                    GetToastUtil.getToads(getApplicationContext(),"请阅读并同意环球在线服务协议");
+                }
+                break;
+            case R.id.iv_queren:
+                if(b ){
+                    iv_queren.setImageResource(R.drawable.icon_agree);
+
+                    b = false;
+                }else {
+                    iv_queren.setImageResource(R.drawable.icon_agree_hl);
+                    b = true;
+                }
+                break;
+            case R.id.tv_xieyi:
+                ServiceAgreementActivity_.intent(RegisteredActivity.this).start();
                 break;
         }
     }
@@ -112,6 +135,17 @@ public void send_code() {
 
 }
     public void tijiao(){
+
+        boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_phone,et_pwd,
+                et_yanzhengma);
+
+        if(!b){
+            return;
+        }
+        if( codeBean == null){
+            GetToastUtil.getToads(getApplicationContext(),"请申请验证码");
+            return;
+        }
 
         String recommend = et_tuijianren.getText() == null ?"0":et_tuijianren.getText().toString();
         if(StringUtil.isBlank(recommend)){

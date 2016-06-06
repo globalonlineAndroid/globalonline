@@ -33,8 +33,11 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".activities.BaseActivie.ServiceAgreementActivity" />
-        <activity android:name=".activities.virtualCurrency.VirtualTradeActivity_"></activity>
+        <activity android:name=".activities.BaseActivie.ServiceAgreementActivity_" />
+        <activity android:name=".activities.virtualCurrency.VirtualTradeActivity_" />
+        <activity android:name=".activities.RMB.RechargeRMBActivity_" />
+        <activity android:name=".activities.RMB.WithdrawalRMBActivity_" />
+        <activity android:name=".activities.virtualCurrency.MandatoryAdministrationActivity_"></activity>
     </application>
 
 </manifest>

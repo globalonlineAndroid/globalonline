@@ -1,66 +1,149 @@
 <resources>
-    <string name="app_name">环球在线</string>
-    <string name="view_titleView_fanhui">返回</string>
+    <string name="app_name">global online</string>
+    <string name="view_titleView_fanhui">return</string>
+	
+	<string name="act_main_title_home">homepage</string>
+    <string name="act_main_title_dating">transaction floor</string>
+    <string name="act_main_title_my">mine</string>
 
-    <string name="act_user_login_phone">手机号码／用户名</string>
-    <string name="act_user_login_pwd">密码</string>
-    <string name="act_user_login_title">登陆</string>
-    <string name="act_user_login_opera">注册</string>
-    <string name="act_user_login_loging">登陆</string>
-    <string name="act_user_login_kefuphone">客服电话：400－888－8888</string>
-    <string name="act_user_login_wangjipwd">忘记密码</string>
+    <!--登陆-->
+    <string name="act_user_login_phone">phone number</string>
+    <string name="act_user_login_pwd">password</string>
+    <string name="act_user_login_title">login</string>
+    <string name="act_user_login_opera">register</string>
+    <string name="act_user_login_loging">login</string>
+    <string name="act_user_login_kefuphone">service number400－888－8888a</string>
+    <string name="act_user_login_wangjipwd">forget password</string>
+
+    <!--注册-->
+    <string name="act_user_registered_zhuce">register</string>
+    <string name="act_user_registered_phone">phone number</string>
+    <string name="act_user_registered_yanzhengma">enter the verification code</string>
+    <string name="act_user_registered_getyanzhengma">get the verification code </string>
+    <string name="act_user_registered_pwd">login password </string>
+    <string name="act_user_registered_repwd">re-enter password </string>
+    <string name="act_user_registered_guojia">country </string>
+    <string name="act_user_registered_tuijianren">referral ID （non mandatory）</string>
+    <string name="act_user_registered_text">i read and agreed</string>
+    <string name="act_user_registered_xieyi">global online service agreement</string>
+
+    <!--修改登陆密码-->
+    <string name="act_user_changeloginpassword_tijiao">save update</string>
+    <string name="act_user_changeloginpassword_oldpwd">old password</string>
+    <string name="act_user_changeloginpassword_newpwd">new password </string>
+    <string name="act_user_changeloginpassword_repwd">re-enter the new password</string>
+    <string name="act_user_changeloginpassword_title">update register password</string>
+
+    <!--修改交易密码-->
+    <string name="act_user_changetradepassword_tijiao">save update</string>
+    <string name="act_user_changetradepassword_oldpwd">transaction password</string>
+    <string name="act_user_changetradepassword_newpwd">re-enter transaction password</string>
+    <string name="act_user_changetradepassword_repwd">enter the verification code</string>
+    <string name="act_user_changetradepassword_title">set up/update the transaction code </string>
+
+    <!--忘记密码-->
+    <string name="act_user_forgotaepassword_tijiao">confirmation</string>
+    <string name="act_user_forgotaepassword_phone">phone number </string>
+    <string name="act_user_forgotaepassword_yanzhengma">enter the verification code </string>
+    <string name="act_user_forgotaepassword_logpwd">login password </string>
+    <string name="act_user_forgotaepassword_relogpwd">re-enter login password </string>
+    <string name="act_user_forgotaepassword_title">forget password</string>
+
+    <!--我的-->
+    <string name="act_myMenu_myact_title">mine</string>
+    <string name="act_myMenu_myact_login">login name </string>
+    <string name="act_myMenu_myact_loginNike">name</string>
+    <string name="act_myMenu_myact_assets">total asset</string>
+    <string name="act_myMenu_myact_RMBPay">RMB pay</string>
+    <string name="act_myMenu_myact_RMBWithdraw">RMB withdraw</string>
+    <string name="act_myMenu_myact_virtualPay">virtual pay </string>
+    <string name="act_myMenu_myact_virtualWithdraw">virtual withdraw</string>
+    <string name="act_myMenu_myact_entrustManager">entrust management</string>
+    <string name="act_myMenu_myact_transaction">transaction slip</string>
+    <string name="act_myMenu_myact_shoukuan">i want collection</string>
+    <string name="act_myMenu_myact_fukuan">i want payment</string>
+    <string name="act_myMenu_myact_renzheng">Real-name authentication </string>
+    <string name="act_myMenu_myact_updateDLPwd">update login password </string>
+    <string name="act_myMenu_myact_updateJYPwd">update transaction password </string>
+    <string name="act_myMenu_myact_messge">messge ceter</string>
+    <string name="act_myMenu_myact_GuanYuWoMen">about us</string>
+    <string name="act_myMenu_myact_exit">login out</string>
 
 
-    <string name="act_user_registered_zhuce">注册</string>
-    <string name="act_user_registered_phone">手机号码</string>
-    <string name="act_user_registered_yanzhengma">请输入验证码</string>
-    <string name="act_user_registered_getyanzhengma">获取验证码</string>
-    <string name="act_user_registered_pwd">登陆密码</string>
-    <string name="act_user_registered_repwd">确认密码</string>
-    <string name="act_user_registered_guojia">国家</string>
-    <string name="act_user_registered_tuijianren">推荐人ID(非必填)</string>
-    <string name="act_user_registered_text">我已阅读并同意</string>
-    <string name="act_user_registered_xieyi">《环球在线服务协议》</string>
+    <string name="act_user_certification_title">real-name authentication</string>
+    <string name="act_user_certification_name">please input name</string>
+    <string name="act_user_certification_cardtype">please select identity card type</string>
+    <string name="act_user_certification_idCard">please input identity card number</string>
+    <string name="act_user_certification_sub">submit</string>
 
 
-    <string name="act_user_changeloginpassword_tijiao">保存修改</string>
-    <string name="act_user_changeloginpassword_oldpwd">旧密码</string>
-    <string name="act_user_changeloginpassword_newpwd">新密码</string>
-    <string name="act_user_changeloginpassword_repwd">确认新密码</string>
-    <string name="act_user_changeloginpassword_title">修改登陆密码</string>
+    <string name="act_baseAct_certificationResults_title">real-name authentication</string>
+    <string name="act_baseAct_certificationResults_tex">your identify information</string>
+    <string name="act_baseAct_certificationResults_name">name</string>
+    <string name="act_baseAct_certificationResults_type">ID type</string>
+    <string name="act_baseAct_certificationResults_idCard">ID number</string>
+    <string name="act_baseAct_certificationResults_date">authentication date</string>
 
-    <string name="act_user_changetradepassword_tijiao">保存修改</string>
-    <string name="act_user_changetradepassword_oldpwd">旧密码</string>
-    <string name="act_user_changetradepassword_newpwd">新密码</string>
-    <string name="act_user_changetradepassword_repwd">确认新密码</string>
-    <string name="act_user_changetradepassword_title">修改交易密码</string>
-
-    <string name="act_user_forgotaepassword_tijiao">确认</string>
-    <string name="act_user_forgotaepassword_phone">手机号码</string>
-    <string name="act_user_forgotaepassword_yanzhengma">请输入验证码</string>
-    <string name="act_user_forgotaepassword_logpwd">登陆密码</string>
-    <string name="act_user_forgotaepassword_relogpwd">确认登陆密码</string>
-    <string name="act_user_forgotaepassword_title">忘记密码</string>
+    <string name="act_mainTab_tradingFloor_chengjiaoe">volume of transaction</string>
+    <string name="act_mainTab_tradingFloor_chengjiaoliang">volumenum</string>
+    <string name="act_mainTab_tradingFloor_minprice">Min price</string>
+    <string name="act_mainTab_tradingFloor_maxprice">Max price</string>
 
 
-    <string name="act_myMenu_myact_title">我的</string>
-    <string name="act_myMenu_myact_login">登录名：</string>
-    <string name="act_myMenu_myact_loginNike">名称：</string>
-    <string name="act_myMenu_myact_assets">总资产</string>
-    <string name="act_myMenu_myact_RMBPay">人民币充值</string>
-    <string name="act_myMenu_myact_RMBWithdraw">人民币提现</string>
-    <string name="act_myMenu_myact_virtualPay">虚拟币充值</string>
-    <string name="act_myMenu_myact_virtualWithdraw">虚拟币提现</string>
-    <string name="act_myMenu_myact_entrustManager">委托管理</string>
-    <string name="act_myMenu_myact_transaction">交易流水</string>
-    <string name="act_myMenu_myact_shoukuan">我要收款</string>
-    <string name="act_myMenu_myact_fukuan">我要付款</string>
-    <string name="act_myMenu_myact_renzheng">实名认证</string>
-    <string name="act_myMenu_myact_updateDLPwd">修改登陆密码</string>
-    <string name="act_myMenu_myact_updateJYPwd">修改交易密码</string>
-    <string name="act_myMenu_myact_messge">消息中心</string>
-    <string name="act_myMenu_myact_GuanYuWoMen">关于我们</string>
-    <string name="act_myMenu_myact_exit">安全退出</string>
+    <!--虚拟币交易-->
+    <string name="act_virtualcurrency_maiyijia">the buy of unit price</string>
+    <string name="act_virtualcurrency_sellyijia">:the sale of unit price</string>
+    <string name="act_virtualcurrency_mairu">buy</string>
+    <string name="act_virtualcurrency_sellru">sale</string>
+    <string name="act_virtualcurrency_chedan">withdraw</string>
+
+    <string name="act_mainTab_homepage_title">global online</string>
+    <string name="act_mainTab_tradingFloor_title">transaction floor</string>
+
+
+    <string name="act_base_serviceAgreement_title">global online service agreement</string>
+
+
+    <!--人民币充值-->
+
+    <string name="act_RechargeRMBActivity_title">RMB PAY</string>
+    <string name="act_RechargeRMBActivity_op">PAY record</string>
+    <string name="act_RechargeRMBActivity_tab1">E-bank pay</string>
+    <string name="act_RechargeRMBActivity_tab2">alipay</string>
+    <string name="act_RechargeRMBActivity_zhanghao">outward remittance account</string>
+    <string name="act_RechargeRMBActivity_name">remittance name</string>
+    <string name="act_RechargeRMBActivity_price">remittance amount</string>
+    <string name="act_RechargeRMBActivity_shuoming">remittance instruction</string>
+    <string name="act_RechargeRMBActivity_tijiao">submit</string>
+    <string name="act_RechargeRMBActivity_buzhou">please follow the below step to operate</string>
+    <string name="act_RechargeRMBActivity_test">
+        1、Login your payment account number,then enter into "i want to pay“ 。
+        2、When outward remittance success，the system will be automatically paid the remittance amount into your account,if unpaid due to the incorrect comments,please contact customer service to solve。
+        3、It is suggest to use alipay and bank card pay ,when you top-up,please input the requirement information in the comments。
+        4、When you top-up the remittance,please ensure remark the postscript in the "Pay instruction" or "the payee ps" according to the system requirement,otherwise the system cannot identity to result the top-up failure。\n
+        5、Please don't use the overdue and unpaid link to prepaid,all need use the timely payment type to do the remittance。
+    </string>
+
+    <!--人民币提现-->
+    <string name="act_WithdrawalRMBActivity_title">RMB withdraw</string>a
+    <string name="act_WithdrawalRMBActivity_op">withdraw record</string>
+    <string name="act_WithdrawalRMBActivity_banktype">select bank type</string>
+    <string name="act_WithdrawalRMBActivity_bankNumber">enter the bank number</string>
+    <string name="act_WithdrawalRMBActivity_rebankNumber">re-enter the bank number</string>
+    <string name="act_WithdrawalRMBActivity_name">payee name</string>
+    <string name="act_WithdrawalRMBActivity_kaihu">please input the bank branch</string>
+    <string name="act_WithdrawalRMBActivity_price">withdraw amount</string>
+    <string name="act_WithdrawalRMBActivity_pwd">transaction password</string>
+    <string name="act_WithdrawalRMBActivity_tixian">withdraw</string>
+    <string name="act_WithdrawalRMBActivity_xuzhi">withdraw notice</string>
+    <string name="act_WithdrawalRMBActivity_text">
+        1.To ensure your account safe,the Max limitation of RMB withdrawal is ￥5000 one time。\n
+        2.The min limitation of withdrawal is ￥100,the service fee of withdrawal is 5%,if you have more requirement，please contact the website customer service。\n
+        3.The withdrawal is paid into account within 24 hours,the bank card withdraw the different bank,the actual payment time maybe have overdue。</string>
+	
+
+
+
 
 
 </resources>

@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/ac_base_backgroud"
     android:orientation="vertical"
 
     >
@@ -18,16 +19,67 @@
         myxmlns:backtxt="no"
         />
 
-    <LinearLayout
-        android:layout_weight="1"
+
+    <FrameLayout
+        android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-        <FrameLayout
-            android:id="@+id/fl_mian"
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fl_mian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
-    </LinearLayout>
+            android:gravity="right"
+            >
+           <LinearLayout
+               android:id="@+id/xiala"
+               android:layout_marginTop="2dp"
+               android:layout_marginRight="6dp"
+               android:layout_width="100dp"
+               android:visibility="gone"
+               android:layout_height="wrap_content"
+               android:background="@color/view_titleview"
+               android:orientation="vertical"
+               >
+               <TextView
+                   android:id="@+id/tv_cn"
+                   android:layout_width="match_parent"
+                   android:layout_height="30dp"
+                   android:text="中文"
+                   android:gravity="center"
+                   android:textColor="@color/view_titleview_fanhui"
+                   />
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:paddingRight="6dp"
+                   android:paddingLeft="6dp"
+                    android:background="@color/zishousuobeijng"
+                   />
+               <TextView
+                   android:id="@+id/tv_english"
+                   android:layout_width="match_parent"
+                   android:layout_height="30dp"
+                   android:text="English"
+                   android:gravity="center"
+                   android:textColor="@color/view_titleview_fanhui"
+                   />
+
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
     <View
         android:id="@+id/line"
         android:layout_width="match_parent"

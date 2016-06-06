@@ -7,10 +7,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.global.globalonline.R;
-import com.global.globalonline.activities.virtualCurrency.VirtualTradeActivity_;
+import com.global.globalonline.activities.virtualCurrency.VirtualTradeActivity;
 import com.global.globalonline.adapter.mainTab.TradingFloorAdapter;
-import com.global.globalonline.bean.VirtualCurrencyBean;
 import com.global.globalonline.bean.VirtualListItemBean;
+import com.global.globalonline.bean.VirtualTradingBean;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
@@ -41,35 +41,30 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
     @ViewById
     ListView lv_tradingFloor;
 
+
+
     TradingFloorAdapter tradingFloorAdapter;
 
 
-    List<VirtualCurrencyBean>  list = null;
+    List<VirtualTradingBean> list = null;
     VirtualService virtualService;
 
     @AfterViews()
     void init(){
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
+        initlist();
 
-        list = new ArrayList<VirtualCurrencyBean>();
-        for (int i = 0; i < 10; i++) {
-            VirtualCurrencyBean v = new VirtualCurrencyBean();
-            v.setCount(String.valueOf(10+i));
-            list.add(v);
-
-        }
 
         srl_tradingFloor.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
-                R.color.indianred);
+                R.color.indianred,R.color.maroon);
         srl_tradingFloor.setOnRefreshListener(this);
-        tradingFloorAdapter = new TradingFloorAdapter(getActivity(),list);
-        lv_tradingFloor.setAdapter(tradingFloorAdapter);
-
 
         lv_tradingFloor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                VirtualTradeActivity_.intent(getActivity()).start();
+
+                VirtualTradingBean virtualTradingBean =(VirtualTradingBean) parent.getItemAtPosition(position);
+                VirtualTradeActivity.toActiviy(getActivity(),virtualTradingBean.getSymbol());
             }
         });
 
@@ -79,10 +74,17 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
     @Override
     public void onRefresh() {
 
+        initlist();
+
+    }
+
+    public void initlist(){
+
+        if(list != null){
+            list.clear();
+        }
+
         Map<String, String> stringMap = new HashMap<String, String>();
-        stringMap.put("next_id", "0");
-        stringMap.put("perpage", "20");
-        stringMap.put("orderby", "1");
 
         stringMap = MapToParams.getParsMap(stringMap);
 
@@ -95,6 +97,15 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
                 srl_tradingFloor.setRefreshing(false);
                 VirtualListItemBean virtualListItemBean =(VirtualListItemBean) response.body();
                 if(virtualListItemBean.getErrorCode().equals("0")){
+
+                    list = new ArrayList<VirtualTradingBean>();
+                    for (int i = 0; i < virtualListItemBean.getItems().size(); i++) {
+                        VirtualTradingBean v = virtualListItemBean.getItems().get(i);
+                        list.add(v);
+                    }
+
+                    tradingFloorAdapter = new TradingFloorAdapter(getActivity(),list);
+                    lv_tradingFloor.setAdapter(tradingFloorAdapter);
 
                 }else {
                     GetToastUtil.getToads(getActivity(),virtualListItemBean.getMessage());

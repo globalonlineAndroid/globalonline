@@ -19,7 +19,7 @@ import org.androidannotations.annotations.ViewById;
 /**
  * Created by sgf on 2015/6/19 0019.
  */
-@EViewGroup(R.layout.act_view_titlebar)
+@EViewGroup(R.layout.act_view_mian_titlebar)
 public class MainTitleView extends LinearLayout {
     @ViewById
     TextView back, title, operation;
@@ -51,11 +51,11 @@ public class MainTitleView extends LinearLayout {
     @AfterViews
     void init() {
 
-        if(operationtxt != null && !operationtxt.equals("")){
+       /* if(operationtxt != null && !operationtxt.equals("")){
             operation.setText(operationtxt);
         }else {
             operation.setVisibility(INVISIBLE);
-        }
+        }*/
         if(titletxt != null && !titletxt.equals("")){
             title.setText(titletxt);
         }

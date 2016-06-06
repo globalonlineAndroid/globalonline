@@ -16,6 +16,7 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.global.globalonline.tools.MapToParams;
 
@@ -64,6 +65,13 @@ public class CertificationActivity extends BaseActivity {
 
 
     public  void tijiao(){
+
+
+        boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_name,et_card);
+
+        if(!b){
+            return;
+        }
         String name = et_name.getText().toString();
         String card = et_card.getText().toString();
         String card_type = et_cardtype.getTag().toString();

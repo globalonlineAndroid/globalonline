@@ -99,6 +99,7 @@
             android:minLines="6"
             android:maxLength="18"
             style="@style/editText"
+            android:inputType="textPassword"
             android:hint="@string/act_user_forgotaepassword_logpwd"
             />
     </LinearLayout>
@@ -124,6 +125,7 @@
             android:minLines="6"
             android:maxLength="18"
             style="@style/editText"
+            android:inputType="textPassword"
             android:hint="@string/act_user_forgotaepassword_relogpwd"
             />
     </LinearLayout>

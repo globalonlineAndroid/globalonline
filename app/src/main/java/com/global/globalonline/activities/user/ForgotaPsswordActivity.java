@@ -15,6 +15,8 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetCheckoutET;
+import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 
 import org.androidannotations.annotations.AfterViews;
@@ -92,7 +94,16 @@ public class ForgotaPsswordActivity extends BaseActivity {
     }
     public void tijiao(){
 
+        boolean b =  GetCheckoutET.checkout(ForgotaPsswordActivity.this,et_phone,et_yanzhengma,et_pwd,et_rePwd);
 
+        if(!b){
+            return;
+        }
+
+        if( codeBean == null){
+            GetToastUtil.getToads(getApplicationContext(),"请申请验证码");
+            return;
+        }
         String mobile= et_phone.getText().toString();
         String codetype=codeBean.getCodetype();
         String code=et_yanzhengma.getText().toString();

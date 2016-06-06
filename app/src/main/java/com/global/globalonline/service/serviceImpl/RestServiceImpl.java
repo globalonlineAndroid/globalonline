@@ -21,8 +21,9 @@ public class RestServiceImpl implements RestService {
     public <T> void get(final Activity activity, String tishi , Call<T> tCall, final CallBackService callBackService) {
         dialog = null;
         if(activity != null) {
-              dialog = GetDialogUtil.loading(activity,"正在登陆...");
+            dialog = GetDialogUtil.loading(activity,tishi);
         }
+
         tCall.enqueue(new Callback<T>() {
             @Override
             public void onResponse(Call<T> call, Response<T> response) {

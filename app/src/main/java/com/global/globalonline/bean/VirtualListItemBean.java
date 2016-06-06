@@ -8,6 +8,7 @@ import java.util.List;
 public class VirtualListItemBean extends  BaseBean{
 
     private  String next_id;
+    private List<VirtualTradingBean>  items  ;
 
     public String getNext_id() {
         return next_id;
@@ -25,5 +26,5 @@ public class VirtualListItemBean extends  BaseBean{
         this.items = items;
     }
 
-    private List<VirtualTradingBean>  items  ;
+
 }

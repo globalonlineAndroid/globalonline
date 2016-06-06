@@ -2,6 +2,11 @@
     <string name="app_name">环球在线</string>
     <string name="view_titleView_fanhui">返回</string>
 
+    <!--主页-->
+    <string name="act_main_title_home">主页</string>
+    <string name="act_main_title_dating">交易大厅</string>
+    <string name="act_main_title_my">我的</string>
+
     <!--登陆-->
     <string name="act_user_login_phone">手机号码</string>
     <string name="act_user_login_pwd">密码</string>
@@ -93,11 +98,84 @@
     <string name="act_virtualcurrency_sellru">卖出</string>
     <string name="act_virtualcurrency_chedan">撤单</string>
 
+
     <string name="act_mainTab_homepage_title">环球在线</string>
     <string name="act_mainTab_tradingFloor_title">交易大厅</string>
 
 
     <string name="act_base_serviceAgreement_title">环球在线服务协议</string>
+
+
+    <!--人民币充值-->
+
+    <string name="act_RechargeRMBActivity_title">人民币充值</string>
+    <string name="act_RechargeRMBActivity_op">充值记录</string>
+    <string name="act_RechargeRMBActivity_tab1">网银充值</string>
+    <string name="act_RechargeRMBActivity_tab2">支付宝充值</string>
+    <string name="act_RechargeRMBActivity_zhanghao">汇出账号:</string>
+    <string name="act_RechargeRMBActivity_name">汇款姓名:</string>
+    <string name="act_RechargeRMBActivity_price">汇款金额:</string>
+    <string name="act_RechargeRMBActivity_shuoming">汇款说明:</string>
+    <string name="act_RechargeRMBActivity_tijiao">提 交</string>
+    <string name="act_RechargeRMBActivity_buzhou">请您按如下步骤操作：</string>
+    <string name="act_RechargeRMBActivity_test">
+        1、 登录您的支付账号，进入"我要付款"。\n
+        2、汇款成功后，系统会自动将您汇款金额充值到您的账户中，若因为没有正确备注而未充值到账的，请联系客服解决。\n
+        3、建议使用支付宝和银行卡充值，充值时请在备注中按照要求注明信息!。\n
+        4、在充值汇款的时候请务必按照系统要求在“付款说明”或“收款人附言”中注明附言，不然系统将无法识别导致充值失败。\n
+        5、请不要用过期的未支付的链接进行充值，一律采用即时支付的方式进行汇款。"</string>
+
+
+    <!--人民币提现-->
+    <string name="act_WithdrawalRMBActivity_title">人民币提现</string>
+    <string name="act_WithdrawalRMBActivity_op">提现记录</string>
+    <string name="act_WithdrawalRMBActivity_banktype">选择银行类型</string>
+    <string name="act_WithdrawalRMBActivity_bankNumber">请输入银行卡号</string>
+    <string name="act_WithdrawalRMBActivity_rebankNumber">确认银行卡号</string>
+    <string name="act_WithdrawalRMBActivity_name">收款人姓名</string>
+    <string name="act_WithdrawalRMBActivity_kaihu">请输入开户支行</string>
+    <string name="act_WithdrawalRMBActivity_price">提现金额</string>
+    <string name="act_WithdrawalRMBActivity_pwd">交易密码</string>
+    <string name="act_WithdrawalRMBActivity_tixian">提现</string>
+    <string name="act_WithdrawalRMBActivity_xuzhi">提现须知</string>
+    <string name="act_WithdrawalRMBActivity_text">
+        1. 为了您的帐户安全，每次人民币提现的最高限额为￥5000 \n
+        2. 提现的最低限额为￥100 ，提现手续费5% ，如果您有更高的需求，请与网站客服联系\n
+        3. 提现24小时内到账，银行卡提现不同的银行，实际到帐时间可能会有所延时。</string>
+
+
+
+    <!--委托管理-->
+    <string name="act_ma_title">委托管理</string>
+
+    <string name="act_ma_caozuo">操作</string>
+    <string name="act_ma_status">状态</string>
+    <string name="act_ma_time">时间</string>
+    <string name="act_ma_type">类别</string>
+    <string name="act_ma_number">委托数量</string>
+    <string name="act_ma_weituojine">委托金额</string>
+    <string name="act_ma_shouxufei">手续费</string>
+    <string name="act_ma_weituojiae">委托价格</string>
+    <string name="act_ma_chengjiaonumber">成交数量</string>
+    <string name="act_ma_chengjiaojine">成交金额</string>
+    <string name="act_ma_avgprice">平均成交价</string>
+
+<!--以上翻译过了-->
+
+    <string name="act_virtualcurrency_keyong">可用人民币：</string>
+    <string name="act_virtualcurrency_kemai">可买虚拟币：</string>
+    <string name="act_virtualcurrency_mairujiae">买入价格：</string>
+    <string name="act_virtualcurrency_mairunumber">买入数量：</string>
+    <string name="act_virtualcurrency_jine">折合金额：</string>
+    <string name="act_virtualcurrency_jiaoyipwd">交易密码：</string>
+
+
+    <string name="act_virtualcurrency_sell_keyong">可卖虚拟币：</string>
+    <string name="act_virtualcurrency_sell_kemai">冻结虚拟币：</string>
+    <string name="act_virtualcurrency_sell_mairujiae">卖出价格：</string>
+    <string name="act_virtualcurrency_sell_mairunumber">卖出数量：</string>
+    <string name="act_virtualcurrency_sell_jine">折合金额：</string>
+    <string name="act_virtualcurrency_sell_jiaoyipwd">交易密码：</string>
 
 
 </resources>

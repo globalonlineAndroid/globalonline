@@ -186,6 +186,9 @@
     <color name="ac_base_fenGeXian">#242b33</color>
     <color name="ac_base_ziti_hui">#8e8f93</color>
     <color name="ac_base_llbackgroud_hui">#373f45</color>
+    <color name="ac_base_tab">#213645</color>
+
+    <color name="ac_base_fuceng">#111c24</color>
     <color name="btn_queding">#3e8de9</color>
 
     <color name="view_titleview">#1d2228</color>

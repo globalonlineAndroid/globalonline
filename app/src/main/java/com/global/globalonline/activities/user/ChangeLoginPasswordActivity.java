@@ -12,6 +12,7 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 
@@ -46,6 +47,13 @@ public class ChangeLoginPasswordActivity extends BaseActivity {
         }
     }
     public void tijiao() {
+
+        boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_oldpwd,et_pwd,
+                et_repwd);
+
+        if(!b){
+            return;
+        }
 
         String oldpwd = et_oldpwd.getText().toString();
         String pwd = et_pwd.getText().toString();

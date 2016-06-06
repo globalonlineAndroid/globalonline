@@ -17,6 +17,7 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 
@@ -104,7 +105,12 @@ public class ChangeTradePasswordActivity extends BaseActivity {
     }
     public void tijiao(){
 
+        boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_trade_pwd,et_trade_repwd,
+                et_yanzhengma);
 
+        if(!b){
+            return;
+        }
         String trade_pwd = et_trade_pwd.getText().toString();
         String trade_repwd = et_trade_repwd.getText().toString();
         String code = et_yanzhengma.getText().toString();

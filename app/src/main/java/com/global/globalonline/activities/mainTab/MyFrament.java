@@ -6,9 +6,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
+import com.global.globalonline.activities.RMB.RechargeRMBActivity_;
+import com.global.globalonline.activities.RMB.WithdrawalRMBActivity_;
 import com.global.globalonline.activities.user.CertificationActivity_;
 import com.global.globalonline.activities.user.ChangeLoginPasswordActivity_;
 import com.global.globalonline.activities.user.ChangeTradePasswordActivity_;
+import com.global.globalonline.activities.virtualCurrency.MandatoryAdministrationActivity_;
 import com.global.globalonline.base.MyApplication;
 
 import org.androidannotations.annotations.AfterViews;
@@ -46,14 +49,18 @@ public class MyFrament extends Fragment {
 
         switch (view.getId()){
             case R.id.ll_RMBPay:
+                RechargeRMBActivity_.intent(getActivity()).start();
+
                 break;
             case R.id.ll_RMBTiXian:
+                WithdrawalRMBActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_XuNiPay:
                 break;
             case R.id.ll_XuNiTiXian:
                 break;
             case R.id.ll_weiTuoManager:
+                MandatoryAdministrationActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_jiaoYiLiuShui:
                 break;

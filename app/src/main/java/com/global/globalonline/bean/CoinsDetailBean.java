@@ -23,6 +23,11 @@ public class CoinsDetailBean extends BaseBean{
     private String ratio;//涨跌比例-负数显示绿色，正数显示红色”,
     private String account_balance;//当前用户可用余额”
 
+
+
+    private String coins_balance;//当前用户此币种余额”,
+
+
     List<CoinsDetailItemBean>  buy_list ; ///买入前五条
     List<CoinsDetailItemBean>  sell_list;//卖出前五条
 
@@ -146,5 +151,11 @@ public class CoinsDetailBean extends BaseBean{
         this.buy_list = buy_list;
     }
 
+    public String getCoins_balance() {
+        return coins_balance;
+    }
 
+    public void setCoins_balance(String coins_balance) {
+        this.coins_balance = coins_balance;
+    }
 }

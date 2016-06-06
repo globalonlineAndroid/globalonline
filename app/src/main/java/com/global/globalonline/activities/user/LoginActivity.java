@@ -28,6 +28,7 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 
@@ -87,7 +88,11 @@ public class LoginActivity extends BaseActivity {
 
     public void loging() {
 
+        boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_phone,et_pwd);
 
+        if(!b){
+            return;
+        }
 
         String tel = et_phone.getText().toString();
         String pwd = et_pwd.getText().toString();

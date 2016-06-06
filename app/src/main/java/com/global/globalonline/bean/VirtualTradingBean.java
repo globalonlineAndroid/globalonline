@@ -8,6 +8,10 @@ package com.global.globalonline.bean;
 public class VirtualTradingBean {
 
     private String   id;
+
+
+
+    private String   symbol;
     private String   name;//虚拟币名称”
     private String   ename;//虚拟币英文名称”
     private String   img;//币种的小图标地址”
@@ -26,7 +30,13 @@ public class VirtualTradingBean {
     public void setId(String id) {
         this.id = id;
     }
+    public String getSymbol() {
+        return symbol;
+    }
 
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
     public String getName() {
         return name;
     }

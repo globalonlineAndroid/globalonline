@@ -1,17 +1,23 @@
 package com.global.globalonline.activities.mainTab;
 
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import java.util.Locale;
 
 
 @EActivity(R.layout.activity_main)
@@ -20,7 +26,10 @@ public class MainActivity extends FragmentActivity {
     @ViewById
     ImageButton ibtn_homepage,ibtn_tradingfloor,ibtn_my;
     @ViewById
-    TextView title;
+    TextView title,tv_english;
+    @ViewById
+    LinearLayout xiala;
+
 
 
 
@@ -35,6 +44,31 @@ public class MainActivity extends FragmentActivity {
     @AfterViews
     void init(){
         initComponents();
+        Locale.setDefault(Locale.CHINESE);
+    }
+
+
+    @Click({R.id.operation,R.id.tv_english,R.id.tv_cn})
+    void click(View view){
+        switch (view.getId()){
+            case R.id.operation :
+
+                if(xiala.getVisibility() == View.VISIBLE){
+                    xiala.setVisibility(View.GONE);
+                }else {
+                    xiala.setVisibility(View.VISIBLE);
+                }
+
+                break;
+            case R.id.tv_english:
+                checkLa(Locale.ENGLISH);
+                break;
+            case R.id.tv_cn:
+                checkLa(Locale.CHINESE);
+
+                break;
+        }
+
     }
 
 
@@ -43,7 +77,8 @@ public class MainActivity extends FragmentActivity {
         ibtn_homepage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                title.setText("环球在线");
+                title.setText(getResources().getString(R.string.act_main_title_home));
+
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);
@@ -64,7 +99,8 @@ public class MainActivity extends FragmentActivity {
         ibtn_tradingfloor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                title.setText("交易大厅");
+                title.setText(getResources().getString(R.string.act_main_title_dating));
+
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);
@@ -82,7 +118,7 @@ public class MainActivity extends FragmentActivity {
         ibtn_my.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                title.setText("我的");
+                title.setText(getResources().getString(R.string.act_main_title_my));
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);
@@ -128,6 +164,19 @@ public class MainActivity extends FragmentActivity {
             transaction.hide(myFrament);
         }
 
+    }
+
+
+    public  void checkLa(Locale locale ){
+        Configuration configCN = getBaseContext().getResources().getConfiguration();
+        configCN.locale = locale;
+        getBaseContext().getResources().updateConfiguration(configCN
+                , getBaseContext().getResources().getDisplayMetrics());
+        xiala.setVisibility(View.GONE);
+        Intent intent = new Intent();
+        intent.setClass(this,MainActivity_.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 }

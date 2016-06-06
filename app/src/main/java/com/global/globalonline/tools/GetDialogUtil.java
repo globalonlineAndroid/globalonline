@@ -177,43 +177,6 @@ public class GetDialogUtil {
 
     public static Dialog loading(final Activity act, String text) {
 
-        /*AlertDialog dialog = null;
-        AlertDialog.Builder builder = new AlertDialog.Builder(act);
-        LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.act_dig_def_loading, null);
-
-       *//* LinearLayout  view = new LinearLayout(act);
-        view.setMinimumHeight(120);
-        view.setMinimumWidth(120);
-
-        ImageView iv_loding = new ImageView(act);
-        iv_loding.setMinimumHeight(100);
-        iv_loding.setMinimumWidth(100);
-        TextView tv_tishi = new TextView(act);
-
-        view.addView(iv_loding);
-        view.addView(tv_tishi);*//*
-
-        final ImageView iv_loding = (ImageView) view.findViewById(R.id.iv_loding);
-        final TextView tv_tishi = (TextView) view.findViewById(R.id.tv_tishi);
-      *//*  iv_loding = (ImageView) view.findViewById(R.id.iv_loding);
-       tv_tishi = (TextView) view.findViewById(R.id.tv_tishi);*//*
-
-
-
-
-        Glide.with(act).load(R.drawable.loading).into(iv_loding);
-
-        tv_tishi.setText(text);
-
-
-
-        builder.setView(view);
-        dialog = builder.create();
-
-        dialog.show();
-*/
-
         LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.act_dig_def_loading, null);
         Dialog dialog=new Dialog(act,R.style.dialog_sel);

@@ -13,10 +13,6 @@ import com.global.globalonline.db.dao.DaoSession;
 public class MyApplication extends Application {
 
     public static UserBean userBean;
-
-    private static Context context;
-
-
     private static DaoMaster daoMaster;
     private static DaoSession daoSession;
     /**
@@ -29,7 +25,7 @@ public class MyApplication extends Application {
     {
         if (daoMaster == null)
         {
-            DaoMaster.OpenHelper helper = new DaoMaster.DevOpenHelper(context,"zthz_gongtongpeisong", null);
+            DaoMaster.OpenHelper helper = new DaoMaster.DevOpenHelper(context,"globaloonlineData", null);
             daoMaster = new DaoMaster(helper.getWritableDatabase());
         }
         return daoMaster;

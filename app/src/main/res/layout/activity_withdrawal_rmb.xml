@@ -9,226 +9,206 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="@color/ac_user_login"
-    tools:context="com.global.globalonline.activities.user.RegisteredActivity">
+    android:background="@color/ac_base_backgroud"
+    android:focusableInTouchMode="true"
+    tools:context="com.global.globalonline.activities.RMB.WithdrawalRMBActivity">
+
 
     <com.global.globalonline.view.TitleView_
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        myxmlns:titletxt="@string/act_user_registered_zhuce"
-
+        myxmlns:titletxt="@string/act_WithdrawalRMBActivity_title"
+        myxmlns:operationtxt="@string/act_WithdrawalRMBActivity_op"
         />
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
+        android:background="@drawable/et_input"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
-            />
 
         <TextView
-            android:id="@+id/tv_guojia"
+
+            android:id="@+id/tv_banktype"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="18dp"
-            android:hint="@string/act_user_registered_guojia"
+
+            android:hint="@string/act_WithdrawalRMBActivity_banktype"
             style="@style/editText"
+            android:paddingRight="6dp"
+            android:drawableRight="@drawable/xiala_bai"
             />
+
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="14dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+
         >
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_phone"
-            />
+
 
         <EditText
             android:id="@+id/et_phone"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:hint="@string/act_user_registered_phone"
+            android:paddingRight="6dp"
+            android:hint="@string/act_WithdrawalRMBActivity_bankNumber"
             android:inputType="number"
             android:maxLength="11"
             style="@style/editText"
             />
-        <Button
-            android:id="@+id/btn_send_code"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:layout_marginRight="4dp"
-            android:background="@drawable/act_regidtered_getyanzhengma"
-            android:text="@string/act_user_registered_getyanzhengma"
-            android:textColor="@color/view_titleview_fanhui"
-            />
+
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
-            />
-
         <EditText
             android:id="@+id/et_yanzhengma"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/act_user_registered_yanzhengma"
+            android:hint="@string/act_WithdrawalRMBActivity_rebankNumber"
             style="@style/editText"
             />
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
-            />
 
         <EditText
             android:id="@+id/et_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/act_user_registered_pwd"
+            android:hint="@string/act_WithdrawalRMBActivity_name"
             style="@style/editText"
-            android:inputType="textPassword"
             />
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
-            />
 
         <EditText
             android:id="@+id/et_rePwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/act_user_registered_repwd"
-            android:inputType="textPassword"
+            android:hint="@string/act_WithdrawalRMBActivity_kaihu"
             style="@style/editText"
 
             />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="6dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
-            />
-
         <EditText
             android:id="@+id/et_tuijianren"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/act_user_registered_tuijianren"
+            android:hint="@string/act_WithdrawalRMBActivity_price"
             style="@style/editText"
             />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         >
-        <ImageView
-            android:id="@+id/iv_queren"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/icon_agree_hl"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="4dp"
+        <EditText
+            android:id="@+id/et_trade_pwd"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="@string/act_user_registered_text"
-            android:textColor="@color/ac_user_registerd_hint"
+            android:hint="@string/act_WithdrawalRMBActivity_pwd"
+            style="@style/editText"
             />
-        <TextView
-            android:id="@+id/tv_xieyi"
-            android:layout_width="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_height="@dimen/act_registered_higth"
-            android:text="@string/act_user_registered_xieyi"
-            android:textColor="@color/view_titleview_fanhui"
-            />
-
     </LinearLayout>
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         >
         <Button
             android:id="@+id/btn_tijiao"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/act_user_registered_zhuce"
+            android:text="@string/act_WithdrawalRMBActivity_tixian"
             android:textColor="@color/white"
             android:background="@drawable/act_login_loging"
             />
     </LinearLayout>
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:text="@string/act_RechargeRMBActivity_buzhou"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/ac_base_ziti_hui"
+        android:text="@string/act_WithdrawalRMBActivity_text"
+        />
 
 
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

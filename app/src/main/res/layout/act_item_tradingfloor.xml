@@ -26,11 +26,13 @@
                 android:gravity="center_vertical"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/tv_image"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/bitebi"
                     />
                 <TextView
+                    android:id="@+id/tv_xunibiName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -48,6 +50,7 @@
                 android:gravity="center_vertical"
                 android:layout_height="match_parent">
                 <TextView
+                    android:id="@+id/tv_price"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -58,12 +61,14 @@
                     android:textColor="@color/white"
                     />
                 <LinearLayout
+                    android:id="@+id/ll_zhangfu"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="30dp"
                     android:background="@color/red"
                     android:gravity="center">
                     <TextView
+                        android:id="@+id/tv_zhangfu"
                         android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,6 +112,7 @@
                     android:textColor="@color/ac_base_ziti_hui"
                     />
                 <TextView
+                    android:id="@+id/tv_chengjiaoe"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:gravity="top"
@@ -158,6 +164,7 @@
                     android:textColor="@color/ac_base_ziti_hui"
                     />
                 <TextView
+                    android:id="@+id/tv_minprice"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:gravity="top"
@@ -183,6 +190,7 @@
                     android:textColor="@color/ac_base_ziti_hui"
                     />
                 <TextView
+                    android:id="@+id/tv_mxPrice"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:gravity="top"

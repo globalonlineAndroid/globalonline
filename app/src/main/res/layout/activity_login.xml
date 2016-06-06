@@ -66,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/editText"
+            android:inputType="textPassword"
             android:minLines="6"
             android:maxLength="18"
             android:hint="@string/act_user_login_pwd"

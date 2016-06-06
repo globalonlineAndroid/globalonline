@@ -1,15 +1,12 @@
 package com.global.globalonline.activities.BaseActivie;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
 import com.global.globalonline.R;
+import com.global.globalonline.base.BaseActivity;
 
-public class ServiceAgreementActivity extends AppCompatActivity {
+import org.androidannotations.annotations.EActivity;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service_agreement);
-    }
+@EActivity(R.layout.activity_service_agreement)
+public class ServiceAgreementActivity extends BaseActivity {
+
+
 }

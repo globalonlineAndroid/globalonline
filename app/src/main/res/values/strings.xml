@@ -144,7 +144,6 @@
         3. 提现24小时内到账，银行卡提现不同的银行，实际到帐时间可能会有所延时。</string>
 
 
-
     <!--委托管理-->
     <string name="act_ma_title">委托管理</string>
 
@@ -160,7 +159,7 @@
     <string name="act_ma_chengjiaojine">成交金额</string>
     <string name="act_ma_avgprice">平均成交价</string>
 
-<!--以上翻译过了-->
+    <!--以上翻译过了-->
 
     <string name="act_virtualcurrency_keyong">可用人民币：</string>
     <string name="act_virtualcurrency_kemai">可买虚拟币：</string>

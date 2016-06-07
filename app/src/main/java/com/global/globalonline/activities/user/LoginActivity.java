@@ -29,6 +29,7 @@ import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
 import com.global.globalonline.tools.GetCheckoutET;
+import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 
@@ -52,7 +53,7 @@ import retrofit2.Response;
 public class LoginActivity extends BaseActivity {
 
     @ViewById
-    TextView operation, tv_wangJiPWD;
+    TextView operation, tv_wangJiPWD,tv_guojia;
     @ViewById
     Button bt_loging;
    @ViewById
@@ -64,6 +65,7 @@ public class LoginActivity extends BaseActivity {
     @AfterViews
     void init() {
         dbHelper = DBHelper.getInstance(LoginActivity.this);
+        GetSelectBouncedUtil.get(this,tv_guojia, StaticBase.COUTRY,"39");
         initDate();
     }
 
@@ -96,12 +98,14 @@ public class LoginActivity extends BaseActivity {
 
         String tel = et_phone.getText().toString();
         String pwd = et_pwd.getText().toString();
+        String country = tv_guojia.getTag().toString();
 
         UserService userService = GetRetrofitService.getRestClient(UserService.class);
 
         Map<String, String> stringMap = new HashMap<String, String>();
         stringMap.put("mobile", tel);
         stringMap.put("pwd", pwd);
+        stringMap.put("country", country);
 
         stringMap = MapToParams.getParsMap(stringMap);
 

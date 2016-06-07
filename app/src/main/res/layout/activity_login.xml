@@ -20,11 +20,35 @@
         myxmlns:titletxt="@string/act_user_login_title"
         myxmlns:operationtxt="@string/act_user_login_opera"
         />
-    
+
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/act_registered_higth"
+        android:background="@color/ac_user_login_phone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/act_user_login_pwd"
+            />
+
+        <TextView
+            android:id="@+id/tv_guojia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18dp"
+            android:hint="@string/act_user_registered_guojia"
+            style="@style/editText"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"
@@ -42,6 +66,7 @@
             android:layout_height="match_parent"
             android:inputType="number"
             android:maxLength="11"
+
             style="@style/editText"
             android:hint="@string/act_user_login_phone"
             />
@@ -49,7 +74,7 @@
     <LinearLayout
         android:layout_marginTop="2dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
         android:orientation="horizontal"
         android:gravity="center_vertical"

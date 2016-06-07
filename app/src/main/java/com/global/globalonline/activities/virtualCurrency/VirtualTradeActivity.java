@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.global.globalonline.R;
+import com.global.globalonline.activities.BaseActivie.KLineActivity;
 import com.global.globalonline.activities.user.LoginActivity_;
 import com.global.globalonline.adapter.VirtualTrade.VirtualTradeAdapter;
 import com.global.globalonline.base.BaseActivity;
@@ -58,6 +59,8 @@ public class VirtualTradeActivity extends BaseActivity {
     @ViewById
     TextView tv_mairu_tab,tv_maichu_tab,tv_chedan;
     @ViewById
+    ImageView operation;
+    @ViewById
     Button btn_buy,btn_sell;
     @ViewById
     LinearLayout ll_buy,ll_sell;
@@ -82,8 +85,6 @@ public class VirtualTradeActivity extends BaseActivity {
 
     }
 
-
-
     @AfterViews
     void init(){
         if(MyApplication.userBean != null){
@@ -96,7 +97,7 @@ public class VirtualTradeActivity extends BaseActivity {
     }
 
     @Click({R.id.back,R.id.tv_mairu_tab,R.id.tv_maichu_tab,R.id.tv_chedan,R.id.btn_buy, R.id.btn_sell,
-            R.id.tv_sell_login,R.id.tv_buy_login})
+            R.id.tv_sell_login,R.id.tv_buy_login,R.id.operation})
     void click(View view){
         switch (view.getId()){
             case R.id.back:
@@ -131,6 +132,11 @@ public class VirtualTradeActivity extends BaseActivity {
             case R.id.tv_buy_login:
                 LoginActivity_.intent(VirtualTradeActivity.this).start();
                 break;
+            case R.id.operation:
+
+               // KLineTestActivity.toActivity(VirtualTradeActivity.this,symbol);
+                KLineActivity.toActivity(VirtualTradeActivity.this,symbol);
+                break;
         }
     }
 
@@ -156,6 +162,9 @@ public class VirtualTradeActivity extends BaseActivity {
                             .load(UrlApi.baseImageUrl+coinsDetailBean.getImg())
                             .into(iv_image);
 
+                    String  buyPrice  = coinsDetailBean.getBuy_list().get(0).getPrice();
+                    String  sellPrice  = coinsDetailBean.getSell_list().get(0).getPrice();
+
                     tv_name.setText(coinsDetailBean.getName());
                     tv_price.setText(coinsDetailBean.getPrice());
                     tv_zhangfu.setText(coinsDetailBean.getRatio());
@@ -163,30 +172,38 @@ public class VirtualTradeActivity extends BaseActivity {
                     tv_chengjiaoliang.setText(coinsDetailBean.getVolume());
                     tv_minprice.setText(coinsDetailBean.getMin_price());
                     tv_maxprice.setText(coinsDetailBean.getMax_price());
-                    tv_buy.setText(coinsDetailBean.getBuy_list().get(0).getPrice());
-                    tv_sell.setText(coinsDetailBean.getSell_list().get(0).getPrice());
+                    tv_buy.setText(buyPrice);
+                    tv_sell.setText(sellPrice);
                     tv_sell_keyongXuNiBi.setText(coinsDetailBean.getCoins_balance());
                     tv_buy_keyongRMB.setText(coinsDetailBean.getAccount_balance());
                     tv_sell_dongjiexunibi.setText(coinsDetailBean.getFrozen());
 
+                    et_buy_price.setText(sellPrice);
+                    et_sell_price.setText(buyPrice);
 
+
+                    List<CoinsDetailItemBean> list = new ArrayList<CoinsDetailItemBean>();
 
                     for (int i = 0; i < coinsDetailBean.getBuy_list().size(); i++) {
                         coinsDetailBean.getBuy_list().get(i).setName("买"+(i+1));
+
                     }
 
-                    for (int i = 0; i < coinsDetailBean.getSell_list().size(); i++) {
-                        coinsDetailBean.getSell_list().get(i).setName("卖"+(i+1));
+                    for (int i = coinsDetailBean.getSell_list().size(); i > 0; i --) {
+                        CoinsDetailItemBean cb = coinsDetailBean.getSell_list().get(i-1);
+                        cb.setName("卖"+i);
+                        list.add(cb);
+
                     }
 
                     if(coinsDetailBean.getBuy_list().size() > 0){
                        coinsDetailBean.getBuy_list();
                     }
                     if(coinsDetailBean.getSell_list().size()>0){
-                        sell_list = coinsDetailBean.getSell_list();
+                       coinsDetailBean.getSell_list();
                     }
 
-                    virtualTradeAdapter = new VirtualTradeAdapter(R.color.limegreen,VirtualTradeActivity.this,coinsDetailBean.getSell_list());
+                    virtualTradeAdapter = new VirtualTradeAdapter(R.color.limegreen,VirtualTradeActivity.this,list);
                     lv_mai.setAdapter(virtualTradeAdapter);
                     virtualTradeAdapter = new VirtualTradeAdapter(R.color.red,VirtualTradeActivity.this,coinsDetailBean.getBuy_list());
                     lv_sell.setAdapter(virtualTradeAdapter);

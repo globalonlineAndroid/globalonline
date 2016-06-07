@@ -64,7 +64,7 @@ public class RegisteredActivity extends BaseActivity {
     @AfterViews
     void init(){
         userService = GetRetrofitService.getRestClient(UserService.class);
-        GetSelectBouncedUtil.get(this,tv_guojia, StaticBase.COUTRY,"0");
+        GetSelectBouncedUtil.get(this,tv_guojia, StaticBase.COUTRY,"39");
     }
 
     @Click({R.id.btn_send_code,R.id.btn_tijiao,R.id.iv_queren,R.id.tv_xieyi})

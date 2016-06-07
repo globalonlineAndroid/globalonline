@@ -13,7 +13,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.mainTab.MainActivity_" />
         <activity android:name=".activities.user.LoginActivity_">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activities.user.RegisteredActivity_" />
         <activity android:name=".activities.user.ChangeLoginPasswordActivity_" />
@@ -34,14 +38,9 @@
         <activity android:name=".activities.RMB.RechargeRMBActivity_" />
         <activity android:name=".activities.RMB.WithdrawalRMBActivity_" />
         <activity android:name=".activities.virtualCurrency.MandatoryAdministrationActivity_" />
-        <activity android:name=".activities.BaseActivie.KLineActivity_">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activities.BaseActivie.KLineActivity_" />
+        <activity android:name=".activities.BaseActivie.KLine_testActivity_" />
+        <activity android:name=".activities.test.KLineTestActivity_"></activity>
     </application>
 
 </manifest>

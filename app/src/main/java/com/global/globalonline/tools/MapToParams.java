@@ -38,7 +38,7 @@ public class MapToParams {
 
         s_token = MD5Util.getMD5String(s_token + UrlApi.key);
 
-       // mapParams.put("token",s_token) ;
+        mapParams.put("token",s_token) ;
 
         return  s_token;
     }
@@ -101,6 +101,38 @@ public class MapToParams {
         }
         if( MyApplication.userBean != null &&!StringUtil.isBlank(MyApplication.userBean.getAuth_key())) {
             parsMap.put("auth_key", MyApplication.userBean.getAuth_key());
+        }
+
+        String token = getToken(parsMap);
+        //parsMap.put("token",token);
+        parsMap.put("token","0");
+
+
+        return parsMap;
+    }
+
+    public static Map<String,String> getParsMap(Map<String,String> parsMap,String... s){
+        String userid = "0";
+
+        if(parsMap == null){
+            parsMap = new HashMap<>();
+        }
+
+        String time = new Date().getTime()+"";
+        parsMap.put("timestamp",time);
+
+
+        if(!parsMap.containsKey("userid") && MyApplication.userBean != null &&!StringUtil.isBlank(MyApplication.userBean.getUserid())) {
+            parsMap.put("userid", MyApplication.userBean.getUserid());
+
+        }else {
+            parsMap.put("userid", "0");
+        }
+        if( MyApplication.userBean != null &&!StringUtil.isBlank(MyApplication.userBean.getAuth_key())) {
+            parsMap.put("auth_key", MyApplication.userBean.getAuth_key());
+        }
+        for (int i = 0; i < s.length; i++) {
+            parsMap.remove(s[i]);
         }
 
         String token = getToken(parsMap);

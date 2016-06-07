@@ -1,6 +1,8 @@
 package com.global.globalonline.service;
 
 import com.global.globalonline.base.UrlApi;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.concurrent.TimeUnit;
 
@@ -58,7 +60,45 @@ public class GetRetrofitService {
        return  t;
     }
 
+    public static  <T> T getRestClientNoGson(Class<T> aClass){
 
+        /* Interceptor mTokenInterceptor = new Interceptor() {
+
+             @Override
+             public Response intercept(Chain chain) throws IOException {
+
+                 return null;
+             }
+         };
+
+
+
+*/
+
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                .create();
+
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder()
+                //.addInterceptor(interceptor)
+                // .addNetworkInterceptor(mTokenInterceptor)
+                .retryOnConnectionFailure(true)
+                .connectTimeout(15, TimeUnit.SECONDS)
+                .build();
+
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl(UrlApi.baseUrl)
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+
+        T t = retrofit.create(aClass);
+        return  t;
+    }
 
 }
 

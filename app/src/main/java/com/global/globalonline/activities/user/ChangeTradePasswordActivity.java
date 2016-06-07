@@ -78,7 +78,7 @@ public class ChangeTradePasswordActivity extends BaseActivity {
         stringMap.put("mobile", phone);
         stringMap.put("stype", "3");
 
-        Map<String,String>  map= MapToParams.getParsMap(stringMap);
+        Map<String,String>  map= MapToParams.getParsMap(stringMap,"auth_key");
 
         Call<CodeBean> call = userService.send_authcode(map);
         call.enqueue(new Callback<CodeBean>() {

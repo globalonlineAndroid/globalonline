@@ -21,29 +21,26 @@
 
 
 
-    <android.support.v4.widget.SwipeRefreshLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.SwipeRefreshLayout
                     android:id="@+id/srl_ma_tradingFloor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
+                    <android.support.v7.widget.RecyclerView
+                       android:id="@+id/lv_ma_tradingFloor"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:dividerHeight="0dp"
+                       android:divider="@color/ac_base_backgroud"
+                       >
+                    </android.support.v7.widget.RecyclerView>
 
 
-                <ListView
-                    android:id="@+id/lv_ma_tradingFloor"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:dividerHeight="0dp"
-                    android:divider="@color/ac_base_backgroud"
-                    >
-                </ListView>
 
-
-                    </HorizontalScrollView>
-    </android.support.v4.widget.SwipeRefreshLayout>
-
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
 
 
 </LinearLayout>

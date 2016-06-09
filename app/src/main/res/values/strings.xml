@@ -177,4 +177,44 @@
     <string name="act_virtualcurrency_sell_jiaoyipwd">交易密码：</string>
 
 
+    <!--虚拟币充值-->
+    <string name="act_virtualcurrency_chargeFees_title">虚拟币充值</string>
+    <string name="act_virtualcurrency_chargeFees_op">转入记录</string>
+    <string name="act_virtualcurrency_chargeFees_keyong">可用比特币：</string>
+    <string name="act_virtualcurrency_chargeFees_dongjie">冻结比特币：</string>
+    <string name="act_virtualcurrency_chargeFees_address">钱包地址：</string>
+    <string name="act_virtualcurrency_chargeFees_miaoshu">充值说明：</string>
+    <string name="act_virtualcurrency_chargeFees_text">本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>
+
+
+    <!--转出虚拟币-->
+    <string name="act_virtualcurrency_archived_title">转出虚拟币</string>
+    <string name="act_virtualcurrency_archived_op">转出记录</string>
+    <string name="act_virtualcurrency_archived_keyong">可用比特币：</string>
+    <string name="act_virtualcurrency_archived_dongjie">冻结比特币：</string>
+    <string name="act_virtualcurrency_archived_address">钱包地址</string>
+    <string name="act_virtualcurrency_archived_number">转出数量</string>
+    <string name="act_virtualcurrency_archived_pwd">交易密码</string>
+    <string name="act_virtualcurrency_archived_tijiao">确认转出</string>
+    <string name="act_virtualcurrency_archived_miaoshu">转出说明：</string>
+    <string name="act_virtualcurrency_archived_text">为了您的帐户安全，每笔提现最小数量0.00100000，最大数量100.00000000， 如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为 0.0001。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。</string>
+
+
+    <!--关于我们-->
+    <string name="act_user_aboutUs_title">关于我们</string>
+    <string name="act_user_aboutUs_str1">环球在线</string>
+    <string name="act_user_aboutUs_str2">让每个人享受科技的乐趣</string>
+    <string name="act_user_aboutUs_str3">让每个人享受科技的乐趣
+        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
+        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
+        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
+        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
+    </string>
+
+
+    <!--收款-->
+    <string name="act_virtualCurrency_shoukuan_title">收款</string>
+    <string name="act_virtualCurrency_shoukuan_shuoming">收款说明</string>
+    <string name="act_virtualCurrency_shoukuan_text">这里是说明内容</string>
+
 </resources>

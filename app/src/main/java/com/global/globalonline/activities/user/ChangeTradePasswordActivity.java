@@ -30,7 +30,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
@@ -80,11 +79,14 @@ public class ChangeTradePasswordActivity extends BaseActivity {
 
         Map<String,String>  map= MapToParams.getParsMap(stringMap,"auth_key");
 
+        RestService  restService = new RestServiceImpl();
+
+
         Call<CodeBean> call = userService.send_authcode(map);
-        call.enqueue(new Callback<CodeBean>() {
+        restService.get(null, "", call, new CallBackService() {
             @Override
-            public void onResponse(Call<CodeBean> call, Response<CodeBean> response) {
-                codeBean = response.body();
+            public <T> void onResponse(Call<T> call, Response<T> response) {
+                codeBean = (CodeBean) response.body();
                 if(codeBean.getErrorCode().equals("0")){
                     time = new TimeCount(30000, 1000,btn_send_code);
                     time.start();
@@ -92,15 +94,15 @@ public class ChangeTradePasswordActivity extends BaseActivity {
                 }else {
                     Toast.makeText(getApplicationContext(),codeBean.getMessage(),Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
-            public void onFailure(Call<CodeBean> call, Throwable t) {
+            public <T> void onFailure(Call<T> call, Throwable t) {
 
-                String a = "";
             }
         });
+
+
 
     }
     public void tijiao(){

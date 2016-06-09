@@ -8,9 +8,12 @@ import android.widget.TextView;
 import com.global.globalonline.R;
 import com.global.globalonline.activities.RMB.RechargeRMBActivity_;
 import com.global.globalonline.activities.RMB.WithdrawalRMBActivity_;
+import com.global.globalonline.activities.user.AboutUsActivity_;
 import com.global.globalonline.activities.user.CertificationActivity_;
 import com.global.globalonline.activities.user.ChangeLoginPasswordActivity_;
 import com.global.globalonline.activities.user.ChangeTradePasswordActivity_;
+import com.global.globalonline.activities.virtualCurrency.ArchivedActivity_;
+import com.global.globalonline.activities.virtualCurrency.ChargeFeesActivity_;
 import com.global.globalonline.activities.virtualCurrency.MandatoryAdministrationActivity_;
 import com.global.globalonline.base.MyApplication;
 
@@ -56,8 +59,10 @@ public class MyFrament extends Fragment {
                 WithdrawalRMBActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_XuNiPay:
+                ChargeFeesActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_XuNiTiXian:
+                ArchivedActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_weiTuoManager:
                 MandatoryAdministrationActivity_.intent(getActivity()).start();
@@ -80,6 +85,7 @@ public class MyFrament extends Fragment {
             case R.id.ll_message:
                 break;
             case R.id.ll_woMen:
+                AboutUsActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_exit:
                 break;

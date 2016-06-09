@@ -6,6 +6,7 @@ import android.app.Dialog;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.tools.GetDialogUtil;
+import com.global.globalonline.tools.GetToastUtil;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,6 +33,7 @@ public class RestServiceImpl implements RestService {
                 if(dialog != null){
                     dialog.cancel();
                 }
+                GetToastUtil.getLog( call.request().url().encodedPath());
 
                 //if (baseBean.getErrorCode().equals("0")) {
                     callBackService.onResponse(call, response);

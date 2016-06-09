@@ -35,7 +35,7 @@ public class MapToParams {
         for(int var6 = 0; var6 < list.size(); ++var6) {
             s_token = s_token + (String)mapParams.get(list.get(var6)) + "|";
         }
-
+        GetToastUtil.getLog(s_token);
         s_token = MD5Util.getMD5String(s_token + UrlApi.key);
 
         mapParams.put("token",s_token) ;

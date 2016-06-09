@@ -40,7 +40,11 @@
         <activity android:name=".activities.virtualCurrency.MandatoryAdministrationActivity_" />
         <activity android:name=".activities.BaseActivie.KLineActivity_" />
         <activity android:name=".activities.BaseActivie.KLine_testActivity_" />
-        <activity android:name=".activities.test.KLineTestActivity_"></activity>
+        <activity android:name=".activities.test.KLineTestActivity_" />
+        <activity android:name=".activities.virtualCurrency.ChargeFeesActivity_" />
+        <activity android:name=".activities.virtualCurrency.ArchivedActivity_" />
+        <activity android:name=".activities.user.AboutUsActivity_" />
+        <activity android:name=".activities.virtualCurrency.ShouKuanActivity_"></activity>
     </application>
 
 </manifest>

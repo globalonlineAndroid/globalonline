@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:myxmlns="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/ac_base_backgroud"
+    tools:context="com.global.globalonline.activities.virtualCurrency.ChargeFeesActivity">
+
+    <com.global.globalonline.view.TitleView_
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        myxmlns:titletxt="@string/act_virtualcurrency_chargeFees_title"
+        myxmlns:operationtxt="@string/act_virtualcurrency_chargeFees_op"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/act_virtualcurrency_archived_keyong"
+            />
+        <TextView
+            android:id="@+id/tv_keyong"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/view_titleview_fanhui"
+            android:text="..."
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/act_registered_higth"
+        android:orientation="horizontal"
+        android:gravity="top"
+        android:paddingLeft="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/act_virtualcurrency_archived_dongjie"
+            />
+        <TextView
+            android:id="@+id/tv_dongjie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/view_titleview_fanhui"
+            android:text="..."
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/ac_base_fuceng"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/act_virtualcurrency_chargeFees_address"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/view_titleview_fanhui"
+            android:text="..."
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ac_base_llbackgroud_hui"
+            android:text="@string/act_virtualcurrency_chargeFees_miaoshu"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/act_virtualcurrency_chargeFees_text"
+            android:textColor="@color/ac_base_llbackgroud_hui"
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

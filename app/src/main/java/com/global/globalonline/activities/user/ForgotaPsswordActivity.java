@@ -62,7 +62,7 @@ public class ForgotaPsswordActivity extends BaseActivity {
         }
     }
 
-    public void send_code() {
+    public void  send_code() {
 
         String phone = et_phone.getText().toString();
         String stype = "2";

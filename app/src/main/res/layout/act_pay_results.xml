@@ -14,7 +14,7 @@
     <com.global.globalonline.view.TitleView_
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        myxmlns:titletxt="@string/act_account_payResults_title"
+        myxmlns:titletxt="@string/act_baseAct_certificationResults_title"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,14 +37,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/act_account_payResults_results"
+                android:text="你已经通过了环球在线审核"
                 android:textColor="@color/seagreen"
                 />
             <TextView
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/act_account_payResults_xinxi"
+                android:text="@string/act_baseAct_certificationResults_tex"
                 android:textColor="@color/ac_baseAct_cretificationResults_text"
                 />
 
@@ -58,7 +58,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/act_account_payResults_zhanghu"
+                    android:text="@string/act_baseAct_certificationResults_name"
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView
@@ -80,7 +80,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/act_account_payResults_price"
+                    android:text="@string/act_baseAct_certificationResults_type"
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView
@@ -102,7 +102,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/act_account_payResults_rmb"
+                    android:text="@string/act_baseAct_certificationResults_idCard"
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView
@@ -119,13 +119,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-
+                android:visibility="gone"
                 >
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/act_account_payResults_date"
+                    android:text="@string/act_baseAct_certificationResults_date"
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView

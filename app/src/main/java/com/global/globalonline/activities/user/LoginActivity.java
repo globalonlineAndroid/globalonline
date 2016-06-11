@@ -139,8 +139,6 @@ public class LoginActivity extends BaseActivity {
 
 
     public void initDate() {
-
-
         final ConfigService configService = GetRetrofitService.getRestClient(ConfigService.class);
         ParsMapBean parse = MapToParams.getMap(null);
 
@@ -233,7 +231,7 @@ public class LoginActivity extends BaseActivity {
                 String a = "";
             }
         });
-    }
+        }
 
 
 }

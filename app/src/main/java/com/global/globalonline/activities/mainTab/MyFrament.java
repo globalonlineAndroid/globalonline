@@ -1,5 +1,6 @@
 package com.global.globalonline.activities.mainTab;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -16,6 +17,8 @@ import com.global.globalonline.activities.virtualCurrency.ArchivedActivity_;
 import com.global.globalonline.activities.virtualCurrency.ChargeFeesActivity_;
 import com.global.globalonline.activities.virtualCurrency.MandatoryAdministrationActivity_;
 import com.global.globalonline.base.MyApplication;
+import com.zbar.lib.CaptureActivity;
+import com.zbar.lib.ShengChengActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -70,8 +73,12 @@ public class MyFrament extends Fragment {
             case R.id.ll_jiaoYiLiuShui:
                 break;
             case R.id.ll_shouKuan:
+                Intent intent_shengcheng = new Intent(getActivity(), ShengChengActivity.class);
+                startActivity(intent_shengcheng);
                 break;
             case R.id.ll_fuKuan:
+                Intent intent = new Intent(getActivity(), CaptureActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_renZheng:
                 CertificationActivity_.intent(getActivity()).start();

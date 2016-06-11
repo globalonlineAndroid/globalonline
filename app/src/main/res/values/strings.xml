@@ -2,6 +2,9 @@
     <string name="app_name">环球在线</string>
     <string name="view_titleView_fanhui">返回</string>
 
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <string name="hello">Hello World, QR_DemoActivity!</string>
+
     <!--主页-->
     <string name="act_main_title_home">主页</string>
     <string name="act_main_title_dating">交易大厅</string>
@@ -216,5 +219,32 @@
     <string name="act_virtualCurrency_shoukuan_title">收款</string>
     <string name="act_virtualCurrency_shoukuan_shuoming">收款说明</string>
     <string name="act_virtualCurrency_shoukuan_text">这里是说明内容</string>
+
+    <!--我要付款_1-->
+    <string name="act_capture_title">我要付款</string>
+
+    <!--我要付款_2-->
+    <string name="act_account_pay_title">我要付款</string>
+    <string name="act_account_pay_zhanghu">收款账户：</string>
+    <string name="act_account_pay_bizhong">收款币种：</string>
+    <string name="act_account_pay_RMB">支付人民币</string>
+    <string name="act_account_pay_biNumber">折合币数量：</string>
+    <string name="act_account_pay_jiaoyipwd">交易密码</string>
+    <string name="act_account_pay_tijiao">确认付款</string>
+    <string name="act_account_pay_shuoming">付款说明</string>
+    <string name="act_account_pay_text">本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>
+    <!--我要付款_3-->
+    <string name="act_account_payResults_title">我要付款</string>
+    <string name="act_account_payResults_results">付款成功：</string>
+    <string name="act_account_payResults_xinxi">您的付款信息：</string>
+    <string name="act_account_payResults_zhanghu">收款账户</string>
+    <string name="act_account_payResults_price">收款金额：</string>
+    <string name="act_account_payResults_rmb">折合币(现价)</string>
+    <string name="act_account_payResults_date">付款时间</string>
+
+
+    <!--虚拟币收款-->
+    <string name="act_account_virtualcollection_title">虚拟币收款</string>
+
 
 </resources>

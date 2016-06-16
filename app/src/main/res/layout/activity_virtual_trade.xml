@@ -358,7 +358,7 @@
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_mairu"
                             android:textColor="@color/white"
-                            android:background="@color/ac_virtual_chunk"
+                            android:background="@color/ac_base_tab"
                             android:textSize="16dp"
                             android:layout_marginRight="2dp"
                             />
@@ -391,7 +391,7 @@
                 <!--买入块-->
                 <LinearLayout
                     android:id="@+id/ll_buy"
-
+                    android:visibility="visible"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -503,6 +503,7 @@
                             android:layout_height="40dp"
                             android:paddingLeft="6dp"
                             android:textColor="@color/white"
+                            android:text="0"
                             android:background="@drawable/et_input"
                             />
                     </LinearLayout>
@@ -522,6 +523,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/tv_realprice"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="¥178"
@@ -676,6 +678,7 @@
                             android:layout_height="40dp"
                             android:paddingLeft="6dp"
                             android:textColor="@color/white"
+                            android:text="0"
                             android:background="@drawable/et_input"
                             />
                     </LinearLayout>
@@ -695,6 +698,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/tv_sell_realpeice"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="¥178"

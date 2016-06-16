@@ -53,7 +53,7 @@ public class ForgotaPsswordActivity extends BaseActivity {
     void click(View view){
         switch (view.getId()){
             case R.id.btn_send_code:
-                time = new TimeCount(60000, 1000,btn_send_code);
+
                 send_code();
                 break;
             case R.id.btn_tijiao:
@@ -77,11 +77,12 @@ public class ForgotaPsswordActivity extends BaseActivity {
             @Override
             public void onResponse(Call<CodeBean> call, Response<CodeBean> response) {
                 codeBean = response.body();
-                if (codeBean.getErrorCode().equals(0)) {
+                if (codeBean.getErrorCode().equals("0")) {
                     String a = "";
+                    time = new TimeCount(60000, 1000,btn_send_code);
                     time.start();
                 }else {
-
+                    GetToastUtil.getToads(ForgotaPsswordActivity.this,codeBean.getErrorCode());
                 }
             }
 

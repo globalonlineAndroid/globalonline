@@ -78,6 +78,7 @@ public class ChangeLoginPasswordActivity extends BaseActivity {
 
                 if(userBean.getErrorCode().equals("0")){
                     GetToastUtil.getToads(getApplicationContext(),"修改成功");
+                    finish();
                 }else {
 
                     GetToastUtil.getToads(getApplicationContext(),userBean.getMessage());

@@ -7,15 +7,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
+import com.global.globalonline.activities.BaseActivie.CertificationResultsActivity_;
 import com.global.globalonline.activities.RMB.RechargeRMBActivity_;
 import com.global.globalonline.activities.RMB.WithdrawalRMBActivity_;
+import com.global.globalonline.activities.select.SelectVirtualActivity_;
 import com.global.globalonline.activities.user.AboutUsActivity_;
 import com.global.globalonline.activities.user.CertificationActivity_;
 import com.global.globalonline.activities.user.ChangeLoginPasswordActivity_;
 import com.global.globalonline.activities.user.ChangeTradePasswordActivity_;
+import com.global.globalonline.activities.user.LoginActivity_;
 import com.global.globalonline.activities.virtualCurrency.ArchivedActivity_;
 import com.global.globalonline.activities.virtualCurrency.ChargeFeesActivity_;
-import com.global.globalonline.activities.virtualCurrency.MandatoryAdministrationActivity_;
 import com.global.globalonline.base.MyApplication;
 import com.zbar.lib.CaptureActivity;
 import com.zbar.lib.ShengChengActivity;
@@ -40,11 +42,15 @@ public class MyFrament extends Fragment {
     @AfterViews
     void init (){
 
-        tv_loginName.setText(MyApplication.userBean.getMobile());
-        tv_ename.setText(MyApplication.userBean.getUsername());
+        try {
+            tv_loginName.setText(MyApplication.userBean.getMobile());
+            tv_ename.setText(MyApplication.userBean.getUsername());
 
-        if(MyApplication.userBean.getIdentity_info() != null){
-            tv_isRenZheng.setText("已认证");
+            if (MyApplication.userBean.getIdentity_info() != null) {
+                tv_isRenZheng.setText("已认证");
+            }
+        }catch (Exception e){
+            LoginActivity_.intent(getActivity()).start();
         }
 
     }
@@ -68,9 +74,13 @@ public class MyFrament extends Fragment {
                 ArchivedActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_weiTuoManager:
-                MandatoryAdministrationActivity_.intent(getActivity()).start();
+                Intent weituo = new Intent(getActivity(), SelectVirtualActivity_.class);
+                weituo.putExtra("type","weituo");
+                startActivity(weituo);
+               // MandatoryAdministrationActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_jiaoYiLiuShui:
+                SelectVirtualActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_shouKuan:
                 Intent intent_shengcheng = new Intent(getActivity(), ShengChengActivity.class);
@@ -81,7 +91,11 @@ public class MyFrament extends Fragment {
                 startActivity(intent);
                 break;
             case R.id.ll_renZheng:
-                CertificationActivity_.intent(getActivity()).start();
+                if(MyApplication.userBean.getIdentity_info() != null){
+                    CertificationResultsActivity_.intent(getActivity()).start();
+                }else {
+                    CertificationActivity_.intent(getActivity()).start();
+                }
                 break;
             case R.id.ll_updateLoginPWD:
                 ChangeLoginPasswordActivity_.intent(getActivity()).start();
@@ -95,6 +109,7 @@ public class MyFrament extends Fragment {
                 AboutUsActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_exit:
+                LoginActivity_.intent(getActivity()).start();
                 break;
 
         }

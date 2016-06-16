@@ -105,7 +105,7 @@ public class MapToParams {
 
         String token = getToken(parsMap);
         //parsMap.put("token",token);
-        parsMap.put("token","0");
+        parsMap.put("token",token);
 
 
         return parsMap;

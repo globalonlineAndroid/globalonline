@@ -6,8 +6,8 @@ package com.global.globalonline.bean;
 public class IdentifyBean {
 
      private String name;
-
     private  String identitytype;
+    private  String identityno;
 
     public String getIdentityno() {
         return identityno;
@@ -33,5 +33,5 @@ public class IdentifyBean {
         this.identitytype = identitytype;
     }
 
-    private  String identityno;
+
 }

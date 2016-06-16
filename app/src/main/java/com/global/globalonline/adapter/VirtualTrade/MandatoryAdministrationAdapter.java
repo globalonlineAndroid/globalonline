@@ -8,7 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
-import com.global.globalonline.bean.DelegateBean;
+import com.global.globalonline.bean.RecordListBean;
+import com.global.globalonline.dao.TishiResDao;
+import com.global.globalonline.dao.WeiTuoMangerDao;
+import com.global.globalonline.tools.DateUtils;
+import com.global.globalonline.tools.GetDialogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,14 +23,16 @@ import java.util.List;
 public class MandatoryAdministrationAdapter extends BaseAdapter {
 
     LayoutInflater layoutInflater = null;
-    List<DelegateBean> list = new ArrayList<DelegateBean>();
+    List<RecordListBean> list = new ArrayList<RecordListBean>();
     Activity activity;
+    WeiTuoMangerDao weiTuoMangerDao;
 
 
-    public MandatoryAdministrationAdapter(Activity activity ,  List<DelegateBean> list) {
+    public MandatoryAdministrationAdapter(Activity activity ,  List<RecordListBean> list,WeiTuoMangerDao weiTuoMangerDao) {
         layoutInflater = LayoutInflater.from(activity);
         this.list = list;
         this.activity = activity;
+        this.weiTuoMangerDao = weiTuoMangerDao;
 
     }
 
@@ -46,30 +52,64 @@ public class MandatoryAdministrationAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         Mandatory  viewHolder = null;
+
         if(convertView == null){
-            if(position == 0) {
-                convertView = layoutInflater.inflate(R.layout.act_item_top_title, null);
-                viewHolder = new Mandatory();
 
-                viewHolder.tv_number = (TextView) convertView.findViewById(R.id.tv_number);
+             convertView = layoutInflater.inflate(R.layout.act_item_mandatory_administration, null);
+             viewHolder = new Mandatory();
 
-                convertView.setTag(viewHolder);
-            }else {
+             viewHolder.tv_quxiao = (TextView) convertView.findViewById(R.id.tv_quxiao);
+             viewHolder.tv_status = (TextView) convertView.findViewById(R.id.tv_status);
+             viewHolder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);
+             viewHolder.tv_type = (TextView) convertView.findViewById(R.id.tv_type);
+             viewHolder.tv_number = (TextView) convertView.findViewById(R.id.tv_number);
+             viewHolder.tv_weituoprice = (TextView) convertView.findViewById(R.id.tv_weituoprice);
+             viewHolder.tv_shouxuprice = (TextView) convertView.findViewById(R.id.tv_shouxuprice);
+             viewHolder.tv_weituojiage = (TextView) convertView.findViewById(R.id.tv_weituojiage);
+             viewHolder.tv_chengjiaonumber = (TextView) convertView.findViewById(R.id.tv_chengjiaonumber);
+             viewHolder.tv_chengjiaojine = (TextView) convertView.findViewById(R.id.tv_chengjiaojine);
+             viewHolder.tv_avgprice = (TextView) convertView.findViewById(R.id.tv_avgprice);
 
-                convertView = layoutInflater.inflate(R.layout.act_item_mandatory_administration, null);
-                viewHolder = new Mandatory();
+             convertView.setTag(viewHolder);
 
-                viewHolder.tv_number = (TextView) convertView.findViewById(R.id.tv_number);
-
-                convertView.setTag(viewHolder);
-            }
         }else {
             viewHolder = (Mandatory)convertView.getTag();
         }
+        final int index = position;
+        RecordListBean recordListBean = list.get(position);
 
-        viewHolder.tv_number.setText(position+"");
+
+        viewHolder.tv_date.setText(DateUtils.getDateString(recordListBean.getTime()));
+        viewHolder.tv_type.setText(recordListBean.getTradetype());
+        viewHolder.tv_number.setText(recordListBean.getNumber());
+        viewHolder.tv_date.setText(recordListBean.getTime());
+        float weituoprice = (Float.parseFloat(recordListBean.getNumber())*Float.parseFloat(recordListBean.getPrice()));
+        viewHolder.tv_weituoprice.setText(weituoprice+"");
+        float feeprice = weituoprice*Float.parseFloat(recordListBean.getFee())/100;
+        viewHolder.tv_shouxuprice.setText(feeprice+"");
+        viewHolder.tv_weituojiage.setText(recordListBean.getPrice());
+        viewHolder.tv_chengjiaonumber.setText(recordListBean.getVolume());
+        viewHolder.tv_chengjiaojine.setText(recordListBean.getDealmoney());
+        Float avg = Float.parseFloat(recordListBean.getDealmoney())/Float.parseFloat(recordListBean.getNumber());
+        viewHolder.tv_avgprice.setText(avg+"");
+
+        viewHolder.tv_quxiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GetDialogUtil.tishi(activity, "提示", "点击确定将无法恢复,是否继续", new TishiResDao() {
+                    @Override
+                    public void getTiShi(String args) {
+                        weiTuoMangerDao.chexiao(index);
+                    }
+                });
+            }
+        });
+
+
+
+
 
         return convertView;
     }
@@ -79,7 +119,7 @@ public class MandatoryAdministrationAdapter extends BaseAdapter {
     /*存放控件 的ViewHolder*/
     public final class Mandatory {
 
-        TextView tv_buquan;
+
         TextView tv_quxiao;
         TextView tv_status;
         TextView tv_date;

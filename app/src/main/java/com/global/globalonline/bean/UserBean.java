@@ -14,9 +14,7 @@ public class UserBean {
 
        private IdentifyBean identity_info;
 
-
-
-    private   String auth_key ;
+       private   String auth_key ;
        private   String mobile ;
        private   String timestamp ;
 

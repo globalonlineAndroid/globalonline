@@ -45,7 +45,6 @@
             android:id="@+id/tv_banktype"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:hint="@string/act_WithdrawalRMBActivity_banktype"
             style="@style/editText"
             android:paddingRight="6dp"
@@ -67,14 +66,15 @@
 
 
         <EditText
-            android:id="@+id/et_phone"
+            android:id="@+id/et_cardNum"
+            android:inputType="number"
+            android:maxLength="23"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:paddingRight="6dp"
             android:hint="@string/act_WithdrawalRMBActivity_bankNumber"
-            android:inputType="number"
-            android:maxLength="11"
+
             style="@style/editText"
             />
 
@@ -89,7 +89,9 @@
         android:paddingLeft="20dp"
         >
         <EditText
-            android:id="@+id/et_yanzhengma"
+            android:id="@+id/et_reCardNum"
+            android:inputType="number"
+            android:maxLength="23"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/act_WithdrawalRMBActivity_rebankNumber"
@@ -108,7 +110,7 @@
 
 
         <EditText
-            android:id="@+id/et_pwd"
+            android:id="@+id/et_toName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/act_WithdrawalRMBActivity_name"
@@ -127,7 +129,7 @@
 
 
         <EditText
-            android:id="@+id/et_rePwd"
+            android:id="@+id/et_kaihuhang"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/act_WithdrawalRMBActivity_kaihu"
@@ -146,10 +148,11 @@
         android:paddingLeft="20dp"
         >
         <EditText
-            android:id="@+id/et_tuijianren"
+            android:id="@+id/et_price"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/act_WithdrawalRMBActivity_price"
+            android:inputType="numberDecimal"
             style="@style/editText"
             />
     </LinearLayout>

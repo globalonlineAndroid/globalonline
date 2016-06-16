@@ -70,14 +70,21 @@ public class ChangeTradePasswordActivity extends BaseActivity {
     }
 
     public void send_code() {
+
+
+        String stype = "3";
+
+
+
         stringMap = new HashMap<String, String>();
         String phone = tv_phone.getText().toString();
 
         stringMap = new HashMap<String, String>();
-        stringMap.put("mobile", phone);
-        stringMap.put("stype", "3");
+        stringMap.put("mobile", "18633492926");
+        stringMap.put("stype",stype);
 
-        Map<String,String>  map= MapToParams.getParsMap(stringMap,"auth_key");
+       // Map<String,String>  map= MapToParams.getParsMap(stringMap,"auth_key");
+        Map<String,String>  map= MapToParams.getParsMap(stringMap);
 
         RestService  restService = new RestServiceImpl();
 
@@ -121,7 +128,7 @@ public class ChangeTradePasswordActivity extends BaseActivity {
         stringMap.put("code",code);
         stringMap.put("codetype",codeBean.getCodetype());
         stringMap.put("new_pwd1",trade_pwd);
-        stringMap.put("new_pwd1",trade_repwd);
+        stringMap.put("new_pwd2",trade_repwd);
 
 
         Map<String,String> parsMap = MapToParams.getParsMap(stringMap);
@@ -135,6 +142,7 @@ public class ChangeTradePasswordActivity extends BaseActivity {
                 UserBean userBean = (UserBean) response.body();
                 if(userBean.getErrorCode().equals("0")){
                     GetToastUtil.getToads(getApplicationContext(),"修改成功");
+                    finish();
                 }else {
 
                     GetToastUtil.getToads(getApplicationContext(),userBean.getMessage());

@@ -58,4 +58,12 @@ public class StringUtil {
     }
 
 
+    public static String getCarNumberForment(String  carNumber) {
+        return "尾号"+carNumber.substring(carNumber.length()-4,carNumber.length());
+    }
+
+
+
+
+
 }

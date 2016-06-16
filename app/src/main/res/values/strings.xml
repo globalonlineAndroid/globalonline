@@ -115,10 +115,13 @@
     <string name="act_RechargeRMBActivity_op">充值记录</string>
     <string name="act_RechargeRMBActivity_tab1">网银充值</string>
     <string name="act_RechargeRMBActivity_tab2">支付宝充值</string>
-    <string name="act_RechargeRMBActivity_zhanghao">汇出账号:</string>
-    <string name="act_RechargeRMBActivity_name">汇款姓名:</string>
-    <string name="act_RechargeRMBActivity_price">汇款金额:</string>
-    <string name="act_RechargeRMBActivity_shuoming">汇款说明:</string>
+
+    <string name="act_RechargeRMBActivity_zhanghao">充值账号:\t\t\t\t</string>
+    <string name="act_RechargeRMBActivity_price">充值金额:\t\t\t\t</string>
+    <string name="act_RechargeRMBActivity_name">充值人姓名:</string>
+    <string name="act_RechargeRMBActivity_phone">手机号:\t\t\t\t\t/t</string>
+    <string name="act_RechargeRMBActivity_shuoming">备注:\t\t\t\t\t\t\t\t\t</string>
+
     <string name="act_RechargeRMBActivity_tijiao">提 交</string>
     <string name="act_RechargeRMBActivity_buzhou">请您按如下步骤操作：</string>
     <string name="act_RechargeRMBActivity_test">
@@ -149,11 +152,12 @@
 
     <!--委托管理-->
     <string name="act_ma_title">委托管理</string>
+    <string name="act_ma_op">历史委托</string>
 
-    <string name="act_ma_caozuo">操作</string>
+    <string name="act_ma_caozuo">状态/操作</string>
     <string name="act_ma_status">状态</string>
-    <string name="act_ma_time">时间</string>
-    <string name="act_ma_type">类别</string>
+    <string name="act_ma_time">委托时间</string>
+    <string name="act_ma_type">委托类别</string>
     <string name="act_ma_number">委托数量</string>
     <string name="act_ma_weituojine">委托金额</string>
     <string name="act_ma_shouxufei">手续费</string>
@@ -161,6 +165,22 @@
     <string name="act_ma_chengjiaonumber">成交数量</string>
     <string name="act_ma_chengjiaojine">成交金额</string>
     <string name="act_ma_avgprice">平均成交价</string>
+
+
+    <!--历史委托-->
+    <string name="act_hisma_title">历史委托</string>
+
+
+    <string name="act_hisma_status">状态</string>
+    <string name="act_hisma_time">委托时间</string>
+    <string name="act_hisma_type">委托类别</string>
+    <string name="act_hisma_number">委托数量</string>
+    <string name="act_hisma_weituojine">委托金额</string>
+    <string name="act_hisma_shouxufei">手续费</string>
+    <string name="act_hisma_weituojiae">委托价格</string>
+    <string name="act_hisma_chengjiaonumber">成交数量</string>
+    <string name="act_hisma_chengjiaojine">成交金额</string>
+    <string name="act_hisma_avgprice">平均成交价</string>
 
     <!--以上翻译过了-->
 
@@ -245,6 +265,68 @@
 
     <!--虚拟币收款-->
     <string name="act_account_virtualcollection_title">虚拟币收款</string>
+
+    <!--选择虚拟币-->
+
+    <string name="act_select_virtual_title">交易流水</string>
+
+    <!--虚拟币交易流水-->
+    <string name="act_historicalRecord_virtualdealflow_title">交易流水</string>
+    <string name="act_historicalRecord_virtualdealflow_tab1">交易</string>
+    <string name="act_historicalRecord_virtualdealflow_tab2">转账</string>
+
+    <string name="act_historicalRecord_virtualdealflow_table_title1">类型</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title2">虚拟币数量</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title3">人民币数量</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title4">状态</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title5">交易时间</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title6">平均交易价</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title7">手续费</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title8">对方账号</string>
+
+
+    <!--提现记录-->
+    <string name="act_historicalRecord_tixianflow_title">提现记录</string>
+    <string name="act_historicalRecord_tixianfloi_shuoming">最近二十笔提现记录</string>
+    <string name="act_historicalRecord_tixianflow_table_title1">提现时间</string>
+    <string name="act_historicalRecord_tixianflow_table_title2">提现账户</string>
+    <string name="act_historicalRecord_tixianflow_table_title3">银行卡类型</string>
+    <string name="act_historicalRecord_tixianflow_table_title4">银行卡号</string>
+    <string name="act_historicalRecord_tixianflow_table_title5">提现金额</string>
+    <string name="act_historicalRecord_tixianflow_table_title6">手续费</string>
+    <string name="act_historicalRecord_tixianflow_table_title7">状态</string>
+
+
+    <!--人民币充值记录-->
+    <string name="act_historicalRecord_RMBChongZhi_title">人民币充值记录</string>
+    <string name="act_historicalRecord_RMBChongZhi_shuoming">最近二十笔充值记录</string>
+    <string name="act_historicalRecord_RMBChongZhi_table_title1">订单号</string>
+    <string name="act_historicalRecord_RMBChongZhi_table_title2">时间</string>
+    <string name="act_historicalRecord_RMBChongZhi_table_title3">金额</string>
+    <string name="act_historicalRecord_RMBChongZhi_table_title4">状态</string>
+    <string name="act_historicalRecord_RMBChongZhi_table_title5">充值方式</string>
+
+
+    <!--虚拟币转出记录-->
+    <string name="act_historicalRecord_zhuanchuVirtual_title">转出比特币记录</string>
+    <string name="act_historicalRecord_zhuanchuVirtual_shuoming">最近十笔转出记录</string>
+
+    <string name="act_historicalRecord_zhuanchuVirtual_table_title1">转出时间</string>
+    <string name="act_historicalRecord_zhuanchuVirtual_table_title2">转出数量</string>
+    <string name="act_historicalRecord_zhuanchuVirtual_table_title3">手续费</string>
+    <string name="act_historicalRecord_zhuanchuVirtual_table_title4">转出地址</string>
+    <string name="act_historicalRecord_zhuanchuVirtual_table_title5">转出状态</string>
+
+    <!--虚拟币转入记录-->
+    <string name="act_historicalRecord_zhuanruVirtual_title">转出比特币记录</string>
+    <string name="act_historicalRecord_zhuanruVirtual_shuoming">最近十笔转出记录</string>
+
+    <string name="act_historicalRecord_zhuanruVirtual_table_title1">转入地址</string>
+    <string name="act_historicalRecord_zhuanruVirtual_table_title2">转入金额</string>
+    <string name="act_historicalRecord_zhuanruVirtual_table_title3">最后更新</string>
+    <string name="act_historicalRecord_zhuanruVirtual_table_title4">转入状态</string>
+
+
 
 
 </resources>

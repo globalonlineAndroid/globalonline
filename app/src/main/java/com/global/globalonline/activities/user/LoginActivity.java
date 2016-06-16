@@ -32,6 +32,7 @@ import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.tools.SharedPreferencesUtil;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -65,7 +66,7 @@ public class LoginActivity extends BaseActivity {
     @AfterViews
     void init() {
         dbHelper = DBHelper.getInstance(LoginActivity.this);
-        GetSelectBouncedUtil.get(this,tv_guojia, StaticBase.COUTRY,"39");
+
         initDate();
     }
 
@@ -120,6 +121,7 @@ public class LoginActivity extends BaseActivity {
                 if(userBean.getErrorCode().equals("0")) {
 
                     MyApplication.userBean = userBean;
+                    SharedPreferencesUtil.setUserInfo(LoginActivity.this,userBean);
                     Intent i = new Intent(getApplicationContext(), MainActivity_.class);
                     startActivity(i);
                     finish();
@@ -219,6 +221,7 @@ public class LoginActivity extends BaseActivity {
 
                     }
                     dbHelper.addDataTable(dataSources);
+                    GetSelectBouncedUtil.get(LoginActivity.this,tv_guojia, StaticBase.COUTRY,"39");
 
 
                 }else {

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.global.globalonline.R;
+import com.global.globalonline.base.GetConfiguration;
 import com.global.globalonline.base.UrlApi;
 import com.global.globalonline.bean.VirtualTradingBean;
 
@@ -68,7 +69,7 @@ public class HomePageAdapter extends BaseAdapter {
             viewHolder = (ViewHolder)convertView.getTag();
         }
         VirtualTradingBean virtualTrading = list.get(position);
-        viewHolder.tv_xunibiName.setText(virtualTrading.getName());
+        viewHolder.tv_xunibiName.setText(GetConfiguration.LANGUAGE.equals(GetConfiguration.ZH)?virtualTrading.getName():virtualTrading.getEname());
         viewHolder.tv_price.setText(virtualTrading.getPrice());
         viewHolder.tv_zhangfu.setText(virtualTrading.getRatio()+"%");
         viewHolder.tv_chengjiaoe.setText(virtualTrading.getTurnover());

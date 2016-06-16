@@ -5,5 +5,5 @@ package com.global.globalonline.dao;
  */
 public interface TishiResDao {
 
-    public void getTiShi(String pars);
+    public void getTiShi(String args);
 }

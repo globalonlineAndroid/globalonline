@@ -36,17 +36,19 @@
         android:gravity="center_vertical"
         >
         <TextView
+            android:id="@+id/tv_wangyi"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/act_RechargeRMBActivity_tab1"
             android:textColor="@color/white"
+            android:background="@color/ac_base_tab"
             android:textSize="16dp"
-            android:background="@color/ac_virtual_chunk"
             android:layout_marginRight="2dp"
             />
         <TextView
+            android:id="@+id/tv_zhifubao"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_width="0dp"
@@ -68,6 +70,32 @@
         android:paddingRight="10dp"
         android:background="@color/ac_virtual_chunk"
         >
+
+        <LinearLayout
+            android:id="@+id/ll_cartype"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/act_registered_higth"
+            android:background="@drawable/et_input"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+
+
+            <TextView
+
+                android:id="@+id/tv_banktype"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/act_WithdrawalRMBActivity_banktype"
+                style="@style/editText"
+                android:paddingRight="6dp"
+                android:drawableRight="@drawable/xiala_bai"
+                />
+
+        </LinearLayout>
+
         <LinearLayout
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
@@ -81,12 +109,35 @@
                 />
 
             <EditText
+                android:id="@+id/et_huichuzhanghao"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="6dp"
                 android:background="@drawable/et_input"
                 android:textColor="@color/white"
                 android:paddingLeft="6dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_RechargeRMBActivity_price"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/et_input"
+                android:paddingLeft="6dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="6dp"
                 />
         </LinearLayout>
         <LinearLayout
@@ -102,6 +153,7 @@
                 />
 
             <EditText
+                android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:textColor="@color/white"
                 android:layout_height="40dp"
@@ -110,8 +162,6 @@
                 android:background="@drawable/et_input"
                 />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
@@ -120,19 +170,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/act_RechargeRMBActivity_price"
+                android:text="@string/act_RechargeRMBActivity_phone"
                 android:textColor="@color/white"
                 />
 
             <EditText
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/et_input"
                 android:paddingLeft="6dp"
                 android:textColor="@color/white"
+                android:inputType="number"
+                android:maxWidth="11dp"
                 android:layout_marginLeft="6dp"
                 />
         </LinearLayout>
+
+
+
 
         <LinearLayout
             android:layout_marginTop="8dp"
@@ -147,6 +203,7 @@
                 />
 
             <EditText
+                android:id="@+id/et_miaoshu"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/et_input"
@@ -157,6 +214,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_tijiao"
             android:layout_width="match_parent"
             android:layout_marginTop="16dp"
             android:layout_height="wrap_content"

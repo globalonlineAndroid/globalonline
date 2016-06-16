@@ -9,6 +9,7 @@ import android.widget.ListView;
 import com.global.globalonline.R;
 import com.global.globalonline.activities.virtualCurrency.VirtualTradeActivity;
 import com.global.globalonline.adapter.mainTab.TradingFloorAdapter;
+import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.VirtualListItemBean;
 import com.global.globalonline.bean.VirtualTradingBean;
 import com.global.globalonline.service.CallBackService;
@@ -18,6 +19,7 @@ import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.virtualTrading.VirtualService;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.view.AutoSwipeRefreshLayout;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -37,7 +39,7 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
 
 
     @ViewById
-    SwipeRefreshLayout srl_tradingFloor;
+    AutoSwipeRefreshLayout srl_tradingFloor;
     @ViewById
     ListView lv_tradingFloor;
 
@@ -52,11 +54,10 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
     @AfterViews()
     void init(){
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
-        initlist();
+       // initlist();
+        srl_tradingFloor.autoRefresh();
 
-
-        srl_tradingFloor.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
-                R.color.indianred,R.color.maroon);
+        srl_tradingFloor.setColorSchemeResources(StaticBase.colorResIds);
         srl_tradingFloor.setOnRefreshListener(this);
 
         lv_tradingFloor.setOnItemClickListener(new AdapterView.OnItemClickListener() {

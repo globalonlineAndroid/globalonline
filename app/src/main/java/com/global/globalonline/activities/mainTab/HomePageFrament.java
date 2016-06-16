@@ -21,6 +21,7 @@ import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.virtualTrading.VirtualService;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.view.AutoSwipeRefreshLayout;
 import com.global.globalonline.view.LocalImageHolderView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -39,7 +40,7 @@ import retrofit2.Response;
 public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
 
     @ViewById
-    SwipeRefreshLayout srl_tradingFloor;
+    AutoSwipeRefreshLayout srl_tradingFloor;
     @ViewById
     ListView lv_tradingFloor;
 
@@ -66,8 +67,8 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
 
 
-        initlist();
-
+        //initlist();
+        srl_tradingFloor.autoRefresh();
         lv_tradingFloor.addHeaderView(initGuanGao());
         srl_tradingFloor.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
                 R.color.indianred,R.color.maroon);

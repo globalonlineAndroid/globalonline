@@ -2,6 +2,8 @@ package com.global.globalonline.activities.virtualCurrency;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +30,7 @@ import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.virtualTrading.VirtualService;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.tools.StringUtil;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -49,7 +52,7 @@ public class VirtualTradeActivity extends BaseActivity {
     ListView lv_mai,lv_sell;
     @ViewById
     TextView back,tv_name,tv_price,tv_zhangfu,tv_chengjiaoe,tv_chengjiaoliang,tv_minprice,tv_maxprice,tv_buy,
-            tv_sell,
+            tv_sell,tv_realprice,tv_sell_realpeice,
             tv_buy_keyongRMB,tv_buy_kemaixunibi,tv_buy_login,
             tv_sell_login,tv_sell_keyongXuNiBi,tv_sell_dongjiexunibi;
     @ViewById
@@ -94,6 +97,92 @@ public class VirtualTradeActivity extends BaseActivity {
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
         symbol = getIntent().getStringExtra("symbol");
         initView();
+
+        et_buy_price.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!StringUtil.isBlank(s.toString())) {
+                    float price = Float.parseFloat(s.toString());
+                    float number = Float.parseFloat(et_buy_number.getText().toString());
+
+                    tv_realprice.setText("¥" + (price * number));
+                }
+            }
+        });
+        et_buy_number.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!StringUtil.isBlank(s.toString())) {
+                    float number = Float.parseFloat(s.toString());
+                    float price = Float.parseFloat(et_buy_price.getText().toString());
+
+                    tv_realprice.setText("¥" + (price * number));
+                }
+            }
+        });
+
+        et_sell_price.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!StringUtil.isBlank(s.toString())) {
+                    float price = Float.parseFloat(s.toString());
+                    float number = Float.parseFloat(et_sell_number.getText().toString());
+
+                    tv_sell_realpeice.setText("¥" + (price * number));
+                }
+            }
+        });
+
+        et_sell_number.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!StringUtil.isBlank(s.toString())) {
+                    float number = Float.parseFloat(s.toString());
+                    float price = Float.parseFloat(et_sell_price.getText().toString());
+                    tv_sell_realpeice.setText("¥" + (price * number));
+                }
+            }
+        });
     }
 
     @Click({R.id.back,R.id.tv_mairu_tab,R.id.tv_maichu_tab,R.id.tv_chedan,R.id.btn_buy, R.id.btn_sell,

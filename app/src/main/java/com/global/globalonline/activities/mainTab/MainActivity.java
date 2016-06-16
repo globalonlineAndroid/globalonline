@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
+import com.global.globalonline.base.GetConfiguration;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -26,7 +27,7 @@ public class MainActivity extends FragmentActivity {
     @ViewById
     ImageButton ibtn_homepage,ibtn_tradingfloor,ibtn_my;
     @ViewById
-    TextView title,tv_english;
+    TextView title,tv_english,operation;
     @ViewById
     LinearLayout xiala;
 
@@ -45,6 +46,11 @@ public class MainActivity extends FragmentActivity {
     void init(){
         initComponents();
         Locale.setDefault(Locale.CHINESE);
+        if(GetConfiguration.LANGUAGE.equals(GetConfiguration.ZH)){
+            operation.setText("中文");
+        }else {
+            operation.setText("En");
+        }
     }
 
 
@@ -62,10 +68,11 @@ public class MainActivity extends FragmentActivity {
                 break;
             case R.id.tv_english:
                 checkLa(Locale.ENGLISH);
+                GetConfiguration.LANGUAGE = GetConfiguration.EN;
                 break;
             case R.id.tv_cn:
                 checkLa(Locale.CHINESE);
-
+                GetConfiguration.LANGUAGE = GetConfiguration.ZH;
                 break;
         }
 

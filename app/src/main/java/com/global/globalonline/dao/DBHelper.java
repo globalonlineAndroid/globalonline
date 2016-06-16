@@ -117,6 +117,23 @@ public class DBHelper {
         }
         return dataSourceList;
     }
+
+    /* 根据 Module 查询列表
+     *
+     * */
+    public List<DataSource> getByModeOrId(String modekey,String id_)
+    {
+
+        List<DataSource> dataSourceList = new ArrayList<DataSource>();
+        if(modekey!=null) {
+            dataSourceList = dataSourceDao.queryBuilder()
+                    .where(DataSourceDao.Properties.Module.eq(modekey)
+                             ,DataSourceDao.Properties.Id_.eq(id_)
+                    )
+                    .list();
+        }
+        return dataSourceList;
+    }
     /** 按id删除 */
     public void clearByIdData(long Id)
     {

@@ -21,11 +21,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.mainTab.MainActivity_" />
         <activity android:name=".activities.user.LoginActivity_">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".activities.user.RegisteredActivity_" />
         <activity android:name=".activities.user.ChangeLoginPasswordActivity_" />
@@ -37,9 +33,11 @@
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
-        <meta-data
+        <!--
+            <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        -->
 
         <activity android:name=".activities.BaseActivie.ServiceAgreementActivity_" />
         <activity android:name=".activities.virtualCurrency.VirtualTradeActivity_" />
@@ -61,7 +59,21 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
-        <activity android:name=".activities.select.SelectVirtualActivity_"></activity>
+        <activity android:name=".activities.select.SelectVirtualActivity_" />
+        <activity android:name=".activities.HistoricalRecord.VirtualDealFlowActivity_"></activity>
+        <activity android:name=".activities.HistoricalRecord.RMBChongZhiFlowActivity_"></activity>
+        <activity android:name=".activities.HistoricalRecord.TiXianFlowActivity_"></activity>
+        <activity android:name=".activities.HistoricalRecord.ZhuanChuVirtualFlowActivity_"></activity>
+        <activity android:name=".activities.HistoricalRecord.ZhuanRuVirtualFlowActivity_"></activity>
+        <activity android:name=".activities.HistoricalRecord.HisWeiTuoActivity_"></activity>
+        <activity android:name=".activities.startPage.SplashActivity_">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.startPage.GuideActivity"></activity>
     </application>
 
 </manifest>

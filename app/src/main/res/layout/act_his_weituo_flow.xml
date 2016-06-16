@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:myxmlns="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/ac_base_backgroud"
+    tools:context="com.global.globalonline.activities.virtualCurrency.MandatoryAdministrationActivity">
+
+    <com.global.globalonline.view.TitleView_
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        myxmlns:titletxt="@string/act_hisma_title"
+
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+           <com.global.globalonline.view.AutoSwipeRefreshLayout
+                    android:id="@+id/srl_ma_tradingFloor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                            <View
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ac_base_fenGeXian"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+                                <LinearLayout
+                                    android:layout_width="117dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_buquan"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_hisma_status"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_date"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_time"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_type"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_type"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_number"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_number"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_weituoprice"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_weituojine"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_shouxuprice"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_shouxufei"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_weituojiage"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_weituojiae"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_chengjiaonumber"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_chengjiaonumber"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_chengjiaojine"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_chengjiaojine"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/ac_base_fenGeXian"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_avgprice"
+                                        android:gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/act_ma_avgprice"
+                                        android:textColor="@color/btn_queding"
+                                        />
+
+                                </LinearLayout>
+
+
+
+
+                            </LinearLayout>
+                            <View
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ac_base_fenGeXian"/>
+
+
+
+
+                            <ListView
+                               android:id="@+id/lv_ma_tradingFloor"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:dividerHeight="0dp"
+                               android:divider="@color/ac_base_backgroud"
+                               >
+                            </ListView>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+
+
+            </com.global.globalonline.view.AutoSwipeRefreshLayout>
+        </LinearLayout>
+
+
+</LinearLayout>

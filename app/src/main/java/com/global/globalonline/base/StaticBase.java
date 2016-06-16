@@ -1,5 +1,9 @@
 package com.global.globalonline.base;
 
+import android.support.annotation.ColorRes;
+
+import com.global.globalonline.R;
+
 /**
  * Created by lijl on 16/5/29.
  */
@@ -13,4 +17,17 @@ public class StaticBase {
     public  static  String VIRTUALOIN = "virtualoin";
     public  static  String BANKTYPE="cartype";
     /*end*/
+
+
+    @ColorRes
+    public static int[] colorResIds = {R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
+            R.color.indianred,R.color.maroon};
+
+    /*public static void  set(){
+
+        srl_trading.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
+                R.color.indianred,R.color.maroon);
+    }*/
+
+
 }

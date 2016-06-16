@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/start2" />
+
+    <Button
+        android:id="@+id/tiaoguo"
+        android:layout_width="170sp"
+        android:layout_height="40sp"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        android:text="直  接  进  入"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_jinzhi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

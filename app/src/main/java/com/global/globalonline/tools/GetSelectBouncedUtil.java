@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.OptionsPickerView;
+import com.global.globalonline.base.GetConfiguration;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.CoutryBean;
 import com.global.globalonline.dao.DBHelper;
@@ -84,4 +85,18 @@ public class GetSelectBouncedUtil {
             }
         });
     }
+
+    public static String getBankName(Activity activity,String mouble, String id_){
+        String bankName = "";
+
+        DBHelper dbHelper = DBHelper.getInstance(activity);
+
+        DataSource dataSource = dbHelper.getByModeOrId(mouble,id_).get(0);
+
+        bankName = GetConfiguration.isZh()?dataSource.getName():dataSource.getEname();
+
+
+        return bankName;
+    }
+
 }

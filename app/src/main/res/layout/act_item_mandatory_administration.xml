@@ -14,16 +14,16 @@
         android:orientation="horizontal"
         >
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="117dp"
         android:layout_height="120dp"
         android:gravity="center"
         android:padding="12dp"
         >
         <TextView
-            android:id="@+id/tv_buquan"
+            android:id="@+id/tv_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="补全信息"
+            android:text="尚未付款"
             android:textColor="@color/red"
             />
         <View
@@ -36,7 +36,7 @@
             android:id="@+id/tv_quxiao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="取消"
+            android:text="撤消"
             android:textColor="@color/red"
             />
     </LinearLayout>
@@ -46,26 +46,7 @@
             android:layout_height="match_parent"
             android:background="@color/ac_base_fenGeXian"
             />
-        <LinearLayout
-        android:layout_width="80dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        >
-        <TextView
-            android:id="@+id/tv_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="尚未付款"
-            android:textColor="@color/white"
-            />
 
-    </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/ac_base_fenGeXian"
-            />
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="match_parent"
@@ -88,7 +69,7 @@
             android:background="@color/ac_base_fenGeXian"
             />
         <LinearLayout
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:gravity="center"
             >

@@ -83,7 +83,7 @@ public class KLineActivity extends BaseActivity implements OnValueSelectedListen
 
     public void initView(){
         Map<String, String> stringMap = new HashMap<String, String>();
-        stringMap.put("symbol","6");
+        stringMap.put("symbol",symbol);
         stringMap.put("limit","50");
         stringMap.put("step","5");
         stringMap = MapToParams.getParsMap(stringMap);

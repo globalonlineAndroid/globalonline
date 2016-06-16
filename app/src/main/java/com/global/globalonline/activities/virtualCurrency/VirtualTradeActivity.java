@@ -257,6 +257,8 @@ public class VirtualTradeActivity extends BaseActivity {
                     tv_name.setText(coinsDetailBean.getName());
                     tv_price.setText(coinsDetailBean.getPrice());
                     tv_zhangfu.setText(coinsDetailBean.getRatio());
+                    float buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance())/Float.parseFloat(coinsDetailBean.getPrice());
+                    tv_buy_kemaixunibi.setText(String.valueOf(buyxunibi));
                     //tv_chengjiaoe.setText(coinsDetailBean.getVolume());
                     tv_chengjiaoliang.setText(coinsDetailBean.getVolume());
                     tv_minprice.setText(coinsDetailBean.getMin_price());

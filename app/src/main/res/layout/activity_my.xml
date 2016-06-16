@@ -20,6 +20,8 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:orientation="vertical"
             >
             <LinearLayout
@@ -42,7 +44,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="vertical"
                     >
@@ -86,6 +88,26 @@
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/act_myMenu_myact_UID"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:id="@+id/tv_uid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="张三"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
 
 
 
@@ -110,7 +132,7 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/act_mymenu_my_touxiang"
+                        android:src="@drawable/icon_price"
                         />
 
 
@@ -145,9 +167,10 @@
 
                         >
                         <TextView
+                            android:id="@+id/tv_zichan"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="188888"
+                            android:text="..."
                             android:gravity="right"
                             android:textColor="@color/red"
 
@@ -178,7 +201,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_monin"
                     />
 
 
@@ -247,7 +270,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_monout"
                     />
 
 
@@ -317,7 +340,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_biin"
                     />
 
 
@@ -387,7 +410,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_biout"
                     />
 
 
@@ -448,7 +471,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_weituo"
                     />
 
 
@@ -518,7 +541,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_bus"
                     />
 
 
@@ -579,7 +602,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                        android:src="@drawable/icon_turnin"
                     />
 
 
@@ -649,7 +672,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_turnout"
                     />
 
 
@@ -710,7 +733,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_yanz"
                     />
 
 
@@ -789,6 +812,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:src="@drawable/icon_mima"
 
                     />
 
@@ -854,7 +878,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_mima"
                     />
 
 
@@ -910,6 +934,7 @@
             <LinearLayout
                 android:id="@+id/ll_message"
                 android:layout_width="match_parent"
+                android:visibility="gone"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
@@ -987,7 +1012,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-
+                    android:src="@drawable/icon_about"
                     />
 
 

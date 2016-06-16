@@ -57,6 +57,7 @@
     <string name="act_myMenu_myact_title">我的</string>
     <string name="act_myMenu_myact_login">登录名：</string>
     <string name="act_myMenu_myact_loginNike">名称：</string>
+    <string name="act_myMenu_myact_UID">UID：</string>
     <string name="act_myMenu_myact_assets">总资产</string>
     <string name="act_myMenu_myact_RMBPay">人民币充值</string>
     <string name="act_myMenu_myact_RMBWithdraw">人民币提现</string>
@@ -202,19 +203,22 @@
 
     <!--虚拟币充值-->
     <string name="act_virtualcurrency_chargeFees_title">虚拟币充值</string>
+    <string name="act_virtualcurrency_chargeFees_chongzhi">充值</string>
     <string name="act_virtualcurrency_chargeFees_op">转入记录</string>
     <string name="act_virtualcurrency_chargeFees_keyong">可用比特币：</string>
     <string name="act_virtualcurrency_chargeFees_dongjie">冻结比特币：</string>
     <string name="act_virtualcurrency_chargeFees_address">钱包地址：</string>
+    <string name="act_virtualcurrency_chargeFees_fuzhi">复 制</string>
     <string name="act_virtualcurrency_chargeFees_miaoshu">充值说明：</string>
     <string name="act_virtualcurrency_chargeFees_text">本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>
 
 
     <!--转出虚拟币-->
     <string name="act_virtualcurrency_archived_title">转出虚拟币</string>
+    <string name="act_virtualcurrency_archived_zhuanchu">转出</string>
     <string name="act_virtualcurrency_archived_op">转出记录</string>
-    <string name="act_virtualcurrency_archived_keyong">可用比特币：</string>
-    <string name="act_virtualcurrency_archived_dongjie">冻结比特币：</string>
+    <string name="act_virtualcurrency_archived_keyong">可用：</string>
+    <string name="act_virtualcurrency_archived_dongjie">冻结：</string>
     <string name="act_virtualcurrency_archived_address">钱包地址</string>
     <string name="act_virtualcurrency_archived_number">转出数量</string>
     <string name="act_virtualcurrency_archived_pwd">交易密码</string>
@@ -268,12 +272,14 @@
 
     <!--选择虚拟币-->
 
-    <string name="act_select_virtual_title">交易流水</string>
+    <string name="act_select_virtual_title">选择虚拟币</string>
 
     <!--虚拟币交易流水-->
     <string name="act_historicalRecord_virtualdealflow_title">交易流水</string>
-    <string name="act_historicalRecord_virtualdealflow_tab1">交易</string>
-    <string name="act_historicalRecord_virtualdealflow_tab2">转账</string>
+    <string name="act_historicalRecord_virtualdealflow_tab1">买入</string>
+    <string name="act_historicalRecord_virtualdealflow_tab2">卖出</string>
+    <string name="act_historicalRecord_virtualdealflow_tab3">转入</string>
+    <string name="act_historicalRecord_virtualdealflow_tab4">转出</string>
 
     <string name="act_historicalRecord_virtualdealflow_table_title1">类型</string>
     <string name="act_historicalRecord_virtualdealflow_table_title2">虚拟币数量</string>
@@ -325,6 +331,15 @@
     <string name="act_historicalRecord_zhuanruVirtual_table_title2">转入金额</string>
     <string name="act_historicalRecord_zhuanruVirtual_table_title3">最后更新</string>
     <string name="act_historicalRecord_zhuanruVirtual_table_title4">转入状态</string>
+
+    <!--K线-->
+    <string name="act_KLine_title">K线图</string>
+    <string name="act_KLine_tab1">1小时</string>
+    <string name="act_KLine_tab2">24小时</string>
+    <string name="act_KLine_tab3">一周</string>
+    <string name="act_KLine_tab4">一月</string>
+
+
 
 
 

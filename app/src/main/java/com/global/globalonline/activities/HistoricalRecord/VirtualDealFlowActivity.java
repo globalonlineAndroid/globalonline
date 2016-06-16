@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
+import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import com.global.globalonline.bean.DelegateBean;
 import com.global.globalonline.service.virtualTrading.VirtualService;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -28,6 +30,8 @@ public class VirtualDealFlowActivity extends BaseActivity {
     SwipeRefreshLayout srl_vdf;
     @ViewById
     ListView lv_vdf;
+    @ViewById
+    TextView tv_tab1,tv_tab2,tv_tab3,tv_tab4;
 
     @ViewById
     TextView tv_mairu_tab,tv_maichu_tab;
@@ -44,17 +48,15 @@ public class VirtualDealFlowActivity extends BaseActivity {
         activity.startActivity(intent);
     }
 
+
+
     @AfterViews
     void init(){
 
-        for (int i = 0; i < 20; i++) {
-            DelegateBean d = new DelegateBean();
-            d.setId(i+"");
-            delegateList.add(d);
-        }
-        maAdapter = new VirtualDealFlowAdapter(VirtualDealFlowActivity.this,delegateList);
-        lv_vdf.setAdapter(maAdapter);
 
+       /* maAdapter = new VirtualDealFlowAdapter(VirtualDealFlowActivity.this,delegateList);
+        lv_vdf.setAdapter(maAdapter);
+*/
         lv_vdf.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -82,6 +84,48 @@ public class VirtualDealFlowActivity extends BaseActivity {
                 srl_vdf.setRefreshing(false);
             }
         });
+
+
+    }
+
+/*tv_tab1,tv_tab2,tv_tab3,tv_tab4*/
+    @Click({R.id.tv_tab1,R.id.tv_tab2,R.id.tv_tab3,R.id.tv_tab4})
+    void click(View view) {
+        switch (view.getId()) {
+            case R.id.tv_tab1:
+                setTextBackgroud(tv_tab1);
+
+                //initView();
+                break;
+            case R.id.tv_tab2:
+                setTextBackgroud(tv_tab2);
+
+               // initView();
+                break;
+            case R.id.tv_tab3:
+                setTextBackgroud(tv_tab3);
+
+             //   initView();
+                break;
+            case R.id.tv_tab4:
+                setTextBackgroud(tv_tab4);
+
+             //   initView();
+                break;
+        }
+
+
+    }
+
+
+    void setTextBackgroud(TextView tv){
+
+
+        tv_tab1.setBackgroundResource(R.color.ac_virtual_chunk);
+        tv_tab2.setBackgroundResource(R.color.ac_virtual_chunk);
+        tv_tab3.setBackgroundResource(R.color.ac_virtual_chunk);
+        tv_tab4.setBackgroundResource(R.color.ac_virtual_chunk);
+        tv.setBackgroundResource(R.color.ac_base_tab);
 
 
     }

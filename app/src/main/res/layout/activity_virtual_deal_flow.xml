@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/act_historicalRecord_virtualdealflow_tab1"
-            android:textColor="@color/btn_queding"
+            android:textColor="@color/white"
             android:background="@color/ac_base_tab"
             android:textSize="16dp"
             android:layout_marginRight="2dp"
@@ -43,7 +43,31 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/act_historicalRecord_virtualdealflow_tab2"
-            android:textColor="@color/btn_queding"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:background="@color/ac_virtual_chunk"
+            android:layout_marginRight="2dp"
+            />
+        <TextView
+            android:id="@+id/tv_tab3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/act_historicalRecord_virtualdealflow_tab3"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:background="@color/ac_virtual_chunk"
+            android:layout_marginRight="2dp"
+            />
+        <TextView
+            android:id="@+id/tv_tab4"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/act_historicalRecord_virtualdealflow_tab3"
+            android:textColor="@color/white"
             android:textSize="16dp"
             android:background="@color/ac_virtual_chunk"
             android:layout_marginRight="2dp"
@@ -67,9 +91,15 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/ac_base_fenGeXian"/>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     >
@@ -243,7 +273,6 @@
                         android:background="@color/ac_base_fenGeXian"
                         />
                 </LinearLayout>
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"

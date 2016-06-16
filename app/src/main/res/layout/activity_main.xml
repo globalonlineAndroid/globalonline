@@ -93,35 +93,78 @@
         android:gravity="center_vertical"
         android:background="@color/ac_mainTab_bottom"
         android:orientation="horizontal">
-        <RelativeLayout style="@style/ButtomBar">
+        <RelativeLayout
+            style="@style/ButtomBar"
+
+            android:layout_marginBottom="6dp"
+            >
 
             <ImageButton
                 android:id="@+id/ibtn_homepage"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_homepage"
                 android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="@color/ac_base_ziti_hui"
+                android:text="@string/act_main_title_home"
+                />
+
         </RelativeLayout>
         <RelativeLayout
-            style="@style/ButtomBar">
+            style="@style/ButtomBar"
+            android:layout_marginBottom="6dp"
+            >
             <ImageButton
                 android:id="@+id/ibtn_tradingfloor"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_tradingfloor"
                 android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_dating"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="@color/ac_base_ziti_hui"
+                android:text="@string/act_main_title_dating"
+                />
         </RelativeLayout>
-        <RelativeLayout style="@style/ButtomBar">
+        <RelativeLayout
+            android:layout_marginBottom="6dp"
+            style="@style/ButtomBar">
 
             <ImageButton
                 android:id="@+id/ibtn_my"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_my"
                 android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_my"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="@color/ac_base_ziti_hui"
+                android:text="@string/act_main_title_my"
+                />
         </RelativeLayout>
     </LinearLayout>
 

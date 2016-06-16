@@ -16,9 +16,15 @@ import com.global.globalonline.activities.user.CertificationActivity_;
 import com.global.globalonline.activities.user.ChangeLoginPasswordActivity_;
 import com.global.globalonline.activities.user.ChangeTradePasswordActivity_;
 import com.global.globalonline.activities.user.LoginActivity_;
-import com.global.globalonline.activities.virtualCurrency.ArchivedActivity_;
-import com.global.globalonline.activities.virtualCurrency.ChargeFeesActivity_;
 import com.global.globalonline.base.MyApplication;
+import com.global.globalonline.bean.AccountDetailBean;
+import com.global.globalonline.service.CallBackService;
+import com.global.globalonline.service.GetRetrofitService;
+import com.global.globalonline.service.RestService;
+import com.global.globalonline.service.serviceImpl.RestServiceImpl;
+import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetToastUtil;
+import com.global.globalonline.tools.MapToParams;
 import com.zbar.lib.CaptureActivity;
 import com.zbar.lib.ShengChengActivity;
 
@@ -27,11 +33,17 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Response;
+
 @EFragment(R.layout.activity_my)
 public class MyFrament extends Fragment {
 
     @ViewById
-    TextView tv_loginName,tv_ename,tv_isRenZheng;
+    TextView tv_loginName,tv_ename,tv_isRenZheng,tv_uid,tv_zichan;
 
     @ViewById
     LinearLayout ll_RMBPay,ll_RMBTiXian,ll_XuNiPay,ll_XuNiTiXian,ll_weiTuoManager,ll_jiaoYiLiuShui,ll_shouKuan,
@@ -52,6 +64,7 @@ public class MyFrament extends Fragment {
         }catch (Exception e){
             LoginActivity_.intent(getActivity()).start();
         }
+        initView();
 
     }
 
@@ -68,19 +81,25 @@ public class MyFrament extends Fragment {
                 WithdrawalRMBActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_XuNiPay:
-                ChargeFeesActivity_.intent(getActivity()).start();
+                Intent xuni = new Intent(getActivity(), SelectVirtualActivity_.class);
+                xuni.putExtra("type","xunizhuanru");
+                startActivity(xuni);
                 break;
             case R.id.ll_XuNiTiXian:
-                ArchivedActivity_.intent(getActivity()).start();
+                Intent xunizhuanchu = new Intent(getActivity(), SelectVirtualActivity_.class);
+                xunizhuanchu.putExtra("type","xunizhuanchu");
+                startActivity(xunizhuanchu);
                 break;
             case R.id.ll_weiTuoManager:
                 Intent weituo = new Intent(getActivity(), SelectVirtualActivity_.class);
                 weituo.putExtra("type","weituo");
                 startActivity(weituo);
-               // MandatoryAdministrationActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_jiaoYiLiuShui:
-                SelectVirtualActivity_.intent(getActivity()).start();
+                //SelectVirtualActivity_.intent(getActivity()).start();
+                Intent jiaoyiliushui = new Intent(getActivity(), SelectVirtualActivity_.class);
+                jiaoyiliushui.putExtra("type","jiaoyiliushui");
+                startActivity(jiaoyiliushui);
                 break;
             case R.id.ll_shouKuan:
                 Intent intent_shengcheng = new Intent(getActivity(), ShengChengActivity.class);
@@ -114,6 +133,42 @@ public class MyFrament extends Fragment {
 
         }
 
+    }
+
+
+    void initView(){
+
+        UserService userService = GetRetrofitService.getRestClient(UserService.class);
+
+        Map<String, String> stringMap = new HashMap<String, String>();
+        stringMap = MapToParams.getParsMap(stringMap);
+
+        Call<AccountDetailBean> call = userService.account_detail(stringMap);
+        RestService restService = new RestServiceImpl();
+        restService.get(getActivity(),"",call, new CallBackService() {
+            @Override
+            public <T> void onResponse(Call<T> call, Response<T> response) {
+
+                AccountDetailBean accountDetailBean =   ((AccountDetailBean)response.body());
+
+                if(accountDetailBean.getErrorCode().equals("0")) {
+                    tv_loginName.setText(accountDetailBean.getAccount_detail().getAccount());
+                    tv_ename.setText(accountDetailBean.getAccount_detail().getUsername());
+                    tv_uid.setText(accountDetailBean.getAccount_detail().getUid());
+                    tv_zichan.setText(accountDetailBean.getAccount_detail().getAccount_balance());
+
+                }else {
+                    GetToastUtil.getToads(getActivity(), accountDetailBean.getMessage());
+
+                }
+                // dialog.cancel();
+            }
+            @Override
+            public <T> void onFailure(Call<T> call, Throwable t) {
+                // dialog.cancel();
+                GetToastUtil.getToads(getActivity(), t.getMessage());
+            }
+        });
     }
 
 

@@ -31,7 +31,7 @@
 
 
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <com.global.globalonline.view.AutoSwipeRefreshLayout
         android:layout_marginTop="10dp"
         android:id="@+id/srl_vdf"
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                     >
 
                     <LinearLayout
-                        android:layout_width="80dp"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         >
@@ -121,7 +121,7 @@
                         android:background="@color/ac_base_fenGeXian"
                         />
                     <LinearLayout
-                        android:layout_width="80dp"
+                        android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         >
@@ -184,7 +184,7 @@
 
 
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </com.global.globalonline.view.AutoSwipeRefreshLayout>
 
 
 

@@ -16,9 +16,6 @@
         android:layout_height="45dp"
         myxmlns:titletxt="@string/act_historicalRecord_zhuanruVirtual_title"
         />
-
-
-
     <TextView
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
@@ -31,7 +28,7 @@
 
 
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <com.global.globalonline.view.AutoSwipeRefreshLayout
         android:layout_marginTop="10dp"
         android:id="@+id/srl_vdf"
         android:layout_width="match_parent"
@@ -41,7 +38,9 @@
         <HorizontalScrollView
 
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+
+            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -53,14 +52,13 @@
                     android:background="@color/ac_base_fenGeXian"/>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
+                    android:layout_height="40dp"
+
                     android:orientation="horizontal"
                     >
-
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
+
+                        android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center"
@@ -72,18 +70,18 @@
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title1"
                             android:textColor="@color/btn_queding"
                             />
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/ac_base_fenGeXian"
-                            />
+
 
                     </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/ac_base_fenGeXian"
+                        />
 
 
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center"
@@ -96,17 +94,17 @@
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title2"
                             android:textColor="@color/btn_queding"
                             />
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/ac_base_fenGeXian"
-                            />
+
                     </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/ac_base_fenGeXian"
+                        />
 
 
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="horizontal"
@@ -119,17 +117,17 @@
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title3"
                             android:textColor="@color/btn_queding"
                             />
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/ac_base_fenGeXian"
-                            />
+
                     </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/ac_base_fenGeXian"
+                        />
 
 
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:gravity="center"
@@ -142,13 +140,14 @@
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title4"
                             android:textColor="@color/btn_queding"
                             />
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/ac_base_fenGeXian"
-                            />
+
 
                     </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/ac_base_fenGeXian"
+                        />
 
                 </LinearLayout>
                 <View
@@ -168,10 +167,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-
-
-
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </com.global.globalonline.view.AutoSwipeRefreshLayout>
 
 
 

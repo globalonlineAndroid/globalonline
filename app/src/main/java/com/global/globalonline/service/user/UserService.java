@@ -1,5 +1,6 @@
 package com.global.globalonline.service.user;
 
+import com.global.globalonline.bean.AccountDetailBean;
 import com.global.globalonline.bean.CodeBean;
 import com.global.globalonline.bean.UserBean;
 
@@ -28,6 +29,9 @@ public interface UserService  {
 
     @GET("identify_auth.json")  //认证
     Call<UserBean> identify_auth(@QueryMap Map<String,String>  map);
+
+    @GET("account_detail.json")  //个人账户详情
+    Call<AccountDetailBean> account_detail(@QueryMap Map<String,String>  map);
 
     @GET("upt_login_pwd.json")  // 修改登陆密码
     Call<UserBean> upt_login_pwd(@QueryMap Map<String,String>  map);

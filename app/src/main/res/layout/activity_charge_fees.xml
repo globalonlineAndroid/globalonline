@@ -81,19 +81,31 @@
             android:text="@string/act_virtualcurrency_chargeFees_address"
             />
         <TextView
+            android:id="@+id/tv_dizhi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/view_titleview_fanhui"
             android:text="..."
 
             />
+        <TextView
+            android:layout_marginTop="6dp"
+            android:id="@+id/tv_fuzhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/view_titleview_fanhui"
+            android:text="@string/act_virtualcurrency_chargeFees_fuzhi"
+
+            />
+
+
 
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:gravity="center_vertical"

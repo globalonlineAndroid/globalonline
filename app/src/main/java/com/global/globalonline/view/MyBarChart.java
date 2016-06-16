@@ -1,7 +1,6 @@
 package com.global.globalonline.view;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -11,6 +10,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.global.globalonline.R;
 import com.global.globalonline.bean.CombinedChartEntity;
 import com.global.globalonline.tools.MyCustomXAxisValueFormatter;
 
@@ -30,7 +30,7 @@ public class MyBarChart extends BarChart {
 
     private void initChart() {
         setDescription("");
-        setBackgroundColor(Color.WHITE);
+        setBackgroundColor(getResources().getColor(R.color.ac_base_llbackgroud_hui));
         setDrawGridBackground(false);
         setDrawBarShadow(false);
 

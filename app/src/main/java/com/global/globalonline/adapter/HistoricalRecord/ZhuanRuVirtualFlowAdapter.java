@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
-import com.global.globalonline.bean.xuNiBi.CoinsExtractRecordItemBean;
+import com.global.globalonline.bean.xuNiBi.CoinsPaycheckRecordItemBean;
 import com.global.globalonline.tools.DateUtils;
 
 import java.util.ArrayList;
@@ -17,14 +17,14 @@ import java.util.List;
 /**
  * Created by lijl on 16/6/5.
  */
-public class ZhuanChuVirtualFlowAdapter extends BaseAdapter {
+public class ZhuanRuVirtualFlowAdapter extends BaseAdapter {
 
     LayoutInflater layoutInflater = null;
-    List<CoinsExtractRecordItemBean> list = new ArrayList<CoinsExtractRecordItemBean>();
+    List<CoinsPaycheckRecordItemBean> list = new ArrayList<CoinsPaycheckRecordItemBean>();
     Activity activity;
 
 
-    public ZhuanChuVirtualFlowAdapter(Activity activity , List<CoinsExtractRecordItemBean> list) {
+    public ZhuanRuVirtualFlowAdapter(Activity activity , List<CoinsPaycheckRecordItemBean> list) {
         layoutInflater = LayoutInflater.from(activity);
         this.list = list;
         this.activity = activity;
@@ -50,27 +50,24 @@ public class ZhuanChuVirtualFlowAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Mandatory  viewHolder = null;
         if(convertView == null){
-                convertView = layoutInflater.inflate(R.layout.act_item_zhuanchu_xunibi_flow, null);
+                convertView = layoutInflater.inflate(R.layout.act_item_zhuanru_xunibi_flow, null);
                 viewHolder = new Mandatory();
 
-                viewHolder.tv_time = (TextView) convertView.findViewById(R.id.tv_time);
-                viewHolder.tv_number = (TextView) convertView.findViewById(R.id.tv_number);
-                viewHolder.tv_feel = (TextView) convertView.findViewById(R.id.tv_feel);
                 viewHolder.tv_dizhi = (TextView) convertView.findViewById(R.id.tv_dizhi);
+                viewHolder.tv_price = (TextView) convertView.findViewById(R.id.tv_price);
+                viewHolder.tv_updatedate = (TextView) convertView.findViewById(R.id.tv_updatedate);
                 viewHolder.tv_status = (TextView) convertView.findViewById(R.id.tv_status);
-
 
                 convertView.setTag(viewHolder);
 
         }else {
             viewHolder = (Mandatory)convertView.getTag();
         }
-        CoinsExtractRecordItemBean con = list.get(position);
-        viewHolder.tv_time.setText(DateUtils.getDateString(con.getTime()));
-        viewHolder.tv_number.setText(con.getQuantity());
-        viewHolder.tv_feel.setText(con.getProcedures());
-        viewHolder.tv_dizhi.setText(con.getExtract_address());
-        viewHolder.tv_status.setText(con.getStatus_name());
+        CoinsPaycheckRecordItemBean coin = list.get(position);
+        viewHolder.tv_dizhi.setText(coin.getWallet());
+        viewHolder.tv_price.setText(coin.getQuantity());
+        viewHolder.tv_updatedate.setText(DateUtils.getDateString(coin.getTime()));
+        viewHolder.tv_status.setText(coin.getStatus_name());
 
         return convertView;
     }
@@ -80,10 +77,9 @@ public class ZhuanChuVirtualFlowAdapter extends BaseAdapter {
     /*存放控件 的ViewHolder*/
     public final class Mandatory {
 
-        TextView tv_time;
-        TextView tv_number;
-        TextView tv_feel;
         TextView tv_dizhi;
+        TextView tv_price;
+        TextView tv_updatedate;
         TextView tv_status;
 
     }

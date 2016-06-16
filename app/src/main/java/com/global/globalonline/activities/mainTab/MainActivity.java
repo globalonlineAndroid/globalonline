@@ -27,7 +27,7 @@ public class MainActivity extends FragmentActivity {
     @ViewById
     ImageButton ibtn_homepage,ibtn_tradingfloor,ibtn_my;
     @ViewById
-    TextView title,tv_english,operation;
+    TextView title,tv_english,operation,tv_home,tv_dating,tv_my;
     @ViewById
     LinearLayout xiala;
 
@@ -86,6 +86,11 @@ public class MainActivity extends FragmentActivity {
             public void onClick(View v) {
                 title.setText(getResources().getString(R.string.act_main_title_home));
 
+                tv_home.setTextColor(getResources().getColor(R.color.btn_queding));
+                tv_dating.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                tv_my.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+
+
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);
@@ -107,6 +112,9 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 title.setText(getResources().getString(R.string.act_main_title_dating));
+                tv_home.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                tv_dating.setTextColor(getResources().getColor(R.color.btn_queding));
+                tv_my.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
 
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
@@ -126,6 +134,9 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 title.setText(getResources().getString(R.string.act_main_title_my));
+                tv_home.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                tv_dating.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                tv_my.setTextColor(getResources().getColor(R.color.btn_queding));
                 FragmentManager fm = MainActivity.this.getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 hideFragments(ft);

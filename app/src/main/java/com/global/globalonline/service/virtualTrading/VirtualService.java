@@ -3,6 +3,7 @@ package com.global.globalonline.service.virtualTrading;
 import com.global.globalonline.bean.BaseBean;
 import com.global.globalonline.bean.CoinsDetailBean;
 import com.global.globalonline.bean.CoinsEntrustRecordBena;
+import com.global.globalonline.bean.CoinsPaycheckBean;
 import com.global.globalonline.bean.VirtualListItemBean;
 
 import java.util.Map;
@@ -30,6 +31,11 @@ public interface VirtualService {
     Call<CoinsEntrustRecordBena> coins_entrust_record(@QueryMap Map<String,String> map);
     @GET("cancel_entrust.json")  //某币种成交&委托记录-->撤销
     Call<BaseBean> cancel_entrust(@QueryMap Map<String,String> map);
+
+    @GET("coins_paycheck.json")  //转入虚拟币
+    Call<CoinsPaycheckBean> coins_paycheck(@QueryMap Map<String,String> map);
+    @GET("coins_extract.json")  //转出虚拟币提交接
+    Call<BaseBean> coins_extract(@QueryMap Map<String,String> map);
 
 
 }

@@ -7,6 +7,8 @@ import android.widget.ListView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.activities.HistoricalRecord.VirtualDealFlowActivity;
+import com.global.globalonline.activities.virtualCurrency.ArchivedActivity;
+import com.global.globalonline.activities.virtualCurrency.ChargeFeesActivity;
 import com.global.globalonline.activities.virtualCurrency.MandatoryAdministrationActivity;
 import com.global.globalonline.adapter.select.SelectVirtualdapter;
 import com.global.globalonline.base.BaseActivity;
@@ -60,7 +62,11 @@ public class SelectVirtualActivity extends BaseActivity implements SwipeRefreshL
                 //VirtualTradeActivity.toActiviy(getActivity(),virtualTradingBean.getSymbol());
                 if(type.equals("weituo")){
                     MandatoryAdministrationActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
-                }else {
+                }else if(type.equals("xunizhuanchu")){
+                    ArchivedActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
+                }else if(type.equals("xunizhuanru")){
+                    ChargeFeesActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
+                }else if(type.equals("jiaoyiliushui")){
                     VirtualDealFlowActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
                 }
 

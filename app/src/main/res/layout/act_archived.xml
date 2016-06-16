@@ -91,7 +91,7 @@
 
 
         <EditText
-            android:id="@+id/et_rePwd"
+            android:id="@+id/et_dizhi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/act_virtualcurrency_archived_address"
@@ -110,9 +110,10 @@
         android:paddingLeft="20dp"
         >
         <EditText
-            android:id="@+id/et_tuijianren"
+            android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:inputType="numberDecimal"
             android:hint="@string/act_virtualcurrency_archived_number"
             style="@style/editText"
             />
@@ -131,6 +132,7 @@
             android:id="@+id/et_trade_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:inputType="textPassword"
             android:hint="@string/act_virtualcurrency_archived_pwd"
             style="@style/editText"
             />

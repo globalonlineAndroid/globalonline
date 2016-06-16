@@ -27,6 +27,7 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.global.globalonline.R;
 import com.global.globalonline.bean.CombinedChartEntity;
 import com.global.globalonline.listener.OnValueSelectedListener;
 import com.global.globalonline.tools.MyChartHighlighter;
@@ -68,7 +69,7 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
 
     private void initChart() {
         setDescription("");
-        setBackgroundColor(Color.WHITE);
+        setBackgroundColor(getResources().getColor(R.color.ac_base_llbackgroud_hui));
         setDrawGridBackground(false);
         setDrawBarShadow(false);
 

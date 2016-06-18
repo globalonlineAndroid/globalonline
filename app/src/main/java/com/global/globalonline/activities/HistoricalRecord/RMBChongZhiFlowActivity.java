@@ -10,8 +10,8 @@ import com.global.globalonline.R;
 import com.global.globalonline.adapter.HistoricalRecord.RMBChongZhiFlowAdapter;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
-import com.global.globalonline.bean.DelegateBean;
 import com.global.globalonline.bean.RMB.chongzhi.ChongZhiBean;
+import com.global.globalonline.bean.RMB.chongzhi.RecordListBean;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.HistoricalRecord.RecordService;
@@ -44,7 +44,7 @@ public class RMBChongZhiFlowActivity extends BaseActivity {
 
 
     RMBChongZhiFlowAdapter maAdapter;
-    List<DelegateBean> delegateList = new ArrayList<DelegateBean>();
+    List<RecordListBean> list = new ArrayList<RecordListBean>();
 
 
     public static void  toActivity(Activity activity,String xuNiId){
@@ -107,8 +107,11 @@ public class RMBChongZhiFlowActivity extends BaseActivity {
 
                 ChongZhiBean baseBean =   ((ChongZhiBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
+                    if (baseBean.getRecord_list() != null){
+                        list.addAll(baseBean.getRecord_list());
+                    }
 
-                    maAdapter = new RMBChongZhiFlowAdapter(RMBChongZhiFlowActivity.this,baseBean.getRecord_list());
+                    maAdapter = new RMBChongZhiFlowAdapter(RMBChongZhiFlowActivity.this,list);
                         lv_vdf.setAdapter(maAdapter);
 
                 }else {

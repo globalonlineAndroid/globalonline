@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.global.globalonline.R;
-import com.global.globalonline.activities.BaseActivie.ServiceAgreementActivity_;
+import com.global.globalonline.activities.BaseActivie.WebViewActivity;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.CodeBean;
@@ -92,7 +92,8 @@ public class RegisteredActivity extends BaseActivity {
                 }
                 break;
             case R.id.tv_xieyi:
-                ServiceAgreementActivity_.intent(RegisteredActivity.this).start();
+              //  ServiceAgreementActivity_.intent(RegisteredActivity.this).start();
+                WebViewActivity.toActivity(RegisteredActivity.this,"fuwuxieyi");
                 break;
         }
     }

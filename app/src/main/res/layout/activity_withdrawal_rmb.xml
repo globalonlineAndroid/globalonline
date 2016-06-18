@@ -207,6 +207,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/ac_base_ziti_hui"
+        android:padding="8dp"
         android:text="@string/act_WithdrawalRMBActivity_text"
         />
 

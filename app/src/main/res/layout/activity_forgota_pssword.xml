@@ -30,7 +30,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/act_user_login_phone"
+            android:src="@drawable/icon_phone"
             />
 
         <EditText
@@ -66,7 +66,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
+            android:src="@drawable/icon_yam"
             />
 
         <EditText
@@ -89,7 +89,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
+            android:src="@drawable/icon_lock"
             />
 
         <EditText
@@ -115,7 +115,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
+            android:src="@drawable/icon_lock"
             />
 
         <EditText

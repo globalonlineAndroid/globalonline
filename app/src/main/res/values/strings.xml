@@ -5,6 +5,11 @@
     <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
     <string name="hello">Hello World, QR_DemoActivity!</string>
 
+    <string name="act_base_nodata">没有数据了</string>
+    <string name="act_base_about">http://api.50f.cn/page/about_us_zh.html</string>
+    <string name="act_base_fuwuxieyi">http://api.50f.cn/page/service_agreement_zh.html</string>
+
+
     <!--主页-->
     <string name="act_main_title_home">主页</string>
     <string name="act_main_title_dating">交易大厅</string>
@@ -37,6 +42,8 @@
     <string name="act_user_changeloginpassword_newpwd">新密码</string>
     <string name="act_user_changeloginpassword_repwd">确认新密码</string>
     <string name="act_user_changeloginpassword_title">修改登陆密码</string>
+    <string name="act_user_changeloginpassword_text">敬告：\n
+        登录密码不要与交易密码或其他网站密码一致，由此产生的账号被盗，本站概不负责。</string>
 
     <!--修改交易密码-->
     <string name="act_user_changetradepassword_tijiao">保存修改</string>
@@ -44,6 +51,8 @@
     <string name="act_user_changetradepassword_newpwd">确认交易密码</string>
     <string name="act_user_changetradepassword_repwd">请输入验证码</string>
     <string name="act_user_changetradepassword_title">设置/修改交易密码</string>
+    <string name="act_user_changetradepassword_text">敬告：\n
+        登录密码不要与交易密码或其他网站密码一致，由此产生的账号被盗，本站概不负责。</string>
 
     <!--忘记密码-->
     <string name="act_user_forgotaepassword_tijiao">确认</string>
@@ -101,6 +110,7 @@
     <string name="act_virtualcurrency_mairu">买入</string>
     <string name="act_virtualcurrency_sellru">卖出</string>
     <string name="act_virtualcurrency_chedan">撤单</string>
+    <string name="act_virtualcurrency_jiaoyi">交易</string>
 
 
     <string name="act_mainTab_homepage_title">环球在线</string>
@@ -110,27 +120,67 @@
     <string name="act_base_serviceAgreement_title">环球在线服务协议</string>
 
 
-    <!--人民币充值-->
+    <!--人民币充值- 银行 -->
 
     <string name="act_RechargeRMBActivity_title">人民币充值</string>
     <string name="act_RechargeRMBActivity_op">充值记录</string>
     <string name="act_RechargeRMBActivity_tab1">网银充值</string>
     <string name="act_RechargeRMBActivity_tab2">支付宝充值</string>
 
-    <string name="act_RechargeRMBActivity_zhanghao">充值账号:\t\t\t\t</string>
-    <string name="act_RechargeRMBActivity_price">充值金额:\t\t\t\t</string>
+    <string name="act_RechargeRMBActivity_zhanghao">充值账号:\t\t</string>
+    <string name="act_RechargeRMBActivity_price">充值金额:\t\t</string>
     <string name="act_RechargeRMBActivity_name">充值人姓名:</string>
-    <string name="act_RechargeRMBActivity_phone">手机号:\t\t\t\t\t/t</string>
-    <string name="act_RechargeRMBActivity_shuoming">备注:\t\t\t\t\t\t\t\t\t</string>
+    <string name="act_RechargeRMBActivity_phone">手机号:\t\t\t</string>
+    <string name="act_RechargeRMBActivity_shuoming">备注:\t\t\t\t</string>
 
     <string name="act_RechargeRMBActivity_tijiao">提 交</string>
     <string name="act_RechargeRMBActivity_buzhou">请您按如下步骤操作：</string>
     <string name="act_RechargeRMBActivity_test">
-        1、 登录您的支付账号，进入"我要付款"。\n
-        2、汇款成功后，系统会自动将您汇款金额充值到您的账户中，若因为没有正确备注而未充值到账的，请联系客服解决。\n
-        3、建议使用支付宝和银行卡充值，充值时请在备注中按照要求注明信息!。\n
-        4、在充值汇款的时候请务必按照系统要求在“付款说明”或“收款人附言”中注明附言，不然系统将无法识别导致充值失败。\n
-        5、请不要用过期的未支付的链接进行充值，一律采用即时支付的方式进行汇款。"</string>
+        注意：银行卡汇款目前仅支持100.0元以上汇款,100.0元以下暂不支持，100.0元以下汇款一律不予处理。
+        请您按如下步骤操作：\n
+            1. 登录您的银行网银，选择转账汇款，或者去银行柜台，要求转账汇款。\n
+            2. 按照下表填写银行汇款信息表单：
+    </string>
+
+    <string name="act_RechargeRMBActivity_test_zi1">收款人：</string>
+    <string name="act_RechargeRMBActivity_test_zi2">收款人帐号：</string>
+    <string name="act_RechargeRMBActivity_test_zi3">收款人开户行：</string>
+    <string name="act_RechargeRMBActivity_test_zi4">金额：</string>
+    <string name="act_RechargeRMBActivity_test_zi5">备注/附言/摘要：</string>
+    <string name="act_RechargeRMBActivity_test_zi6">(转账汇款时请一定在“备注/附言/摘要”栏目里填写此数字，此数字只可使用一次，每次汇款请填写新生成的数字)</string>
+
+    <string name="act_RechargeRMBActivity_test2">
+        3. 然后根据要求和提示完成汇款。
+
+    </string>
+
+
+    <!--人民币－支付宝
+
+    收款人：{公共配置中的收款名incomebank_list.name}
+    收款人帐号：{公共配置中的账户incomebank_list.bankno}
+    收款人开户行：{公共配置中的开户行名incomebank_list.bankadd}
+    金额：{实际上边填写的金额}
+    备注/附言/摘要：{此处填写当前登陆用户的uid的值}
+    (转账汇款时请一定在“备注/附言/摘要”栏目里填写此数字，此数字只可使用一次，每次汇款请填写新生成的数字)
+    3. 然后根据要求和提示完成汇款。
+
+    -->
+    <string name="act_RechargeRMBActivity_alipay_test">
+        请您按如下步骤操作：\n
+        1. 登录您的支付账号，进入"我要付款"。\n
+        1、汇款成功后，系统会自动将您汇款金额充值到您的账户中，若因为没有正确备注而未充值到账的，请联系客服解决。\n
+        2、建议使用支付宝和银行卡充值，充值时请在备注中按照要求注明信息!。\n
+        3、在充值汇款的时候请务必按照系统要求在“付款说明”或“收款人附言”中注明附言，不然系统将无法识别导致充值失败。\n
+        4、请不要用过期的未支付的链接进行充值，一律采用即时支付的方式进行汇款。
+    </string>
+
+    <string name="act_RechargeRMBActivity_test_alipay_zi1">充值方式:</string>
+    <string name="act_RechargeRMBActivity_test_alipay_zi2">收款帐号:</string>
+    <string name="act_RechargeRMBActivity_test_alipay_zi3">收款人名:</string>
+    <string name="act_RechargeRMBActivity_test_alipay_zi4">附言内容:</string>
+    <string name="act_RechargeRMBActivity_test_alipay_zi5">付款金额:</string>
+
 
 
     <!--人民币提现-->
@@ -146,9 +196,7 @@
     <string name="act_WithdrawalRMBActivity_tixian">提现</string>
     <string name="act_WithdrawalRMBActivity_xuzhi">提现须知</string>
     <string name="act_WithdrawalRMBActivity_text">
-        1. 为了您的帐户安全，每次人民币提现的最高限额为￥5000 \n
-        2. 提现的最低限额为￥100 ，提现手续费5% ，如果您有更高的需求，请与网站客服联系\n
-        3. 提现24小时内到账，银行卡提现不同的银行，实际到帐时间可能会有所延时。</string>
+        重要提示：为了您的帐户安全，每次人民币提现的最高限额为￥ 5000 、提现的最低限额为￥ 100 ，提现手续费5% ，如果您有更高的需求，请与网站客服联系，银行卡提现不同的银行，实际到帐时间可能会有所延时。</string>
 
 
     <!--委托管理-->
@@ -210,7 +258,7 @@
     <string name="act_virtualcurrency_chargeFees_address">钱包地址：</string>
     <string name="act_virtualcurrency_chargeFees_fuzhi">复 制</string>
     <string name="act_virtualcurrency_chargeFees_miaoshu">充值说明：</string>
-    <string name="act_virtualcurrency_chargeFees_text">本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>
+    <string name="act_virtualcurrency_chargeFees_text">重要提示：本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>
 
 
     <!--转出虚拟币-->
@@ -224,18 +272,19 @@
     <string name="act_virtualcurrency_archived_pwd">交易密码</string>
     <string name="act_virtualcurrency_archived_tijiao">确认转出</string>
     <string name="act_virtualcurrency_archived_miaoshu">转出说明：</string>
-    <string name="act_virtualcurrency_archived_text">为了您的帐户安全，每笔提现最小数量0.00100000，最大数量100.00000000， 如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为 0.0001。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。</string>
+    <string name="act_virtualcurrency_archived_text">
+        重要提示：为了您的帐户安全，每笔提现最小数量0.00100000，最大数量100.00000000， 如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为 0.0001。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。\n
+	** 本站客服不会要求用QQ远程控制您的电脑,所有要求远程的都是骗子。短信验证码、谷歌验证码非常重要，请勿透露给任何人，包括本站的客服。
+        </string>
 
 
     <!--关于我们-->
     <string name="act_user_aboutUs_title">关于我们</string>
     <string name="act_user_aboutUs_str1">环球在线</string>
     <string name="act_user_aboutUs_str2">让每个人享受科技的乐趣</string>
-    <string name="act_user_aboutUs_str3">让每个人享受科技的乐趣
-        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
-        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
-        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
-        让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣让每个人享受科技的乐趣
+    <string name="act_user_aboutUs_str3">免费的数字货币行情显示和交易软件。由中东MEC集团授权上海珺腾文化传播有限公司管理运营的官方APP，无需登录就可以查看全球虚拟币（比特币、莱特币）实时行情。可实现手机充值/提现/交易。官方应用，专业、安全、可信赖。
+团队核心成员：均毕业于清华大学、北京大学、复旦大学等国内名校。曾就职于甲骨文、中信证券、腾讯、百度、阿里巴巴等国内外知名企业。
+官方网站：http://www.globalonline.cc
     </string>
 
 
@@ -251,24 +300,25 @@
     <string name="act_account_pay_title">我要付款</string>
     <string name="act_account_pay_zhanghu">收款账户：</string>
     <string name="act_account_pay_bizhong">收款币种：</string>
-    <string name="act_account_pay_RMB">支付人民币</string>
+    <string name="act_account_pay_RMB">支付人民币:</string>
     <string name="act_account_pay_biNumber">折合币数量：</string>
-    <string name="act_account_pay_jiaoyipwd">交易密码</string>
+    <string name="act_account_pay_jiaoyipwd">交易密码:\t\t</string>
     <string name="act_account_pay_tijiao">确认付款</string>
     <string name="act_account_pay_shuoming">付款说明</string>
     <string name="act_account_pay_text">本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>
     <!--我要付款_3-->
-    <string name="act_account_payResults_title">我要付款</string>
+    <string name="act_account_payResults_title">付款成功</string>
     <string name="act_account_payResults_results">付款成功：</string>
     <string name="act_account_payResults_xinxi">您的付款信息：</string>
-    <string name="act_account_payResults_zhanghu">收款账户</string>
+    <string name="act_account_payResults_zhanghu">收款账户：</string>
     <string name="act_account_payResults_price">收款金额：</string>
-    <string name="act_account_payResults_rmb">折合币(现价)</string>
-    <string name="act_account_payResults_date">付款时间</string>
+    <string name="act_account_payResults_rmb">折合币:</string>
 
 
     <!--虚拟币收款-->
     <string name="act_account_virtualcollection_title">虚拟币收款</string>
+    <string name="act_account_virtualcollection_tishi">
+        收款说明：打开此页面二维码后，付款者使用APP中的”我要付款“功能，进入扫友页面，对准此二维码进行扫描，直到识别出内容后弹出支付界面后，输入实际要支付的金额后进行确认付款操作即可！</string>
 
     <!--选择虚拟币-->
 
@@ -281,14 +331,13 @@
     <string name="act_historicalRecord_virtualdealflow_tab3">转入</string>
     <string name="act_historicalRecord_virtualdealflow_tab4">转出</string>
 
-    <string name="act_historicalRecord_virtualdealflow_table_title1">类型</string>
-    <string name="act_historicalRecord_virtualdealflow_table_title2">虚拟币数量</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title1">类别</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title2">时间</string>
     <string name="act_historicalRecord_virtualdealflow_table_title3">人民币数量</string>
-    <string name="act_historicalRecord_virtualdealflow_table_title4">状态</string>
-    <string name="act_historicalRecord_virtualdealflow_table_title5">交易时间</string>
-    <string name="act_historicalRecord_virtualdealflow_table_title6">平均交易价</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title4">虚拟币数量</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title5">状态</string>
+    <string name="act_historicalRecord_virtualdealflow_table_title6">平均成交价</string>
     <string name="act_historicalRecord_virtualdealflow_table_title7">手续费</string>
-    <string name="act_historicalRecord_virtualdealflow_table_title8">对方账号</string>
 
 
     <!--提现记录-->
@@ -338,10 +387,6 @@
     <string name="act_KLine_tab2">24小时</string>
     <string name="act_KLine_tab3">一周</string>
     <string name="act_KLine_tab4">一月</string>
-
-
-
-
 
 
 </resources>

@@ -154,6 +154,7 @@
 
             <LinearLayout
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:layout_width="0dp"
                 android:orientation="vertical"
                 android:gravity="left"
@@ -423,7 +424,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="未登陆"
-                                android:textColor="@color/ac_base_ziti_hui"
+                                android:textColor="@color/btn_queding"
                                 />
 
                         </LinearLayout>
@@ -459,8 +460,9 @@
                             android:id="@+id/tv_buy_kemaixunibi"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+
                             android:text="..."
-                            android:textColor="@color/ac_base_ziti_hui"
+                            android:textColor="@color/red"
                             />
                     </LinearLayout>
 

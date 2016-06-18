@@ -3,6 +3,7 @@ package com.global.globalonline.activities.mainTab;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -139,12 +140,21 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
 
     public  View initGuanGao(){
+
+        WindowManager wm = getActivity().getWindowManager();
+
+        int width = wm.getDefaultDisplay().getWidth();
+        int height = wm.getDefaultDisplay().getHeight();
+
+
+         int  imgeHeight =  width/3;         //300/60
+
         localImages.add(R.drawable.page_1);
         localImages.add(R.drawable.page_1);
         localImages.add(R.drawable.page_1);
 
         ConvenientBanner mConvenientBanner = new ConvenientBanner(getActivity());
-        mConvenientBanner.setMinimumHeight(500);
+        mConvenientBanner.setMinimumHeight(imgeHeight);
         mConvenientBanner.setPages(
                 new CBViewHolderCreator<LocalImageHolderView>() {
                     @Override

@@ -62,7 +62,7 @@
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView
-
+                    android:id="@+id/tv_zhuanghu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="张三"
@@ -84,7 +84,7 @@
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView
-
+                    android:id="@+id/tv_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="张三"
@@ -99,14 +99,14 @@
                 android:orientation="horizontal"
                 >
                 <TextView
-
+                    android:id="@+id/tv_xunibinuber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/act_account_payResults_rmb"
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
                 <TextView
-
+                    android:id="@+id/tv_xunibiName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="张三"
@@ -114,29 +114,7 @@
                     />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
 
-                >
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/act_account_payResults_date"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="张三"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
-
-            </LinearLayout>
 
 
         </LinearLayout>

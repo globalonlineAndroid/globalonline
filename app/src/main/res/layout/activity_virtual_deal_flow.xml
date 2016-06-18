@@ -75,7 +75,7 @@
 
     </LinearLayout>
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <com.global.globalonline.view.AutoSwipeRefreshLayout
         android:layout_marginTop="20dp"
         android:id="@+id/srl_vdf"
         android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                         android:gravity="center"
                         >
                         <TextView
-                            android:id="@+id/tv_status"
+                            android:id="@+id/tv_type"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title1"
@@ -146,12 +146,12 @@
                         android:background="@color/ac_base_fenGeXian"
                         />
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         >
                         <TextView
-                            android:id="@+id/tv_type"
+                            android:id="@+id/tv_rmbNumber"
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -172,7 +172,7 @@
                         android:gravity="center"
                         >
                         <TextView
-                            android:id="@+id/tv_number"
+                            android:id="@+id/tv_xunibiNumber"
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                         android:gravity="center"
                         >
                         <TextView
-                            android:id="@+id/tv_weituoprice"
+                            android:id="@+id/tv_status"
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
                         android:gravity="center"
                         >
                         <TextView
-                            android:id="@+id/tv_shouxuprice"
+                            android:id="@+id/tv_avgprice"
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
                         android:gravity="center"
                         >
                         <TextView
-                            android:id="@+id/tv_weituojiage"
+                            android:id="@+id/tv_feel"
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -246,26 +246,6 @@
 
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/ac_base_fenGeXian"
-                        />
-                    <LinearLayout
-                        android:layout_width="80dp"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        >
-                        <TextView
-                            android:id="@+id/tv_chengjiaonumber"
-                            android:gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/act_historicalRecord_virtualdealflow_table_title8"
-                            android:textColor="@color/btn_queding"
-                            />
-
-                    </LinearLayout>
 
                     <View
                         android:layout_width="1dp"
@@ -291,7 +271,7 @@
 
 
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </com.global.globalonline.view.AutoSwipeRefreshLayout>
 
 
 

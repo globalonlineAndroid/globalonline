@@ -16,6 +16,7 @@ public class StaticBase {
     public  static  String BANK="bank";
     public  static  String VIRTUALOIN = "virtualoin";
     public  static  String BANKTYPE="cartype";
+    public  static  String ALIPAY="alipay";
     /*end*/
 
 

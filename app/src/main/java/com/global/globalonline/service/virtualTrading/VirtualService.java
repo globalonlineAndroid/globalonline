@@ -36,6 +36,8 @@ public interface VirtualService {
     Call<CoinsPaycheckBean> coins_paycheck(@QueryMap Map<String,String> map);
     @GET("coins_extract.json")  //转出虚拟币提交接
     Call<BaseBean> coins_extract(@QueryMap Map<String,String> map);
+    @GET("collect_money.json")  //付款
+    Call<BaseBean> collect_money(@QueryMap Map<String,String> map);
 
 
 }

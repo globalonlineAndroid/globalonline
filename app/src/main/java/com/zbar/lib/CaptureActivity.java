@@ -176,6 +176,7 @@ public class CaptureActivity extends Activity implements Callback {
 		Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
 		Intent pay = new Intent(this, PayActivity_.class);
+		pay.putExtra("str",result);
 		startActivity(pay);
 
 		//此处是扫描到消息的回调

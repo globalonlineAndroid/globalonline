@@ -16,6 +16,7 @@ import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.VirtualcoinBean;
 import com.global.globalonline.dao.DBHelper;
 import com.global.globalonline.db.bean.DataSource;
+import com.zbar.lib.ShengChengActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -68,6 +69,8 @@ public class SelectVirtualActivity extends BaseActivity implements SwipeRefreshL
                     ChargeFeesActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
                 }else if(type.equals("jiaoyiliushui")){
                     VirtualDealFlowActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
+                }else if(type.equals("fukuan")){
+                    ShengChengActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
                 }
 
             }

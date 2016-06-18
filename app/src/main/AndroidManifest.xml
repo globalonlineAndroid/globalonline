@@ -20,9 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.mainTab.MainActivity_" />
-        <activity android:name=".activities.user.LoginActivity_">
-
-        </activity>
+        <activity android:name=".activities.user.LoginActivity_" />
         <activity android:name=".activities.user.RegisteredActivity_" />
         <activity android:name=".activities.user.ChangeLoginPasswordActivity_" />
         <activity android:name=".activities.user.ChangeTradePasswordActivity_" />
@@ -60,12 +58,12 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity android:name=".activities.select.SelectVirtualActivity_" />
-        <activity android:name=".activities.HistoricalRecord.VirtualDealFlowActivity_"></activity>
-        <activity android:name=".activities.HistoricalRecord.RMBChongZhiFlowActivity_"></activity>
-        <activity android:name=".activities.HistoricalRecord.TiXianFlowActivity_"></activity>
-        <activity android:name=".activities.HistoricalRecord.ZhuanChuVirtualFlowActivity_"></activity>
-        <activity android:name=".activities.HistoricalRecord.ZhuanRuVirtualFlowActivity_"></activity>
-        <activity android:name=".activities.HistoricalRecord.HisWeiTuoActivity_"></activity>
+        <activity android:name=".activities.HistoricalRecord.VirtualDealFlowActivity_" />
+        <activity android:name=".activities.HistoricalRecord.RMBChongZhiFlowActivity_" />
+        <activity android:name=".activities.HistoricalRecord.TiXianFlowActivity_" />
+        <activity android:name=".activities.HistoricalRecord.ZhuanChuVirtualFlowActivity_" />
+        <activity android:name=".activities.HistoricalRecord.ZhuanRuVirtualFlowActivity_" />
+        <activity android:name=".activities.HistoricalRecord.HisWeiTuoActivity_" />
         <activity android:name=".activities.startPage.SplashActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,7 +71,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.startPage.GuideActivity"></activity>
+        <activity android:name=".activities.startPage.GuideActivity" />
+        <activity android:name=".activities.BaseActivie.WebViewActivity_" />
+        <activity android:name=".activities.BaseActivie.WebViewActivity"></activity>
     </application>
 
 </manifest>

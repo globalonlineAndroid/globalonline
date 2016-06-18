@@ -12,8 +12,18 @@ import android.widget.TextView;
 import com.global.globalonline.R;
 import com.global.globalonline.adapter.HistoricalRecord.VirtualDealFlowAdapter;
 import com.global.globalonline.base.BaseActivity;
-import com.global.globalonline.bean.DelegateBean;
+import com.global.globalonline.base.StaticBase;
+import com.global.globalonline.bean.xuNiBi.CoinsTradeRecordBean;
+import com.global.globalonline.bean.xuNiBi.CoinsTradeRecordItemBean;
+import com.global.globalonline.service.CallBackService;
+import com.global.globalonline.service.GetRetrofitService;
+import com.global.globalonline.service.HistoricalRecord.RecordService;
+import com.global.globalonline.service.RestService;
+import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.virtualTrading.VirtualService;
+import com.global.globalonline.tools.GetToastUtil;
+import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.view.AutoSwipeRefreshLayout;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -21,13 +31,18 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 @EActivity(R.layout.activity_virtual_deal_flow)
 public class VirtualDealFlowActivity extends BaseActivity {
 
     @ViewById
-    SwipeRefreshLayout srl_vdf;
+    AutoSwipeRefreshLayout srl_vdf;
     @ViewById
     ListView lv_vdf;
     @ViewById
@@ -37,14 +52,18 @@ public class VirtualDealFlowActivity extends BaseActivity {
     TextView tv_mairu_tab,tv_maichu_tab;
 
     VirtualDealFlowAdapter maAdapter;
-    List<DelegateBean> delegateList = new ArrayList<DelegateBean>();
+    List<CoinsTradeRecordItemBean> list = new ArrayList<CoinsTradeRecordItemBean>();
     VirtualService virtualService;
+    String symbol = "";
+    String types = "1";
+    String next_id = "0";
+    String type = "0";
+    boolean b = true;
 
-
-    public static void  toActivity(Activity activity,String xuNiId){
+    public static void  toActivity(Activity activity,String symbol){
 
         Intent intent = new Intent(activity, VirtualDealFlowActivity_.class);
-        intent.putExtra("xuNiId",xuNiId);
+        intent.putExtra("symbol",symbol);
         activity.startActivity(intent);
     }
 
@@ -52,11 +71,9 @@ public class VirtualDealFlowActivity extends BaseActivity {
 
     @AfterViews
     void init(){
+        symbol = getIntent().getStringExtra("symbol");
 
-
-       /* maAdapter = new VirtualDealFlowAdapter(VirtualDealFlowActivity.this,delegateList);
-        lv_vdf.setAdapter(maAdapter);
-*/
+        srl_vdf.setColorSchemeResources(StaticBase.colorResIds);
         lv_vdf.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -71,46 +88,66 @@ public class VirtualDealFlowActivity extends BaseActivity {
                     srl_vdf.setEnabled(false);
                 }
 
-                if(visibleItemCount+firstVisibleItem==totalItemCount){
+                if(visibleItemCount+firstVisibleItem==totalItemCount  && firstVisibleItem != 0) {
                     Log.e("log", "滑到底部");
+                    initView(false);
                 }
             }
         });
 
 
+
         srl_vdf.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                initView(true);
                 srl_vdf.setRefreshing(false);
             }
         });
 
+        tv_tab1.performClick();
+
 
     }
 
-/*tv_tab1,tv_tab2,tv_tab3,tv_tab4*/
     @Click({R.id.tv_tab1,R.id.tv_tab2,R.id.tv_tab3,R.id.tv_tab4})
     void click(View view) {
         switch (view.getId()) {
             case R.id.tv_tab1:
                 setTextBackgroud(tv_tab1);
-
-                //initView();
+                 types = "1";
+                 next_id = "0";
+                 type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab1);
+                 list.clear();
+                srl_vdf.autoRefresh();
+               // initView();
                 break;
             case R.id.tv_tab2:
                 setTextBackgroud(tv_tab2);
-
-               // initView();
+                 types = "2";
+                 next_id = "0";
+                type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab2);
+                list.clear();
+                srl_vdf.autoRefresh();
+                // initView();
                 break;
             case R.id.tv_tab3:
                 setTextBackgroud(tv_tab3);
-
-             //   initView();
+                types = "3";
+                next_id = "0";
+                type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab3);
+                list.clear();
+                srl_vdf.autoRefresh();
+                // initView();
                 break;
             case R.id.tv_tab4:
                 setTextBackgroud(tv_tab4);
-
-             //   initView();
+                types = "4";
+                next_id = "0";
+                type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab4);
+                list.clear();
+                srl_vdf.autoRefresh();
+                // initView();
                 break;
         }
 
@@ -120,14 +157,60 @@ public class VirtualDealFlowActivity extends BaseActivity {
 
     void setTextBackgroud(TextView tv){
 
-
         tv_tab1.setBackgroundResource(R.color.ac_virtual_chunk);
         tv_tab2.setBackgroundResource(R.color.ac_virtual_chunk);
         tv_tab3.setBackgroundResource(R.color.ac_virtual_chunk);
         tv_tab4.setBackgroundResource(R.color.ac_virtual_chunk);
         tv.setBackgroundResource(R.color.ac_base_tab);
 
+    }
 
+    public void initView(final boolean  c) {
+
+        RecordService baseService = GetRetrofitService.getRestClient(RecordService.class);
+
+        Map<String, String> stringMap = new HashMap<String, String>();
+        stringMap.put("symbol",symbol);
+        stringMap.put("types",types);
+        stringMap.put("next_id",next_id);
+
+        stringMap = MapToParams.getParsMap(stringMap);
+
+        Call<CoinsTradeRecordBean> call = baseService.coins_trade_record(stringMap);
+        RestService restService = new RestServiceImpl();
+        restService.get(null,"",call, new CallBackService() {
+            @Override
+            public <T> void onResponse(Call<T> call, Response<T> response) {
+
+                CoinsTradeRecordBean baseBean =   ((CoinsTradeRecordBean)response.body());
+                next_id = baseBean.getNext_id();
+                if(baseBean.getErrorCode().equals("0")) {
+
+                    if(baseBean.getRecord_list() != null && baseBean.getRecord_list().size()>0) {
+                        list.addAll(baseBean.getRecord_list());
+                    }else {
+                        GetToastUtil.getToads(VirtualDealFlowActivity.this,getResources().getString(R.string.act_base_nodata));
+                    }
+                    if (b && c == true){
+                        maAdapter = new VirtualDealFlowAdapter(VirtualDealFlowActivity.this,baseBean.getRecord_list(),type);
+                        lv_vdf.setAdapter(maAdapter);
+                    }else {
+                        maAdapter.notifyDataSetChanged();
+                    }
+
+                }else {
+                    GetToastUtil.getToads(getApplication(), baseBean.getMessage());
+
+                }
+
+
+            }
+            @Override
+            public <T> void onFailure(Call<T> call, Throwable t) {
+
+                GetToastUtil.getToads(getApplication(), t.getMessage());
+            }
+        });
     }
 
 

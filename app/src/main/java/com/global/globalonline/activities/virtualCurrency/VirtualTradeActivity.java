@@ -54,7 +54,9 @@ public class VirtualTradeActivity extends BaseActivity {
     TextView back,tv_name,tv_price,tv_zhangfu,tv_chengjiaoe,tv_chengjiaoliang,tv_minprice,tv_maxprice,tv_buy,
             tv_sell,tv_realprice,tv_sell_realpeice,
             tv_buy_keyongRMB,tv_buy_kemaixunibi,tv_buy_login,
-            tv_sell_login,tv_sell_keyongXuNiBi,tv_sell_dongjiexunibi;
+            tv_sell_login,tv_sell_keyongXuNiBi,tv_sell_dongjiexunibi,
+            title
+    ;
     @ViewById
     EditText et_buy_price,et_buy_number,et_buy_jiaoyipwd,
                 et_sell_price,et_sell_number,et_sell_jiaoyipwd;
@@ -210,6 +212,8 @@ public class VirtualTradeActivity extends BaseActivity {
                 tv_mairu_tab.setBackgroundResource(R.color.ac_virtual_chunk);
                 tv_maichu_tab.setBackgroundResource(R.color.ac_virtual_chunk);
                 tv_chedan.setBackgroundResource(R.color.ac_base_tab);
+                MandatoryAdministrationActivity.toActivity(VirtualTradeActivity.this,symbol);
+
                 break;
             case R.id.btn_buy:
                 buy();
@@ -255,6 +259,7 @@ public class VirtualTradeActivity extends BaseActivity {
                     String  sellPrice  = coinsDetailBean.getSell_list().get(0).getPrice();
 
                     tv_name.setText(coinsDetailBean.getName());
+                    title.setText(coinsDetailBean.getName()+getResources().getString(R.string.act_virtualcurrency_jiaoyi));
                     tv_price.setText(coinsDetailBean.getPrice());
                     tv_zhangfu.setText(coinsDetailBean.getRatio());
                     float buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance())/Float.parseFloat(coinsDetailBean.getPrice());

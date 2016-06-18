@@ -12,6 +12,16 @@ public class ConfigsBean {
     private List<BankBean> bank_list;
     private List<VirtualcoinBean> virtualcointype;
     private List<CardTypeBean> card_type_list;
+    private AlipayBean alipay;
+
+
+    public AlipayBean getAlipay() {
+        return alipay;
+    }
+
+    public void setAlipay(AlipayBean alipay) {
+        this.alipay = alipay;
+    }
 
     public List<VirtualcoinBean> getVirtualcointype() {
         return virtualcointype;

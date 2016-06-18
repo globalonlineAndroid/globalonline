@@ -8,25 +8,26 @@ import android.widget.TextView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.activities.BaseActivie.CertificationResultsActivity_;
+import com.global.globalonline.activities.BaseActivie.WebViewActivity;
 import com.global.globalonline.activities.RMB.RechargeRMBActivity_;
 import com.global.globalonline.activities.RMB.WithdrawalRMBActivity_;
 import com.global.globalonline.activities.select.SelectVirtualActivity_;
-import com.global.globalonline.activities.user.AboutUsActivity_;
 import com.global.globalonline.activities.user.CertificationActivity_;
 import com.global.globalonline.activities.user.ChangeLoginPasswordActivity_;
 import com.global.globalonline.activities.user.ChangeTradePasswordActivity_;
 import com.global.globalonline.activities.user.LoginActivity_;
 import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.bean.AccountDetailBean;
+import com.global.globalonline.dao.TishiResDao;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetDialogUtil;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 import com.zbar.lib.CaptureActivity;
-import com.zbar.lib.ShengChengActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -60,6 +61,8 @@ public class MyFrament extends Fragment {
 
             if (MyApplication.userBean.getIdentity_info() != null) {
                 tv_isRenZheng.setText("已认证");
+                tv_ename.setText(MyApplication.userBean.getIdentity_info().getName());
+
             }
         }catch (Exception e){
             LoginActivity_.intent(getActivity()).start();
@@ -102,12 +105,16 @@ public class MyFrament extends Fragment {
                 startActivity(jiaoyiliushui);
                 break;
             case R.id.ll_shouKuan:
-                Intent intent_shengcheng = new Intent(getActivity(), ShengChengActivity.class);
-                startActivity(intent_shengcheng);
+               /* Intent intent_shengcheng = new Intent(getActivity(), ShengChengActivity.class);
+                startActivity(intent_shengcheng);*/
+                Intent intent = new Intent(getActivity(), SelectVirtualActivity_.class);
+                intent.putExtra("type","fukuan");
+                startActivity(intent);
                 break;
             case R.id.ll_fuKuan:
-                Intent intent = new Intent(getActivity(), CaptureActivity.class);
-                startActivity(intent);
+                Intent intentFuKuan = new Intent(getActivity(), CaptureActivity.class);
+                startActivity(intentFuKuan);
+
                 break;
             case R.id.ll_renZheng:
                 if(MyApplication.userBean.getIdentity_info() != null){
@@ -125,10 +132,19 @@ public class MyFrament extends Fragment {
             case R.id.ll_message:
                 break;
             case R.id.ll_woMen:
-                AboutUsActivity_.intent(getActivity()).start();
+                //AboutUsActivity_.intent(getActivity()).start();
+                WebViewActivity.toActivity(getActivity(),"guanyu");
                 break;
             case R.id.ll_exit:
-                LoginActivity_.intent(getActivity()).start();
+
+                GetDialogUtil.tishi(getActivity(), "提示", "是否退出", new TishiResDao() {
+                    @Override
+                    public void getTiShi(String args) {
+                        MyApplication.userBean = null;
+                        LoginActivity_.intent(getActivity()).start();
+                    }
+                });
+
                 break;
 
         }

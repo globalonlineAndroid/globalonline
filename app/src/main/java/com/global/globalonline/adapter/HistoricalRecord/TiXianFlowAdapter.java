@@ -53,7 +53,7 @@ public class TiXianFlowAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Mandatory  viewHolder = null;
         if(convertView == null){
-                convertView = layoutInflater.inflate(R.layout.act_item_virtual_deal_flow, null);
+                convertView = layoutInflater.inflate(R.layout.act_item_tixian_flow, null);
                 viewHolder = new Mandatory();
 
                 viewHolder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);

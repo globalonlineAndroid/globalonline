@@ -101,8 +101,8 @@
 
             <ImageButton
                 android:id="@+id/ibtn_homepage"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
 
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_homepage"
@@ -126,8 +126,8 @@
             >
             <ImageButton
                 android:id="@+id/ibtn_tradingfloor"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_tradingfloor"
                 android:contentDescription="@string/app_name" />
@@ -149,8 +149,8 @@
 
             <ImageButton
                 android:id="@+id/ibtn_my"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_my"
                 android:contentDescription="@string/app_name" />

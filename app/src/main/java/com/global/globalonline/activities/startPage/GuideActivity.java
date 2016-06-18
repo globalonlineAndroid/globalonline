@@ -62,7 +62,8 @@ public class GuideActivity extends BaseActivity implements OnPageChangeListener 
 		views.add(inflater.inflate(R.layout.what_new_one, null));
 		views.add(inflater.inflate(R.layout.what_new_two, null));
 		views.add(inflater.inflate(R.layout.what_new_three, null));
-		//views.add(inflater.inflate(R.layout.what_new_four, null));
+		views.add(inflater.inflate(R.layout.what_new_four, null));
+		views.add(inflater.inflate(R.layout.what_new_five, null));
 
 		// 初始化Adapter
 		vpAdapter = new ViewPagerAdapter(views, this);

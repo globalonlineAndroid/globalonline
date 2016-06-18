@@ -115,11 +115,13 @@ public class ZhuanRuVirtualFlowActivity extends BaseActivity {
 
                 CoinsPaycheckRecordBean baseBean =   ((CoinsPaycheckRecordBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
-                    list.clear();
-                    list.addAll(baseBean.getRecord_list());
+                    if(baseBean.getRecord_list() != null) {
+                        list.clear();
+                        list.addAll(baseBean.getRecord_list());
 
-                    maAdapter = new ZhuanRuVirtualFlowAdapter(ZhuanRuVirtualFlowActivity.this,list);
-                    lv_vdf.setAdapter(maAdapter);
+                        maAdapter = new ZhuanRuVirtualFlowAdapter(ZhuanRuVirtualFlowActivity.this, list);
+                        lv_vdf.setAdapter(maAdapter);
+                    }
 
                 }else {
                     GetToastUtil.getToads(getApplication(), baseBean.getMessage());

@@ -116,10 +116,12 @@ public class ZhuanChuVirtualFlowActivity extends BaseActivity {
                 CoinsExtractRecordBean baseBean =   ((CoinsExtractRecordBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
                     list.clear();
-                    list.addAll(baseBean.getRecord_list());
+                    if(baseBean.getRecord_list() != null) {
+                        list.addAll(baseBean.getRecord_list());
 
-                    maAdapter = new ZhuanChuVirtualFlowAdapter(ZhuanChuVirtualFlowActivity.this,list);
-                    lv_vdf.setAdapter(maAdapter);
+                        maAdapter = new ZhuanChuVirtualFlowAdapter(ZhuanChuVirtualFlowActivity.this, list);
+                        lv_vdf.setAdapter(maAdapter);
+                    }
 
 
                 }else {

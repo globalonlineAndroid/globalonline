@@ -241,6 +241,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_zhuyi"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -251,6 +252,48 @@
 
 
     </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_fanben"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp">
+
+
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_RechargeRMBActivity_test_zi6"
+                android:textColor="@color/ac_base_ziti_hui"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_text3"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_RechargeRMBActivity_test2"
+                android:textColor="@color/ac_base_ziti_hui"
+                />
+
+        </LinearLayout>
+
 
     <LinearLayout
         android:layout_marginTop="30dp"

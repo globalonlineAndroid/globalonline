@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">global online</string>
     <string name="view_titleView_fanhui">return</string>
+
+
+    <string name="act_base_about">http://api.50f.cn/page/about_us_en.html</string>
+    <string name="act_base_fuwuxieyi">http://api.50f.cn/page/about_us_zh.html</string>
 	
 	<string name="act_main_title_home">homepage</string>
     <string name="act_main_title_dating">transaction floor</string>

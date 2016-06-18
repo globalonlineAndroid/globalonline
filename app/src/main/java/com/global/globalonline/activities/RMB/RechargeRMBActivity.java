@@ -1,16 +1,22 @@
 package com.global.globalonline.activities.RMB;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.activities.HistoricalRecord.RMBChongZhiFlowActivity_;
 import com.global.globalonline.base.BaseActivity;
+import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.BaseBean;
+import com.global.globalonline.dao.DBHelper;
+import com.global.globalonline.db.bean.DataSource;
 import com.global.globalonline.service.BaseService;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
@@ -20,13 +26,16 @@ import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.view.SetListViewHeightBasedOnChildren;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -41,7 +50,12 @@ public class RechargeRMBActivity extends BaseActivity {
     @ViewById
     Button btn_tijiao;
     @ViewById
-    LinearLayout ll_cartype;
+    LinearLayout ll_cartype,ll_text3;
+    @ViewById
+    TextView tv_zhuyi;
+
+    @ViewById
+    ListView lv_fanben;
 
 
     String recharge_type = "1";  //1网银2支付宝
@@ -50,6 +64,7 @@ public class RechargeRMBActivity extends BaseActivity {
     void init(){
 
         GetSelectBouncedUtil.get(this,tv_banktype, StaticBase.BANK,"0");
+        initList(true);
     }
 
 
@@ -69,13 +84,18 @@ public class RechargeRMBActivity extends BaseActivity {
                 ll_cartype.setVisibility(View.VISIBLE);
                 tv_wangyi.setBackgroundResource(R.color.ac_base_tab);
                 tv_zhifubao.setBackgroundResource(R.color.ac_virtual_chunk);
+                tv_zhuyi.setText(getResources().getString(R.string.act_RechargeRMBActivity_test));
+                ll_text3.setVisibility(View.VISIBLE);
+                initList(true);
                 break;
             case R.id.tv_zhifubao:
                 recharge_type = "2";
                 ll_cartype.setVisibility(View.GONE);
-
                 tv_wangyi.setBackgroundResource(R.color.ac_virtual_chunk);
                 tv_zhifubao.setBackgroundResource(R.color.ac_base_tab);
+                tv_zhuyi.setText(getResources().getString(R.string.act_RechargeRMBActivity_alipay_test));
+                initList(false);
+                ll_text3.setVisibility(View.GONE);
                 break;
         }
     }
@@ -137,5 +157,65 @@ public class RechargeRMBActivity extends BaseActivity {
         });
 
     }
+
+
+    void initList(boolean b){
+
+        List<Map<String,String>> list = new ArrayList<>();
+        DBHelper dbHelper = DBHelper.getInstance(RechargeRMBActivity.this);
+
+
+        if(b) {
+            List<DataSource> dataSources = dbHelper.getByModekeyList(StaticBase.INCOMEBANK);
+            for (int i = 0; i < dataSources.size(); i++) {
+                DataSource d = dataSources.get(i);
+                Map<String, String> map = new HashMap<>();
+                map.put("shoukuanren", d.getName());
+                map.put("shoukuanzhanghao", d.getBankno());
+                map.put("shoukuankaihu", d.getBankadd());
+                map.put("jine", "您要转入的金额");
+                map.put("beizhu", MyApplication.userBean.getUserid());
+                list.add(map);
+            }
+            Sa sa  =  new Sa(RechargeRMBActivity.this,list,R.layout.act_item_recharge_rmb,
+                    new String[]{"shoukuanren","shoukuanzhanghao","shoukuankaihu","jine","beizhu"},
+                    new int[]{R.id.tv_shoukuanren,R.id.tv_shoukuanzhanghao,R.id.tv_shoukuankaihu,R.id.tv_jine,R.id.tv_beizhu}
+            );
+
+            lv_fanben.setAdapter(sa);
+
+        }else {
+            List<DataSource> dataSources = dbHelper.getByModekeyList(StaticBase.ALIPAY);
+            for (int i = 0; i < dataSources.size(); i++) {
+                DataSource d = dataSources.get(i);
+                Map<String, String> map = new HashMap<>();
+                map.put("name", getResources().getString(R.string.act_RechargeRMBActivity_tab2));
+                map.put("zhanghao", d.getBankno());
+                map.put("shoukuanname", d.getName());
+                map.put("jine", "您要转入的金额");
+                map.put("nenrong", MyApplication.userBean.getUserid());
+                list.add(map);
+            }
+            Sa sa  =  new Sa(RechargeRMBActivity.this,list,R.layout.act_item_recharge_zhifubao_rmb,
+                    new String[]{"name","zhanghao","shoukuanname","nenrong","jine"},
+                    new int[]{R.id.tv_zchongzhifangshi,R.id.tv_zhanghao,R.id.tv_shoukuanname,R.id.tv_nenrong,R.id.tv_price}
+            );
+
+            lv_fanben.setAdapter(sa);
+        }
+
+
+
+        SetListViewHeightBasedOnChildren.setList(lv_fanben);
+    }
+
+}
+
+class Sa extends SimpleAdapter {
+
+    public Sa(Context context, List<? extends Map<String, ?>> data, int resource, String[] from, int[] to) {
+        super(context, data, resource, from, to);
+    }
+
 
 }

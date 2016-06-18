@@ -1,11 +1,17 @@
 package com.zbar.lib;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.global.globalonline.R;
+import com.global.globalonline.base.MyApplication;
+import com.global.globalonline.base.StaticBase;
+import com.global.globalonline.tools.GetSelectBouncedUtil;
+import com.google.gson.Gson;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -13,36 +19,51 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 public class ShengChengActivity extends Activity {
 
 
     ImageView  erweima;
-   // EditText  nrong;
-  //  Button bt_shengcheng;
+
+   String symbol = "";
+    int QR_WIDTH = 400;
+    int QR_HEIGHT = 400;
+
+    public static void  toActivity(Activity activity,String symbol){
+
+        Intent intent = new Intent(activity, ShengChengActivity.class);
+        intent.putExtra("symbol",symbol);
+        activity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sheng_cheng);
+
+
+        WindowManager wm = this.getWindowManager();
+
+        int width = wm.getDefaultDisplay().getWidth();
+        int height = wm.getDefaultDisplay().getHeight();
+
+       // QR_WIDTH =Integer.parseInt(new DecimalFormat("#").format(width * 0.6));
+
+        symbol = getIntent().getStringExtra("symbol");
         erweima = (ImageView)this.findViewById(R.id.erweima);
-       /* nrong = (EditText)this.findViewById(R.id.nrong);
-        bt_shengcheng = (Button)this.findViewById(R.id.bt_shengcheng);
 
-        bt_shengcheng.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                createQRImage(nrong.getText().toString());
-            }
-        });
-*/
-
-        createQRImage("afsdfasfsfasdfasdfasfdsadfasdfasfdasdf");
+        Map<String,String>  map = new Hashtable<>();
+        map.put("sysid",symbol);
+        String name =  GetSelectBouncedUtil.getBankName(ShengChengActivity.this, StaticBase.VIRTUALOIN,symbol);
+        map.put("sysname",name);
+        map.put("userid", MyApplication.userBean.getUserid());
+        String str = new  Gson().toJson(map);
+        createQRImage(str);
     }
 
 
-    int QR_WIDTH = 100;
-    int QR_HEIGHT = 100;
+
 
     public void createQRImage(String url)
     {

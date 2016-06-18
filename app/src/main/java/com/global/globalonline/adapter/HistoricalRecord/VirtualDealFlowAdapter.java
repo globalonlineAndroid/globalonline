@@ -8,7 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
-import com.global.globalonline.bean.DelegateBean;
+import com.global.globalonline.bean.xuNiBi.CoinsTradeRecordItemBean;
+import com.global.globalonline.tools.DateUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,14 +20,16 @@ import java.util.List;
 public class VirtualDealFlowAdapter extends BaseAdapter {
 
     LayoutInflater layoutInflater = null;
-    List<DelegateBean> list = new ArrayList<DelegateBean>();
+    List<CoinsTradeRecordItemBean> list = new ArrayList<CoinsTradeRecordItemBean>();
     Activity activity;
+    String type = "";
 
 
-    public VirtualDealFlowAdapter(Activity activity , List<DelegateBean> list) {
+    public VirtualDealFlowAdapter(Activity activity , List<CoinsTradeRecordItemBean> list,String type) {
         layoutInflater = LayoutInflater.from(activity);
         this.list = list;
         this.activity = activity;
+        this.type = type;
 
     }
 
@@ -52,7 +55,13 @@ public class VirtualDealFlowAdapter extends BaseAdapter {
                 convertView = layoutInflater.inflate(R.layout.act_item_virtual_deal_flow, null);
                 viewHolder = new Mandatory();
 
-                viewHolder.tv_number = (TextView) convertView.findViewById(R.id.tv_number);
+                viewHolder.tv_type = (TextView) convertView.findViewById(R.id.tv_type);
+                viewHolder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);
+                viewHolder.tv_rmbNumber = (TextView) convertView.findViewById(R.id.tv_rmbNumber);
+                viewHolder.tv_xunibiNumber = (TextView) convertView.findViewById(R.id.tv_xunibiNumber);
+                viewHolder.tv_status = (TextView) convertView.findViewById(R.id.tv_status);
+                viewHolder.tv_avgprice = (TextView) convertView.findViewById(R.id.tv_avgprice);
+                viewHolder.tv_feel = (TextView) convertView.findViewById(R.id.tv_feel);
 
                 convertView.setTag(viewHolder);
 
@@ -60,7 +69,16 @@ public class VirtualDealFlowAdapter extends BaseAdapter {
             viewHolder = (Mandatory)convertView.getTag();
         }
 
-        viewHolder.tv_number.setText(position+"");
+
+        CoinsTradeRecordItemBean co = list.get(position);
+        viewHolder.tv_type.setText(type);
+        viewHolder.tv_date.setText(DateUtils.getDateString(co.getTime()));
+        viewHolder.tv_rmbNumber.setText(co.getDealmoney());
+        viewHolder.tv_xunibiNumber.setText(co.getVolume());
+        viewHolder.tv_status.setText("成功");
+        viewHolder.tv_status.setTextColor(activity.getResources().getColor(R.color.green));
+        viewHolder.tv_avgprice.setText("¥"+co.getPrice());
+        viewHolder.tv_feel.setText("¥"+co.getFee());
 
         return convertView;
     }
@@ -70,17 +88,13 @@ public class VirtualDealFlowAdapter extends BaseAdapter {
     /*存放控件 的ViewHolder*/
     public final class Mandatory {
 
-        TextView tv_buquan;
-        TextView tv_quxiao;
-        TextView tv_status;
-        TextView tv_date;
         TextView tv_type;
-        TextView tv_number;
-        TextView tv_weituoprice;
-        TextView tv_shouxuprice;
-        TextView tv_weituojiage;
-        TextView tv_chengjiaonumber;
-        TextView tv_chengjiaojine;
+        TextView tv_date;
+        TextView tv_rmbNumber;
+        TextView tv_xunibiNumber;
+        TextView tv_status;
         TextView tv_avgprice;
+        TextView tv_feel;
+
     }
 }

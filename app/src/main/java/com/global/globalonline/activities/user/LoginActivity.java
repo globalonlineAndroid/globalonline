@@ -5,19 +5,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.global.globalonline.R;
 import com.global.globalonline.activities.mainTab.MainActivity_;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.StaticBase;
+import com.global.globalonline.bean.AlipayBean;
 import com.global.globalonline.bean.BankBean;
 import com.global.globalonline.bean.CardTypeBean;
 import com.global.globalonline.bean.ConfigBean;
 import com.global.globalonline.bean.CoutryBean;
 import com.global.globalonline.bean.IncomebankBean;
-import com.global.globalonline.bean.ParsMapBean;
 import com.global.globalonline.bean.UserBean;
 import com.global.globalonline.bean.VirtualcoinBean;
 import com.global.globalonline.dao.DBHelper;
@@ -141,10 +140,15 @@ public class LoginActivity extends BaseActivity {
 
 
     public void initDate() {
-        final ConfigService configService = GetRetrofitService.getRestClient(ConfigService.class);
-        ParsMapBean parse = MapToParams.getMap(null);
 
-        Call<ConfigBean> call = configService.getCofig(parse.getTime(),parse.getToken());
+
+        ConfigService configService = GetRetrofitService.getRestClient(ConfigService.class);
+        Map<String, String> stringMap = new HashMap<String, String>();
+
+
+        stringMap = MapToParams.getParsMap(stringMap);
+
+        Call<ConfigBean> call = configService.getCofig(stringMap);
 
         RestService  restService = new RestServiceImpl();
         restService.get(null,"",call, new CallBackService() {
@@ -220,18 +224,29 @@ public class LoginActivity extends BaseActivity {
                         dataSources.add(dataSource);
 
                     }
+                  //  for (int i = 0; i < configBean.getConfig().getAlipay().size(); i++) {
+                        DataSource dataSource = new DataSource();
+                        AlipayBean alipayBean = configBean.getConfig().getAlipay();
+
+                        dataSource.setName(alipayBean.getName());
+                        dataSource.setBankno(alipayBean.getAccount());
+                        dataSource.setModule(StaticBase.ALIPAY);
+                        dataSources.add(dataSource);
+
+                   // }
                     dbHelper.addDataTable(dataSources);
                     GetSelectBouncedUtil.get(LoginActivity.this,tv_guojia, StaticBase.COUTRY,"39");
 
 
                 }else {
-                    Toast.makeText(getApplicationContext(), configBean.getMessage(), Toast.LENGTH_SHORT).show();
+
+                    GetToastUtil.getToads(LoginActivity.this, configBean.getMessage());
 
                 }
             }
             @Override
             public <T> void onFailure(Call<T> call, Throwable t) {
-                String a = "";
+               GetToastUtil.getToads(LoginActivity.this,t.getMessage());
             }
         });
         }

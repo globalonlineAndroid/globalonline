@@ -4,6 +4,7 @@ import com.global.globalonline.bean.RMB.chongzhi.ChongZhiBean;
 import com.global.globalonline.bean.RMB.tixian.RmbExtractRecordBean;
 import com.global.globalonline.bean.xuNiBi.CoinsExtractRecordBean;
 import com.global.globalonline.bean.xuNiBi.CoinsPaycheckRecordBean;
+import com.global.globalonline.bean.xuNiBi.CoinsTradeRecordBean;
 
 import java.util.Map;
 
@@ -25,4 +26,6 @@ public interface RecordService {
 
     @GET("coins_extract_record.json")  //虚拟币准出记录
     Call<CoinsExtractRecordBean> coins_extract_record(@QueryMap Map<String,String> map);
+    @GET("coins_trade_record.json")  //虚拟交易流水
+    Call<CoinsTradeRecordBean> coins_trade_record(@QueryMap Map<String,String> map);
 }

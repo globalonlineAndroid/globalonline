@@ -72,16 +72,28 @@ public class TradingFloorAdapter extends BaseAdapter{
         VirtualTradingBean virtualTrading = list.get(position);
         viewHolder.tv_xunibiName.setText(GetConfiguration.LANGUAGE.equals(GetConfiguration.ZH)?virtualTrading.getName():virtualTrading.getEname());
         viewHolder.tv_price.setText(virtualTrading.getPrice());
-        viewHolder.tv_zhangfu.setText(virtualTrading.getRatio()+"%");
+
+
+        float zhangfu = Float.parseFloat(virtualTrading.getRatio());
+        String str = "";
+        if(zhangfu >= 0){
+            str = "+"+virtualTrading.getRatio()+"%";
+            viewHolder.ll_zhangfu.setBackgroundResource(R.color.red);
+        }else {
+            str = virtualTrading.getRatio()+"%";
+            viewHolder.ll_zhangfu.setBackgroundResource(R.color.green);
+        }
+
+        viewHolder.tv_zhangfu.setText(str);
         viewHolder.tv_chengjiaoe.setText(virtualTrading.getTurnover());
         viewHolder.tv_chengjiaoliang.setText(virtualTrading.getVolume());
         viewHolder.tv_minprice.setText(virtualTrading.getMin_price());
         viewHolder.tv_mxPrice.setText(virtualTrading.getMax_price());
-        if(virtualTrading.getRatio().indexOf("-") > 0){
+       /* if(virtualTrading.getRatio().indexOf("-") > 0){
             viewHolder.ll_zhangfu.setBackgroundResource(R.color.green);
         }else {
             viewHolder.ll_zhangfu.setBackgroundResource(R.color.red);
-        }
+        }*/
         Glide.with(act)
                 .load(UrlApi.baseImageUrl+virtualTrading.getImg())
                 .into(viewHolder.tv_image);

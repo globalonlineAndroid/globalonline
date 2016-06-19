@@ -81,51 +81,77 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:visibility="gone"
             tools:visibility="visible">
+           <LinearLayout
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_height="0dp">
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:orientation="horizontal"
+                   android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:text="开盘:" />
+
+                    <TextView
+                        android:id="@+id/open"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        tools:text="..." />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:orientation="horizontal"
+                   android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:text="收盘:" />
+
+                    <TextView
+                        android:id="@+id/close"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        tools:text="..." />
+                   </LinearLayout>
+           </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:textColor="@color/white"
-                android:text="开盘:" />
-
-            <TextView
-                android:id="@+id/open"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                tools:text="2015" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:textColor="@color/white"
-                android:text="收盘:" />
-
-            <TextView
-                android:id="@+id/close"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                tools:text="2015" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
                 android:gravity="right"
                 android:textColor="@color/white"
                 android:text="最高:" />
@@ -137,13 +163,19 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:textColor="@color/white"
-                tools:text="2015" />
+                tools:text="..." />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="1"
+
                 android:gravity="right"
                 android:textColor="@color/white"
                 android:text="最低:" />
@@ -155,7 +187,9 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:textColor="@color/white"
-                tools:text="2015" />
+                tools:text="..." />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
     </RelativeLayout>

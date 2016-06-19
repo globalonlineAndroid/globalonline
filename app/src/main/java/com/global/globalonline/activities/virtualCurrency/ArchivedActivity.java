@@ -141,7 +141,8 @@ public class ArchivedActivity extends BaseActivity {
 
                 BaseBean baseBean =(BaseBean) response.body();
                 if(baseBean.getErrorCode().equals("0")){
-                    GetToastUtil.getToads(ArchivedActivity.this,"提交成功");
+                    //GetToastUtil.getToads(ArchivedActivity.this,"提交成功");
+                    GetToastUtil.getSuccessToads(ArchivedActivity.this);
                 }else {
                     GetToastUtil.getToads(ArchivedActivity.this,baseBean.getMessage());
                 }

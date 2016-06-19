@@ -79,6 +79,7 @@
             android:background="@drawable/act_regidtered_getyanzhengma"
             android:text="@string/act_user_registered_getyanzhengma"
             android:textColor="@color/view_titleview_fanhui"
+            android:textSize="10dp"
             />
     </LinearLayout>
     <LinearLayout

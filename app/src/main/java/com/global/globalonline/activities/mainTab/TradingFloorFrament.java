@@ -17,6 +17,7 @@ import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.virtualTrading.VirtualService;
+import com.global.globalonline.tools.GetQuanXian;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 import com.global.globalonline.view.AutoSwipeRefreshLayout;
@@ -64,8 +65,10 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                VirtualTradingBean virtualTradingBean =(VirtualTradingBean) parent.getItemAtPosition(position);
-                VirtualTradeActivity.toActiviy(getActivity(),virtualTradingBean.getSymbol());
+                if(GetQuanXian.getIsQuanXian(getActivity())) {
+                    VirtualTradingBean virtualTradingBean = (VirtualTradingBean) parent.getItemAtPosition(position);
+                    VirtualTradeActivity.toActiviy(getActivity(), virtualTradingBean.getSymbol());
+                }
             }
         });
 

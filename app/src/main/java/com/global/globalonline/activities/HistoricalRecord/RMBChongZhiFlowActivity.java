@@ -73,7 +73,7 @@ public class RMBChongZhiFlowActivity extends BaseActivity {
                     srl_vdf.setEnabled(false);
                 }
 
-                if(visibleItemCount+firstVisibleItem==totalItemCount){
+                if(visibleItemCount+firstVisibleItem==totalItemCount  ){
                     Log.e("log", "滑到底部");
                 }
             }
@@ -108,7 +108,11 @@ public class RMBChongZhiFlowActivity extends BaseActivity {
                 ChongZhiBean baseBean =   ((ChongZhiBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
                     if (baseBean.getRecord_list() != null){
+                        list.clear();
                         list.addAll(baseBean.getRecord_list());
+                    }else {
+                        GetToastUtil.getToads(RMBChongZhiFlowActivity.this,getResources().getString(R.string.act_base_nodata));
+
                     }
 
                     maAdapter = new RMBChongZhiFlowAdapter(RMBChongZhiFlowActivity.this,list);

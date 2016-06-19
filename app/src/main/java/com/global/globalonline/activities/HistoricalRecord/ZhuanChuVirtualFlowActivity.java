@@ -121,6 +121,9 @@ public class ZhuanChuVirtualFlowActivity extends BaseActivity {
 
                         maAdapter = new ZhuanChuVirtualFlowAdapter(ZhuanChuVirtualFlowActivity.this, list);
                         lv_vdf.setAdapter(maAdapter);
+                    }else {
+                        GetToastUtil.getToads(ZhuanChuVirtualFlowActivity.this,getResources().getString(R.string.act_base_nodata));
+
                     }
 
 

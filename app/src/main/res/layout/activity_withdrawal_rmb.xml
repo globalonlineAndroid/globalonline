@@ -63,7 +63,12 @@
 
         >
 
-
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_price_dz"
+            android:layout_marginRight="8dp"
+            />
 
         <EditText
             android:id="@+id/et_cardNum"
@@ -88,6 +93,13 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         >
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_price_dz"
+            android:layout_marginRight="8dp"
+            />
+
         <EditText
             android:id="@+id/et_reCardNum"
             android:inputType="number"
@@ -107,7 +119,12 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         >
-
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_men"
+            android:layout_marginRight="8dp"
+            />
 
         <EditText
             android:id="@+id/et_toName"
@@ -127,7 +144,12 @@
         android:paddingLeft="20dp"
         >
 
-
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_kaihuzh"
+            android:layout_marginRight="8dp"
+            />
         <EditText
             android:id="@+id/et_kaihuhang"
             android:layout_width="match_parent"
@@ -147,6 +169,12 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         >
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_money_bi"
+            android:layout_marginRight="8dp"
+            />
         <EditText
             android:id="@+id/et_price"
             android:layout_width="match_parent"
@@ -166,11 +194,18 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         >
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_lock"
+            android:layout_marginRight="8dp"
+            />
         <EditText
             android:id="@+id/et_trade_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/act_WithdrawalRMBActivity_pwd"
+            android:inputType="textPassword"
             style="@style/editText"
             />
     </LinearLayout>

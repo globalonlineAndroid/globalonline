@@ -46,7 +46,7 @@ public class CertificationActivity extends BaseActivity {
 
        // GetSelectBouncedUtil.get(this,et_cardtype, StaticBase.BANKTYPE,"39");
         String index = "0";
-        GetSelectBouncedUtil.get(this,et_cardtype, StaticBase.BANKTYPE,index);
+        GetSelectBouncedUtil.get(this,et_cardtype, StaticBase.CARTYPE,index);
     }
 
 

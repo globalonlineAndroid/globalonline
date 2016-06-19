@@ -38,7 +38,7 @@ public class GetSelectBouncedUtil {
 
             DataSource data = list.get(i);
             if(!"".equals(defId) && data.getId_().equals(defId)){
-                textView.setText(data.getName());
+                textView.setText(GetConfiguration.isZh()?data.getName():data.getEname());
                 textView.setTag(data.getId_());
             }
             CoutryBean cou = new CoutryBean();
@@ -47,7 +47,7 @@ public class GetSelectBouncedUtil {
             cou.setEname(data.getEname());
             cou.setId(data.getId_());
             coutrys.add(cou);
-            options.add(cou.getName());
+            options.add(GetConfiguration.isZh()?cou.getName():cou.getEname());
         }
 
 
@@ -56,7 +56,7 @@ public class GetSelectBouncedUtil {
         pvOptions.setPicker(options);
         pvOptions.setTitle("请选择");
         pvOptions.setCyclic(false);
-        if(mouble.equals(StaticBase.BANKTYPE)) {
+        if(mouble.equals(StaticBase.CARTYPE)) {
             pvOptions.setSelectOptions(Integer.parseInt(defId));
         }else {
             pvOptions.setSelectOptions(Integer.parseInt(defId) - 1);
@@ -67,7 +67,7 @@ public class GetSelectBouncedUtil {
             @Override
             public void onOptionsSelect(int options1, int option2, int options3) {
                 //返回的分别是三个级别的选中位置
-                String tx = coutrys.get(options1).getName();
+                String tx =GetConfiguration.isZh()? coutrys.get(options1).getName():coutrys.get(options1).getEname();
                 String id = coutrys.get(options1).getId();
                 textView.setText(tx);
                 textView.setTag(id);

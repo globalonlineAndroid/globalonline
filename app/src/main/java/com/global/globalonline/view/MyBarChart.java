@@ -30,7 +30,7 @@ public class MyBarChart extends BarChart {
 
     private void initChart() {
         setDescription("");
-        setBackgroundColor(getResources().getColor(R.color.ac_base_llbackgroud_hui));
+        setBackgroundColor(getResources().getColor(R.color.zishousuobeijng));
         setDrawGridBackground(false);
         setDrawBarShadow(false);
 

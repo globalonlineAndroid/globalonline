@@ -63,7 +63,7 @@ public class RechargeRMBActivity extends BaseActivity {
     @AfterViews
     void init(){
 
-        GetSelectBouncedUtil.get(this,tv_banktype, StaticBase.BANK,"0");
+        GetSelectBouncedUtil.get(this,tv_banktype, StaticBase.BANK,"1");
         initList(true);
     }
 
@@ -143,7 +143,10 @@ public class RechargeRMBActivity extends BaseActivity {
                 BaseBean userBean =   ((BaseBean)response.body());
 
                 if(userBean.getErrorCode().equals("0")) {
-                    GetToastUtil.getToads(getApplication(),"充值成功");
+                    //GetToastUtil.getToads(getApplication(),"充值成功");
+
+                    GetToastUtil.getSuccessToads(RechargeRMBActivity.this);
+
                 }else {
                     GetToastUtil.getToads(getApplication(), userBean.getMessage());
                 }

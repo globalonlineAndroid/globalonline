@@ -103,8 +103,9 @@ public class WithdrawalRMBActivity extends BaseActivity {
                 BaseBean baseBean =   ((BaseBean)response.body());
 
                 if(baseBean.getErrorCode().equals("0")) {
-                    GetToastUtil.getToads(getApplication(), "提交成功");
-                    finish();
+                   // GetToastUtil.getToads(getApplication(), "提交成功");
+                  //  finish();
+                    GetToastUtil.getSuccessToads(WithdrawalRMBActivity.this);
                 }else {
                     GetToastUtil.getToads(getApplication(), baseBean.getMessage());
 

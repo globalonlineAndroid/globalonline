@@ -220,7 +220,7 @@ public class LoginActivity extends BaseActivity {
                         dataSource.setId_(cardType.getId());
                         dataSource.setName(cardType.getName());
                         dataSource.setEname(cardType.getEname());
-                        dataSource.setModule(StaticBase.BANKTYPE);
+                        dataSource.setModule(StaticBase.CARTYPE);
                         dataSources.add(dataSource);
 
                     }

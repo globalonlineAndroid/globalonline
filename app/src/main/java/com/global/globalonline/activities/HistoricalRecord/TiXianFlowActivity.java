@@ -115,9 +115,12 @@ public class TiXianFlowActivity extends BaseActivity {
                 RmbExtractRecordBean baseBean =   ((RmbExtractRecordBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
 
-                    maAdapter = new TiXianFlowAdapter(TiXianFlowActivity.this,baseBean.getRecord_list());
-                    lv_vdf.setAdapter(maAdapter);
-
+                    if(baseBean.getRecord_list() !=null) {
+                        maAdapter = new TiXianFlowAdapter(TiXianFlowActivity.this, baseBean.getRecord_list());
+                        lv_vdf.setAdapter(maAdapter);
+                    }else {
+                        GetToastUtil.getToads(TiXianFlowActivity.this,getResources().getString(R.string.act_base_nodata));
+                    }
                 }else {
                     GetToastUtil.getToads(getApplication(), baseBean.getMessage());
 

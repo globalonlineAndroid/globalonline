@@ -46,7 +46,6 @@
             />
         <TextView
             android:id="@+id/tv_keyong"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/view_titleview_fanhui"
@@ -89,6 +88,12 @@
         android:paddingLeft="20dp"
         >
 
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_price"
+            android:layout_marginRight="6dp"
+            />
 
         <EditText
             android:id="@+id/et_dizhi"
@@ -96,7 +101,6 @@
             android:layout_height="match_parent"
             android:hint="@string/act_virtualcurrency_archived_address"
             style="@style/editText"
-
             />
     </LinearLayout>
 
@@ -109,6 +113,13 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         >
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_bi_num"
+            android:layout_marginRight="6dp"
+            />
         <EditText
             android:id="@+id/et_number"
             android:layout_width="match_parent"
@@ -128,6 +139,12 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         >
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_lock"
+            android:layout_marginRight="6dp"
+            />
         <EditText
             android:id="@+id/et_trade_pwd"
             android:layout_width="match_parent"

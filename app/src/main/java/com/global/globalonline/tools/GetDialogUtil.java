@@ -142,11 +142,14 @@ public class GetDialogUtil {
         final TextView btn_quxiao = (TextView) view.findViewById(R.id.btn_quxiao);
 
 
+        if(title == null){
+            title  = act.getResources().getString(R.string.act_base_tishi);
+        }
         tv_title.setText(title);
         textView.setText(text);
 
-        btn_queding.setText("确定");
-        btn_quxiao.setText("取消");
+        btn_queding.setText(act.getResources().getString(R.string.act_base_queding));
+        btn_quxiao.setText(act.getResources().getString(R.string.act_base_quxiao));
 
 
         builder.setView(view);
@@ -159,7 +162,6 @@ public class GetDialogUtil {
             public void onClick(View v) {
                 tishiResDao.getTiShi("");
                 finalDialog.cancel();
-
             }
         });
 

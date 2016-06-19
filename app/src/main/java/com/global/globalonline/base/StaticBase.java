@@ -15,7 +15,7 @@ public class StaticBase {
     public  static  String INCOMEBANK = "incomebank";
     public  static  String BANK="bank";
     public  static  String VIRTUALOIN = "virtualoin";
-    public  static  String BANKTYPE="cartype";
+    public  static  String CARTYPE="cartype";
     public  static  String ALIPAY="alipay";
     /*end*/
 

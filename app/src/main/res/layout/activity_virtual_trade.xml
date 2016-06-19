@@ -40,7 +40,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:textColor="@color/white"
-            android:text="幸运币交易"
+            android:text="@string/act_mainTab_tradingFloor_chengjiaoliang"
             android:textSize="18sp" />
         <LinearLayout
             android:layout_weight="1"
@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="比特币(BTC)"
+                    android:text="..."
                     android:textSize="@dimen/act_textsize"
                     android:textColor="@color/white"
                     />
@@ -113,23 +113,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="¥0.888"
+                    android:text="..."
                     android:textSize="@dimen/act_textsize"
                     android:textColor="@color/white"
                     />
                 <LinearLayout
+
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="30dp"
                     android:gravity="center">
                     <TextView
                         android:id="@+id/tv_zhangfu"
-                        android:gravity="right"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="4dp"
-                        android:text="+2.50%"
-                        android:textColor="@color/red"
+                        android:text="..."
+                        android:textColor="@color/white"
                         />
                 </LinearLayout>
 
@@ -199,7 +200,7 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="3990"
+                    android:text="..."
                     android:textColor="@color/ac_base_ziti_hui"
                     />
 
@@ -225,7 +226,7 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="¥0.999"
+                    android:text="..."
                     android:textColor="@color/ac_base_ziti_hui"
                     />
 
@@ -251,7 +252,7 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="¥1.020"
+                    android:text="..."
                     android:textColor="@color/ac_base_ziti_hui"
                     />
 
@@ -294,7 +295,7 @@
                     android:id="@+id/tv_buy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0.009"
+                    android:text="..."
                     android:textColor="@color/ac_base_ziti_hui"
                     android:textSize="16dp"
                     />
@@ -324,7 +325,7 @@
                     android:id="@+id/tv_sell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0.009"
+                    android:text="..."
                     android:textColor="@color/ac_base_ziti_hui"
                     android:textSize="16dp"
                     />
@@ -550,6 +551,7 @@
                             android:layout_height="40dp"
                             android:background="@drawable/et_input"
                             android:paddingLeft="6dp"
+                            android:inputType="textPassword"
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
@@ -561,7 +563,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/btn_queding_red"
                         android:textColor="@color/white"
-                        android:text="买 入"
+                        android:text="@string/act_virtualcurrency_mairu"
                         />
 
                 </LinearLayout>
@@ -600,7 +602,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="未登陆"
-                                android:textColor="@color/ac_base_ziti_hui"
+                                android:textColor="@color/btn_queding"
                                 />
 
                         </LinearLayout>
@@ -636,7 +638,7 @@
                             android:id="@+id/tv_sell_dongjiexunibi"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="未登陆"
+                            android:text="0"
                             android:textColor="@color/ac_base_ziti_hui"
                             />
                     </LinearLayout>
@@ -716,6 +718,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_jiaoyipwd"
+
                             android:textColor="@color/white"
                             />
 
@@ -725,6 +728,7 @@
                             android:layout_height="40dp"
                             android:background="@drawable/et_input"
                             android:paddingLeft="6dp"
+                            android:inputType="textPassword"
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
@@ -736,7 +740,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/btn_queding"
                         android:textColor="@color/white"
-                        android:text="卖 出"
+                        android:text="@string/act_virtualcurrency_sellru"
                         />
 
                 </LinearLayout>
@@ -764,7 +768,7 @@
                             android:gravity="center"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="买/卖"
+                            android:text="@string/act_virtualcurrency_buysell"
                             android:textColor="@color/white"
                             android:background="@color/ac_virtual_chunk"
                             android:textSize="16dp"
@@ -775,7 +779,7 @@
                             android:gravity="center"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="价格(¥)"
+                            android:text="@string/act_virtualcurrency_price"
                             android:textColor="@color/white"
                             android:textSize="16dp"
                             android:background="@color/ac_virtual_chunk"
@@ -786,7 +790,7 @@
                             android:gravity="center"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:text="数量"
+                            android:text="@string/act_virtualcurrency_number"
                             android:textColor="@color/white"
                             android:textSize="16dp"
                             android:background="@color/ac_virtual_chunk"

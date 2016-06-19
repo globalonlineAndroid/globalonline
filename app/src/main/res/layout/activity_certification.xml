@@ -29,9 +29,10 @@
         >
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_phone"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_men"
+            android:layout_marginRight="6dp"
             />
 
         <EditText
@@ -52,9 +53,10 @@
         >
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_bus"
+            android:layout_marginRight="6dp"
             />
 
         <TextView
@@ -77,9 +79,10 @@
         >
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/act_user_login_pwd"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/icon_sfznum"
+            android:layout_marginRight="6dp"
             />
 
         <EditText

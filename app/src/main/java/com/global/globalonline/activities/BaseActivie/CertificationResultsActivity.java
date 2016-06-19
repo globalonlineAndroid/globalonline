@@ -5,6 +5,8 @@ import android.widget.TextView;
 import com.global.globalonline.R;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.MyApplication;
+import com.global.globalonline.base.StaticBase;
+import com.global.globalonline.tools.GetSelectBouncedUtil;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -19,7 +21,8 @@ public class CertificationResultsActivity extends BaseActivity {
     @AfterViews
     void init(){
         tv_name.setText(MyApplication.userBean.getIdentity_info().getName());
-        tv_cardtype.setText(MyApplication.userBean.getIdentity_info().getIdentitytype());
+        String name = GetSelectBouncedUtil.getBankName(CertificationResultsActivity.this, StaticBase.CARTYPE,MyApplication.userBean.getIdentity_info().getIdentitytype());
+        tv_cardtype.setText(name);
         tv_cardnumber.setText(MyApplication.userBean.getIdentity_info().getIdentityno());
 
     }

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.base.GetConfiguration;
+import com.global.globalonline.tools.GetQuanXian;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -133,22 +134,23 @@ public class MainActivity extends FragmentActivity {
         ibtn_my.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                title.setText(getResources().getString(R.string.act_main_title_my));
-                tv_home.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
-                tv_dating.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
-                tv_my.setTextColor(getResources().getColor(R.color.btn_queding));
-                FragmentManager fm = MainActivity.this.getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                hideFragments(ft);
-                if(myFrament != null){
-                    ft.show(myFrament);
-                }else {
-                    myFrament = new MyFrament_();
-                    ft.add(R.id.fl_mian, myFrament, MainActivity.TAG);
+                if(GetQuanXian.getIsQuanXian(MainActivity.this)) {
+                    title.setText(getResources().getString(R.string.act_main_title_my));
+                    tv_home.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                    tv_dating.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                    tv_my.setTextColor(getResources().getColor(R.color.btn_queding));
+                    FragmentManager fm = MainActivity.this.getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    hideFragments(ft);
+                    if (myFrament != null) {
+                        ft.show(myFrament);
+                    } else {
+                        myFrament = new MyFrament_();
+                        ft.add(R.id.fl_mian, myFrament, MainActivity.TAG);
+                    }
+                    ft.commit();
+                    setButton(v);
                 }
-                ft.commit();
-
-                setButton(v);
 
             }
         });

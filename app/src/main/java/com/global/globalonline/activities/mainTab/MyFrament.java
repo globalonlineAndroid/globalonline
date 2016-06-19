@@ -25,6 +25,7 @@ import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
 import com.global.globalonline.service.user.UserService;
 import com.global.globalonline.tools.GetDialogUtil;
+import com.global.globalonline.tools.GetQuanXian;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 import com.zbar.lib.CaptureActivity;
@@ -56,14 +57,17 @@ public class MyFrament extends Fragment {
     void init (){
 
         try {
-            tv_loginName.setText(MyApplication.userBean.getMobile());
-            tv_ename.setText(MyApplication.userBean.getUsername());
 
-            if (MyApplication.userBean.getIdentity_info() != null) {
-                tv_isRenZheng.setText("已认证");
-                tv_ename.setText(MyApplication.userBean.getIdentity_info().getName());
+            if(GetQuanXian.getIsQuanXian(getActivity())) {
+
+                tv_loginName.setText(MyApplication.userBean.getMobile());
+                tv_ename.setText(MyApplication.userBean.getUsername());
+
+
+                tv_isRenZheng.setText(getResources().getString(R.string.act_base_yirenzheng));
 
             }
+
         }catch (Exception e){
             LoginActivity_.intent(getActivity()).start();
         }
@@ -137,7 +141,8 @@ public class MyFrament extends Fragment {
                 break;
             case R.id.ll_exit:
 
-                GetDialogUtil.tishi(getActivity(), "提示", "是否退出", new TishiResDao() {
+                GetDialogUtil.tishi(getActivity(), getResources().getString(R.string.act_base_tishi),
+                        getResources().getString(R.string.act_base_istuichu), new TishiResDao() {
                     @Override
                     public void getTiShi(String args) {
                         MyApplication.userBean = null;
@@ -172,6 +177,7 @@ public class MyFrament extends Fragment {
                     tv_ename.setText(accountDetailBean.getAccount_detail().getUsername());
                     tv_uid.setText(accountDetailBean.getAccount_detail().getUid());
                     tv_zichan.setText(accountDetailBean.getAccount_detail().getAccount_balance());
+                    tv_ename.setText(MyApplication.userBean.getIdentity_info().getName());
 
                 }else {
                     GetToastUtil.getToads(getActivity(), accountDetailBean.getMessage());

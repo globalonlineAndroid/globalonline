@@ -68,6 +68,7 @@ public class ChargeFeesActivity extends BaseActivity {
                 ClipboardManager clip = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clipData = ClipData.newPlainText("dizhi",str);
                 clip.setPrimaryClip(clipData);
+                GetToastUtil.getToads(ChargeFeesActivity.this,getResources().getString(R.string.act_base_fuzhichenggong));
                 break;
 
 

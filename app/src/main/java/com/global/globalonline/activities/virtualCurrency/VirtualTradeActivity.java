@@ -18,6 +18,7 @@ import com.global.globalonline.activities.BaseActivie.KLineActivity;
 import com.global.globalonline.activities.user.LoginActivity_;
 import com.global.globalonline.adapter.VirtualTrade.VirtualTradeAdapter;
 import com.global.globalonline.base.BaseActivity;
+import com.global.globalonline.base.GetConfiguration;
 import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.UrlApi;
 import com.global.globalonline.bean.BaseBean;
@@ -258,10 +259,23 @@ public class VirtualTradeActivity extends BaseActivity {
                     String  buyPrice  = coinsDetailBean.getBuy_list().get(0).getPrice();
                     String  sellPrice  = coinsDetailBean.getSell_list().get(0).getPrice();
 
-                    tv_name.setText(coinsDetailBean.getName());
-                    title.setText(coinsDetailBean.getName()+getResources().getString(R.string.act_virtualcurrency_jiaoyi));
+                    String name = GetConfiguration.isZh()?coinsDetailBean.getName():coinsDetailBean.getEname();
+                    tv_name.setText(name);
+                    title.setText(name+" "+getResources().getString(R.string.act_virtualcurrency_title));
                     tv_price.setText(coinsDetailBean.getPrice());
-                    tv_zhangfu.setText(coinsDetailBean.getRatio());
+
+
+                    float zhangfu = Float.parseFloat(coinsDetailBean.getRatio());
+                    String str = "";
+                    if(zhangfu >= 0){
+                        str = "+"+coinsDetailBean.getRatio()+"%";
+                        tv_zhangfu.setBackgroundResource(R.color.red);
+                    }else {
+                        str = coinsDetailBean.getRatio()+"%";
+                        tv_zhangfu.setBackgroundResource(R.color.green);
+                    }
+
+                    tv_zhangfu.setText(str);
                     float buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance())/Float.parseFloat(coinsDetailBean.getPrice());
                     tv_buy_kemaixunibi.setText(String.valueOf(buyxunibi));
                     //tv_chengjiaoe.setText(coinsDetailBean.getVolume());

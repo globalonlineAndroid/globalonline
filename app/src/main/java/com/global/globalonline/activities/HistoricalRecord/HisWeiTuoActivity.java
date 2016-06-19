@@ -124,6 +124,8 @@ public class HisWeiTuoActivity extends BaseActivity {
                 if(coinsDetailBean.getErrorCode().equals("0")){
                     if(coinsDetailBean.getRecord_list() !=null) {
                         delegateList.addAll(coinsDetailBean.getRecord_list());
+                    }else {
+                        GetToastUtil.getToads(HisWeiTuoActivity.this,getResources().getString(R.string.act_base_nodata));
                     }
                 }else {
                     GetToastUtil.getToads(HisWeiTuoActivity.this,coinsDetailBean.getMessage());

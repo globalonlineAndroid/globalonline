@@ -64,7 +64,7 @@
                             android:id="@+id/tv_loginName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="18633492927"
+                            android:text="..."
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
@@ -84,7 +84,7 @@
                             android:id="@+id/tv_ename"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="张三"
+                            android:text="..."
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
@@ -104,8 +104,8 @@
                             android:id="@+id/tv_uid"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="张三"
-                            android:textColor="@color/white"
+                            android:text="..."
+                            android:textColor="@color/btn_queding"
                             />
                     </LinearLayout>
 

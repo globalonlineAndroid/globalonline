@@ -74,19 +74,19 @@ public class KLineActivity extends BaseActivity implements OnValueSelectedListen
                 break;
             case R.id.tv_tian_tab:
                 setTextBackgroud(tv_tian_tab);
-                limit = "100";
+                limit = "50";
                 step = String.valueOf(60*24);
                 initView();
                 break;
             case R.id.tv_zhou_tab:
                 setTextBackgroud(tv_zhou_tab);
-                limit = "150";
+                limit = "50";
                 step = String.valueOf(60*24*7);
                 initView();
                 break;
             case R.id.tv_yue_tab:
                 setTextBackgroud(tv_yue_tab);
-                limit = "200";
+                limit = "50";
                 step = String.valueOf(60*24*30);
                 initView();
                 break;
@@ -174,7 +174,7 @@ public class KLineActivity extends BaseActivity implements OnValueSelectedListen
 
     @Override
     public void data(double open, double close, double high, double low) {
-
+        details.setVisibility(View.VISIBLE);
         this.open.setText(String.valueOf(open));
         this.close.setText(String.valueOf(close));
         this.high.setText(String.valueOf(high));

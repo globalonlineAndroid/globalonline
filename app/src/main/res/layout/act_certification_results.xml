@@ -65,7 +65,7 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="张三"
+                    android:text="..."
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
 
@@ -87,7 +87,7 @@
                     android:id="@+id/tv_cardtype"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="张三"
+                    android:text="..."
                     android:textColor="@color/ac_baseAct_cretificationResults_text"
                     />
 

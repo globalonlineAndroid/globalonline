@@ -69,7 +69,8 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
 
     private void initChart() {
         setDescription("");
-        setBackgroundColor(getResources().getColor(R.color.ac_base_llbackgroud_hui));
+        setBackgroundColor(getResources().getColor(R.color.zishousuobeijng));
+        //setBackgroundColor(Color.WHITE);
         setDrawGridBackground(false);
         setDrawBarShadow(false);
 
@@ -162,22 +163,24 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
             //entries.add(new CandleEntry(index, a, b, c, dd));
             entries.add(new CandleEntry(index, b, c, a, dd));
         }
-        CandleDataSet set = new CandleDataSet(entries, "K线");
-        // 不显示横向高亮线
-        set.setDrawHorizontalHighlightIndicator(false);
-        set.setShadowColor(Color.DKGRAY);
+        CandleDataSet set1 = new CandleDataSet(entries, "K线");
 
-        set.setDecreasingColor(Color.RED);
-        set.setDecreasingPaintStyle(Paint.Style.FILL);
 
-        set.setIncreasingColor(Color.rgb(122, 242, 84));
-        set.setIncreasingPaintStyle(Paint.Style.FILL);
+        set1.setAxisDependency(YAxis.AxisDependency.LEFT);
+        //        set1.setColor(Color.rgb(80, 80, 80));
+        set1.setShadowColor(Color.DKGRAY);
+        set1.setShadowWidth(0.7f);
 
-        set.setNeutralColor(Color.BLUE);
-        set.setColor(Color.rgb(80, 80, 80));
-        set.setValueTextSize(10f);
-        set.setDrawValues(false);
-        d.addDataSet(set);
+        set1.setDecreasingColor(Color.GREEN); /*收>开*/
+        set1.setDecreasingPaintStyle(Paint.Style.FILL_AND_STROKE);
+
+        set1.setIncreasingColor(Color.RED); /*开>收*/
+        set1.setIncreasingPaintStyle(Paint.Style.FILL_AND_STROKE);
+
+
+        set1.setNeutralColor(Color.BLUE);
+       // set.setDrawValues(false);
+        d.addDataSet(set1);
         return d;
     }
 
@@ -250,9 +253,9 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
             if (null != mOnValueSelectedListener) {
                 mOnValueSelectedListener.start();
                 float open = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(1) );
-                float  close = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(2));
-                float  high = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(3));
-                float  low = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(4));
+                float  close = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(4));
+                float  high = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(2));
+                float  low = Float.parseFloat(mCombinedChartEntity.getK().get(index).get(3));
                 mOnValueSelectedListener.data(open, close, high, low);
             }
         }
@@ -297,9 +300,9 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
         try {
             assert null != mCombinedChartEntity;
             float open = Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(1)) ;
-            float close =  Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(2)) ;
-            float high =  Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(3)) ;
-            float low =  Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(4));
+            float close =  Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(4)) ;
+            float high =  Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(2)) ;
+            float low =  Float.parseFloat(mCombinedChartEntity.getK().get(e.getXIndex()).get(3));
             if (null != mOnValueSelectedListener) {
                 mOnValueSelectedListener.data(open, close, high, low);
             }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.global.globalonline.R;
+import com.global.globalonline.base.GetConfiguration;
 import com.global.globalonline.base.UrlApi;
 import com.global.globalonline.bean.VirtualcoinBean;
 
@@ -61,7 +62,15 @@ public class SelectVirtualdapter extends BaseAdapter{
             viewHolder = (ViewHolder)convertView.getTag();
         }
 
-        viewHolder.tv_name.setText(list.get(position).getName()+"("+list.get(position).getEname()+")");
+
+        String name = "";
+       if( GetConfiguration.isZh()){
+
+           name =   list.get(position).getName();
+       }else {
+           name =   list.get(position).getEname();
+       }
+        viewHolder.tv_name.setText(name);
 
         Glide.with(activity)
                 .load(UrlApi.baseImageUrl+list.get(position).getLogo())

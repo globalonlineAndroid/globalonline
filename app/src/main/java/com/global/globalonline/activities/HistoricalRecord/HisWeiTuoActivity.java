@@ -122,7 +122,7 @@ public class HisWeiTuoActivity extends BaseActivity {
 
                 CoinsEntrustRecordBena coinsDetailBean =(CoinsEntrustRecordBena) response.body();
                 if(coinsDetailBean.getErrorCode().equals("0")){
-                    if(coinsDetailBean.getRecord_list() !=null) {
+                    if(coinsDetailBean.getRecord_list() !=null && coinsDetailBean.getRecord_list().size()>0) {
                         delegateList.addAll(coinsDetailBean.getRecord_list());
                     }else {
                         GetToastUtil.getToads(HisWeiTuoActivity.this,getResources().getString(R.string.act_base_nodata));

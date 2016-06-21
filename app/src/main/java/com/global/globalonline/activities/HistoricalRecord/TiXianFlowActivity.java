@@ -115,7 +115,7 @@ public class TiXianFlowActivity extends BaseActivity {
                 RmbExtractRecordBean baseBean =   ((RmbExtractRecordBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
 
-                    if(baseBean.getRecord_list() !=null) {
+                    if(baseBean.getRecord_list() !=null && baseBean.getRecord_list().size()>0) {
                         maAdapter = new TiXianFlowAdapter(TiXianFlowActivity.this, baseBean.getRecord_list());
                         lv_vdf.setAdapter(maAdapter);
                     }else {

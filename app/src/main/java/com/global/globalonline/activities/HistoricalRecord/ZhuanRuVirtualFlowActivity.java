@@ -115,7 +115,7 @@ public class ZhuanRuVirtualFlowActivity extends BaseActivity {
 
                 CoinsPaycheckRecordBean baseBean =   ((CoinsPaycheckRecordBean)response.body());
                 if(baseBean.getErrorCode().equals("0")) {
-                    if(baseBean.getRecord_list() != null) {
+                    if(baseBean.getRecord_list() != null && baseBean.getRecord_list().size()>0) {
                         list.clear();
                         list.addAll(baseBean.getRecord_list());
 

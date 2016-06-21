@@ -22,6 +22,8 @@
     <string name="act_base_successful">Congratulations, submitted to success!</string>
     <string name="act_base_buy_successful">Buy Successful</string>
     <string name="act_base_sell_successful">Sell Successful</string>
+    <string name="act_base_buy">buy</string>
+    <string name="act_base_sell">sell</string>
 
 
 

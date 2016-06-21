@@ -44,6 +44,7 @@ public class GetRetrofitService {
         OkHttpClient client = new OkHttpClient.Builder()
                 //.addInterceptor(interceptor)
                // .addNetworkInterceptor(mTokenInterceptor)
+
                 .retryOnConnectionFailure(true)
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .build();

@@ -3,13 +3,13 @@
     <string name="view_titleView_fanhui">Return</string>
     <string name="hello">Hello World, QR_DemoActivity!</string>
 
-    <string name="act_base_about">http://api.50f.cn/page/about_us_en.html</string>
-    <string name="act_base_fuwuxieyi">http://api.50f.cn/page/service_agreement_en.html</string>
-    <string name="act_base_yirenzheng">certified</string>
+    <string name="act_base_about">http://api.globalonline.cc/page/about_us_en.html</string>
+    <string name="act_base_fuwuxieyi">http://api.globalonline.cc/page/service_agreement_en.html</string>
+    <string name="act_base_yirenzheng">Certified</string>
     <string name="scan_tips">Aim the qr code image scanning frame can automatically scan</string>
-	<string name="act_main_title_home">Homepage</string>
-    <string name="act_main_title_dating">Transaction Floor</string>
-    <string name="act_main_title_my">Mine</string>
+    <string name="act_main_title_home">Homepage</string>
+    <string name="act_main_title_dating">Trading Hall</string>
+    <string name="act_main_title_my">My</string>
     <string name="act_base_nodata">There is no data for</string>
     <string name="act_base_fuzhichenggong">Copy success</string>
     <string name="act_base_tishi">prompt</string>
@@ -42,20 +42,20 @@
     <string name="act_user_registered_zhuce">Register</string>
     <string name="act_user_registered_phone">Phone Number</string>
     <string name="act_user_registered_yanzhengma">Enter The Verification Code</string>
-    <string name="act_user_registered_getyanzhengma">Get verification code</string>
+    <string name="act_user_registered_getyanzhengma">Get verification Code</string>
     <string name="act_user_registered_pwd">Login Password </string>
-    <string name="act_user_registered_repwd">Re-enter Password </string>
-    <string name="act_user_registered_guojia">Country </string>
+    <string name="act_user_registered_repwd">Input Password </string>
+    <string name="act_user_registered_guojia">Country</string>
     <string name="act_user_registered_tuijianren">Referral ID （Non Mandatory）</string>
     <string name="act_user_registered_text">I Read And Agreed</string>
     <string name="act_user_registered_xieyi">《Global Online Service Agreement》</string>
 
     <!--修改登陆密码-->
-    <string name="act_user_changeloginpassword_tijiao">Save Update</string>
+    <string name="act_user_changeloginpassword_tijiao">Save Changes</string>
     <string name="act_user_changeloginpassword_oldpwd">Old Password</string>
     <string name="act_user_changeloginpassword_newpwd">New Password </string>
-    <string name="act_user_changeloginpassword_repwd">Re-enter The New Password</string>
-    <string name="act_user_changeloginpassword_title">Update Register Password</string>
+    <string name="act_user_changeloginpassword_repwd">Confirm New Password</string>
+    <string name="act_user_changeloginpassword_title">Modify Login Password</string>
     <string name="act_user_changeloginpassword_text">Warning:\n
         Login password don\'t password is consistent with transaction password or other web site, the resulting account stolen, this site is not responsible for。</string>
 
@@ -78,34 +78,34 @@
     <string name="act_user_forgotaepassword_title">Forget Password</string>
 
     <!--我的-->
-    <string name="act_myMenu_myact_title">Mine</string>
+    <string name="act_myMenu_myact_title">My</string>
     <string name="act_myMenu_myact_login">Login Name: </string>
     <string name="act_myMenu_myact_loginNike">Name:</string>
-    <string name="act_myMenu_myact_assets">Total Asset</string>
-    <string name="act_myMenu_myact_RMBPay">RMB Pay</string>
-    <string name="act_myMenu_myact_RMBWithdraw">RMB Withdraw</string>
-    <string name="act_myMenu_myact_virtualPay">Virtual Pay </string>
-    <string name="act_myMenu_myact_virtualWithdraw">Virtual Withdraw</string>
+    <string name="act_myMenu_myact_assets">Total Assets</string>
+    <string name="act_myMenu_myact_RMBPay">RMB Recharge</string>
+    <string name="act_myMenu_myact_RMBWithdraw">RMB Cash Withdrawal</string>
+    <string name="act_myMenu_myact_virtualPay">Virtual Currency Recharge</string>
+    <string name="act_myMenu_myact_virtualWithdraw">Virtual Cash Withdrawal</string>
     <string name="act_myMenu_myact_entrustManager">Entrust Management</string>
-    <string name="act_myMenu_myact_transaction">Transaction Slip</string>
+    <string name="act_myMenu_myact_transaction">Transaction Flow</string>
     <string name="act_myMenu_myact_shoukuan">I Want Collection</string>
-    <string name="act_myMenu_myact_fukuan">I Want Payment</string>
-    <string name="act_myMenu_myact_renzheng">Real-Name Authentication </string>
-    <string name="act_myMenu_myact_updateDLPwd">Update Login Password </string>
+    <string name="act_myMenu_myact_fukuan">I Want Pay</string>
+    <string name="act_myMenu_myact_renzheng">Real Name Authentication </string>
+    <string name="act_myMenu_myact_updateDLPwd">Modify Login Password </string>
     <string name="act_myMenu_myact_updateJYPwd">Update Transaction Password </string>
-    <string name="act_myMenu_myact_messge">Messge Ceter</string>
+    <string name="act_myMenu_myact_messge">Messge Center</string>
     <string name="act_myMenu_myact_GuanYuWoMen">About Us</string>
     <string name="act_myMenu_myact_exit">Login Out</string>
 
 
-    <string name="act_user_certification_title">Real-Name Authentication</string>
+    <string name="act_user_certification_title">Real Name Authentication</string>
     <string name="act_user_certification_name">Please Input Name</string>
     <string name="act_user_certification_cardtype">Please Select Identity Card Type</string>
     <string name="act_user_certification_idCard">Please Input Identity Card Number</string>
     <string name="act_user_certification_sub">Submit</string>
 
 
-    <string name="act_baseAct_certificationResults_title">Real-Name Authentication</string>
+    <string name="act_baseAct_certificationResults_title">Real Name Authentication</string>
     <string name="act_baseAct_certificationResults_tex">Your Identify Information</string>
     <string name="act_baseAct_certificationResults_seucc">You have gone through the global online review</string>
 
@@ -114,7 +114,7 @@
     <string name="act_baseAct_certificationResults_idCard">ID Number</string>
     <string name="act_baseAct_certificationResults_date">Authentication date</string>
 
-    <string name="act_mainTab_tradingFloor_chengjiaoe">Volume Of Transaction</string>
+    <string name="act_mainTab_tradingFloor_chengjiaoe">Turnover Volume</string>
     <string name="act_mainTab_tradingFloor_chengjiaoliang">Volumenum</string>
     <string name="act_mainTab_tradingFloor_minprice">Lowest Price</string>
     <string name="act_mainTab_tradingFloor_maxprice">Highest Price</string>
@@ -141,23 +141,23 @@
 
     <!--人民币充值-->
 
-   <!-- <string name="act_RechargeRMBActivity_title">RMB PAY</string>
-    <string name="act_RechargeRMBActivity_op">PAY record</string>
-    <string name="act_RechargeRMBActivity_tab1">E-bank pay</string>
-    <string name="act_RechargeRMBActivity_tab2">Alipay</string>
-    <string name="act_RechargeRMBActivity_zhanghao">Outward Remittance Account</string>
-    <string name="act_RechargeRMBActivity_name">Remittance Name</string>
-    <string name="act_RechargeRMBActivity_price">Remittance Amount</string>
-    <string name="act_RechargeRMBActivity_shuoming">Remittance Instruction</string>
-    <string name="act_RechargeRMBActivity_tijiao">Submit</string>
-    <string name="act_RechargeRMBActivity_buzhou">Please Follow The Below Step To Operate</string>
-    <string name="act_RechargeRMBActivity_test">
-        1、Login your payment account number,then enter into "i want to pay“ 。
-        2、When outward remittance success，the system will be automatically paid the remittance amount into your account,if unpaid due to the incorrect comments,please contact customer service to solve。
-        3、It is suggest to use alipay and bank card pay ,when you top-up,please input the requirement information in the comments。
-        4、When you top-up the remittance,please ensure remark the postscript in the "Pay instruction" or "the payee ps" according to the system requirement,otherwise the system cannot identity to result the top-up failure。\n
-        5、Please don't use the overdue and unpaid link to prepaid,all need use the timely payment type to do the remittance。
-    </string>-->
+    <!-- <string name="act_RechargeRMBActivity_title">RMB PAY</string>
+     <string name="act_RechargeRMBActivity_op">PAY record</string>
+     <string name="act_RechargeRMBActivity_tab1">E-bank pay</string>
+     <string name="act_RechargeRMBActivity_tab2">Alipay</string>
+     <string name="act_RechargeRMBActivity_zhanghao">Outward Remittance Account</string>
+     <string name="act_RechargeRMBActivity_name">Remittance Name</string>
+     <string name="act_RechargeRMBActivity_price">Remittance Amount</string>
+     <string name="act_RechargeRMBActivity_shuoming">Remittance Instruction</string>
+     <string name="act_RechargeRMBActivity_tijiao">Submit</string>
+     <string name="act_RechargeRMBActivity_buzhou">Please Follow The Below Step To Operate</string>
+     <string name="act_RechargeRMBActivity_test">
+         1、Login your payment account number,then enter into "i want to pay“ 。
+         2、When outward remittance success，the system will be automatically paid the remittance amount into your account,if unpaid due to the incorrect comments,please contact customer service to solve。
+         3、It is suggest to use alipay and bank card pay ,when you top-up,please input the requirement information in the comments。
+         4、When you top-up the remittance,please ensure remark the postscript in the "Pay instruction" or "the payee ps" according to the system requirement,otherwise the system cannot identity to result the top-up failure。\n
+         5、Please don't use the overdue and unpaid link to prepaid,all need use the timely payment type to do the remittance。
+     </string>-->
 
     <!--人民币充值- 银行 -->
 
@@ -321,12 +321,7 @@
 
     <!--关于我们-->
     <string name="act_user_aboutUs_title">About us</string>
-   <!-- <string name="act_user_aboutUs_str1">环球在线</string>
-    <string name="act_user_aboutUs_str2">让每个人享受科技的乐趣</string>
-    <string name="act_user_aboutUs_str3">免费的数字货币行情显示和交易软件。由中东MEC集团授权上海珺腾文化传播有限公司管理运营的官方APP，无需登录就可以查看全球虚拟币（比特币、莱特币）实时行情。可实现手机充值/提现/交易。官方应用，专业、安全、可信赖。
-团队核心成员：均毕业于清华大学、北京大学、复旦大学等国内名校。曾就职于甲骨文、中信证券、腾讯、百度、阿里巴巴等国内外知名企业。
-官方网站：http://www.globalonline.cc
-    </string>-->
+
 
 
     <!--收款-->
@@ -344,7 +339,7 @@
     <string name="act_account_pay_RMB">Payment in RMB:</string>
     <string name="act_account_pay_biNumber">Number or currency：</string>
     <string name="act_account_pay_jiaoyipwd">Trade password:\t\t</string>
-    <string name="act_account_pay_tijiao">Confirm the payment</string>
+    <string name="act_account_pay_tijiao">Confirm payment</string>
     <string name="act_account_pay_shuoming">Payment instructions</string>
     <string name="act_account_pay_text">This site has been support to the same address top-up for many times, we will cost for you after receiving the confirmed three times。</string>
     <!--我要付款_3-->
@@ -363,7 +358,7 @@
 
     <!--选择虚拟币-->
 
-    <string name="act_select_virtual_title">Choose the virtual currency</string>
+    <string name="act_select_virtual_title">Choose a currency</string>
 
     <!--虚拟币交易流水-->
     <string name="act_historicalRecord_virtualdealflow_title">Deal flow</string>
@@ -423,12 +418,12 @@
     <string name="act_historicalRecord_zhuanruVirtual_table_title4">Into the state</string>
 
     <!--K线-->
-        <string name="act_KLine_title">K Line</string>
+    <string name="act_KLine_title">K Line</string>
     <string name="act_KLine_tab1">hour</string>
     <string name="act_KLine_tab2">Day</string>
     <string name="act_KLine_tab3">Week</string>
     <string name="act_KLine_tab4">Month</string>
-	
+
 
 
 

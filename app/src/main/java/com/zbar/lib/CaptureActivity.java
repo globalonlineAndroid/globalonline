@@ -18,7 +18,6 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.global.globalonline.R;
 import com.global.globalonline.activities.account.PayActivity_;
@@ -173,7 +172,7 @@ public class CaptureActivity extends Activity implements Callback {
 	public void handleDecode(String result) {
 		inactivityTimer.onActivity();
 		playBeepSoundAndVibrate();
-		Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
 		Intent pay = new Intent(this, PayActivity_.class);
 		pay.putExtra("str",result);

@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="你已经通过了环球在线审核"
+                android:text="@string/act_baseAct_certificationResults_tex"
                 android:textColor="@color/seagreen"
                 />
             <TextView

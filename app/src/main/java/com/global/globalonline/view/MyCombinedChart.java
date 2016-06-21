@@ -23,10 +23,12 @@ import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 import com.global.globalonline.R;
 import com.global.globalonline.bean.CombinedChartEntity;
 import com.global.globalonline.listener.OnValueSelectedListener;
@@ -142,7 +144,9 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
         // 最多显示60组数据
         setVisibleXRangeMaximum(60);
         // 最少显示30组数据
+
         setVisibleXRangeMinimum(30);
+
         // 移动到最右侧数据
         moveViewToX(entity.getK().size() - 1);
         /*
@@ -156,12 +160,15 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
         CandleData d = new CandleData();
         ArrayList<CandleEntry> entries = new ArrayList<>();
         for (int index = 0; index < entity.getK().size(); index++) {
-            float a = Float.parseFloat(entity.getK().get(index).get(1) );
-            float b = Float.parseFloat(entity.getK().get(index).get(2)) ;
-            float c = Float.parseFloat(entity.getK().get(index).get(3) );
-            float dd = Float.parseFloat(entity.getK().get(index).get(4) );
-            //entries.add(new CandleEntry(index, a, b, c, dd));
-            entries.add(new CandleEntry(index, b, c, a, dd));
+            //float count = Float.parseFloat(entity.getK().get(index).get(5));
+           // if(count > 0) {
+                float a = Float.parseFloat(entity.getK().get(index).get(1));
+                float b = Float.parseFloat(entity.getK().get(index).get(2));
+                float c = Float.parseFloat(entity.getK().get(index).get(3));
+                float dd = Float.parseFloat(entity.getK().get(index).get(4));
+                //entries.add(new CandleEntry(index, a, b, c, dd));
+                entries.add(new CandleEntry(index, b, c, a, dd));
+           // }
         }
         CandleDataSet set1 = new CandleDataSet(entries, "K线");
 
@@ -210,8 +217,11 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
         set.setLineWidth(1f);
         set.setDrawCircles(false);
         set.setDrawCubic(false);
-        set.setDrawValues(false);
+        set.setDrawHorizontalHighlightIndicator(false);
+
         set.setValueTextSize(10f);
+        set.setDrawValues(false);
+
         set.setValueTextColor(Color.rgb(240, 238, 70));
         set.setAxisDependency(YAxis.AxisDependency.LEFT);
         return set;

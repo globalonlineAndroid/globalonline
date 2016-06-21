@@ -120,8 +120,8 @@ public class KLineActivity extends BaseActivity implements OnValueSelectedListen
         barChart.setOnChartGestureListener(new CoupleChartGestureListener(barChart, new Chart[]{combinedChart}));
 
         combinedChart.setOnValueSelectedListener(this);
-
-        initView();
+        tv_xiaoshi_tab.performClick();
+       // initView();
 
 
     }
@@ -151,8 +151,29 @@ public class KLineActivity extends BaseActivity implements OnValueSelectedListen
                 CombinedChartEntity combinedChartEntity =(CombinedChartEntity) response.body();
                 //JSONObject combinedChartEntity =(JSONObject) response.body();
                 if(combinedChartEntity.getErrorCode() == 0){
-                    combinedChart.setData(combinedChartEntity);
-                    barChart.setData(combinedChartEntity);
+
+
+                   /* List<List<String>> list = new ArrayList<List<String>>();
+                    for (int i = 0; i < combinedChartEntity.getK().size(); i++) {
+                        List<String> a = new ArrayList<String>();
+
+                        float count = Float.parseFloat(combinedChartEntity.getK().get(i).get(5));
+                        if(count > 0) {
+                            a.addAll(combinedChartEntity.getK().get(i));
+                            list.add(a);
+                        }
+
+                    }
+
+                    combinedChartEntity.setK(list) ;*/
+
+
+
+
+                   // if (list.size()>0) {
+                        combinedChart.setData(combinedChartEntity);
+                        barChart.setData(combinedChartEntity);
+                   // }
 
                 }else {
                    // GetToastUtil.getToads(getApplicationContext(),combinedChartEntity.getMessage());

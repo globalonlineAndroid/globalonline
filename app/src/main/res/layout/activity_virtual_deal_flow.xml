@@ -66,7 +66,7 @@
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="@string/act_historicalRecord_virtualdealflow_tab3"
+            android:text="@string/act_historicalRecord_virtualdealflow_tab4"
             android:textColor="@color/white"
             android:textSize="16dp"
             android:background="@color/ac_virtual_chunk"

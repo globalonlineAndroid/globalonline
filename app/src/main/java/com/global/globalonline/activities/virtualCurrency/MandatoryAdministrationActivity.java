@@ -73,7 +73,7 @@ public class MandatoryAdministrationActivity extends BaseActivity {
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
 
         symbol = getIntent().getStringExtra("symbol");
-        initView();
+        //initView();
             lv_ma_tradingFloor.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {

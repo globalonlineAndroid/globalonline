@@ -9,7 +9,10 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 import com.global.globalonline.R;
 import com.global.globalonline.bean.CombinedChartEntity;
 import com.global.globalonline.tools.MyCustomXAxisValueFormatter;
@@ -102,6 +105,20 @@ public class MyBarChart extends BarChart {
 
         BarDataSet set1 = new BarDataSet(yVals1, "DataSet");
         set1.setBarSpacePercent(35f);
+        set1.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+
+                String str = "";
+                if(value == 0) {
+                    str = "";
+                }else {
+                    str = String.valueOf(value);
+                }
+
+                return str;
+            }
+        });
 
         ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();
         dataSets.add(set1);
@@ -109,6 +126,7 @@ public class MyBarChart extends BarChart {
         BarData data = new BarData(xVals, dataSets);
         data.setValueTextSize(10f);
 //        data.setValueTypeface(mTf);
+
 
         setData(data);
 

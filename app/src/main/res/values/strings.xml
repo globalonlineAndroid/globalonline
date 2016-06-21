@@ -13,10 +13,15 @@
     <string name="act_base_tishi">提示</string>
     <string name="act_base_queding">确定</string>
     <string name="act_base_quxiao">取消</string>
+    <string name="act_base_tuichu">安全退出</string>
     <string name="act_base_istuichu">是否安全退出</string>
     <string name="act_base_nologin">您还没有登陆</string>
     <string name="act_base_norenzhu">您还没认证</string>
     <string name="act_base_successful">恭喜，提交成功!</string>
+    <string name="act_base_buy_successful">买入成功</string>
+    <string name="act_base_sell_successful">卖出成功</string>
+    <string name="act_base_buy">买</string>
+    <string name="act_base_sell">卖</string>
 
 
 
@@ -105,6 +110,7 @@
 
     <string name="act_baseAct_certificationResults_title">实名认证</string>
     <string name="act_baseAct_certificationResults_tex">您的身份信息</string>
+    <string name="act_baseAct_certificationResults_seucc">您已经通过了环球在线审核</string>
     <string name="act_baseAct_certificationResults_name">姓名:</string>
     <string name="act_baseAct_certificationResults_type">证件类型:</string>
     <string name="act_baseAct_certificationResults_idCard">证件号:</string>
@@ -334,7 +340,7 @@
 
 
     <!--虚拟币收款-->
-    <string name="act_account_virtualcollection_title">虚拟币收款</string>
+    <string name="act_account_virtualcollection_title">收款</string>
     <string name="act_account_virtualcollection_tishi">
         收款说明：打开此页面二维码后，付款者使用APP中的”我要付款“功能，进入扫友页面，对准此二维码进行扫描，直到识别出内容后弹出支付界面后，输入实际要支付的金额后进行确认付款操作即可！</string>
 

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.base.MyApplication;
@@ -24,11 +25,13 @@ import java.util.Map;
 public class ShengChengActivity extends Activity {
 
 
+
     ImageView  erweima;
+    TextView title;
 
    String symbol = "";
-    int QR_WIDTH = 400;
-    int QR_HEIGHT = 400;
+    int QR_WIDTH = 980;
+    int QR_HEIGHT = 980;
 
     public static void  toActivity(Activity activity,String symbol){
 
@@ -41,7 +44,7 @@ public class ShengChengActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sheng_cheng);
-
+        title = (TextView) this.findViewById(R.id.title);
 
         WindowManager wm = this.getWindowManager();
 
@@ -51,6 +54,8 @@ public class ShengChengActivity extends Activity {
        // QR_WIDTH =Integer.parseInt(new DecimalFormat("#").format(width * 0.6));
 
         symbol = getIntent().getStringExtra("symbol");
+        String titleName =  GetSelectBouncedUtil.getBankName(ShengChengActivity.this, StaticBase.VIRTUALOIN,symbol);
+        title.setText(titleName+getResources().getString(R.string.act_account_virtualcollection_title));
         erweima = (ImageView)this.findViewById(R.id.erweima);
 
         Map<String,String>  map = new Hashtable<>();

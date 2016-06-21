@@ -295,13 +295,13 @@ public class VirtualTradeActivity extends BaseActivity {
                     List<CoinsDetailItemBean> list = new ArrayList<CoinsDetailItemBean>();
 
                     for (int i = 0; i < coinsDetailBean.getBuy_list().size(); i++) {
-                        coinsDetailBean.getBuy_list().get(i).setName("买"+(i+1));
+                        coinsDetailBean.getBuy_list().get(i).setName(getResources().getString(R.string.act_base_buy)+(i+1));
 
                     }
 
                     for (int i = coinsDetailBean.getSell_list().size(); i > 0; i --) {
                         CoinsDetailItemBean cb = coinsDetailBean.getSell_list().get(i-1);
-                        cb.setName("卖"+i);
+                        cb.setName(getResources().getString(R.string.act_base_sell)+i);
                         list.add(cb);
 
                     }
@@ -352,7 +352,7 @@ public class VirtualTradeActivity extends BaseActivity {
 
                 BaseBean base =(BaseBean) response.body();
                 if(base.getErrorCode().equals("0")){
-                    GetToastUtil.getToads(VirtualTradeActivity.this,"买入成功");
+                    GetToastUtil.getToads(VirtualTradeActivity.this,getResources().getString(R.string.act_base_buy_successful));
                     VirtualTradeActivity.toActiviy(VirtualTradeActivity.this,symbol);
 
                 }else {
@@ -389,7 +389,7 @@ public class VirtualTradeActivity extends BaseActivity {
 
                 BaseBean base =(BaseBean) response.body();
                 if(base.getErrorCode().equals("0")){
-                    GetToastUtil.getToads(VirtualTradeActivity.this,"卖出成功");
+                    GetToastUtil.getToads(VirtualTradeActivity.this,getResources().getString(R.string.act_base_sell_successful));
                     VirtualTradeActivity.toActiviy(VirtualTradeActivity.this,symbol);
                 }else {
                     GetToastUtil.getToads(VirtualTradeActivity.this,base.getMessage());

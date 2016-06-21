@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Global Online</string>
     <string name="view_titleView_fanhui">Return</string>
-
+    <string name="hello">Hello World, QR_DemoActivity!</string>
 
     <string name="act_base_about">http://api.50f.cn/page/about_us_en.html</string>
     <string name="act_base_fuwuxieyi">http://api.50f.cn/page/about_us_zh.html</string>
@@ -20,6 +20,12 @@
     <string name="act_base_nologin">You haven\'t already landed</string>
     <string name="act_base_norenzhu">You haven\'t the certification</string>
     <string name="act_base_successful">Congratulations, submitted to success!</string>
+    <string name="act_base_buy_successful">Buy Successful</string>
+    <string name="act_base_sell_successful">Sell Successful</string>
+
+
+
+    <string name="act_myMenu_myact_UID">UID：</string>
 
     <!--登陆-->
     <string name="act_user_login_phone">Phone Number</string>
@@ -71,8 +77,8 @@
 
     <!--我的-->
     <string name="act_myMenu_myact_title">Mine</string>
-    <string name="act_myMenu_myact_login">Login Name </string>
-    <string name="act_myMenu_myact_loginNike">Name</string>
+    <string name="act_myMenu_myact_login">Login Name: </string>
+    <string name="act_myMenu_myact_loginNike">Name:</string>
     <string name="act_myMenu_myact_assets">Total Asset</string>
     <string name="act_myMenu_myact_RMBPay">RMB Pay</string>
     <string name="act_myMenu_myact_RMBWithdraw">RMB Withdraw</string>
@@ -99,6 +105,8 @@
 
     <string name="act_baseAct_certificationResults_title">Real-Name Authentication</string>
     <string name="act_baseAct_certificationResults_tex">Your Identify Information</string>
+    <string name="act_baseAct_certificationResults_seucc">You have gone through the global online review</string>
+
     <string name="act_baseAct_certificationResults_name">Name</string>
     <string name="act_baseAct_certificationResults_type">ID Type</string>
     <string name="act_baseAct_certificationResults_idCard">ID Number</string>
@@ -120,6 +128,7 @@
     <string name="act_virtualcurrency_buysell">Buy/sell</string>
     <string name="act_virtualcurrency_price">price(¥)</string>
     <string name="act_virtualcurrency_number">Number</string>
+    <string name="act_virtualcurrency_jiaoyi">trading</string>
 
     <string name="act_mainTab_homepage_title">Global Online</string>
     <string name="act_mainTab_tradingFloor_title">Transaction Floor</string>
@@ -215,7 +224,7 @@
 
     <!--人民币提现-->
     <string name="act_WithdrawalRMBActivity_title">RMB Withdraw</string>a
-    <string name="act_WithdrawalRMBActivity_op">Withdraw Record</string>
+    <string name="act_WithdrawalRMBActivity_op">Record</string>
     <string name="act_WithdrawalRMBActivity_banktype">Select Bank Type</string>
     <string name="act_WithdrawalRMBActivity_bankNumber">Enter The Bank Number</string>
     <string name="act_WithdrawalRMBActivity_rebankNumber">Re-enter The Bank Number</string>
@@ -346,7 +355,7 @@
 
 
     <!--虚拟币收款-->
-    <string name="act_account_virtualcollection_title">Virtual currency payment</string>
+    <string name="act_account_virtualcollection_title">Collection</string>
     <string name="act_account_virtualcollection_tishi">
        Payment details: payment after the qr code, open the page in the APP is used "I want to payment" function, enter the friend page, scan the qr code, until identify content pop-up after payment interface, input the actual amount to pay to confirm payment after operation can!</string>
 

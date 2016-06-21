@@ -51,4 +51,17 @@
         <item name="android:background">@null</item>
         <item name="android:textSize">16dp</item>
     </style>
+
+
+    <style name="text">
+        <item name="android:textColor">@color/ac_base_ziti_hui</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:text">...</item>
+    </style>
+    <style name="titleText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:text">...</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

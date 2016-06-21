@@ -100,9 +100,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".activities.user.AboutUsActivity_"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"/>
+
 
         <activity android:name=".activities.virtualCurrency.ShouKuanActivity_"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -158,9 +156,7 @@
         <activity android:name=".activities.startPage.GuideActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activities.BaseActivie.WebViewActivity_"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"/>
+
         <activity android:name=".activities.BaseActivie.WebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">

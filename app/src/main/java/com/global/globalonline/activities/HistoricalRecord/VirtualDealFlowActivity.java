@@ -75,22 +75,28 @@ public class VirtualDealFlowActivity extends BaseActivity {
 
         srl_vdf.setColorSchemeResources(StaticBase.colorResIds);
         lv_vdf.setOnScrollListener(new AbsListView.OnScrollListener() {
+            int firstVisibleItem; // 当前第一个可见Item的位置
+            int totalItemCount;
+            int lastVisibleItem;
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
+                if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE){
+                    Log.e("log", "滑到底部");
+                    initView(false);
+                }
 
             }
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                this.firstVisibleItem = firstVisibleItem;
+                this.totalItemCount=totalItemCount;
+                this.lastVisibleItem=firstVisibleItem+visibleItemCount;
+
                 if(firstVisibleItem==0){
                     srl_vdf.setEnabled(true);
                 }else {
                     srl_vdf.setEnabled(false);
-                }
-
-                if(visibleItemCount+firstVisibleItem==totalItemCount  && firstVisibleItem != 0) {
-                    Log.e("log", "滑到底部");
-                    initView(false);
                 }
             }
         });

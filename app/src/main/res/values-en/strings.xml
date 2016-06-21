@@ -4,7 +4,7 @@
     <string name="hello">Hello World, QR_DemoActivity!</string>
 
     <string name="act_base_about">http://api.50f.cn/page/about_us_en.html</string>
-    <string name="act_base_fuwuxieyi">http://api.50f.cn/page/about_us_zh.html</string>
+    <string name="act_base_fuwuxieyi">http://api.50f.cn/page/service_agreement_en.html</string>
     <string name="act_base_yirenzheng">certified</string>
     <string name="scan_tips">Aim the qr code image scanning frame can automatically scan</string>
 	<string name="act_main_title_home">Homepage</string>
@@ -321,12 +321,12 @@
 
     <!--关于我们-->
     <string name="act_user_aboutUs_title">About us</string>
-    <string name="act_user_aboutUs_str1">环球在线</string>
+   <!-- <string name="act_user_aboutUs_str1">环球在线</string>
     <string name="act_user_aboutUs_str2">让每个人享受科技的乐趣</string>
     <string name="act_user_aboutUs_str3">免费的数字货币行情显示和交易软件。由中东MEC集团授权上海珺腾文化传播有限公司管理运营的官方APP，无需登录就可以查看全球虚拟币（比特币、莱特币）实时行情。可实现手机充值/提现/交易。官方应用，专业、安全、可信赖。
 团队核心成员：均毕业于清华大学、北京大学、复旦大学等国内名校。曾就职于甲骨文、中信证券、腾讯、百度、阿里巴巴等国内外知名企业。
 官方网站：http://www.globalonline.cc
-    </string>
+    </string>-->
 
 
     <!--收款-->

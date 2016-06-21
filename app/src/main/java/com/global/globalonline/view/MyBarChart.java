@@ -116,7 +116,7 @@ public class MyBarChart extends BarChart {
                     str = String.valueOf(value);
                 }
 
-                return str;
+                return "";
             }
         });
 

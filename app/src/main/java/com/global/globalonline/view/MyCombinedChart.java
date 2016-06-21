@@ -186,6 +186,13 @@ public class MyCombinedChart extends CombinedChart implements OnChartGestureList
 
 
         set1.setNeutralColor(Color.BLUE);
+        set1.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return "";
+            }
+        });
+
        // set.setDrawValues(false);
         d.addDataSet(set1);
         return d;

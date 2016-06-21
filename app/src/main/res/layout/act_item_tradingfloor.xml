@@ -36,10 +36,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="比特币(BTC)"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:textColor="@color/white"
+                    style="@style/titleText"
+
                     />
 
             </LinearLayout>
@@ -55,10 +53,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-                    android:text="¥0.888"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
+                    style="@style/titleText"
                     />
                 <LinearLayout
                     android:id="@+id/ll_zhangfu"
@@ -73,7 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="4dp"
-                        android:text="+2.50%"
+                        style="@style/text"
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
@@ -109,7 +104,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_chengjiaoe"
-                    android:textColor="@color/ac_base_ziti_hui"
+                    style="@style/text"
                     />
                 <TextView
                     android:id="@+id/tv_chengjiaoe"
@@ -117,8 +112,8 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="18888.88万"
-                    android:textColor="@color/ac_base_ziti_hui"
+
+                    style="@style/text"
                     />
 
 
@@ -135,7 +130,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_chengjiaoliang"
-                    android:textColor="@color/ac_base_ziti_hui"
+                    style="@style/text"
                     />
                 <TextView
                     android:id="@+id/tv_chengjiaoliang"
@@ -143,8 +138,8 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="3990"
-                    android:textColor="@color/ac_base_ziti_hui"
+
+                    style="@style/text"
                     />
 
 
@@ -161,7 +156,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_minprice"
-                    android:textColor="@color/ac_base_ziti_hui"
+                    style="@style/text"
                     />
                 <TextView
                     android:id="@+id/tv_minprice"
@@ -169,8 +164,8 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="¥0.999"
-                    android:textColor="@color/ac_base_ziti_hui"
+
+                    style="@style/text"
                     />
 
 
@@ -187,7 +182,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_maxprice"
-                    android:textColor="@color/ac_base_ziti_hui"
+                    style="@style/text"
                     />
                 <TextView
                     android:id="@+id/tv_mxPrice"
@@ -195,8 +190,8 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-                    android:text="¥1.020"
-                    android:textColor="@color/ac_base_ziti_hui"
+
+                    style="@style/text"
                     />
 
 

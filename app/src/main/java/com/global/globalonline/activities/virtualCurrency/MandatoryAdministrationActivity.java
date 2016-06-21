@@ -57,6 +57,13 @@ public class MandatoryAdministrationActivity extends BaseActivity {
     String next_id = "0";
     boolean b = true;
 
+
+
+    int firstVisibleItem; // 当前第一个可见Item的位置
+   
+    int totalItemCount;
+    int lastVisibleItem;
+
     public static void  toActivity(Activity activity, String symbol){
 
         Intent intent = new Intent(activity, MandatoryAdministrationActivity_.class);
@@ -75,25 +82,41 @@ public class MandatoryAdministrationActivity extends BaseActivity {
         symbol = getIntent().getStringExtra("symbol");
         //initView();
             lv_ma_tradingFloor.setOnScrollListener(new AbsListView.OnScrollListener() {
-            @Override
+                int firstVisibleItem; // 当前第一个可见Item的位置
+                int totalItemCount;
+                int lastVisibleItem;
+
+                @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+                if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE){
+                    Log.e("log", "滑到底部");
+                    initView();
+                }
 
             }
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                this.firstVisibleItem = firstVisibleItem;
+                this.totalItemCount=totalItemCount;
+                this.lastVisibleItem=firstVisibleItem+visibleItemCount;
+
                 if(firstVisibleItem==0){
                     srl_ma_tradingFloor.setEnabled(true);
                 }else {
                     srl_ma_tradingFloor.setEnabled(false);
                 }
 
-                if(visibleItemCount != totalItemCount && visibleItemCount+firstVisibleItem==totalItemCount){
-                    Log.e("log", "滑到底部");
-                    initView();
-                }
+              /*  if(visibleItemCount != totalItemCount && visibleItemCount+firstVisibleItem==totalItemCount){
+
+                }*/
             }
         });
+
+
+
 
         srl_ma_tradingFloor.setColorSchemeResources(StaticBase.colorResIds);
         srl_ma_tradingFloor.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -138,8 +161,9 @@ public class MandatoryAdministrationActivity extends BaseActivity {
 
                 CoinsEntrustRecordBena coinsDetailBean =(CoinsEntrustRecordBena) response.body();
                 if(coinsDetailBean.getErrorCode().equals("0")){
+
                     if(coinsDetailBean.getRecord_list() != null && coinsDetailBean.getRecord_list().size()>0) {
-                        delegateList.addAll(coinsDetailBean.getRecord_list());
+                            delegateList.addAll(coinsDetailBean.getRecord_list());
                     } else {
                         GetToastUtil.getToads(MandatoryAdministrationActivity.this,getResources().getString(R.string.act_base_nodata));
                     }

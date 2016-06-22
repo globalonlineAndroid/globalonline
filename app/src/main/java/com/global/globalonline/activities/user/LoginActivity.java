@@ -11,18 +11,9 @@ import com.global.globalonline.activities.mainTab.MainActivity_;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.StaticBase;
-import com.global.globalonline.bean.AlipayBean;
-import com.global.globalonline.bean.BankBean;
-import com.global.globalonline.bean.CardTypeBean;
-import com.global.globalonline.bean.ConfigBean;
-import com.global.globalonline.bean.CoutryBean;
-import com.global.globalonline.bean.IncomebankBean;
 import com.global.globalonline.bean.UserBean;
-import com.global.globalonline.bean.VirtualcoinBean;
 import com.global.globalonline.dao.DBHelper;
-import com.global.globalonline.db.bean.DataSource;
 import com.global.globalonline.service.CallBackService;
-import com.global.globalonline.service.ConfigService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
@@ -38,9 +29,7 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -64,9 +53,9 @@ public class LoginActivity extends BaseActivity {
 
     @AfterViews
     void init() {
-        dbHelper = DBHelper.getInstance(LoginActivity.this);
 
-        initDate();
+        GetSelectBouncedUtil.get(LoginActivity.this,tv_guojia, StaticBase.COUTRY,"39");
+        //initDate();
     }
 
     @Click({R.id.operation, R.id.bt_loging, R.id.tv_wangJiPWD})
@@ -139,117 +128,7 @@ public class LoginActivity extends BaseActivity {
     }
 
 
-    public void initDate() {
 
-
-        ConfigService configService = GetRetrofitService.getRestClient(ConfigService.class);
-        Map<String, String> stringMap = new HashMap<String, String>();
-
-
-        stringMap = MapToParams.getParsMap(stringMap);
-
-        Call<ConfigBean> call = configService.getCofig(stringMap);
-
-        RestService  restService = new RestServiceImpl();
-        restService.get(null,"",call, new CallBackService() {
-            @Override
-            public <T> void onResponse(Call<T> call, Response<T> response) {
-
-                ConfigBean configBean =   ((ConfigBean)response.body());
-                List<DataSource>  list =dbHelper.getDataInfoList();
-                dbHelper.clearAllData();
-                if(configBean.getErrorCode().equals("0")) {
-                    List<DataSource> dataSources = new ArrayList<DataSource>();
-                    for (int i = 0; i < configBean.getConfig().getCoutry_list().size(); i++) {
-                        DataSource dataSource = new DataSource();
-                        CoutryBean coutry = configBean.getConfig().getCoutry_list().get(i);
-                        dataSource.setId_(coutry.getId());
-                        dataSource.setName(coutry.getName());
-                        dataSource.setEname(coutry.getEname());
-                        dataSource.setCode(coutry.getCode());
-                        dataSource.setModule(StaticBase.COUTRY);
-                        dataSources.add(dataSource);
-                    }
-
-                    for (int i = 0; i < configBean.getConfig().getIncomebank_list().size(); i++) {
-                        DataSource dataSource = new DataSource();
-                        IncomebankBean incomebank = configBean.getConfig().getIncomebank_list().get(i);
-
-                        dataSource.setId_(incomebank.getId());
-                        dataSource.setName(incomebank.getName());
-                        dataSource.setBankname(incomebank.getBankname());
-                        dataSource.setBankno(incomebank.getBankno());
-                        dataSource.setBankadd(incomebank.getBankadd());
-                        dataSource.setModule(StaticBase.INCOMEBANK);
-                        dataSources.add(dataSource);
-                    }
-
-                    for (int i = 0; i < configBean.getConfig().getBank_list().size(); i++) {
-                        BankBean bankBean = configBean.getConfig().getBank_list().get(i);
-                        DataSource dataSource = new DataSource();
-                        dataSource.setId_(bankBean.getId());
-                        dataSource.setName( bankBean.getName());
-                        dataSource.setEname( bankBean.getEname());
-                        dataSource.setModule(StaticBase.BANK);
-                        dataSources.add(dataSource);
-                    }
-
-                    for (int i = 0; i < configBean.getConfig().getVirtualcointype().size(); i++) {
-                        DataSource dataSource = new DataSource();
-                        VirtualcoinBean virtualcoin = configBean.getConfig().getVirtualcointype().get(i);
-
-                        dataSource.setId_(virtualcoin.getId());
-                        dataSource.setSort_id(virtualcoin.getSort_id());
-                        dataSource.setName(virtualcoin.getName());
-                        dataSource.setEname(virtualcoin.getEname());
-                        dataSource.setShortname(virtualcoin.getShortname());
-                        dataSource.setWord(virtualcoin.getWord());
-                        dataSource.setLogo(virtualcoin.getLogo());
-                        dataSource.setMiniconfirm(virtualcoin.getMiniconfirm());
-                        dataSource.setWithdraw_fee(virtualcoin.getWithdraw_fee());
-                        dataSource.setMinwithdrawbtc(virtualcoin.getMinwithdrawbtc());
-                        dataSource.setMaxwithdrawbtc(virtualcoin.getMaxwithdrawbtc());
-                        dataSource.setRecharge_fee(virtualcoin.getRecharge_fee());
-                        dataSource.setDraw_fee(virtualcoin.getDraw_fee());
-                        dataSource.setModule(StaticBase.VIRTUALOIN);
-                        dataSources.add(dataSource);
-                    }
-                    for (int i = 0; i < configBean.getConfig().getCard_type_list().size(); i++) {
-                        DataSource dataSource = new DataSource();
-                        CardTypeBean cardType = configBean.getConfig().getCard_type_list().get(i);
-                        dataSource.setId_(cardType.getId());
-                        dataSource.setName(cardType.getName());
-                        dataSource.setEname(cardType.getEname());
-                        dataSource.setModule(StaticBase.CARTYPE);
-                        dataSources.add(dataSource);
-
-                    }
-                  //  for (int i = 0; i < configBean.getConfig().getAlipay().size(); i++) {
-                        DataSource dataSource = new DataSource();
-                        AlipayBean alipayBean = configBean.getConfig().getAlipay();
-
-                        dataSource.setName(alipayBean.getName());
-                        dataSource.setBankno(alipayBean.getAccount());
-                        dataSource.setModule(StaticBase.ALIPAY);
-                        dataSources.add(dataSource);
-
-                   // }
-                    dbHelper.addDataTable(dataSources);
-                    GetSelectBouncedUtil.get(LoginActivity.this,tv_guojia, StaticBase.COUTRY,"39");
-
-
-                }else {
-
-                    GetToastUtil.getToads(LoginActivity.this, configBean.getMessage());
-
-                }
-            }
-            @Override
-            public <T> void onFailure(Call<T> call, Throwable t) {
-               GetToastUtil.getToads(LoginActivity.this,t.getMessage());
-            }
-        });
-        }
 
 
 }

@@ -43,6 +43,9 @@ public class SplashActivity extends BaseActivity {
 	private static final String SHAREDPREFERENCES_NAME = "first_pref";
 
 
+
+
+
 	/**
 	 * Handler:跳转到不同界面
 	 */
@@ -128,4 +131,8 @@ public class SplashActivity extends BaseActivity {
         // 提交修改
         editor.commit();
     }
+
+
+
+
 }

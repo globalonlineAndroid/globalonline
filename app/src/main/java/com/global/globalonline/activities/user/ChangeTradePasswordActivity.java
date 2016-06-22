@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.global.globalonline.R;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.MyApplication;
+import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.CodeBean;
 import com.global.globalonline.bean.UserBean;
 import com.global.globalonline.dao.TimeCount;
@@ -70,17 +71,16 @@ public class ChangeTradePasswordActivity extends BaseActivity {
     }
 
     public void send_code() {
-
-
         String stype = "3";
-
-
-
         stringMap = new HashMap<String, String>();
         String phone = tv_phone.getText().toString();
+        if(phone.equals("")){
+            GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_no_wanzheng));
+            return;
+        }
 
         stringMap = new HashMap<String, String>();
-        stringMap.put("mobile", "18633492926");
+        stringMap.put("mobile", phone);
         stringMap.put("stype",stype);
 
        // Map<String,String>  map= MapToParams.getParsMap(stringMap,"auth_key");
@@ -95,9 +95,9 @@ public class ChangeTradePasswordActivity extends BaseActivity {
             public <T> void onResponse(Call<T> call, Response<T> response) {
                 codeBean = (CodeBean) response.body();
                 if(codeBean.getErrorCode().equals("0")){
-                    time = new TimeCount(30000, 1000,btn_send_code);
+                    time = new TimeCount(StaticBase.YANZHENGTIME, 1000,btn_send_code);
                     time.start();
-                    Toast.makeText(getApplicationContext(),"验证码发送成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getResources().getString(R.string.act_base_send_code),Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getApplicationContext(),codeBean.getMessage(),Toast.LENGTH_SHORT).show();
                 }
@@ -118,6 +118,10 @@ public class ChangeTradePasswordActivity extends BaseActivity {
                 et_yanzhengma);
 
         if(!b){
+            return;
+        }
+        if( codeBean == null){
+            GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_please_send_code));
             return;
         }
         String trade_pwd = et_trade_pwd.getText().toString();
@@ -141,7 +145,7 @@ public class ChangeTradePasswordActivity extends BaseActivity {
             public <T> void onResponse(Call<T> call, Response<T> response) {
                 UserBean userBean = (UserBean) response.body();
                 if(userBean.getErrorCode().equals("0")){
-                    GetToastUtil.getToads(getApplicationContext(),"修改成功");
+                    GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_update_successful));
                     finish();
                 }else {
 

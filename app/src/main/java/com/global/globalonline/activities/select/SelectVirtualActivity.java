@@ -15,7 +15,10 @@ import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.VirtualcoinBean;
 import com.global.globalonline.dao.DBHelper;
+import com.global.globalonline.dao.TishiResDao;
 import com.global.globalonline.db.bean.DataSource;
+import com.global.globalonline.tools.GetDialogUtil;
+import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.zbar.lib.ShengChengActivity;
 
 import org.androidannotations.annotations.AfterViews;
@@ -66,7 +69,21 @@ public class SelectVirtualActivity extends BaseActivity implements SwipeRefreshL
                 }else if(type.equals("xunizhuanchu")){
                     ArchivedActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
                 }else if(type.equals("xunizhuanru")){
-                    ChargeFeesActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
+
+                    DataSource dataSource =   GetSelectBouncedUtil.getDataSource(SelectVirtualActivity.this,StaticBase.VIRTUALOIN,
+                            virtualcoinBean.getId());
+                    if(dataSource.getIswithdraw() != null && dataSource.getIswithdraw().equals("1")) {
+                        ChargeFeesActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
+                    }else {
+                        GetDialogUtil.tishi(SelectVirtualActivity.this, null, getResources().getString(R.string.act_base_nodata), new TishiResDao() {
+                            @Override
+                            public void getTiShi(String args) {
+                                finish();
+                            }
+                        });
+
+                    }
+
                 }else if(type.equals("jiaoyiliushui")){
                     VirtualDealFlowActivity.toActivity(SelectVirtualActivity.this, virtualcoinBean.getId());
                 }else if(type.equals("fukuan")){

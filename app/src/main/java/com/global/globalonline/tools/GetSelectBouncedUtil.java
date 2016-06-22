@@ -99,4 +99,13 @@ public class GetSelectBouncedUtil {
         return bankName;
     }
 
+    public static DataSource getDataSource(Activity activity,String mouble, String id_){
+        DataSource dataSource = null;
+
+        DBHelper dbHelper = DBHelper.getInstance(activity);
+
+         dataSource = dbHelper.getByModeOrId(mouble,id_).get(0);
+        return dataSource;
+    }
+
 }

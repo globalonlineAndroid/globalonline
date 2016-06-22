@@ -7,7 +7,7 @@ import de.greenrobot.daogenerator.Schema;
 public class MyDaoGenerator {
 
     public static void main(String args[]) throws Exception {
-        Schema schema = new Schema(1, "bean");
+        Schema schema = new Schema(2, "bean");
         schema.setDefaultJavaPackageDao("dao");
         initUserBean(schema);
         new DaoGenerator().generateAll(schema, args[0]);
@@ -35,6 +35,7 @@ public class MyDaoGenerator {
         dataBean.addStringProperty("bankno");
         dataBean.addStringProperty("bankadd");
         dataBean.addStringProperty("status");
+        dataBean.addStringProperty("iswithdraw");
         dataBean.addStringProperty("module");
     }
 

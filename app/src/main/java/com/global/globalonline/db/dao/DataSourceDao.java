@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 
 import com.global.globalonline.db.bean.DataSource;
+
 import de.greenrobot.dao.AbstractDao;
 import de.greenrobot.dao.Property;
 import de.greenrobot.dao.internal.DaoConfig;
@@ -41,7 +42,8 @@ public class DataSourceDao extends AbstractDao<DataSource, Long> {
         public final static Property Bankno = new Property(16, String.class, "bankno", false, "BANKNO");
         public final static Property Bankadd = new Property(17, String.class, "bankadd", false, "BANKADD");
         public final static Property Status = new Property(18, String.class, "status", false, "STATUS");
-        public final static Property Module = new Property(19, String.class, "module", false, "MODULE");
+        public final static Property Iswithdraw = new Property(19, String.class, "iswithdraw", false, "ISWITHDRAW");
+        public final static Property Module = new Property(20, String.class, "module", false, "MODULE");
     };
 
 
@@ -76,7 +78,8 @@ public class DataSourceDao extends AbstractDao<DataSource, Long> {
                 "'BANKNO' TEXT," + // 16: bankno
                 "'BANKADD' TEXT," + // 17: bankadd
                 "'STATUS' TEXT," + // 18: status
-                "'MODULE' TEXT);"); // 19: module
+                "'ISWITHDRAW' TEXT," + // 19: iswithdraw
+                "'MODULE' TEXT);"); // 20: module
     }
 
     /** Drops the underlying database table. */
@@ -185,9 +188,14 @@ public class DataSourceDao extends AbstractDao<DataSource, Long> {
             stmt.bindString(19, status);
         }
  
+        String iswithdraw = entity.getIswithdraw();
+        if (iswithdraw != null) {
+            stmt.bindString(20, iswithdraw);
+        }
+ 
         String module = entity.getModule();
         if (module != null) {
-            stmt.bindString(20, module);
+            stmt.bindString(21, module);
         }
     }
 
@@ -220,7 +228,8 @@ public class DataSourceDao extends AbstractDao<DataSource, Long> {
             cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16), // bankno
             cursor.isNull(offset + 17) ? null : cursor.getString(offset + 17), // bankadd
             cursor.isNull(offset + 18) ? null : cursor.getString(offset + 18), // status
-            cursor.isNull(offset + 19) ? null : cursor.getString(offset + 19) // module
+            cursor.isNull(offset + 19) ? null : cursor.getString(offset + 19), // iswithdraw
+            cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20) // module
         );
         return entity;
     }
@@ -247,7 +256,8 @@ public class DataSourceDao extends AbstractDao<DataSource, Long> {
         entity.setBankno(cursor.isNull(offset + 16) ? null : cursor.getString(offset + 16));
         entity.setBankadd(cursor.isNull(offset + 17) ? null : cursor.getString(offset + 17));
         entity.setStatus(cursor.isNull(offset + 18) ? null : cursor.getString(offset + 18));
-        entity.setModule(cursor.isNull(offset + 19) ? null : cursor.getString(offset + 19));
+        entity.setIswithdraw(cursor.isNull(offset + 19) ? null : cursor.getString(offset + 19));
+        entity.setModule(cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20));
      }
     
     /** @inheritdoc */

@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.global.globalonline.R;
 import com.global.globalonline.base.BaseActivity;
+import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.CodeBean;
 import com.global.globalonline.bean.UserBean;
 import com.global.globalonline.dao.TimeCount;
@@ -65,6 +66,10 @@ public class ForgotaPsswordActivity extends BaseActivity {
     public void  send_code() {
 
         String phone = et_phone.getText().toString();
+        boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_phone);
+        if(!b){
+            return;
+        }
         String stype = "2";
         stringMap = new HashMap<String, String>();
         stringMap.put("mobile", phone);
@@ -79,7 +84,7 @@ public class ForgotaPsswordActivity extends BaseActivity {
                 codeBean = response.body();
                 if (codeBean.getErrorCode().equals("0")) {
                     String a = "";
-                    time = new TimeCount(60000, 1000,btn_send_code);
+                    time = new TimeCount(StaticBase.YANZHENGTIME, 1000,btn_send_code);
                     time.start();
                 }else {
                     GetToastUtil.getToads(ForgotaPsswordActivity.this,codeBean.getErrorCode());
@@ -102,7 +107,7 @@ public class ForgotaPsswordActivity extends BaseActivity {
         }
 
         if( codeBean == null){
-            GetToastUtil.getToads(getApplicationContext(),"请申请验证码");
+            GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_please_send_code));
             return;
         }
         String mobile= et_phone.getText().toString();
@@ -134,7 +139,7 @@ public class ForgotaPsswordActivity extends BaseActivity {
             public <T> void onResponse(Call<T> call, Response<T> response) {
                 UserBean userBean = (UserBean) response.body();
                 if(userBean.getErrorCode().equals("0")){
-                    Toast.makeText(getApplicationContext(),"修改成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getResources().getString(R.string.act_base_update_successful),Toast.LENGTH_SHORT).show();
                     finish();
                 }else {
                     Toast.makeText(getApplicationContext(),codeBean.getMessage(),Toast.LENGTH_SHORT).show();

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.global.globalonline.R;
-import com.global.globalonline.activities.BaseActivie.KLineActivity;
+import com.global.globalonline.activities.BaseActivie.KLineWebViewActivity;
 import com.global.globalonline.activities.user.LoginActivity_;
 import com.global.globalonline.adapter.VirtualTrade.VirtualTradeAdapter;
 import com.global.globalonline.base.BaseActivity;
@@ -229,7 +229,8 @@ public class VirtualTradeActivity extends BaseActivity {
             case R.id.operation:
 
                // KLineTestActivity.toActivity(VirtualTradeActivity.this,symbol);
-                KLineActivity.toActivity(VirtualTradeActivity.this,symbol);
+                //KLineActivity.toActivity(VirtualTradeActivity.this,symbol);
+                KLineWebViewActivity.toActivity(VirtualTradeActivity.this,symbol);
                 break;
         }
     }
@@ -249,78 +250,84 @@ public class VirtualTradeActivity extends BaseActivity {
             public <T> void onResponse(Call<T> call, Response<T> response) {
 
                 CoinsDetailBean coinsDetailBean =(CoinsDetailBean) response.body();
-                if(coinsDetailBean.getErrorCode().equals("0")){
+                if(coinsDetailBean.getErrorCode().equals("0")) {
+
+                    try {
 
 
-                    Glide.with(VirtualTradeActivity.this)
-                            .load(UrlApi.baseImageUrl+coinsDetailBean.getImg())
-                            .into(iv_image);
 
-                    String  buyPrice  = coinsDetailBean.getBuy_list().get(0).getPrice();
-                    String  sellPrice  = coinsDetailBean.getSell_list().get(0).getPrice();
+                        Glide.with(VirtualTradeActivity.this)
+                                .load(UrlApi.baseImageUrl + coinsDetailBean.getImg())
+                                .into(iv_image);
 
-                    String name = GetConfiguration.isZh()?coinsDetailBean.getName():coinsDetailBean.getEname();
-                    tv_name.setText(name);
-                    title.setText(name+" "+getResources().getString(R.string.act_virtualcurrency_title));
-                    tv_price.setText(coinsDetailBean.getPrice());
+                        String buyPrice = coinsDetailBean.getBuy_list().size() > 0 ? coinsDetailBean.getBuy_list().get(0).getPrice() : "0";
+                        String sellPrice = coinsDetailBean.getSell_list().size() > 0 ? coinsDetailBean.getSell_list().get(0).getPrice() : "0";
+
+                        String name = GetConfiguration.isZh() ? coinsDetailBean.getName() : coinsDetailBean.getEname();
+                        tv_name.setText(name);
+                        title.setText(name + " " + getResources().getString(R.string.act_virtualcurrency_title));
+                        tv_price.setText(coinsDetailBean.getPrice());
 
 
-                    float zhangfu = Float.parseFloat(coinsDetailBean.getRatio());
-                    String str = "";
-                    if(zhangfu >= 0){
-                        str = "+"+coinsDetailBean.getRatio()+"%";
-                        tv_zhangfu.setBackgroundResource(R.color.red);
-                    }else {
-                        str = coinsDetailBean.getRatio()+"%";
-                        tv_zhangfu.setBackgroundResource(R.color.green);
+                        float zhangfu = Float.parseFloat(coinsDetailBean.getRatio());
+                        String str = "";
+                        if (zhangfu >= 0) {
+                            str = "+" + coinsDetailBean.getRatio() + "%";
+                            tv_zhangfu.setBackgroundResource(R.color.red);
+                        } else {
+                            str = coinsDetailBean.getRatio() + "%";
+                            tv_zhangfu.setBackgroundResource(R.color.green);
+                        }
+
+                        tv_zhangfu.setText(str);
+                        float buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance()) / Float.parseFloat(coinsDetailBean.getPrice());
+                        tv_buy_kemaixunibi.setText(String.valueOf(buyxunibi));
+                        //tv_chengjiaoe.setText(coinsDetailBean.getVolume());
+                        tv_chengjiaoliang.setText(coinsDetailBean.getVolume());
+                        tv_minprice.setText(coinsDetailBean.getMin_price());
+                        tv_maxprice.setText(coinsDetailBean.getMax_price());
+                        tv_buy.setText(buyPrice);
+                        tv_sell.setText(sellPrice);
+                        tv_sell_keyongXuNiBi.setText(coinsDetailBean.getCoins_balance());
+                        tv_buy_keyongRMB.setText(coinsDetailBean.getAccount_balance());
+                        tv_sell_dongjiexunibi.setText(coinsDetailBean.getFrozen());
+
+                        et_buy_price.setText(sellPrice);
+                        et_sell_price.setText(buyPrice);
+
+
+                        List<CoinsDetailItemBean> list = new ArrayList<CoinsDetailItemBean>();
+
+                        for (int i = 0; i < coinsDetailBean.getBuy_list().size(); i++) {
+                            coinsDetailBean.getBuy_list().get(i).setName(getResources().getString(R.string.act_base_buy) + (i + 1));
+
+                        }
+
+                        for (int i = coinsDetailBean.getSell_list().size(); i > 0; i--) {
+                            CoinsDetailItemBean cb = coinsDetailBean.getSell_list().get(i - 1);
+                            cb.setName(getResources().getString(R.string.act_base_sell) + i);
+                            list.add(cb);
+
+                        }
+
+                        if (coinsDetailBean.getBuy_list().size() > 0) {
+                            coinsDetailBean.getBuy_list();
+                        }
+                        if (coinsDetailBean.getSell_list().size() > 0) {
+                            coinsDetailBean.getSell_list();
+                        }
+
+                        virtualTradeAdapter = new VirtualTradeAdapter(R.color.limegreen, VirtualTradeActivity.this, list);
+                        lv_mai.setAdapter(virtualTradeAdapter);
+                        virtualTradeAdapter = new VirtualTradeAdapter(R.color.red, VirtualTradeActivity.this, coinsDetailBean.getBuy_list());
+                        lv_sell.setAdapter(virtualTradeAdapter);
+                    }catch (Exception e){
+
+                    }
+                    }else{
+                        GetToastUtil.getToads(VirtualTradeActivity.this, coinsDetailBean.getMessage());
                     }
 
-                    tv_zhangfu.setText(str);
-                    float buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance())/Float.parseFloat(coinsDetailBean.getPrice());
-                    tv_buy_kemaixunibi.setText(String.valueOf(buyxunibi));
-                    //tv_chengjiaoe.setText(coinsDetailBean.getVolume());
-                    tv_chengjiaoliang.setText(coinsDetailBean.getVolume());
-                    tv_minprice.setText(coinsDetailBean.getMin_price());
-                    tv_maxprice.setText(coinsDetailBean.getMax_price());
-                    tv_buy.setText(buyPrice);
-                    tv_sell.setText(sellPrice);
-                    tv_sell_keyongXuNiBi.setText(coinsDetailBean.getCoins_balance());
-                    tv_buy_keyongRMB.setText(coinsDetailBean.getAccount_balance());
-                    tv_sell_dongjiexunibi.setText(coinsDetailBean.getFrozen());
-
-                    et_buy_price.setText(sellPrice);
-                    et_sell_price.setText(buyPrice);
-
-
-                    List<CoinsDetailItemBean> list = new ArrayList<CoinsDetailItemBean>();
-
-                    for (int i = 0; i < coinsDetailBean.getBuy_list().size(); i++) {
-                        coinsDetailBean.getBuy_list().get(i).setName(getResources().getString(R.string.act_base_buy)+(i+1));
-
-                    }
-
-                    for (int i = coinsDetailBean.getSell_list().size(); i > 0; i --) {
-                        CoinsDetailItemBean cb = coinsDetailBean.getSell_list().get(i-1);
-                        cb.setName(getResources().getString(R.string.act_base_sell)+i);
-                        list.add(cb);
-
-                    }
-
-                    if(coinsDetailBean.getBuy_list().size() > 0){
-                       coinsDetailBean.getBuy_list();
-                    }
-                    if(coinsDetailBean.getSell_list().size()>0){
-                       coinsDetailBean.getSell_list();
-                    }
-
-                    virtualTradeAdapter = new VirtualTradeAdapter(R.color.limegreen,VirtualTradeActivity.this,list);
-                    lv_mai.setAdapter(virtualTradeAdapter);
-                    virtualTradeAdapter = new VirtualTradeAdapter(R.color.red,VirtualTradeActivity.this,coinsDetailBean.getBuy_list());
-                    lv_sell.setAdapter(virtualTradeAdapter);
-
-                }else {
-                    GetToastUtil.getToads(VirtualTradeActivity.this,coinsDetailBean.getMessage());
-                }
             }
 
             @Override

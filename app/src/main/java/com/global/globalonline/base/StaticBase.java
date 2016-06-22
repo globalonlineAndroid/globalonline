@@ -19,6 +19,8 @@ public class StaticBase {
     public  static  String ALIPAY="alipay";
     /*end*/
 
+    public  static  int YANZHENGTIME=120000;
+
 
     @ColorRes
     public static int[] colorResIds = {R.color.springgreen, R.color.forestgreen, R.color.goldenrod,

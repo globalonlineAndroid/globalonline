@@ -25,6 +25,7 @@ public class DataSource {
     private String bankno;
     private String bankadd;
     private String status;
+    private String iswithdraw;
     private String module;
 
     public DataSource() {
@@ -34,7 +35,7 @@ public class DataSource {
         this.id = id;
     }
 
-    public DataSource(Long id, String id_, String name, String ename, String code, String sort_id, String shortname, String word, String logo, String miniconfirm, String withdraw_fee, String minwithdrawbtc, String maxwithdrawbtc, String recharge_fee, String draw_fee, String bankname, String bankno, String bankadd, String status, String module) {
+    public DataSource(Long id, String id_, String name, String ename, String code, String sort_id, String shortname, String word, String logo, String miniconfirm, String withdraw_fee, String minwithdrawbtc, String maxwithdrawbtc, String recharge_fee, String draw_fee, String bankname, String bankno, String bankadd, String status, String iswithdraw, String module) {
         this.id = id;
         this.id_ = id_;
         this.name = name;
@@ -54,6 +55,7 @@ public class DataSource {
         this.bankno = bankno;
         this.bankadd = bankadd;
         this.status = status;
+        this.iswithdraw = iswithdraw;
         this.module = module;
     }
 
@@ -207,6 +209,14 @@ public class DataSource {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getIswithdraw() {
+        return iswithdraw;
+    }
+
+    public void setIswithdraw(String iswithdraw) {
+        this.iswithdraw = iswithdraw;
     }
 
     public String getModule() {

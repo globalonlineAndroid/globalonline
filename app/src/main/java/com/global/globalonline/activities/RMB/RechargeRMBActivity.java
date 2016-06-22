@@ -176,7 +176,7 @@ public class RechargeRMBActivity extends BaseActivity {
                 map.put("shoukuanren", d.getName());
                 map.put("shoukuanzhanghao", d.getBankno());
                 map.put("shoukuankaihu", d.getBankadd());
-                map.put("jine", "您要转入的金额");
+                map.put("jine", getResources().getString(R.string.act_base_chongzhi_text));
                 map.put("beizhu", MyApplication.userBean.getUserid());
                 list.add(map);
             }

@@ -308,6 +308,7 @@ public class MainActivity extends FragmentActivity {
                             dataSource.setMaxwithdrawbtc(virtualcoin.getMaxwithdrawbtc());
                             dataSource.setRecharge_fee(virtualcoin.getRecharge_fee());
                             dataSource.setDraw_fee(virtualcoin.getDraw_fee());
+                            dataSource.setIswithdraw(virtualcoin.getIswithdraw());
                             dataSource.setModule(StaticBase.VIRTUALOIN);
                             dataSources.add(dataSource);
                         }

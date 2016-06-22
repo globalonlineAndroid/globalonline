@@ -102,7 +102,11 @@ public void send_code() {
 
     String phone = et_phone.getText().toString();
     String stype = "1";
+    boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_phone);
 
+    if(!b){
+        return;
+    }
 
 
     stringMap = new HashMap<String, String>();
@@ -118,9 +122,9 @@ public void send_code() {
         public void onResponse(Call<CodeBean> call, Response<CodeBean> response) {
              codeBean = response.body();
             if(codeBean.getErrorCode().equals("0")){
-                time = new TimeCount(30000, 1000,btn_send_code);
+                time = new TimeCount(StaticBase.YANZHENGTIME, 1000,btn_send_code);
                 time.start();
-                Toast.makeText(getApplicationContext(),"验证码发送成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.act_base_send_code),Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(getApplicationContext(),codeBean.getMessage(),Toast.LENGTH_SHORT).show();
             }
@@ -144,7 +148,7 @@ public void send_code() {
             return;
         }
         if( codeBean == null){
-            GetToastUtil.getToads(getApplicationContext(),"请申请验证码");
+            GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_please_send_code));
             return;
         }
 
@@ -179,7 +183,7 @@ public void send_code() {
             public <T> void onResponse(Call<T> call, Response<T> response) {
                 UserBean userBean = (UserBean) response.body();
                 if(userBean.getErrorCode().equals("0")){
-                    GetToastUtil.getToads(getApplicationContext(),"注册成功");
+                    GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_registered_successfully));
                 }else {
                     GetToastUtil.getToads(getApplicationContext(),userBean.getMessage());
                 }

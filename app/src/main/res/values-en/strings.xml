@@ -5,6 +5,7 @@
 
     <string name="act_base_about">http://api.globalonline.cc/page/about_us_en.html</string>
     <string name="act_base_fuwuxieyi">http://api.globalonline.cc/page/service_agreement_en.html</string>
+    <string name="act_base_KLine">http://v.globalonline.cc/index.php?r=wap/kline&amp;lang=en&amp;</string>
     <string name="act_base_yirenzheng">Certified</string>
     <string name="scan_tips">Aim the qr code image scanning frame can automatically scan</string>
     <string name="act_main_title_home">Homepage</string>
@@ -24,7 +25,12 @@
     <string name="act_base_sell_successful">Sell Successful</string>
     <string name="act_base_buy">buy</string>
     <string name="act_base_sell">sell</string>
-
+    <string name="act_base_chongzhi_text">The amount you want to top-up</string>
+    <string name="act_base_update_successful">Modify the success</string>
+    <string name="act_base_send_code">Verification code sent successfully</string>
+    <string name="act_base_please_send_code">Please apply for verification code</string>
+    <string name="act_base_registered_successfully">Registered successfully</string>
+    <string name="act_base_no_wanzheng">Please fill in complete information</string>
 
 
     <string name="act_myMenu_myact_UID">UID：</string>

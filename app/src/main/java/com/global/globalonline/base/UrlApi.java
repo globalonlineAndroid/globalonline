@@ -19,6 +19,11 @@ public class UrlApi {
     public  static  String service_agreement_zh = "http://api.50f.cn/page/service_agreement_zh.html"; //服务协议_中文地址
     public  static  String service_agreement_en = "http://api.50f.cn/page/service_agreement_en.html"; //服务协议_英文地址
 
+    public  static  String KLine_zh = "http://v.globalonline.cc/index.php?r=wap/kline&"; //  symbol=3    K线图_中文地址
+    public  static  String KLine_en = "http://v.globalonline.cc/index.php?r=wap/kline&lang=en&"; //  symbol=3    K线图_中文地址
+    public  static  String KLine = GetConfiguration.isZh()?KLine_zh:KLine_en; //  symbol=3    K线图_中文地址
+
+
 
     public  static  String aboutUrl = GetConfiguration.isZh()?aboutUrl_zh:aboutUrl_en; //关于我们
     public  static  String service_agreement = GetConfiguration.isZh()?service_agreement_zh:service_agreement_en; //服务协议

@@ -17,6 +17,18 @@ public class VirtualcoinBean {
           private String maxwithdrawbtc;
           private String recharge_fee;
           private String draw_fee;
+          private String iswithdraw;
+
+    public String getIswithdraw() {
+        return iswithdraw;
+    }
+
+    public void setIswithdraw(String iswithdraw) {
+        this.iswithdraw = iswithdraw;
+    }
+
+
+
 
     public String getId() {
         return id;

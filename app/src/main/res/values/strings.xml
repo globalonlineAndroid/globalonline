@@ -8,6 +8,7 @@
     <string name="act_base_nodata">没有数据了</string>
     <string name="act_base_about">http://api.globalonline.cc/page/about_us_zh.html</string>
     <string name="act_base_fuwuxieyi">http://api.globalonline.cc/page/service_agreement_zh.html</string>
+    <string name="act_base_KLine">http://v.globalonline.cc/index.php?r=wap/kline&amp;</string>
     <string name="act_base_fuzhichenggong">复制成功</string>
     <string name="act_base_yirenzheng">已认证</string>
     <string name="act_base_tishi">提示</string>
@@ -22,7 +23,12 @@
     <string name="act_base_sell_successful">卖出成功</string>
     <string name="act_base_buy">买</string>
     <string name="act_base_sell">卖</string>
-
+    <string name="act_base_chongzhi_text">您要充值的金额</string>
+    <string name="act_base_update_successful">修改成功</string>
+    <string name="act_base_send_code">验证码发送成功</string>
+    <string name="act_base_please_send_code">请申请验证码</string>
+    <string name="act_base_registered_successfully">注册成功</string>
+    <string name="act_base_no_wanzheng">请填写完整信息</string>
 
 
 
@@ -117,7 +123,6 @@
     <string name="act_baseAct_certificationResults_date">认证时间:</string>
 
 
-
     <string name="act_mainTab_tradingFloor_chengjiaoe">成交额</string>
     <string name="act_mainTab_tradingFloor_chengjiaoliang">成交量</string>
     <string name="act_mainTab_tradingFloor_minprice">最低价</string>
@@ -204,7 +209,6 @@
     <string name="act_RechargeRMBActivity_test_alipay_zi3">收款人名:</string>
     <string name="act_RechargeRMBActivity_test_alipay_zi4">附言内容:</string>
     <string name="act_RechargeRMBActivity_test_alipay_zi5">付款金额:</string>
-
 
 
     <!--人民币提现-->
@@ -304,7 +308,6 @@
 
     <!--关于我们-->
     <string name="act_user_aboutUs_title">关于我们</string>
-
 
 
     <!--收款-->

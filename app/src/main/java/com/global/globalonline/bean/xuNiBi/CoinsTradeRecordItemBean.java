@@ -10,6 +10,17 @@ public class CoinsTradeRecordItemBean {
     private  String time;
     private  String fee;
     private  String price;
+    private  String money;
+
+    public String getMoney() {
+        return money;
+    }
+
+    public void setMoney(String money) {
+        this.money = money;
+    }
+
+
 
 
     public String getId() {

@@ -78,7 +78,12 @@ public class HisWeiTuoActivity extends BaseActivity {
 
                 if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE){
                     Log.e("log", "滑到底部");
-                    initView();
+                    if(next_id.equals("0")){
+                        GetToastUtil.getToads(HisWeiTuoActivity.this,getResources().getString(R.string.act_base_nodata));
+                        return ;
+                    }else {
+                        initView();
+                    }
                 }
             }
 
@@ -102,6 +107,7 @@ public class HisWeiTuoActivity extends BaseActivity {
             @Override
             public void onRefresh() {
                 delegateList.clear();
+                next_id = "0";
                 initView();
 
             }
@@ -109,8 +115,6 @@ public class HisWeiTuoActivity extends BaseActivity {
 
 
     }
-
-
 
     public void initView(){
         String types = "1";
@@ -131,7 +135,9 @@ public class HisWeiTuoActivity extends BaseActivity {
 
                 CoinsEntrustRecordBena coinsDetailBean =(CoinsEntrustRecordBena) response.body();
                 if(coinsDetailBean.getErrorCode().equals("0")){
+
                     if(coinsDetailBean.getRecord_list() !=null && coinsDetailBean.getRecord_list().size()>0) {
+                        next_id = coinsDetailBean.getNext_id();
                         delegateList.addAll(coinsDetailBean.getRecord_list());
                     }else {
                         GetToastUtil.getToads(HisWeiTuoActivity.this,getResources().getString(R.string.act_base_nodata));

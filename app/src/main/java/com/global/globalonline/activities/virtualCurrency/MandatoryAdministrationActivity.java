@@ -91,7 +91,13 @@ public class MandatoryAdministrationActivity extends BaseActivity {
 
                 if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE){
                     Log.e("log", "滑到底部");
-                    initView();
+
+                    if( next_id.equals("0")){
+                        GetToastUtil.getToads(MandatoryAdministrationActivity.this,getResources().getString(R.string.act_base_nodata));
+                        return ;
+                    }else {
+                        initView();
+                    }
                 }
 
             }
@@ -123,6 +129,7 @@ public class MandatoryAdministrationActivity extends BaseActivity {
             @Override
             public void onRefresh() {
                 delegateList.clear();
+                next_id = "0";
                 initView();
 
             }

@@ -71,7 +71,7 @@ public class MyFrament extends Fragment {
         }catch (Exception e){
             LoginActivity_.intent(getActivity()).start();
         }
-        initView();
+        //initView();
 
     }
 
@@ -166,7 +166,7 @@ public class MyFrament extends Fragment {
 
         Call<AccountDetailBean> call = userService.account_detail(stringMap);
         RestService restService = new RestServiceImpl();
-        restService.get(getActivity(),"",call, new CallBackService() {
+        restService.get(null,"",call, new CallBackService() {
             @Override
             public <T> void onResponse(Call<T> call, Response<T> response) {
 
@@ -194,4 +194,9 @@ public class MyFrament extends Fragment {
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        initView();
+    }
 }

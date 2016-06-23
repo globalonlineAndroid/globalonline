@@ -280,8 +280,13 @@ public class VirtualTradeActivity extends BaseActivity {
                         }
 
                         tv_zhangfu.setText(str);
-                        float buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance()) / Float.parseFloat(coinsDetailBean.getPrice());
-                        tv_buy_kemaixunibi.setText(String.valueOf(buyxunibi));
+                        String buyxunibiStr = "0";
+                        float buyxunibi = 0;
+                        if(coinsDetailBean.getPrice() != null && !coinsDetailBean.getPrice().equals("0")) {
+                            buyxunibi = Float.parseFloat(coinsDetailBean.getAccount_balance()) / Float.parseFloat(coinsDetailBean.getPrice());
+                            buyxunibiStr = String.valueOf(buyxunibi);
+                        }
+                        tv_buy_kemaixunibi.setText(buyxunibiStr);
                         //tv_chengjiaoe.setText(coinsDetailBean.getVolume());
                         tv_chengjiaoliang.setText(coinsDetailBean.getVolume());
                         tv_minprice.setText(coinsDetailBean.getMin_price());

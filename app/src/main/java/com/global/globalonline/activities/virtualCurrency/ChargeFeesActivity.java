@@ -94,13 +94,23 @@ public class ChargeFeesActivity extends BaseActivity {
 
                 CoinsPaycheckBean virtualListItemBean =(CoinsPaycheckBean) response.body();
                 if(virtualListItemBean.getErrorCode().equals("0")){
-
+                    String keyong = virtualListItemBean.getAmount();
                     tv_dizhi.setText(virtualListItemBean.getWallet());
-                    tv_keyong.setText(virtualListItemBean.getAmount());
+                    tv_keyong.setText(keyong);
                     tv_dongjie.setText(virtualListItemBean.getFrozen());
+
+                   /* if(keyong == null || keyong.equals("0")){
+                        String name =  GetSelectBouncedUtil.getBankName(ChargeFeesActivity.this, StaticBase.VIRTUALOIN,symbol);
+                        String noMoneyStr = getResources().getString(R.string.act_base_noMoney)
+                                .replace("%",name);
+                        GetToastUtil.getToads(ChargeFeesActivity.this,noMoneyStr);
+                        finish();
+                    }*/
+
 
                 }else {
                     GetToastUtil.getToads(ChargeFeesActivity.this,virtualListItemBean.getMessage());
+                    finish();
                 }
             }
 

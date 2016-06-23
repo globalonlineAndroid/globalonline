@@ -12,7 +12,7 @@ import com.global.globalonline.activities.HistoricalRecord.ZhuanChuVirtualFlowAc
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.BaseBean;
-import com.global.globalonline.bean.CoinsPaycheckBean;
+import com.global.globalonline.bean.CoinsDetailBean;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
@@ -79,31 +79,39 @@ public class ArchivedActivity extends BaseActivity {
         }
     }
 
+
+    /* tv_keyong.setText(virtualListItemBean.getAmount());
+                    tv_dongjie.setText(virtualListItemBean.getFrozen());*/
+
     void initView(){
-
-
         Map<String,String> map = new HashMap<String,String>();
         map.put("symbol",symbol);
 
         map = MapToParams.getParsMap(map);
 
-        Call<CoinsPaycheckBean> call = virtualService.coins_paycheck(map);
+        //Call<CoinsPaycheckBean> call = virtualService.coins_paycheck(map);
+        Call<CoinsDetailBean> call = virtualService.coins_detail(map);
         RestService restService = new RestServiceImpl();
 
-        restService.get(null, "", call, new CallBackService() {
+        restService.get(ArchivedActivity.this, "loading...", call, new CallBackService() {
             @Override
             public <T> void onResponse(Call<T> call, Response<T> response) {
 
-                CoinsPaycheckBean virtualListItemBean =(CoinsPaycheckBean) response.body();
-                if(virtualListItemBean.getErrorCode().equals("0")){
+                CoinsDetailBean coinsDetailBean =(CoinsDetailBean) response.body();
+                if(coinsDetailBean.getErrorCode().equals("0")) {
 
+                    try {
 
-                    tv_keyong.setText(virtualListItemBean.getAmount());
-                    tv_dongjie.setText(virtualListItemBean.getFrozen());
+                    tv_keyong.setText(coinsDetailBean.getCoins_balance());
+                    tv_dongjie.setText(coinsDetailBean.getFrozen());
 
-                }else {
-                    GetToastUtil.getToads(ArchivedActivity.this,virtualListItemBean.getMessage());
+                    }catch (Exception e){
+
+                    }
+                }else{
+                    GetToastUtil.getToads(ArchivedActivity.this, coinsDetailBean.getMessage());
                 }
+
             }
 
             @Override
@@ -141,8 +149,9 @@ public class ArchivedActivity extends BaseActivity {
 
                 BaseBean baseBean =(BaseBean) response.body();
                 if(baseBean.getErrorCode().equals("0")){
-                    //GetToastUtil.getToads(ArchivedActivity.this,"提交成功");
-                    GetToastUtil.getSuccessToads(ArchivedActivity.this);
+                    GetToastUtil.getToads(ArchivedActivity.this,"提交成功");
+                    finish();
+                   // GetToastUtil.getSuccessToads(ArchivedActivity.this);
                 }else {
                     GetToastUtil.getToads(ArchivedActivity.this,baseBean.getMessage());
                 }

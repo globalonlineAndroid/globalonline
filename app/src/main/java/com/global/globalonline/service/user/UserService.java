@@ -27,6 +27,7 @@ public interface UserService  {
     @GET("find_pwd.json")  //找回密码
     Call<UserBean> find_pwd(@QueryMap Map<String,String>  map);
 
+
     @GET("identify_auth.json")  //认证
     Call<UserBean> identify_auth(@QueryMap Map<String,String>  map);
 

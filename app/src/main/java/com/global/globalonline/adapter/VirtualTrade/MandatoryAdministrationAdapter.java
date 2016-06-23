@@ -9,7 +9,10 @@ import android.widget.TextView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.bean.RecordListBean;
+import com.global.globalonline.dao.TishiResDao;
 import com.global.globalonline.dao.WeiTuoMangerDao;
+import com.global.globalonline.tools.DateUtils;
+import com.global.globalonline.tools.GetDialogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,10 +81,10 @@ public class MandatoryAdministrationAdapter extends BaseAdapter {
         RecordListBean recordListBean = list.get(position);
 
 
-      /*  viewHolder.tv_date.setText(DateUtils.getDateString(recordListBean.getTime()));
-        viewHolder.tv_type.setText(recordListBean.getTradetype());*/
+        viewHolder.tv_date.setText(DateUtils.getDateString(recordListBean.getTime()));
+        viewHolder.tv_type.setText(recordListBean.getTradetype());
         viewHolder.tv_number.setText(recordListBean.getNumber());
-      /*  viewHolder.tv_date.setText(recordListBean.getTime());
+        viewHolder.tv_date.setText(recordListBean.getTime());
         float weituoprice = (Float.parseFloat(recordListBean.getNumber())*Float.parseFloat(recordListBean.getPrice()));
         viewHolder.tv_weituoprice.setText(weituoprice+"");
         float feeprice = weituoprice*Float.parseFloat(recordListBean.getFee())/100;
@@ -90,9 +93,9 @@ public class MandatoryAdministrationAdapter extends BaseAdapter {
         viewHolder.tv_chengjiaonumber.setText(recordListBean.getVolume());
         viewHolder.tv_chengjiaojine.setText(recordListBean.getDealmoney());
         Float avg = Float.parseFloat(recordListBean.getDealmoney())/Float.parseFloat(recordListBean.getNumber());
-        viewHolder.tv_avgprice.setText(avg+"");*/
+        viewHolder.tv_avgprice.setText(avg+"");
 
-       /* viewHolder.tv_quxiao.setOnClickListener(new View.OnClickListener() {
+        viewHolder.tv_quxiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 GetDialogUtil.tishi(activity, "提示", "点击确定将无法恢复,是否继续", new TishiResDao() {
@@ -103,7 +106,6 @@ public class MandatoryAdministrationAdapter extends BaseAdapter {
                 });
             }
         });
-*/
 
 
 

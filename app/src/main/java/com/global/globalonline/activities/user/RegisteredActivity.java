@@ -184,6 +184,7 @@ public void send_code() {
                 UserBean userBean = (UserBean) response.body();
                 if(userBean.getErrorCode().equals("0")){
                     GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_registered_successfully));
+                    finish();
                 }else {
                     GetToastUtil.getToads(getApplicationContext(),userBean.getMessage());
                 }

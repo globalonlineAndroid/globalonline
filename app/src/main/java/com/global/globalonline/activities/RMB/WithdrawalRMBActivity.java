@@ -45,7 +45,7 @@ public class WithdrawalRMBActivity extends BaseActivity {
     @AfterViews
     void init(){
 
-        GetSelectBouncedUtil.get(this,tv_banktype, StaticBase.BANK,"0");
+        GetSelectBouncedUtil.get(this,tv_banktype, StaticBase.BANK,"1");
         et_cardNum.addTextChangedListener(new CarNumberTextWatcher(et_cardNum));
         et_reCardNum.addTextChangedListener(new CarNumberTextWatcher(et_reCardNum));
     }

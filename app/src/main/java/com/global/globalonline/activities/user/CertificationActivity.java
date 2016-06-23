@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.global.globalonline.R;
 import com.global.globalonline.activities.BaseActivie.CertificationResultsActivity_;
 import com.global.globalonline.base.BaseActivity;
+import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.UserBean;
 import com.global.globalonline.service.CallBackService;
@@ -65,8 +66,6 @@ public class CertificationActivity extends BaseActivity {
 
 
     public  void tijiao(){
-
-
         boolean b =  GetCheckoutET.checkout(getApplicationContext(),et_name,et_card);
 
         if(!b){
@@ -94,7 +93,7 @@ public class CertificationActivity extends BaseActivity {
                 UserBean userBean =   ((UserBean)response.body());
 
                 if(userBean.getErrorCode().equals("0")) {
-                    //MyApplication.userBean = userBean;
+                    MyApplication.userBean = userBean;
                     CertificationResultsActivity_.intent(CertificationActivity.this).start();
                     finish();
                 }else {

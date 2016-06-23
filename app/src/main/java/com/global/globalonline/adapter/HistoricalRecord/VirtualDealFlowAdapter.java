@@ -73,9 +73,9 @@ public class VirtualDealFlowAdapter extends BaseAdapter {
         CoinsTradeRecordItemBean co = list.get(position);
         viewHolder.tv_type.setText(type);
         viewHolder.tv_date.setText(DateUtils.getDateString(co.getTime()));
-        viewHolder.tv_rmbNumber.setText(co.getDealmoney());
+        viewHolder.tv_rmbNumber.setText(co.getDealmoney() == null ? co.getMoney():co.getDealmoney());
         viewHolder.tv_xunibiNumber.setText(co.getVolume());
-        viewHolder.tv_status.setText("成功");
+        viewHolder.tv_status.setText(activity.getResources().getString(R.string.act_base_succ));
         viewHolder.tv_status.setTextColor(activity.getResources().getColor(R.color.green));
         viewHolder.tv_avgprice.setText("¥"+co.getPrice());
         viewHolder.tv_feel.setText("¥"+co.getFee());

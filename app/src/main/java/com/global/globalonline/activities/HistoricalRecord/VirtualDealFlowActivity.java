@@ -82,7 +82,13 @@ public class VirtualDealFlowActivity extends BaseActivity {
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE){
                     Log.e("log", "滑到底部");
-                    initView(false);
+
+                    if( next_id.equals("0")){
+                        GetToastUtil.getToads(VirtualDealFlowActivity.this,getResources().getString(R.string.act_base_nodata));
+                    }else {
+                        initView(false);
+                    }
+
                 }
 
             }
@@ -107,6 +113,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
             @Override
             public void onRefresh() {
                 initView(true);
+                next_id = "0";
                 srl_vdf.setRefreshing(false);
             }
         });
@@ -193,6 +200,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
                 if(baseBean.getErrorCode().equals("0")) {
 
                     if(baseBean.getRecord_list() != null && baseBean.getRecord_list().size()>0) {
+                        next_id = baseBean.getNext_id();
                         list.addAll(baseBean.getRecord_list());
                     }else {
                         GetToastUtil.getToads(VirtualDealFlowActivity.this,getResources().getString(R.string.act_base_nodata));

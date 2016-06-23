@@ -424,7 +424,7 @@
                                 android:id="@+id/tv_buy_keyongRMB"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="未登陆"
+                                android:text="..."
                                 android:textColor="@color/btn_queding"
                                 />
 
@@ -436,7 +436,7 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="登陆"
+                            android:text="@string/act_user_login_loging"
                             android:textColor="@color/view_titleview_fanhui"
                             />
 
@@ -529,7 +529,7 @@
                             android:id="@+id/tv_realprice"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="¥178"
+                            android:text="..."
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
@@ -601,7 +601,7 @@
                                 android:id="@+id/tv_sell_keyongXuNiBi"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="未登陆"
+                                android:text="..."
                                 android:textColor="@color/btn_queding"
                                 />
 
@@ -613,7 +613,7 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="登陆"
+                            android:text="@string/act_user_login_loging"
                             android:textColor="@color/view_titleview_fanhui"
                             />
 

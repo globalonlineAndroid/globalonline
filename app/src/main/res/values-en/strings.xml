@@ -18,9 +18,10 @@
     <string name="act_base_quxiao">cancel</string>
     <string name="act_base_tuichu">Whether safety exit</string>
     <string name="act_base_istuichu">Whether safety exit</string>
-    <string name="act_base_nologin">You haven\'t already landed</string>
-    <string name="act_base_norenzhu">You haven\'t the certification</string>
+    <string name="act_base_nologin">ou haven\'t log in, go to login</string>
+    <string name="act_base_norenzhu">You haven\'t the certification,Go to the certification</string>
     <string name="act_base_successful">Congratulations, submitted to success!</string>
+    <string name="act_base_succ">Successful</string>
     <string name="act_base_buy_successful">Buy Successful</string>
     <string name="act_base_sell_successful">Sell Successful</string>
     <string name="act_base_buy">buy</string>
@@ -31,6 +32,7 @@
     <string name="act_base_please_send_code">Please apply for verification code</string>
     <string name="act_base_registered_successfully">Registered successfully</string>
     <string name="act_base_no_wanzheng">Please fill in complete information</string>
+    <string name="act_base_noMoney">You have no % currency balance, do not use the currency transfer.</string>
 
 
     <string name="act_myMenu_myact_UID">UID：</string>
@@ -405,7 +407,7 @@
 
 
     <!--虚拟币转出记录-->
-    <string name="act_historicalRecord_zhuanchuVirtual_title">Transfer the currency</string>
+    <string name="act_historicalRecord_zhuanchuVirtual_title">Transfer record</string>
     <string name="act_historicalRecord_zhuanchuVirtual_shuoming">In the past ten pens out record</string>
 
     <string name="act_historicalRecord_zhuanchuVirtual_table_title1">Out of time</string>
@@ -415,7 +417,7 @@
     <string name="act_historicalRecord_zhuanchuVirtual_table_title5">Turns out the state</string>
 
     <!--虚拟币转入记录-->
-    <string name="act_historicalRecord_zhuanruVirtual_title">Turns out the state</string>
+    <string name="act_historicalRecord_zhuanruVirtual_title">Voucher records</string>
     <string name="act_historicalRecord_zhuanruVirtual_shuoming">In the past ten pens out record</string>
 
     <string name="act_historicalRecord_zhuanruVirtual_table_title1">To address</string>

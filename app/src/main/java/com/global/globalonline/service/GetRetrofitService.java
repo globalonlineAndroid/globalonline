@@ -46,13 +46,15 @@ public class GetRetrofitService {
                // .addNetworkInterceptor(mTokenInterceptor)
 
                 .retryOnConnectionFailure(true)
+
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .build();
 
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(UrlApi.baseUrl)
-                .client(client)
+                //.client(client)
+
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();

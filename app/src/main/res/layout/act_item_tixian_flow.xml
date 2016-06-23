@@ -24,6 +24,8 @@
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
                 android:text="@string/act_historicalRecord_tixianflow_table_title1"
                 android:textColor="@color/white"
                 />

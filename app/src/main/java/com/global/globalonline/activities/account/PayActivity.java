@@ -47,12 +47,19 @@ public class PayActivity extends BaseActivity {
     Map<String,String > map = new HashMap<>();
     String price = "";
 
+    String userId = "";
+
     VirtualService virtualService;
     @AfterViews
     void init(){
         str = getIntent().getStringExtra("str");
         map = new Gson().fromJson(str,Map.class);
-        tv_zhuanghu.setText(new DecimalFormat("#").format(map.get("userid")));
+        if(map.get("userid") instanceof  String) {
+            userId = map.get("userid");
+        }else {
+            userId = new DecimalFormat("#").format(map.get("userid"));
+        }
+        tv_zhuanghu.setText(userId);
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
         initView();
 
@@ -90,9 +97,13 @@ public class PayActivity extends BaseActivity {
                         tv_number.setText("0");
                     } else {
                         String rmb = et_rmb.getText().toString();
+                        if(price != null && !price.equals("0")){
+                            float  numberFloat =  Float.parseFloat(rmb)/Float.parseFloat(price);
+                            tv_number.setText(String.valueOf(numberFloat));
+                        }else {
+                            tv_number.setText("0");
+                        }
 
-                        float  numberFloat =  Float.parseFloat(rmb)/Float.parseFloat(price);
-                        tv_number.setText(String.valueOf(numberFloat));
                     }
                 }else {
                     tv_number.setText("0");
@@ -127,6 +138,16 @@ public class PayActivity extends BaseActivity {
                         tv_bizhong.setText(coinsDetailBean.getEname());
                     }
                     addText();
+                   /* String keyong = coinsDetailBean.getAccount_balance();
+
+                    if(keyong == null || keyong.equals("0")){
+                        String name =  GetSelectBouncedUtil.getBankName(PayActivity.this, StaticBase.VIRTUALOIN,symbol);
+                        String noMoneyStr = getResources().getString(R.string.act_base_noMoney)
+                                .replace("%",name);
+                        GetToastUtil.getToads(PayActivity.this,noMoneyStr);
+                        finish();
+                    }*/
+
                 }else {
                     GetToastUtil.getToads(PayActivity.this,coinsDetailBean.getMessage());
                 }
@@ -143,7 +164,7 @@ public class PayActivity extends BaseActivity {
     public void tijiao(){
 
         final String symbol = map.get("sysid").toString();
-        final String receiver_id = new DecimalFormat("#").format(map.get("userid"));
+        final String receiver_id = userId;
         final String money = et_rmb.getText().toString();
         final String trade_pwd = et_tradePwd.getText().toString();
 

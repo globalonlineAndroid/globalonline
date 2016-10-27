@@ -46,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_virtualdealflow_table_title2"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -67,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_virtualdealflow_table_title3"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -88,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_virtualdealflow_table_title4"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -101,6 +104,7 @@
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:visibility="gone"
             >
             <TextView
                 android:id="@+id/tv_status"
@@ -109,6 +113,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_virtualdealflow_table_title5"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -117,6 +122,7 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/ac_base_fenGeXian"
+            android:visibility="gone"
             />
         <LinearLayout
             android:layout_width="80dp"
@@ -130,6 +136,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_virtualdealflow_table_title6"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -152,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_virtualdealflow_table_title7"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>

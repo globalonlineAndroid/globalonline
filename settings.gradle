@@ -1,1 +1,1 @@
-include ':app', ':greenDao',':lib:pull'
+include ':app', ':greenDao'

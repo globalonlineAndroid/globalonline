@@ -35,7 +35,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/icon_country"
             />
 
@@ -43,7 +43,7 @@
             android:id="@+id/tv_guojia"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="18dp"
+            android:textSize="14dp"
             android:hint="@string/act_user_registered_guojia"
             android:layout_marginLeft="6dp"
             android:drawableRight="@drawable/tiangle"
@@ -62,7 +62,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/act_user_login_phone"
             />
 
@@ -78,7 +78,7 @@
             />
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/act_registered_higth"
         android:background="@color/ac_user_login_phone"
@@ -89,7 +89,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/icon_lock"
             />
 
@@ -130,6 +130,7 @@
         android:layout_height="40dp"
         android:gravity="center"
         android:textColor="@color/ac_user_login_hint"
+        android:visibility="gone"
         android:text="@string/act_user_login_kefuphone"
         />
 

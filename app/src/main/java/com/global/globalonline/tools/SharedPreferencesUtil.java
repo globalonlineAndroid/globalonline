@@ -19,7 +19,7 @@ public class SharedPreferencesUtil {
     /*end*/
 
 
-    /*存放用户详情*/
+    /*配置的检查串*/
     public static String MD5 = "md5";
     public static String MD5_STR = "md5Str";
     /*end*/

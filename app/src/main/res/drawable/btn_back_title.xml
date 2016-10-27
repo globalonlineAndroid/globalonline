@@ -13,6 +13,7 @@
 	android:src="@drawable/icon_back_chevron"
 	android:tileMode="disabled"
 	android:gravity="center"
+
 	>
 
 </bitmap>

@@ -251,7 +251,7 @@ public class MainActivity extends FragmentActivity {
             public <T> void onResponse(Call<T> call, Response<T> response) {
 
                 ConfigBean configBean =   ((ConfigBean)response.body());
-                List<DataSource> list =dbHelper.getDataInfoList();
+                //List<DataSource> list =dbHelper.getDataInfoList();
                 if(configBean.getErrorCode().equals("0")) {
 
                     if(is_data.equals("0")){

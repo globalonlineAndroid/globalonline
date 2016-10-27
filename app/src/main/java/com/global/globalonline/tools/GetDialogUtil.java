@@ -142,8 +142,8 @@ public class GetDialogUtil {
         final TextView btn_quxiao = (TextView) view.findViewById(R.id.btn_quxiao);
 
 
-        if(title == null){
-            title  = act.getResources().getString(R.string.act_base_tishi);
+        if (title == null) {
+            title = act.getResources().getString(R.string.act_base_tishi);
         }
         tv_title.setText(title);
         textView.setText(text);
@@ -169,6 +169,53 @@ public class GetDialogUtil {
             @Override
             public void onClick(View v) {
 
+                finalDialog.cancel();
+
+            }
+        });
+    }
+
+    public static void tishi(final Activity act, String title, String text,String queding_text , String quxiao_text,final TishiResDao queding,final TishiResDao quxiao) {
+
+        AlertDialog dialog = null;
+        AlertDialog.Builder builder = new AlertDialog.Builder(act);
+        LayoutInflater inflater = (LayoutInflater) act.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.act_dig_def_tishi, null);
+
+
+        final TextView tv_title = (TextView) view.findViewById(R.id.title);
+        final TextView textView = (TextView) view.findViewById(R.id.text);
+        final TextView btn_queding = (TextView) view.findViewById(R.id.btn_queding);
+        final TextView btn_quxiao = (TextView) view.findViewById(R.id.btn_quxiao);
+
+
+        if(title == null){
+            title  = act.getResources().getString(R.string.act_base_tishi);
+        }
+        tv_title.setText(title);
+        textView.setText(text);
+
+        btn_queding.setText(queding_text);
+        btn_quxiao.setText(quxiao_text);
+
+
+        builder.setView(view);
+        dialog = builder.create();
+        dialog.show();
+
+        final AlertDialog finalDialog = dialog;
+        btn_queding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                queding.getTiShi("");
+                finalDialog.cancel();
+            }
+        });
+
+        btn_quxiao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                quxiao.getTiShi("");
                 finalDialog.cancel();
 
             }

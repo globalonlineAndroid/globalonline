@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title1"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -48,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title2"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -69,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title3"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -90,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title4"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -111,6 +115,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title5"
                 android:textColor="@color/white"
+                android:textSize="@dimen/act_textsize"
                 />
         </LinearLayout>
         <View

@@ -13,6 +13,8 @@ import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.BaseBean;
 import com.global.globalonline.bean.CoinsDetailBean;
+import com.global.globalonline.dao.DBHelper;
+import com.global.globalonline.db.bean.DataSource;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
@@ -39,7 +41,7 @@ public class ArchivedActivity extends BaseActivity {
 
 
     @ViewById
-    TextView operation,title,tv_keyong,tv_dongjie;
+    TextView operation,title,tv_keyong,tv_dongjie,tv_shuoming;
 
     @ViewById
     EditText    et_dizhi, et_number,  et_trade_pwd;
@@ -63,6 +65,13 @@ public class ArchivedActivity extends BaseActivity {
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
         String name =  GetSelectBouncedUtil.getBankName(ArchivedActivity.this, StaticBase.VIRTUALOIN,symbol);
         title.setText(getResources().getString(R.string.act_virtualcurrency_archived_zhuanchu)+name);
+
+        DBHelper dbHelper  = DBHelper.getInstance(ArchivedActivity.this);
+        DataSource dataSource = dbHelper.getByModeOrId(StaticBase.VIRTUALOIN,symbol).get(0);
+
+        tv_shuoming.setText(getResources().getString(R.string.act_virtualcurrency_archived_text)+" "+
+                dataSource.getMinwithdrawbtc()+getResources().getString(R.string.act_virtualcurrency_archived_text_1)+" "+
+                dataSource.getMaxwithdrawbtc()+getResources().getString(R.string.act_virtualcurrency_archived_text_2));
         initView();
 
     }

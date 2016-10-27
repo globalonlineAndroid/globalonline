@@ -13,6 +13,7 @@ import android.os.Vibrator;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
@@ -106,6 +107,21 @@ public class CaptureActivity extends Activity implements Callback {
 
 		mContainer = (RelativeLayout) findViewById(R.id.capture_containter);
 		mCropLayout = (RelativeLayout) findViewById(R.id.capture_crop_layout);
+
+		WindowManager wm = this.getWindowManager();
+
+		int width = wm.getDefaultDisplay().getWidth();
+		int height = wm.getDefaultDisplay().getHeight();
+		int  imgeHeight =  width/3*2;
+
+		RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) mCropLayout.getLayoutParams();
+		params.height = imgeHeight;
+		params.width = imgeHeight;
+		mCropLayout.setLayoutParams(params);
+
+		//mCropLayout.setMinimumHeight(imgeHeight);
+		//mCropLayout.setMinimumWidth(imgeHeight);
+
 
 		ImageView mQrLineView = (ImageView) findViewById(R.id.capture_scan_line);
 		TranslateAnimation mAnimation = new TranslateAnimation(TranslateAnimation.ABSOLUTE, 0f, TranslateAnimation.ABSOLUTE, 0f,

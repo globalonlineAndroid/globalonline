@@ -7,6 +7,7 @@
 
     <string name="act_base_nodata">没有数据了</string>
     <string name="act_base_about">http://api.globalonline.cc/page/about_us_zh.html</string>
+    <string name="act_base_about_test">http://t.api.globalonline.cc/page/about_us_zh.html</string>
     <string name="act_base_fuwuxieyi">http://api.globalonline.cc/page/service_agreement_zh.html</string>
     <string name="act_base_KLine">http://v.globalonline.cc/index.php?r=wap/kline&amp;</string>
     <string name="act_base_fuzhichenggong">复制成功</string>
@@ -19,7 +20,7 @@
     <string name="act_base_nologin">您还没有登陆,去登陆</string>
     <string name="act_base_norenzhu">您还没认证,去认证</string>
     <string name="act_base_successful">恭喜，提交成功!</string>
-    <string name="act_base_succ">成功!</string>
+    <string name="act_base_succ">成功</string>
     <string name="act_base_buy_successful">买入成功</string>
     <string name="act_base_sell_successful">卖出成功</string>
     <string name="act_base_buy">买</string>
@@ -31,6 +32,9 @@
     <string name="act_base_registered_successfully">注册成功</string>
     <string name="act_base_no_wanzheng">请填写完整信息</string>
     <string name="act_base_noMoney">您已没有%币的余额，不可使用此币种转账！</string>
+    <string name="act_base_gorenzheng">去认证</string>
+    <string name="act_base_weichengjiao">未成交</string>
+    <string name="act_base_chexiao">撤销</string>
 
 
 
@@ -46,7 +50,7 @@
     <string name="act_user_login_title">登陆</string>
     <string name="act_user_login_opera">注册</string>
     <string name="act_user_login_loging">登陆</string>
-    <string name="act_user_login_kefuphone">客服电话：400－888－8888</string>
+    <string name="act_user_login_kefuphone"></string>
     <string name="act_user_login_wangjipwd">忘记密码</string>
 
     <!--注册-->
@@ -303,7 +307,13 @@
     <string name="act_virtualcurrency_archived_tijiao">确认转出</string>
     <string name="act_virtualcurrency_archived_miaoshu">转出说明：</string>
     <string name="act_virtualcurrency_archived_text">
-        重要提示：为了您的帐户安全，每笔提现最小数量0.00100000，最大数量100.00000000， 如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为 0.0001。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。\n
+        重要提示：为了您的帐户安全，每笔提现最小数量
+        </string>
+    <string name="act_virtualcurrency_archived_text_1">
+       ,最大数量
+        </string>
+      <string name="act_virtualcurrency_archived_text_2">
+       ,如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为 0.0001。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。\n
 	** 本站客服不会要求用QQ远程控制您的电脑,所有要求远程的都是骗子。短信验证码、谷歌验证码非常重要，请勿透露给任何人，包括本站的客服。
         </string>
 
@@ -324,7 +334,7 @@
     <string name="act_account_pay_title">我要付款</string>
     <string name="act_account_pay_zhanghu">收款账户：</string>
     <string name="act_account_pay_bizhong">收款币种：</string>
-    <string name="act_account_pay_RMB">支付人民币:</string>
+    <string name="act_account_pay_RMB">支付人民币(元):</string>
     <string name="act_account_pay_biNumber">折合币数量：</string>
     <string name="act_account_pay_jiaoyipwd">交易密码:\t\t</string>
     <string name="act_account_pay_tijiao">确认付款</string>

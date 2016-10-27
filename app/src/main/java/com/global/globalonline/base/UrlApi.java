@@ -10,9 +10,12 @@ public class UrlApi {
 
     /*public  static  String baseUrl = "http://api.50f.cn/mapi/";
    public  static  String baseImageUrl = "http://coins.zhaojizi.com";
+
 */
-    public  static  String baseUrl = "http://api.globalonline.cc" + action;   //接口地址
-    public  static  String baseImageUrl = "http://v.globalonline.cc"; //图片地址接口
+    public static boolean b = true;
+    public  static  String baseUrl =  (b ? "http://api.globalonline.cc"  : "http://t.api.globalonline.cc") + action;   //接口地址
+    public  static  String baseImageUrl =b ? "http://v.globalonline.cc" : "http://t.v.globalonline.cc"; //图片地址接口
+
 
 
 

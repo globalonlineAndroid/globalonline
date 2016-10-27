@@ -28,7 +28,7 @@
         android:layout_marginLeft="8dp"
         android:gravity="center"
         android:text="@string/view_titleView_fanhui"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/view_titleview_fanhui"
         android:drawableLeft="@drawable/btn_back_title"
         style="@style/header_style"
@@ -42,7 +42,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
     <TextView
         android:id="@+id/operation"
         android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
         android:gravity="center_vertical"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/view_titleview_fanhui"
         android:layout_alignTop="@+id/title"
         android:layout_alignRight="@+id/add"

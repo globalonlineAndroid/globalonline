@@ -32,6 +32,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="@string/act_virtualcurrency_archived_keyong"
+            android:textSize="@dimen/act_textsize"
+
             />
         <TextView
             android:id="@+id/tv_keyong"
@@ -40,6 +42,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/view_titleview_fanhui"
             android:text="..."
+            android:textSize="@dimen/act_textsize"
+
 
             />
     </LinearLayout>
@@ -55,6 +59,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:textSize="@dimen/act_textsize"
+
             android:text="@string/act_virtualcurrency_archived_dongjie"
             />
         <TextView
@@ -63,6 +69,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/view_titleview_fanhui"
             android:text="..."
+            android:textSize="@dimen/act_textsize"
+
 
             />
     </LinearLayout>
@@ -86,13 +94,14 @@
             android:layout_height="wrap_content"
             android:textColor="@color/view_titleview_fanhui"
             android:text="..."
-
+            android:textSize="@dimen/act_textsize"
             />
         <TextView
             android:layout_marginTop="6dp"
             android:id="@+id/tv_fuzhi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/act_textsize"
             android:textColor="@color/view_titleview_fanhui"
             android:text="@string/act_virtualcurrency_chargeFees_fuzhi"
 

@@ -4,6 +4,7 @@
     <string name="hello">Hello World, QR_DemoActivity!</string>
 
     <string name="act_base_about">http://api.globalonline.cc/page/about_us_en.html</string>
+    <string name="act_base_about_test">http://t.api.globalonline.cc/page/about_us_en.html</string>
     <string name="act_base_fuwuxieyi">http://api.globalonline.cc/page/service_agreement_en.html</string>
     <string name="act_base_KLine">http://v.globalonline.cc/index.php?r=wap/kline&amp;lang=en&amp;</string>
     <string name="act_base_yirenzheng">Certified</string>
@@ -33,6 +34,10 @@
     <string name="act_base_registered_successfully">Registered successfully</string>
     <string name="act_base_no_wanzheng">Please fill in complete information</string>
     <string name="act_base_noMoney">You have no % currency balance, do not use the currency transfer.</string>
+    <string name="act_base_gorenzheng">Go Certified</string>
+    <string name="act_base_weichengjiao">no bargain</string>
+    <string name="act_base_chexiao">withdraw</string>
+
 
 
     <string name="act_myMenu_myact_UID">UID：</string>
@@ -43,7 +48,7 @@
     <string name="act_user_login_title">Login</string>
     <string name="act_user_login_opera">Register</string>
     <string name="act_user_login_loging">Login</string>
-    <string name="act_user_login_kefuphone">Service Number:400－888－8888</string>
+    <string name="act_user_login_kefuphone"> </string>
     <string name="act_user_login_wangjipwd">Forget Password</string>
 
     <!--注册-->
@@ -322,7 +327,11 @@
     <string name="act_virtualcurrency_archived_tijiao">Confirm the transfer</string>
     <string name="act_virtualcurrency_archived_miaoshu">Confirm the transfer：</string>
     <string name="act_virtualcurrency_archived_text">
-        Important: in order to the security of your account and each withdrawal minimum number 0.00100000, the maximum number of 100.00000000, if you have a higher demand, please contact the website customer service.Please note that if you carry too big or too small, the number of digits after a decimal point or too much, the network may charge fees (not on this site), average of 0.0001.So you received the virtual currency is the number of withdrawal amount after deducting fees.\n
+        Important: in order to the security of your account and each withdrawal minimum number </string>
+    <string name="act_virtualcurrency_archived_text_1">
+        , the maximum number of </string>
+    <string name="act_virtualcurrency_archived_text_2">
+        , if you have a higher demand, please contact the website customer service.Please note that if you carry too big or too small, the number of digits after a decimal point or too much, the network may charge fees (not on this site), average of 0.0001.So you received the virtual currency is the number of withdrawal amount after deducting fees.\n
         Customer service * * this site does not require using QQ remote control your computer, all the requirements of remote is a liar.Message authentication code, Google verification code is very important, do not say to anyone, including customer service on this site.
         </string>
 

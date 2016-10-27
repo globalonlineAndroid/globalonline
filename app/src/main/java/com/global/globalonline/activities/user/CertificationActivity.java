@@ -20,6 +20,7 @@ import com.global.globalonline.service.user.UserService;
 import com.global.globalonline.tools.GetCheckoutET;
 import com.global.globalonline.tools.GetSelectBouncedUtil;
 import com.global.globalonline.tools.MapToParams;
+import com.global.globalonline.tools.SharedPreferencesUtil;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -94,6 +95,7 @@ public class CertificationActivity extends BaseActivity {
 
                 if(userBean.getErrorCode().equals("0")) {
                     MyApplication.userBean = userBean;
+                    SharedPreferencesUtil.setUserInfo(CertificationActivity.this,userBean);
                     CertificationResultsActivity_.intent(CertificationActivity.this).start();
                     finish();
                 }else {

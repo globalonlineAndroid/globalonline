@@ -1,5 +1,7 @@
 package com.global.globalonline.bean;
 
+import com.global.globalonline.tools.DateUtils;
+
 /**
  * Created by lijl on 16/6/14.
  */
@@ -24,7 +26,8 @@ public class RecordListBean {
     }
 
     public String getTime() {
-        return time;
+
+        return DateUtils.getDateStringByLong(time);
     }
 
     public void setTime(String time) {

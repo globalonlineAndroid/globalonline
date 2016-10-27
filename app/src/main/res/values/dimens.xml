@@ -4,8 +4,8 @@
     <dimen name="activity_vertical_margin">0dp</dimen>
 
     <dimen name="act_login_higth">0dp</dimen>
-    <dimen name="act_registered_higth">45dp</dimen>
-    <dimen name="act_textsize">16dp</dimen>
+    <dimen name="act_registered_higth">38dp</dimen>
+    <dimen name="act_textsize">14dp</dimen>
 
 
 </resources>

@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             style="@style/editText"
-            android:textSize="18dp"
+            android:textSize="14dp"
             android:drawableRight="@drawable/tiangle"
             android:hint="@string/act_user_certification_cardtype"
             />

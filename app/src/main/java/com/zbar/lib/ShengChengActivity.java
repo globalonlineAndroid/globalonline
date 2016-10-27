@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.global.globalonline.R;
@@ -28,6 +29,7 @@ public class ShengChengActivity extends Activity {
 
     ImageView  erweima;
     TextView title;
+    LinearLayout ll_shoukuan;
 
    String symbol = "";
     int QR_WIDTH = 980;
@@ -45,18 +47,27 @@ public class ShengChengActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sheng_cheng);
         title = (TextView) this.findViewById(R.id.title);
+        ll_shoukuan = (LinearLayout)this.findViewById(R.id.ll_shoukuan);
 
         WindowManager wm = this.getWindowManager();
 
         int width = wm.getDefaultDisplay().getWidth();
         int height = wm.getDefaultDisplay().getHeight();
+        QR_WIDTH  = width/5*3;
+        QR_HEIGHT = width/5*3;
 
        // QR_WIDTH =Integer.parseInt(new DecimalFormat("#").format(width * 0.6));
 
         symbol = getIntent().getStringExtra("symbol");
         String titleName =  GetSelectBouncedUtil.getBankName(ShengChengActivity.this, StaticBase.VIRTUALOIN,symbol);
         title.setText(titleName+getResources().getString(R.string.act_account_virtualcollection_title));
-        erweima = (ImageView)this.findViewById(R.id.erweima);
+        //erweima = (ImageView)this.findViewById(R.id.erweima);
+        //QR_WIDTH = erweima.getWidth();
+       // QR_HEIGHT = erweima.getHeight();
+       /* ImageView imageView = new ImageView(this);
+        imageView.setMaxWidth(QR_WIDTH);
+        imageView.setMaxHeight(QR_HEIGHT);
+        ll_shoukuan.addView(imageView);*/
 
         Map<String,String>  map = new Hashtable<>();
         map.put("sysid",symbol);
@@ -106,9 +117,14 @@ public class ShengChengActivity extends Activity {
             }
             //生成二维码图片的格式，使用ARGB_8888
             Bitmap bitmap = Bitmap.createBitmap(QR_WIDTH, QR_HEIGHT, Bitmap.Config.ARGB_8888);
-            bitmap.setPixels(pixels, 0, QR_WIDTH, 0, 0, QR_WIDTH, QR_HEIGHT);
+           // bitmap.setPixels(pixels, 0, QR_WIDTH, 0, 0, QR_WIDTH, QR_HEIGHT);
+            bitmap.setPixels(pixels, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
             //显示到一个ImageView上面
-            erweima.setImageBitmap(bitmap);
+            //erweima.setImageBitmap(bitmap);
+            ImageView imageView = new ImageView(this);
+
+            imageView.setImageBitmap(bitmap);
+            ll_shoukuan.addView(imageView);
         }
         catch (WriterException e)
         {

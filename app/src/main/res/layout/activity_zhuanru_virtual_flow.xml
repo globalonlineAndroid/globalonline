@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="@string/act_historicalRecord_zhuanruVirtual_shuoming"
         android:textColor="@color/ac_base_ziti_hui"
+        android:textSize="@dimen/act_textsize"
         />
 
 
@@ -69,6 +70,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title1"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
 
@@ -93,6 +95,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title2"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -116,6 +119,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title3"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -139,6 +143,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_zhuanruVirtual_table_title4"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
 

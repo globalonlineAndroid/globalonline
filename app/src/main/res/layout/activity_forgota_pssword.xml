@@ -29,7 +29,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/icon_phone"
             />
 
@@ -65,7 +65,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/icon_yam"
             />
 
@@ -88,7 +88,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/icon_lock"
             />
 
@@ -114,7 +114,7 @@
 
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="24dp"
             android:src="@drawable/icon_lock"
             />
 

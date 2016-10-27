@@ -75,6 +75,10 @@ public class DateUtils {
         return getDateStringByLong(time, simpleDateFormat);
     }
 
+    public static String getDateStringByLong(String time) {
+        return getDateStringByLong(Long.parseLong(time), simpleDateFormat);
+    }
+
     /**
      * @param time
      * @return 根据时间戳转换为日期格式

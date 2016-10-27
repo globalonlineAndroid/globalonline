@@ -20,7 +20,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="6dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         >
@@ -33,7 +34,7 @@
             android:text="@string/act_historicalRecord_virtualdealflow_tab1"
             android:textColor="@color/white"
             android:background="@color/ac_base_tab"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:layout_marginRight="2dp"
             />
         <TextView
@@ -44,7 +45,7 @@
             android:layout_height="match_parent"
             android:text="@string/act_historicalRecord_virtualdealflow_tab2"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:background="@color/ac_virtual_chunk"
             android:layout_marginRight="2dp"
             />
@@ -56,7 +57,7 @@
             android:layout_height="match_parent"
             android:text="@string/act_historicalRecord_virtualdealflow_tab3"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:background="@color/ac_virtual_chunk"
             android:layout_marginRight="2dp"
             />
@@ -68,7 +69,7 @@
             android:layout_height="match_parent"
             android:text="@string/act_historicalRecord_virtualdealflow_tab4"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:background="@color/ac_virtual_chunk"
             android:layout_marginRight="2dp"
             />
@@ -76,7 +77,7 @@
     </LinearLayout>
 
     <com.global.globalonline.view.AutoSwipeRefreshLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="6dp"
         android:id="@+id/srl_vdf"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -99,7 +100,7 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="36dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     >
@@ -115,6 +116,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title1"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -132,6 +134,7 @@
                         <TextView
                             android:id="@+id/tv_date"
                             android:gravity="center"
+                            android:textSize="@dimen/act_textsize"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title2"
@@ -157,6 +160,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title3"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -178,6 +182,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title4"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -191,6 +196,7 @@
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
+                        android:visibility="gone"
                         >
                         <TextView
                             android:id="@+id/tv_status"
@@ -199,12 +205,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title5"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
 
                     <View
                         android:layout_width="1dp"
+                        android:visibility="gone"
                         android:layout_height="match_parent"
                         android:background="@color/ac_base_fenGeXian"
                         />
@@ -220,6 +228,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title6"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -242,6 +251,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_virtualdealflow_table_title7"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>

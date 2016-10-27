@@ -21,6 +21,7 @@
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/act_textsize"
         android:text="@string/act_historicalRecord_RMBChongZhi_shuoming"
         android:textColor="@color/ac_base_ziti_hui"
         />
@@ -62,6 +63,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_RMBChongZhi_table_title1"
+                            android:textSize="@dimen/act_textsize"
                             android:textColor="@color/btn_queding"
                             />
 
@@ -82,6 +84,7 @@
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/act_textsize"
                             android:text="@string/act_historicalRecord_RMBChongZhi_table_title2"
                             android:textColor="@color/btn_queding"
                             />
@@ -103,6 +106,7 @@
                             android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textSize="@dimen/act_textsize"
                             android:text="@string/act_historicalRecord_RMBChongZhi_table_title3"
                             android:textColor="@color/btn_queding"
                             />
@@ -126,6 +130,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_RMBChongZhi_table_title4"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -147,6 +152,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_RMBChongZhi_table_title5"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
                     </LinearLayout>
                     <View

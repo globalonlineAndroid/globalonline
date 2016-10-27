@@ -16,11 +16,11 @@
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         myxmlns:titletxt="@string/act_select_virtual_title"
-
         />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/srl_trading"
+        android:layout_marginTop="6dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -28,7 +28,7 @@
             android:id="@+id/lv_trading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:dividerHeight="10dp"
+            android:dividerHeight="6dp"
             android:divider="@color/ac_base_backgroud"
             >
         </ListView>

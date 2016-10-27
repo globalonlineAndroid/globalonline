@@ -44,7 +44,7 @@
             android:text="@string/act_RechargeRMBActivity_tab1"
             android:textColor="@color/white"
             android:background="@color/ac_base_tab"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:layout_marginRight="2dp"
             />
         <TextView
@@ -55,7 +55,7 @@
             android:layout_height="match_parent"
             android:text="@string/act_RechargeRMBActivity_tab2"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:background="@color/ac_virtual_chunk"
             />
     </LinearLayout>
@@ -97,6 +97,7 @@
                 style="@style/editText"
                 android:paddingRight="6dp"
                 android:drawableRight="@drawable/xiala_bai"
+                android:textSize="@dimen/act_textsize"
                 />
 
         </LinearLayout>
@@ -150,6 +151,7 @@
                 android:layout_height="match_parent"
                 android:hint="@string/act_RechargeRMBActivity_price"
                 style="@style/editText"
+                android:inputType="numberDecimal"
                 />
         </LinearLayout>
 
@@ -202,6 +204,7 @@
                 android:layout_height="match_parent"
                 android:hint="@string/act_RechargeRMBActivity_phone"
                 style="@style/editText"
+                android:inputType="number"
                 />
         </LinearLayout>
 
@@ -320,7 +323,7 @@
         android:gravity="center_horizontal"
         >
         <TextView
-
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/ac_base_ziti_hui"

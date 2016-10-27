@@ -17,6 +17,8 @@
         android:layout_height="45dp"
         android:background="@color/view_titleview"
         android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
         >
         <TextView
             android:layout_weight="1"
@@ -41,7 +43,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:text="@string/act_mainTab_tradingFloor_chengjiaoliang"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -192,6 +194,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_chengjiaoliang"
+                    android:textSize="14dp"
                     android:textColor="@color/ac_base_ziti_hui"
                     />
                 <TextView
@@ -218,6 +221,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_minprice"
+                    android:textSize="14dp"
                     android:textColor="@color/ac_base_ziti_hui"
                     />
                 <TextView
@@ -244,6 +248,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_maxprice"
+                    android:textSize="14dp"
                     android:textColor="@color/ac_base_ziti_hui"
                     />
                 <TextView
@@ -282,14 +287,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/act_virtualcurrency_maiyijia"
                     android:textColor="@color/ac_base_ziti_hui"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="¥"
                     android:textColor="@color/ac_base_ziti_hui"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     />
                 <TextView
                     android:id="@+id/tv_buy"
@@ -297,7 +302,7 @@
                     android:layout_height="wrap_content"
                     android:text="..."
                     android:textColor="@color/ac_base_ziti_hui"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     />
 
 
@@ -348,7 +353,7 @@
                 <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="36dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     >
@@ -361,7 +366,7 @@
                             android:text="@string/act_virtualcurrency_mairu"
                             android:textColor="@color/white"
                             android:background="@color/ac_base_tab"
-                            android:textSize="16dp"
+                            android:textSize="14dp"
                             android:layout_marginRight="2dp"
                             />
                         <TextView
@@ -372,7 +377,7 @@
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_sellru"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="14dp"
                             android:background="@color/ac_virtual_chunk"
                             android:layout_marginRight="2dp"
                             />
@@ -384,7 +389,7 @@
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_chedan"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="14dp"
                             android:background="@color/ac_virtual_chunk"
                             />
                 </LinearLayout>
@@ -486,6 +491,7 @@
                             android:textColor="@color/white"
                             android:background="@drawable/et_input"
                             android:paddingLeft="6dp"
+                            android:inputType="numberDecimal"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -507,6 +513,7 @@
                             android:paddingLeft="6dp"
                             android:textColor="@color/white"
                             android:text="0"
+                            android:inputType="number"
                             android:background="@drawable/et_input"
                             />
                     </LinearLayout>
@@ -594,6 +601,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/act_virtualcurrency_sell_keyong"
+                                android:textSize="14dp"
                                 android:textColor="@color/white"
                                 />
 
@@ -602,6 +610,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="..."
+                                android:textSize="14dp"
                                 android:textColor="@color/btn_queding"
                                 />
 
@@ -614,6 +623,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="@string/act_user_login_loging"
+                            android:textSize="14dp"
                             android:textColor="@color/view_titleview_fanhui"
                             />
 
@@ -631,6 +641,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_kemai"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             />
 
@@ -639,6 +650,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="0"
+                            android:textSize="14dp"
                             android:textColor="@color/ac_base_ziti_hui"
                             />
                     </LinearLayout>
@@ -652,6 +664,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_mairujiae"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             />
 
@@ -661,6 +674,7 @@
                             android:layout_height="40dp"
                             android:textColor="@color/white"
                             android:background="@drawable/et_input"
+                            android:inputType="numberDecimal"
                             android:paddingLeft="6dp"
                             />
                     </LinearLayout>
@@ -673,6 +687,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_mairunumber"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             />
 
@@ -683,6 +698,8 @@
                             android:paddingLeft="6dp"
                             android:textColor="@color/white"
                             android:text="0"
+                            android:textSize="14dp"
+                            android:inputType="number"
                             android:background="@drawable/et_input"
                             />
                     </LinearLayout>
@@ -698,6 +715,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_jine"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             />
 
@@ -706,6 +724,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="¥178"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             />
                     </LinearLayout>
@@ -718,7 +737,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_jiaoyipwd"
-
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             />
 
@@ -728,6 +747,7 @@
                             android:layout_height="40dp"
                             android:background="@drawable/et_input"
                             android:paddingLeft="6dp"
+                            android:textSize="14dp"
                             android:inputType="textPassword"
                             android:textColor="@color/white"
                             />
@@ -740,6 +760,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/btn_queding"
                         android:textColor="@color/white"
+                        android:textSize="14dp"
                         android:text="@string/act_virtualcurrency_sellru"
                         />
 
@@ -771,7 +792,7 @@
                             android:text="@string/act_virtualcurrency_buysell"
                             android:textColor="@color/white"
                             android:background="@color/ac_virtual_chunk"
-                            android:textSize="16dp"
+                            android:textSize="14dp"
                             android:layout_marginRight="2dp"
                             />
                         <TextView
@@ -781,7 +802,7 @@
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_price"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="14dp"
                             android:background="@color/ac_virtual_chunk"
                             android:layout_marginRight="2dp"
                             />
@@ -792,7 +813,7 @@
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_number"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="14dp"
                             android:background="@color/ac_virtual_chunk"
                             />
                     </LinearLayout>

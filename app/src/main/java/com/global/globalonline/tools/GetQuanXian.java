@@ -32,16 +32,28 @@ public static  boolean getIsQuanXian(final Activity activity){
             return b;
         }
 
-        if (MyApplication.userBean.getIdentity_info() != null) {
+        if (MyApplication.userBean.getIdentity_info() != null
+                && MyApplication.userBean.getIdentity_info().getIdentityno() != null
+                && !MyApplication.userBean.getIdentity_info().getIdentityno().equals("")
+                ) {
             b=true;
 
         }else {
-            GetDialogUtil.tishi(activity, null, activity.getResources().getString(R.string.act_base_norenzhu), new TishiResDao() {
-                @Override
-                public void getTiShi(String args) {
-                    CertificationActivity_.intent(activity).start();
-                }
-            });
+            GetDialogUtil.tishi(activity, null, activity.getResources().getString(R.string.act_base_norenzhu),
+                            activity.getResources().getString(R.string.act_base_gorenzheng),
+                            activity.getResources().getString(R.string.act_base_yirenzheng),
+                            new TishiResDao() {
+                                @Override
+                                public void getTiShi(String args) {
+                                    CertificationActivity_.intent(activity).start();
+                                }
+                            },
+                            new TishiResDao() {
+                                @Override
+                                public void getTiShi(String args) {
+                                    LoginActivity_.intent(activity).start();
+                                }
+                            });
 
             b = false;
             return b;

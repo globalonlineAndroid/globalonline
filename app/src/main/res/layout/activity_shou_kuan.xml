@@ -40,6 +40,7 @@
         android:textColor="@color/ac_base_ziti_hui"
         android:paddingLeft="10dp"
         android:text="@string/act_virtualCurrency_shoukuan_shuoming"
+        android:textSize="@dimen/act_textsize"
         />
 
     <TextView
@@ -49,6 +50,7 @@
         android:textColor="@color/ac_base_ziti_hui"
         android:paddingLeft="10dp"
         android:text="@string/act_virtualCurrency_shoukuan_text"
+        android:textSize="@dimen/act_textsize"
         />
 
 </LinearLayout>

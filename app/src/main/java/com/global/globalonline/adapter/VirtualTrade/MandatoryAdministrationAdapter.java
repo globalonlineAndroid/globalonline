@@ -82,7 +82,14 @@ public class MandatoryAdministrationAdapter extends BaseAdapter {
 
 
         viewHolder.tv_date.setText(DateUtils.getDateString(recordListBean.getTime()));
-        viewHolder.tv_type.setText(recordListBean.getTradetype());
+
+        String type = activity.getResources().getString(R.string.act_base_sell);
+        if(recordListBean.getTradetype().equals("BUY")){
+
+            type = activity.getResources().getString(R.string.act_base_buy);
+        }
+
+        viewHolder.tv_type.setText(type);
         viewHolder.tv_number.setText(recordListBean.getNumber());
         viewHolder.tv_date.setText(recordListBean.getTime());
         float weituoprice = (Float.parseFloat(recordListBean.getNumber())*Float.parseFloat(recordListBean.getPrice()));

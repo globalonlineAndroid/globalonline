@@ -20,16 +20,16 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+
             android:orientation="vertical"
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
                 <LinearLayout
@@ -59,6 +59,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_login"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
                             />
                         <TextView
                             android:id="@+id/tv_loginName"
@@ -78,6 +79,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_loginNike"
+                            android:textSize="@dimen/act_textsize"
+
                             android:textColor="@color/white"
                             />
                         <TextView
@@ -99,6 +102,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_UID"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
                         <TextView
                             android:id="@+id/tv_uid"
@@ -156,6 +161,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_assets"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -195,6 +202,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -224,6 +232,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_RMBPay"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -254,13 +264,13 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
                 android:id="@+id/ll_RMBTiXian"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:paddingLeft="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="1dp"
@@ -294,6 +304,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_RMBWithdraw"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -324,7 +336,6 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
@@ -333,6 +344,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:paddingLeft="10dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
@@ -364,6 +376,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_virtualPay"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -394,7 +408,6 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
@@ -403,6 +416,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:paddingLeft="10dp"
                 android:layout_marginTop="1dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
@@ -434,6 +448,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_virtualWithdraw"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -465,6 +481,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -495,6 +512,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_entrustManager"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -525,13 +544,13 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
                 android:id="@+id/ll_jiaoYiLiuShui"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:paddingLeft="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="1dp"
@@ -565,6 +584,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_transaction"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -596,6 +617,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -611,7 +633,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
-
+                    android:textSize="@dimen/act_textsize"
                     android:gravity="center_vertical"
                     >
 
@@ -656,7 +678,6 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
@@ -666,6 +687,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="1dp"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -696,6 +718,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_fukuan"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
+
                             />
 
                     </LinearLayout>
@@ -726,6 +750,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:paddingLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
@@ -757,6 +782,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_renzheng"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -773,9 +799,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/limegreen"
-
-
-
+                            android:textSize="@dimen/act_textsize"
                             />
                         <ImageView
                             android:layout_width="20dp"
@@ -796,13 +820,13 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
                 android:id="@+id/ll_updateLoginPWD"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:paddingLeft="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="1dp"
@@ -837,6 +861,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_updateDLPwd"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -862,7 +887,6 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
                 android:layout_height="1dp"
                 android:background="@color/ac_mymenu_my_fengexian"/>
             <LinearLayout
@@ -872,6 +896,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="1dp"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -902,6 +927,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_updateJYPwd"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -939,6 +965,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -969,6 +996,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_messge"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -1005,7 +1033,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
-
+                android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
 
@@ -1036,6 +1064,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_GuanYuWoMen"
                             android:textColor="@color/white"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>

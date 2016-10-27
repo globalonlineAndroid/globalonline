@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/act_historicalRecord_tixianfloi_shuoming"
         android:textColor="@color/ac_base_ziti_hui"
+        android:textSize="@dimen/act_textsize"
         />
 
     <com.global.globalonline.view.AutoSwipeRefreshLayout
@@ -69,6 +70,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title1"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -86,6 +88,7 @@
                         <TextView
                             android:id="@+id/tv_zhanghu"
                             android:gravity="center"
+                            android:textSize="@dimen/act_textsize"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title2"
@@ -107,6 +110,7 @@
                         <TextView
                             android:id="@+id/tv_cartype"
                             android:gravity="center"
+                            android:textSize="@dimen/act_textsize"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title3"
@@ -132,6 +136,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title4"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -153,6 +158,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title5"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -174,6 +180,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title6"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>
@@ -195,6 +202,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_historicalRecord_tixianflow_table_title7"
                             android:textColor="@color/btn_queding"
+                            android:textSize="@dimen/act_textsize"
                             />
 
                     </LinearLayout>

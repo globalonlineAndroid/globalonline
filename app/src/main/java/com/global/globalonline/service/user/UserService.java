@@ -1,6 +1,7 @@
 package com.global.globalonline.service.user;
 
 import com.global.globalonline.bean.AccountDetailBean;
+import com.global.globalonline.bean.AppBean;
 import com.global.globalonline.bean.CodeBean;
 import com.global.globalonline.bean.UserBean;
 
@@ -38,5 +39,8 @@ public interface UserService  {
     Call<UserBean> upt_login_pwd(@QueryMap Map<String,String>  map);
     @GET("upt_trade_pwd.json")     // 修改交易密码
     Call<UserBean> upt_trade_pwd(@QueryMap Map<String,String>  map);
+
+    @GET("version.json")     // 获取版本信息
+    Call<AppBean> version(@QueryMap Map<String,String>  map);
 
 }

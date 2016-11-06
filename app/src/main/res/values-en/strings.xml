@@ -37,6 +37,16 @@
     <string name="act_base_gorenzheng">Go Certified</string>
     <string name="act_base_weichengjiao">no bargain</string>
     <string name="act_base_chexiao">withdraw</string>
+    <string name="act_base_tishi_erweima">Please make sure the qr code is correct</string>
+
+
+    <string name="soft_update_no">Is the latest version</string>
+    <string name="soft_update_title">Software updates</string>
+    <string name="soft_update_info">Detected a new version, update now</string>
+    <string name="soft_update_updatebtn">update</string>
+    <string name="soft_update_later">Update later</string>
+    <string name="soft_updating">Being updated</string>
+    <string name="soft_update_cancel">cancel</string>
 
 
 

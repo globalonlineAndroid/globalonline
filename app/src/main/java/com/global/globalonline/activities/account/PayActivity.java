@@ -52,16 +52,23 @@ public class PayActivity extends BaseActivity {
     VirtualService virtualService;
     @AfterViews
     void init(){
-        str = getIntent().getStringExtra("str");
-        map = new Gson().fromJson(str,Map.class);
-        if(map.get("userid") instanceof  String) {
-            userId = map.get("userid");
-        }else {
-            userId = new DecimalFormat("#").format(map.get("userid"));
+        try {
+            str = getIntent().getStringExtra("str");
+            map = new Gson().fromJson(str, Map.class);
+            if (map.get("userid") instanceof String) {
+                userId = map.get("userid");
+            } else {
+                userId = new DecimalFormat("#").format(map.get("userid"));
+            }
+
+            tv_zhuanghu.setText(userId);
+            virtualService = GetRetrofitService.getRestClient(VirtualService.class);
+            initView();
+        }catch (Exception e ){
+
+            GetToastUtil.getToads(getApplicationContext(),getResources().getString(R.string.act_base_tishi_erweima));
+            finish();
         }
-        tv_zhuanghu.setText(userId);
-        virtualService = GetRetrofitService.getRestClient(VirtualService.class);
-        initView();
 
 
     }

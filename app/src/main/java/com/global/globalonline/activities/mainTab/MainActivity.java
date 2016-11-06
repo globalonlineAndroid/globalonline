@@ -13,9 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.global.globalonline.R;
+import com.global.globalonline.app.UpdateManager;
 import com.global.globalonline.base.GetConfiguration;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.AlipayBean;
+import com.global.globalonline.bean.AppBean;
 import com.global.globalonline.bean.BankBean;
 import com.global.globalonline.bean.CardTypeBean;
 import com.global.globalonline.bean.ConfigBean;
@@ -30,6 +32,8 @@ import com.global.globalonline.service.ConfigService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
 import com.global.globalonline.service.serviceImpl.RestServiceImpl;
+import com.global.globalonline.service.user.UserService;
+import com.global.globalonline.tools.GetPublicConfig;
 import com.global.globalonline.tools.GetQuanXian;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
@@ -114,6 +118,80 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+
+        //更新
+        if(GetPublicConfig.isUpdate ) {
+            GetPublicConfig.isUpdate=false;
+            upApp();
+        }
+        super.onResume();
+    }
+
+
+    //更新
+    private void upApp() {
+
+        UserService userService = GetRetrofitService.getRestClient(UserService.class);
+
+        Map<String, String> stringMap = new HashMap<String, String>();
+        stringMap.put("app_type", "android");
+        stringMap.put("app_version", UpdateManager.getVersionCode(this) + "");
+
+        stringMap = MapToParams.getParsMap(stringMap);
+
+        Call<AppBean> call = userService.version(stringMap);
+        RestService  restService = new RestServiceImpl();
+        restService.get(MainActivity.this,"",call, new CallBackService() {
+            @Override
+            public <T> void onResponse(Call<T> call, Response<T> response) {
+
+                AppBean appBean =   ((AppBean)response.body());
+                try {
+
+                    if (appBean.getErrorCode().equals("0")) {
+
+                        Map<String, String> map = new HashMap<String, String>();
+                        map.put("latest_version", appBean.getApp_version());
+                        map.put("url", appBean.getDownload());
+                        map.put("size", appBean.getSize());
+                        map.put("must", appBean.getMust());
+
+                        try {
+                            int serviceCode = Integer.parseInt(appBean.getApp_version());
+                        } catch (Exception e) {
+                            String a = "";
+                            return;
+                        }
+
+                        checkVersion(map);
+
+
+                    } else {
+                        GetToastUtil.getToads(getApplication(), appBean.getMessage());
+
+                    }
+                }catch (Exception e){
+                        String a = "";
+
+                }finally {
+                    GetPublicConfig.isUpdate=true;
+                }
+            }
+            @Override
+            public <T> void onFailure(Call<T> call, Throwable t) {
+                GetToastUtil.getToads(getApplication(), t.getMessage());
+            }
+        });
+    }
+
+    /*检查更新*/
+    public void checkVersion(Map map){
+        UpdateManager manager = new UpdateManager(MainActivity.this,map);
+        // 检查软件更新
+        manager.checkUpdate();
+    }
 
     private void initComponents() {
 

@@ -91,7 +91,8 @@ public class HisWeiTuoFlowAdapter extends BaseAdapter {
         float weituoprice = (Float.parseFloat(recordListBean.getNumber())*Float.parseFloat(recordListBean.getPrice()));
         viewHolder.tv_weituoprice.setText(weituoprice+"");
         float feeprice = weituoprice*Float.parseFloat(recordListBean.getFee())/100;
-        viewHolder.tv_shouxuprice.setText(feeprice+"");
+        //viewHolder.tv_shouxuprice.setText(feeprice+"");
+        viewHolder.tv_shouxuprice.setText(recordListBean.getFee());
         viewHolder.tv_weituojiage.setText(recordListBean.getPrice());
         viewHolder.tv_chengjiaonumber.setText(recordListBean.getVolume());
         viewHolder.tv_chengjiaojine.setText(recordListBean.getDealmoney());

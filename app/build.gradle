@@ -58,6 +58,8 @@ dependencies {
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
     compile files('libs/QRCode.jar')
     compile files('libs/zxing.jar')
+
+    compile 'com.squareup.picasso:picasso:2.4.0'
 }
 
 

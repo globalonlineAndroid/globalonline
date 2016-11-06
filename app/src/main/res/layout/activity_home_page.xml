@@ -8,8 +8,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".activities.mainTab.HomePageFrament">
+
+
+    <com.global.globalonline.view.infiniteindicator.InfiniteIndicatorLayout
+        android:id="@+id/viewPager"
+        app:indicator_type="indicator_anim_line"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        />
+
+
     <com.global.globalonline.view.AutoSwipeRefreshLayout
         android:id="@+id/srl_tradingFloor"
         android:layout_width="match_parent"

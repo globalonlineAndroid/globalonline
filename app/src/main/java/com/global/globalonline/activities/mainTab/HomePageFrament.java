@@ -25,6 +25,9 @@ import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 import com.global.globalonline.view.AutoSwipeRefreshLayout;
 import com.global.globalonline.view.LocalImageHolderView;
+import com.global.globalonline.view.infiniteindicator.InfiniteIndicatorLayout;
+import com.global.globalonline.view.infiniteindicator.slideview.BaseSliderView;
+import com.global.globalonline.view.infiniteindicator.slideview.DefaultSliderView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -45,6 +48,8 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
     AutoSwipeRefreshLayout srl_tradingFloor;
     @ViewById
     ListView lv_tradingFloor;
+    @ViewById
+    InfiniteIndicatorLayout viewPager;
 
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
 
@@ -59,12 +64,27 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
             "http://www.globalonline.cc/upload/shop/cdfghiklmortvwyz0128.png"
     };
 
+
+    //首页循环图片
+    int[] mainViewImgs={R.drawable.home_1,R.drawable.home_1,R.drawable.home_1};
+
     @AfterViews()
     void init(){
+
+
+
+        addImgPager();
+        //导航显示位置
+        viewPager.setIndicatorPosition(InfiniteIndicatorLayout.IndicatorPosition.Center_Bottom);
+        //循环速度
+        viewPager.setInterval(2000);
+        viewPager.startAutoScroll();
+
+
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
         //initlist();
         srl_tradingFloor.autoRefresh();
-        lv_tradingFloor.addHeaderView(initGuanGao());
+        //lv_tradingFloor.addHeaderView(initGuanGao());
         srl_tradingFloor.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
                 R.color.indianred,R.color.maroon);
         srl_tradingFloor.setOnRefreshListener(this);
@@ -79,6 +99,25 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
                 }
             }
         });
+
+    }
+
+    private void addImgPager() {
+        DefaultSliderView textSliderView = new DefaultSliderView(getActivity());
+        textSliderView
+                .image(mainViewImgs[0])
+                .setScaleType(BaseSliderView.ScaleType.Fit);
+        viewPager.addSlider(textSliderView);
+        DefaultSliderView textSliderView1 = new DefaultSliderView(getActivity());
+        textSliderView1
+                .image(mainViewImgs[1])
+                .setScaleType(BaseSliderView.ScaleType.Fit);
+        viewPager.addSlider(textSliderView1);
+        DefaultSliderView textSliderView2 = new DefaultSliderView(getActivity());
+        textSliderView2
+                .image(mainViewImgs[2])
+                .setScaleType(BaseSliderView.ScaleType.Fit);
+        viewPager.addSlider(textSliderView2);
 
     }
 

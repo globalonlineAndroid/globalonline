@@ -7,5 +7,6 @@
     <dimen name="act_registered_higth">38dp</dimen>
     <dimen name="act_textsize">14dp</dimen>
 
+    <dimen name="anim_circle_indicator_height">30dp</dimen>
 
 </resources>

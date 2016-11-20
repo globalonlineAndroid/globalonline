@@ -66,25 +66,23 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
 
     //首页循环图片
-    int[] mainViewImgs={R.drawable.home_1,R.drawable.home_1,R.drawable.home_1};
+    int[] mainViewImgs={R.drawable.home_page,R.drawable.home_page,R.drawable.home_page};
 
     @AfterViews()
     void init(){
 
 
 
-        addImgPager();
+        //addImgPager();
         //导航显示位置
-        viewPager.setIndicatorPosition(InfiniteIndicatorLayout.IndicatorPosition.Center_Bottom);
-        //循环速度
-        viewPager.setInterval(2000);
-        viewPager.startAutoScroll();
+
 
 
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
         //initlist();
         srl_tradingFloor.autoRefresh();
         //lv_tradingFloor.addHeaderView(initGuanGao());
+        lv_tradingFloor.addHeaderView(addImgPager());
         srl_tradingFloor.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
                 R.color.indianred,R.color.maroon);
         srl_tradingFloor.setOnRefreshListener(this);
@@ -102,7 +100,23 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
     }
 
-    private void addImgPager() {
+    private View addImgPager() {
+
+
+        View headerView = View.inflate(getActivity(),R.layout.act_main_lunbotu, null);
+        InfiniteIndicatorLayout viewPager = (InfiniteIndicatorLayout)headerView.findViewById(R.id.viewPager);
+
+        WindowManager wm = getActivity().getWindowManager();
+
+        int width = wm.getDefaultDisplay().getWidth();
+        int height = wm.getDefaultDisplay().getHeight();
+
+
+        int  imgeHeight =  width/3;
+
+        viewPager.setMinimumHeight(imgeHeight);
+
+
         DefaultSliderView textSliderView = new DefaultSliderView(getActivity());
         textSliderView
                 .image(mainViewImgs[0])
@@ -113,11 +127,18 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
                 .image(mainViewImgs[1])
                 .setScaleType(BaseSliderView.ScaleType.Fit);
         viewPager.addSlider(textSliderView1);
-        DefaultSliderView textSliderView2 = new DefaultSliderView(getActivity());
+       /* DefaultSliderView textSliderView2 = new DefaultSliderView(getActivity());
         textSliderView2
                 .image(mainViewImgs[2])
                 .setScaleType(BaseSliderView.ScaleType.Fit);
-        viewPager.addSlider(textSliderView2);
+        viewPager.addSlider(textSliderView2);*/
+
+        viewPager.setIndicatorPosition(InfiniteIndicatorLayout.IndicatorPosition.Center_Bottom);
+        //循环速度
+        viewPager.setInterval(2000);
+        viewPager.startAutoScroll();
+
+        return  headerView;
 
     }
 
@@ -184,8 +205,8 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
          int  imgeHeight =  width/3;         //300/60
 
-        localImages.add(R.drawable.home_1);
-        localImages.add(R.drawable.home_1);
+        localImages.add(R.drawable.home_page);
+        localImages.add(R.drawable.home_page);
         //localImages.add(R.drawable.page_1);
 
         ConvenientBanner mConvenientBanner = new ConvenientBanner(getActivity());

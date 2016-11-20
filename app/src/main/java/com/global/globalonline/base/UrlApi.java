@@ -12,7 +12,7 @@ public class UrlApi {
    public  static  String baseImageUrl = "http://coins.zhaojizi.com";
 
 */
-    public static boolean b = true;
+    public static boolean b = false;
     public  static  String baseUrl =  (b ? "http://api.globalonline.cc"  : "http://t.api.globalonline.cc") + action;   //接口地址
     public  static  String baseImageUrl =b ? "http://v.globalonline.cc" : "http://t.v.globalonline.cc"; //图片地址接口
 

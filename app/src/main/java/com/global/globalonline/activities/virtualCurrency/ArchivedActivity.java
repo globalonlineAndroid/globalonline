@@ -71,7 +71,8 @@ public class ArchivedActivity extends BaseActivity {
 
         tv_shuoming.setText(getResources().getString(R.string.act_virtualcurrency_archived_text)+" "+
                 dataSource.getMinwithdrawbtc()+getResources().getString(R.string.act_virtualcurrency_archived_text_1)+" "+
-                dataSource.getMaxwithdrawbtc()+getResources().getString(R.string.act_virtualcurrency_archived_text_2));
+                dataSource.getMaxwithdrawbtc()+getResources().getString(R.string.act_virtualcurrency_archived_text_2)+dataSource.getRecharge_fee()+
+                getResources().getString(R.string.act_virtualcurrency_archived_text_3));
         initView();
 
     }

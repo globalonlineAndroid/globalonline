@@ -13,19 +13,25 @@
     tools:context=".activities.mainTab.HomePageFrament">
 
 
-    <com.global.globalonline.view.infiniteindicator.InfiniteIndicatorLayout
-        android:id="@+id/viewPager"
-        app:indicator_type="indicator_anim_line"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2.5"
-        />
 
-
-    <com.global.globalonline.view.AutoSwipeRefreshLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+           <!-- <com.global.globalonline.view.infiniteindicator.InfiniteIndicatorLayout
+                android:id="@+id/viewPager"
+                app:indicator_type="indicator_anim_line"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_weight="3"
+            />-->
+            <com.global.globalonline.view.AutoSwipeRefreshLayout
         android:id="@+id/srl_tradingFloor"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_weight="7"
+        android:layout_height="0dp">
 
         <ListView
             android:id="@+id/lv_tradingFloor"
@@ -37,5 +43,8 @@
         </ListView>
 
     </com.global.globalonline.view.AutoSwipeRefreshLayout>
+
+        </LinearLayout>
+
 
 </LinearLayout>

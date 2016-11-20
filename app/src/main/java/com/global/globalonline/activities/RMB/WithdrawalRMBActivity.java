@@ -35,7 +35,7 @@ import retrofit2.Response;
 @EActivity(R.layout.activity_withdrawal_rmb)
 public class WithdrawalRMBActivity extends BaseActivity {
     @ViewById
-    TextView tv_banktype,operation;
+    TextView tv_banktype,operation,tv_rmntixian;
     @ViewById
     EditText et_cardNum,et_reCardNum,et_toName,et_kaihuhang,et_price,et_trade_pwd;
     @ViewById
@@ -48,6 +48,14 @@ public class WithdrawalRMBActivity extends BaseActivity {
         GetSelectBouncedUtil.get(this,tv_banktype, StaticBase.BANK,"1");
         et_cardNum.addTextChangedListener(new CarNumberTextWatcher(et_cardNum));
         et_reCardNum.addTextChangedListener(new CarNumberTextWatcher(et_reCardNum));
+
+
+       // DBHelper dbHelper  = DBHelper.getInstance(ArchivedActivity.this);
+       // DataSource dataSource = dbHelper.getByModeOrId(StaticBase.VIRTUALOIN,symbol).get(0);
+
+        String  sAgeFormat1 = getResources().getString(R.string.act_WithdrawalRMBActivity_text);
+        String text = String.format(sAgeFormat1,"4000","1000","5");
+        tv_rmntixian.setText(text);
     }
 
 

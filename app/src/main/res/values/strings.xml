@@ -240,7 +240,7 @@
     <string name="act_WithdrawalRMBActivity_tixian">提现</string>
     <string name="act_WithdrawalRMBActivity_xuzhi">提现须知</string>
     <string name="act_WithdrawalRMBActivity_text">
-        重要提示：为了您的帐户安全，每次人民币提现的最高限额为￥ 5000 、提现的最低限额为￥ 100 ，提现手续费5% ，如果您有更高的需求，请与网站客服联系，银行卡提现不同的银行，实际到帐时间可能会有所延时。</string>
+        重要提示：为了您的帐户安全，每次人民币提现的最高限额为%1$s 、提现的最低限额为%2$s ，提现手续费%3$s ，如果您有更高的需求，请与网站客服联系，银行卡提现不同的银行，实际到帐时间可能会有所延时。</string>
 
 
     <!--委托管理-->
@@ -322,9 +322,12 @@
     <string name="act_virtualcurrency_archived_text_1">
        ,最大数量
         </string>
-      <string name="act_virtualcurrency_archived_text_2">
-       ,如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为 0.0001。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。\n
-	** 本站客服不会要求用QQ远程控制您的电脑,所有要求远程的都是骗子。短信验证码、谷歌验证码非常重要，请勿透露给任何人，包括本站的客服。
+    <string name="act_virtualcurrency_archived_text_2">
+       ,如果您有更高的需求，请与网站客服联系。请注意如果您提现的数量过大或过小，或者小数点后位数过多，网络(非本站)会收取手续费，一般为
+        </string>
+    <string name="act_virtualcurrency_archived_text_3">
+        。因此您收到的虚拟币是提现数量扣除支付手续费后的数量。\n
+	    ** 本站客服不会要求用QQ远程控制您的电脑,所有要求远程的都是骗子。短信验证码、谷歌验证码非常重要，请勿透露给任何人，包括本站的客服。
         </string>
 
 

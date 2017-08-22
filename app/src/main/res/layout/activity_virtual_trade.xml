@@ -515,7 +515,7 @@
                             android:textColor="@color/white"
                             android:text="0"
                             android:textSize="14dp"
-                            android:inputType="number"
+                            android:inputType="numberDecimal"
                             android:background="@drawable/et_input"
                             />
                     </LinearLayout>
@@ -703,7 +703,7 @@
                             android:textColor="@color/white"
                             android:text="0"
                             android:textSize="14dp"
-                            android:inputType="number"
+                            android:inputType="numberDecimal"
                             android:background="@drawable/et_input"
                             />
                     </LinearLayout>

@@ -128,7 +128,7 @@
             android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:hint="@string/act_virtualcurrency_archived_number"
             style="@style/editText"
             />

@@ -10,6 +10,8 @@ import com.global.globalonline.activities.HistoricalRecord.TiXianFlowActivity_;
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.BaseBean;
+import com.global.globalonline.dao.DBHelper;
+import com.global.globalonline.db.bean.DataSource;
 import com.global.globalonline.service.BaseService;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
@@ -50,11 +52,11 @@ public class WithdrawalRMBActivity extends BaseActivity {
         et_reCardNum.addTextChangedListener(new CarNumberTextWatcher(et_reCardNum));
 
 
-       // DBHelper dbHelper  = DBHelper.getInstance(ArchivedActivity.this);
-       // DataSource dataSource = dbHelper.getByModeOrId(StaticBase.VIRTUALOIN,symbol).get(0);
+        DBHelper dbHelper  = DBHelper.getInstance(WithdrawalRMBActivity.this);
+        DataSource dataSource = dbHelper.getByModekeyList(StaticBase.RMB).get(0);
 
         String  sAgeFormat1 = getResources().getString(R.string.act_WithdrawalRMBActivity_text);
-        String text = String.format(sAgeFormat1,"4000","1000","5");
+        String text = String.format(sAgeFormat1,"¥"+dataSource.getMaxwithdrawbtc(),"¥"+dataSource.getMinwithdrawbtc(),dataSource.getWithdraw_fee()+"%");
         tv_rmntixian.setText(text);
     }
 

@@ -50,6 +50,7 @@ public class KLineWebViewActivity extends BaseActivity {
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setAllowFileAccess(true);
+        settings.setDisplayZoomControls(false);
 
 
         wv_kLine.setDownloadListener(new DownloadListener() {

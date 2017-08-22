@@ -17,6 +17,7 @@ public class StaticBase {
     public  static  String VIRTUALOIN = "virtualoin";
     public  static  String CARTYPE="cartype";
     public  static  String ALIPAY="alipay";
+    public  static  String RMB="renminbi";
     /*end*/
 
     public  static  int YANZHENGTIME=120000;

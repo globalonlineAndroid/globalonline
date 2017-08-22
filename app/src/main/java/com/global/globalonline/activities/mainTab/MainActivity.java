@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.global.globalonline.BuildConfig;
 import com.global.globalonline.R;
 import com.global.globalonline.app.UpdateManager;
 import com.global.globalonline.base.GetConfiguration;
@@ -409,18 +410,27 @@ public class MainActivity extends FragmentActivity {
                         dataSource.setModule(StaticBase.ALIPAY);
                         dataSources.add(dataSource);
 
+                        DataSource dataSource_rmb = new DataSource();
+                        dataSource_rmb.setWithdraw_fee(configBean.getConfig().getDrawcnyfee());
+                        dataSource_rmb.setMaxwithdrawbtc(configBean.getConfig().getMax_double());
+                        dataSource_rmb.setMinwithdrawbtc(configBean.getConfig().getMin_double());
+                        dataSource_rmb.setModule(StaticBase.RMB);
+                        dataSources.add(dataSource_rmb);
+
                         // }
                         dbHelper.addDataTable(dataSources);
 
                     }else {
 
                         String md5Str = SharedPreferencesUtil.getShared(MainActivity.this, SharedPreferencesUtil.MD5, SharedPreferencesUtil.MD5_STR);
-                        if (configBean.getData_md5().equals(md5Str)) {
+                        int version = SharedPreferencesUtil.getSharedInt(MainActivity.this, SharedPreferencesUtil.VERSION, SharedPreferencesUtil.VERSION_KEY);
+                        if (configBean.getData_md5().equals(md5Str) && version == BuildConfig.VERSION_CODE) {
                             call.cancel();
                         } else {
                             is_data = "0";
                             initDate();
                             SharedPreferencesUtil.setShared(MainActivity.this, SharedPreferencesUtil.MD5, SharedPreferencesUtil.MD5_STR, configBean.getData_md5());
+                            SharedPreferencesUtil.setShared(MainActivity.this, SharedPreferencesUtil.VERSION, SharedPreferencesUtil.VERSION_KEY, BuildConfig.VERSION_CODE);
                         }
                     }
 

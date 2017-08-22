@@ -4,9 +4,9 @@
     <string name="hello">Hello World, QR_DemoActivity!</string>
 
     <string name="act_base_about">http://api.globalonline.cc/page/about_us_en.html</string>
-    <string name="act_base_about_test">http://t.api.globalonline.cc/page/about_us_en.html</string>
-    <string name="act_base_fuwuxieyi">http://api.globalonline.cc/page/service_agreement_en.html</string>
-    <string name="act_base_KLine">http://v.globalonline.cc/index.php?r=wap/kline&amp;lang=en&amp;</string>
+    <string name="act_base_about_test">http://test.g.api.stupid2brave.com/page/about_us_en.html</string>
+    <string name="act_base_fuwuxieyi">http://test.g.api.stupid2brave.com/page/service_agreement_en.html</string>
+    <string name="act_base_KLine">http://test.g.t.stupid2brave.com/index.php?r=wap/kline&amp;lang=en&amp;</string>
     <string name="act_base_yirenzheng">Certified</string>
     <string name="scan_tips">Aim the qr code image scanning frame can automatically scan</string>
     <string name="act_main_title_home">Homepage</string>

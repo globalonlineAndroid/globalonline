@@ -14,7 +14,7 @@ public class SharedPreferencesUtil {
 
     /*存放用户详情*/
     public static String USER = "userInfo";
-        public static String USERINFO_KEY = "userInfo";
+    public static String USERINFO_KEY = "userInfo";
 
     /*end*/
 
@@ -24,6 +24,10 @@ public class SharedPreferencesUtil {
     public static String MD5_STR = "md5Str";
     /*end*/
 
+
+    /*存放版本号*/
+    public static String VERSION = "version";
+    public static String VERSION_KEY = "versionStr";
 
 
 
@@ -38,6 +42,17 @@ public class SharedPreferencesUtil {
 
         return t;
     }
+    public static int  getSharedInt(Activity act,String file,String key){
+        int t = 0;
+
+        SharedPreferences preferences = act.getSharedPreferences(
+                file, act.MODE_PRIVATE);
+
+        // 取得相应的值，如果没有该值，说明还未写入，用true作为默认值
+        t = preferences.getInt(key, 0);
+
+        return t;
+    }
 
 
     public static void  setShared(Activity act,String file,String key,String value){
@@ -48,6 +63,17 @@ public class SharedPreferencesUtil {
         SharedPreferences.Editor editor = preferences.edit();
         // 存入数据
         editor.putString(key, value);
+        // 提交修改
+        editor.commit();
+    }
+    public static void  setShared(Activity act,String file,String key,int value){
+
+
+        SharedPreferences preferences =act.getSharedPreferences(
+                file, act.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        // 存入数据
+        editor.putInt(key, value);
         // 提交修改
         editor.commit();
     }

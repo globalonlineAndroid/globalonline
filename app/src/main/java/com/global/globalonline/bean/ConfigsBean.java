@@ -13,7 +13,34 @@ public class ConfigsBean {
     private List<VirtualcoinBean> virtualcointype;
     private List<CardTypeBean> card_type_list;
     private AlipayBean alipay;
+    private String drawcnyfee;
+    private String max_double;
+    private String min_double;
 
+
+    public String getDrawcnyfee() {
+        return drawcnyfee;
+    }
+
+    public void setDrawcnyfee(String drawcnyfee) {
+        this.drawcnyfee = drawcnyfee;
+    }
+
+    public String getMax_double() {
+        return max_double;
+    }
+
+    public void setMax_double(String max_double) {
+        this.max_double = max_double;
+    }
+
+    public String getMin_double() {
+        return min_double;
+    }
+
+    public void setMin_double(String min_double) {
+        this.min_double = min_double;
+    }
 
     public AlipayBean getAlipay() {
         return alipay;

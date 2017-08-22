@@ -67,15 +67,13 @@ public class HisWeiTuoActivity extends BaseActivity {
 
         symbol = getIntent().getStringExtra("symbol");
         initView();
-            lv_ma_tradingFloor.setOnScrollListener(new AbsListView.OnScrollListener() {
+        lv_ma_tradingFloor.setOnScrollListener(new AbsListView.OnScrollListener() {
 
                 int firstVisibleItem; // 当前第一个可见Item的位置
                 int totalItemCount;
                 int lastVisibleItem;
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-
-
                 if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE){
                     Log.e("log", "滑到底部");
                     if(next_id.equals("0")){

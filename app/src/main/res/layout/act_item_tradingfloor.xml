@@ -7,15 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/ac_list_item_background"
+
+        android:background="@color/white"
         >
 
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:orientation="horizontal"
 
             >
@@ -36,8 +37,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
-
                     style="@style/titleText"
+                    android:textSize="16dp"
 
                     />
 
@@ -54,7 +55,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
+                    android:textColor="@color/D0021B"
                     style="@style/titleText"
+                    android:textSize="16dp"
+
                     />
                 <LinearLayout
                     android:id="@+id/ll_zhangfu"
@@ -81,15 +85,15 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/ac_base_fenGeXian"
+            android:background="@color/F1F1F1"
             />
 
         <LinearLayout
             android:layout_weight="1.2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:orientation="horizontal"
             >
 
@@ -105,7 +109,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_chengjiaoe"
-                    style="@style/text"
+                    style="@style/text_title"
                     />
                 <TextView
                     android:id="@+id/tv_chengjiaoe"
@@ -131,7 +135,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_chengjiaoliang"
-                    style="@style/text"
+                    style="@style/text_title"
                     />
                 <TextView
                     android:id="@+id/tv_chengjiaoliang"
@@ -157,7 +161,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_minprice"
-                    style="@style/text"
+                    style="@style/text_title"
                     />
                 <TextView
                     android:id="@+id/tv_minprice"
@@ -183,7 +187,7 @@
                     android:layout_height="0dp"
                     android:gravity="bottom"
                     android:text="@string/act_mainTab_tradingFloor_maxprice"
-                    style="@style/text"
+                    style="@style/text_title"
                     />
                 <TextView
                     android:id="@+id/tv_mxPrice"
@@ -191,7 +195,6 @@
                     android:layout_width="wrap_content"
                     android:gravity="top"
                     android:layout_height="0dp"
-
                     style="@style/text"
                     />
 

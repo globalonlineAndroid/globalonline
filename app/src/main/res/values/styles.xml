@@ -52,17 +52,34 @@
         <item name="android:textSize">14dp</item>
     </style>
 
-
-    <style name="text">
+    <style name="text_title">
         <item name="android:textColor">@color/ac_base_ziti_hui</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:text">...</item>
+    </style>
+    <style name="text">
+        <!--<item name="android:textColor">@color/ac_base_ziti_hui</item>-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:text">...</item>
+    </style>
+    <style name="text_12">
+        <!--<item name="android:textColor">@color/ac_base_ziti_hui</item>-->
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">12dp</item>
         <item name="android:text">...</item>
     </style>
+    <style name="text_16">
+        <!--<item name="android:textColor">@color/ac_base_ziti_hui</item>-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:text">...</item>
+    </style>
     <style name="titleText">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">14dp</item>
         <item name="android:text">...</item>
-        <item name="android:textStyle">bold</item>
+
     </style>
 
 

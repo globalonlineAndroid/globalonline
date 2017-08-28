@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
@@ -25,6 +26,7 @@ import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
 import com.global.globalonline.view.AutoSwipeRefreshLayout;
 import com.global.globalonline.view.LocalImageHolderView;
+import com.global.globalonline.view.VerticalTextview;
 import com.global.globalonline.view.infiniteindicator.InfiniteIndicatorLayout;
 import com.global.globalonline.view.infiniteindicator.slideview.BaseSliderView;
 import com.global.globalonline.view.infiniteindicator.slideview.DefaultSliderView;
@@ -59,6 +61,7 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
     List<VirtualTradingBean> list = null;
     VirtualService virtualService;
+    VerticalTextview verticalTextview = null;
 
     private String[] images = {"http://www.globalonline.cc/upload/shop/cdfghiklmortvwyz0128.png",
             "http://www.globalonline.cc/upload/shop/cdfghiklmortvwyz0128.png"
@@ -105,6 +108,8 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
         View headerView = View.inflate(getActivity(),R.layout.act_main_lunbotu, null);
         InfiniteIndicatorLayout viewPager = (InfiniteIndicatorLayout)headerView.findViewById(R.id.viewPager);
+        VerticalTextview vt_gonggao = (VerticalTextview)headerView.findViewById(R.id.vt_gonggao);
+        init_gonggao(vt_gonggao);
 
         WindowManager wm = getActivity().getWindowManager();
 
@@ -112,10 +117,9 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         int height = wm.getDefaultDisplay().getHeight();
 
 
-        int  imgeHeight =  width/3;
-
-        viewPager.setMinimumHeight(imgeHeight);
-
+        int  imgeHeight =  height/3;
+        headerView.setMinimumHeight(imgeHeight);
+       // viewPager.setMinimumHeight(imgeHeight);
 
         DefaultSliderView textSliderView = new DefaultSliderView(getActivity());
         textSliderView
@@ -194,7 +198,6 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         });
     }
 
-
     public  View initGuanGao(){
 
         WindowManager wm = getActivity().getWindowManager();
@@ -232,4 +235,45 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         return  mConvenientBanner;
     }
 
+
+    private void init_gonggao(VerticalTextview mTextview){
+
+        final ArrayList<String> titleList=new ArrayList<String>();
+        titleList.add("公告1");
+        titleList.add("公告2");
+        titleList.add("公告3");
+        titleList.add("公告4");
+        titleList.add("公告5");
+        titleList.add("公告6");
+        titleList.add("公告7");
+        titleList.add("公告8");
+        mTextview.setTextList(titleList);
+        mTextview.setText(14, 5, getResources().getColor(R.color.ac_base_ziti_hui));//设置属性
+        mTextview.setTextStillTime(3000);//设置停留时长间隔
+        mTextview.setAnimTime(1000);//设置进入和退出的时间间隔
+        mTextview.setOnItemClickListener(new VerticalTextview.OnItemClickListener(){
+
+
+            @Override
+            public void onItemClick(int position) {
+
+                Toast.makeText(getActivity(),"我点击了"+titleList.get(position),Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        mTextview.startAutoScroll();
+        verticalTextview = mTextview;
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (verticalTextview != null){
+
+           // verticalTextview.stopAutoScroll();
+        }
+    }
 }

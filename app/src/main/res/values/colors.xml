@@ -165,6 +165,8 @@
     <color name="darkblue">#00008b</color><!--暗蓝色 -->
     <color name="navy">#000080</color><!--海军色 -->
     <color name="black">#000000</color><!--黑色 -->
+    <color name="F1F1F1">#F1F1F1</color><!--黑色 -->
+    <color name="F0F1F2">#F0F1F2</color><!--黑色 -->
 
 
     <color name="qingwei_yongdu">#aa0000</color>
@@ -191,6 +193,7 @@
 
 
     <color name="btn_queding">#3e8de9</color>
+    <color name="F58704">#F58704</color>
 
     <color name="view_titleview">#1d2228</color>
     <color name="view_titleview_fanhui">#4398ff</color>
@@ -213,6 +216,10 @@
 
     <color name="ac_virtual_chunk">#111c24</color>
     <color name="ac_virtual_xian">#213340</color>
+
+    <color name="F58703">#F58703</color>
+    <color name="color_29313A">#29313A</color>
+    <color name="D0021B">#D0021B</color>
 
 
 

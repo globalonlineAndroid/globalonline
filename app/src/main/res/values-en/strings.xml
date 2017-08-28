@@ -9,7 +9,7 @@
     <string name="act_base_KLine">http://test.g.t.stupid2brave.com/index.php?r=wap/kline&amp;lang=en&amp;</string>
     <string name="act_base_yirenzheng">Certified</string>
     <string name="scan_tips">Aim the qr code image scanning frame can automatically scan</string>
-    <string name="act_main_title_home">Homepage</string>
+    <string name="act_main_title_home">With The Money</string>
     <string name="act_main_title_dating">Trading Hall</string>
     <string name="act_main_title_my">My</string>
     <string name="act_base_nodata">There is no data for</string>
@@ -156,7 +156,7 @@
     <string name="act_virtualcurrency_jiaoyi">trading</string>
 
     <string name="act_mainTab_homepage_title">Global Online</string>
-    <string name="act_mainTab_tradingFloor_title">Transaction Floor</string>
+    <string name="act_mainTab_tradingFloor_title">HomePage</string>
 
 
     <string name="act_base_serviceAgreement_title">Global Online Service Agreement</string>

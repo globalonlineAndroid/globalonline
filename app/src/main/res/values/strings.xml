@@ -50,7 +50,7 @@
 
 
     <!--主页-->
-    <string name="act_main_title_home">主页</string>
+    <string name="act_main_title_home">一起兑币</string>
     <string name="act_main_title_dating">交易大厅</string>
     <string name="act_main_title_my">我的</string>
 
@@ -159,7 +159,7 @@
 
 
     <string name="act_mainTab_homepage_title">环球在线</string>
-    <string name="act_mainTab_tradingFloor_title">交易大厅</string>
+    <string name="act_mainTab_tradingFloor_title">首页</string>
 
 
     <string name="act_base_serviceAgreement_title">环球在线服务协议</string>

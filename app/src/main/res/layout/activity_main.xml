@@ -8,15 +8,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/ac_base_backgroud"
+    android:background="@color/F0F1F2"
     android:orientation="vertical"
-
     >
     <com.global.globalonline.view.MainTitleView_
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        myxmlns:titletxt="@string/act_mainTab_tradingFloor_title"
+        myxmlns:titletxt="@string/act_main_title_home"
         myxmlns:backtxt="no"
+
         />
 
 
@@ -91,7 +91,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:gravity="center_vertical"
-        android:background="@color/ac_mainTab_bottom"
+        android:background="@color/white"
         android:orientation="horizontal">
         <RelativeLayout
             style="@style/ButtomBar"
@@ -103,7 +103,6 @@
                 android:id="@+id/ibtn_homepage"
                 android:layout_width="26dp"
                 android:layout_height="24dp"
-
                 style="@style/ButtomBarImgBtn"
                 android:background="@drawable/bar_homepage"
                 android:contentDescription="@string/app_name" />
@@ -116,7 +115,7 @@
                 android:textStyle="bold"
                 android:textSize="10dp"
                 android:textColor="@color/ac_base_ziti_hui"
-                android:text="@string/act_main_title_home"
+                android:text="@string/act_mainTab_tradingFloor_title"
                 />
 
         </RelativeLayout>

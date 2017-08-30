@@ -197,14 +197,14 @@
 
     <color name="view_titleview">#1d2228</color>
     <color name="view_titleview_fanhui">#4398ff</color>
-    <color name="ac_user_login">#0e1821</color>
+    <color name="ac_user_login">#ffffff</color>
     <color name="ac_user_login_phone">#373f45</color>
     <color name="ac_user_login_loging">#3e8de9</color>
     <color name="ac_user_login_hint">#979ca2</color>
 
 
     <color name="ac_user_registerd_hint">#979ca2</color>
-    <color name="ac_user_registerd_bankgroud">#979ca2</color>
+    <color name="ac_user_registerd_bankgroud">#78909C</color>
 
     <color name="ac_mymenu_my_bankgroud">#111c24</color>
     <color name="ac_mymenu_my_fengexian">#242b33</color>
@@ -220,6 +220,8 @@
     <color name="F58703">#F58703</color>
     <color name="color_29313A">#29313A</color>
     <color name="D0021B">#D0021B</color>
+    <color name="FFA200">#FFA200</color>
+    <color name="E4E4E4">#E4E4E4</color>
 
 
 

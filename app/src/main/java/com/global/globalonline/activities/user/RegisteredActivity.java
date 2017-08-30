@@ -49,9 +49,9 @@ public class RegisteredActivity extends BaseActivity {
     EditText  et_phone,et_yanzhengma,et_pwd,et_rePwd,et_tuijianren;
 
     @ViewById
-    Button btn_send_code,btn_tijiao;
+    Button btn_tijiao;
     @ViewById
-    TextView tv_guojia,tv_xieyi;
+    TextView tv_guojia,tv_xieyi,btn_send_code;
     @ViewById
     ImageView iv_queren;
 
@@ -122,7 +122,7 @@ public void send_code() {
         public void onResponse(Call<CodeBean> call, Response<CodeBean> response) {
              codeBean = response.body();
             if(codeBean.getErrorCode().equals("0")){
-                time = new TimeCount(StaticBase.YANZHENGTIME, 1000,btn_send_code);
+                time = new TimeCount(StaticBase.YANZHENGTIME, 1000,RegisteredActivity.this,btn_send_code);
                 time.start();
                 Toast.makeText(getApplicationContext(),getResources().getString(R.string.act_base_send_code),Toast.LENGTH_SHORT).show();
             }else {

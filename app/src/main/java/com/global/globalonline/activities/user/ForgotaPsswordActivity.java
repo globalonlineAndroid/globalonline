@@ -3,6 +3,7 @@ package com.global.globalonline.activities.user;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.global.globalonline.R;
@@ -38,7 +39,9 @@ public class ForgotaPsswordActivity extends BaseActivity {
     @ViewById
     EditText et_phone,et_yanzhengma,et_pwd,et_rePwd;
     @ViewById
-    Button btn_send_code,btn_tijiao;
+    Button btn_tijiao;
+    @ViewById
+    TextView btn_send_code;
 
     UserService userService;
     Map<String, String> stringMap;
@@ -84,7 +87,7 @@ public class ForgotaPsswordActivity extends BaseActivity {
                 codeBean = response.body();
                 if (codeBean.getErrorCode().equals("0")) {
                     String a = "";
-                    time = new TimeCount(StaticBase.YANZHENGTIME, 1000,btn_send_code);
+                    time = new TimeCount(StaticBase.YANZHENGTIME, 1000,ForgotaPsswordActivity.this,btn_send_code);
                     time.start();
                 }else {
                     GetToastUtil.getToads(ForgotaPsswordActivity.this,codeBean.getErrorCode());

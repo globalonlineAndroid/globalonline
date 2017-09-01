@@ -5,12 +5,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:gravity="center_vertical"
-        android:background="@color/ac_list_item_background"
+        android:background="@color/white"
         >
 
                 <TextView
@@ -21,8 +21,6 @@
                     android:gravity="center"
                     android:text="卖5"
                     />
-
-
                 <TextView
                     android:id="@+id/tv_jiage"
                     android:layout_weight="1"
@@ -41,10 +39,5 @@
                     android:text="9342.9"
                     android:textColor="@color/ac_base_ziti_hui"
                     />
-
-
-
-
-
     </LinearLayout>
 </LinearLayout>

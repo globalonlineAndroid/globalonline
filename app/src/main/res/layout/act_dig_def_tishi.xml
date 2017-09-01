@@ -10,34 +10,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="vertical"
         >
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textColor="@color/tv_jine"
-            android:textSize="18dp"
-            android:text="提示"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/tv_jine"
-            />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="46dp"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:background="@color/FFF58703"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:text="提示"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal"
-
+            android:background="@color/F3F3F3"
             >
             <TextView
                 android:id="@+id/text"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
@@ -47,16 +48,15 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-
             android:orientation="vertical"
+            android:background="@color/F3F3F3"
             >
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/huibai"
+                android:background="@color/BDBEC3"
             />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,14 +69,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:background="@color/white"
+                    android:textColor="@color/FFA200"
                     android:text="确定"
 
                     />
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/huibai"/>
+                    android:background="@color/BDBEC3"/>
                 <TextView
                     android:id="@+id/btn_quxiao"
                     android:text="取消"

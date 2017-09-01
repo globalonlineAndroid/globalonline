@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/ac_base_fuceng"
     >
 
 
@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title1"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
 
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title2"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
 
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title3"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
 
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title4"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
 
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_historicalRecord_RMBChongZhi_table_title5"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
         </LinearLayout>

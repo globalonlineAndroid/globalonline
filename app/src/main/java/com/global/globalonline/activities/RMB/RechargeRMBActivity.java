@@ -53,6 +53,8 @@ public class RechargeRMBActivity extends BaseActivity {
     LinearLayout ll_cartype,ll_text3;
     @ViewById
     TextView tv_zhuyi;
+    @ViewById
+    View view_tv_wangyi,view_tv_zhifubao;
 
     @ViewById
     ListView lv_fanben;
@@ -82,8 +84,11 @@ public class RechargeRMBActivity extends BaseActivity {
             case R.id.tv_wangyi:
                 recharge_type = "1";
                 ll_cartype.setVisibility(View.VISIBLE);
-                tv_wangyi.setBackgroundResource(R.color.ac_base_tab);
-                tv_zhifubao.setBackgroundResource(R.color.ac_virtual_chunk);
+                tv_wangyi.setTextColor(getResources().getColor(R.color.FFF58703));
+                view_tv_wangyi.setBackgroundResource(R.color.FFF58703);
+
+                tv_zhifubao.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+                view_tv_zhifubao.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
                 tv_zhuyi.setText(getResources().getString(R.string.act_RechargeRMBActivity_test));
                 ll_text3.setVisibility(View.VISIBLE);
                 initList(true);
@@ -91,8 +96,11 @@ public class RechargeRMBActivity extends BaseActivity {
             case R.id.tv_zhifubao:
                 recharge_type = "2";
                 ll_cartype.setVisibility(View.GONE);
-                tv_wangyi.setBackgroundResource(R.color.ac_virtual_chunk);
-                tv_zhifubao.setBackgroundResource(R.color.ac_base_tab);
+                tv_wangyi.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+                view_tv_wangyi.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
+
+                tv_zhifubao.setTextColor(getResources().getColor(R.color.FFF58703));
+                view_tv_zhifubao.setBackgroundResource(R.color.FFF58703);
                 tv_zhuyi.setText(getResources().getString(R.string.act_RechargeRMBActivity_alipay_test));
                 initList(false);
                 ll_text3.setVisibility(View.GONE);

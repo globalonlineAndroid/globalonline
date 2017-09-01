@@ -157,6 +157,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -167,13 +168,15 @@
         <activity
             android:name=".activities.BaseActivie.WebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BaseActivie.KLineWebViewActivity_"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".activities.BaseActivie.KLineWebViewActivity_"
+        <activity android:name=".activities.setting.SettingActivity_"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
-            >
-
-        </activity>
+            ></activity>
     </application>
 
 </manifest>

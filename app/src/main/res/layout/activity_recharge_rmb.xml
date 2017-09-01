@@ -5,8 +5,6 @@
     android:layout_height="match_parent"
     xmlns:myxmlns="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/ac_base_backgroud"
     android:orientation="vertical"
@@ -20,322 +18,339 @@
         myxmlns:titletxt="@string/act_RechargeRMBActivity_title"
         myxmlns:operationtxt="@string/act_RechargeRMBActivity_op"
         />
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-    <LinearLayout
-        android:layout_marginTop="10dp"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        >
-        <TextView
-            android:id="@+id/tv_wangyi"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/act_RechargeRMBActivity_tab1"
-            android:textColor="@color/white"
-            android:background="@color/ac_base_tab"
-            android:textSize="14dp"
-            android:layout_marginRight="2dp"
-            />
-        <TextView
-            android:id="@+id/tv_zhifubao"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="@string/act_RechargeRMBActivity_tab2"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            android:background="@color/ac_virtual_chunk"
-            />
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/ac_virtual_chunk"
-        >
-
-        <LinearLayout
-            android:id="@+id/ll_cartype"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/act_registered_higth"
-            android:background="@drawable/et_input"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/icon_price_dz"
-                android:layout_marginRight="6dp"
-                />
-
-            <TextView
-
-                android:id="@+id/tv_banktype"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/act_WithdrawalRMBActivity_banktype"
-                style="@style/editText"
-                android:paddingRight="6dp"
-                android:drawableRight="@drawable/xiala_bai"
-                android:textSize="@dimen/act_textsize"
-                />
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tv_wangyi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/act_RechargeRMBActivity_tab1"
+                        android:textColor="@color/FFF58703"
+                        android:textSize="14dp" />
 
-        <LinearLayout
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/act_registered_higth"
-            android:background="@color/ac_user_login_phone"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/icon_zhanghu"
-                android:layout_marginRight="8dp"
-                />
+                    <View
+                        android:id="@+id/view_tv_wangyi"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/FFF58703" />
+                </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_huichuzhanghao"
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/E4E4E4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/tv_zhifubao"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="@string/act_RechargeRMBActivity_tab2"
+                        android:textColor="@color/ac_baseAct_cretificationResults_text"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:id="@+id/view_tv_zhifubao"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/ac_baseAct_cretificationResults_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/act_RechargeRMBActivity_zhanghao"
-                style="@style/editText"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_marginTop="1dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/act_registered_higth"
-            android:background="@color/ac_user_login_phone"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/icon_money_bi"
-                android:layout_marginRight="8dp"
-                />
-
-            <EditText
-                android:id="@+id/et_price"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/act_RechargeRMBActivity_price"
-                style="@style/editText"
-                android:inputType="numberDecimal"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_marginTop="1dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/act_registered_higth"
-            android:background="@color/ac_user_login_phone"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/icon_men"
-                android:layout_marginRight="8dp"
-                />
-
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/act_RechargeRMBActivity_name"
-                style="@style/editText"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_marginTop="1dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/act_registered_higth"
-            android:background="@color/ac_user_login_phone"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/icon_phone"
-                android:layout_marginRight="8dp"
-                />
-
-            <EditText
-                android:id="@+id/et_phone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/act_RechargeRMBActivity_phone"
-                style="@style/editText"
-                android:inputType="number"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="1dp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/act_registered_higth"
-            android:background="@color/ac_user_login_phone"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/icon_note"
-                android:layout_marginRight="8dp"
-                />
-
-            <EditText
-                android:id="@+id/et_miaoshu"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/act_RechargeRMBActivity_shuoming"
-                style="@style/editText"
-                />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_tijiao"
-            android:layout_width="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_queding"
-            android:textColor="@color/white"
-            android:text="@string/act_RechargeRMBActivity_tijiao"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="@string/act_RechargeRMBActivity_buzhou"
-            />
-
-        <TextView
-            android:id="@+id/tv_zhuyi"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/ac_base_ziti_hui"
-            android:text="@string/act_RechargeRMBActivity_test"
-            />
-
-
-
-    </LinearLayout>
-
-        <ListView
-            android:id="@+id/lv_fanben"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp">
-
-
-
-        </ListView>
-
-        <LinearLayout
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/act_RechargeRMBActivity_test_zi6"
-                android:textColor="@color/ac_base_ziti_hui"
-                />
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_text3"
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/ll_cartype"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/act_registered_higth"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/et_input"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/icon_price_dz" />
+
+                    <TextView
+
+                        android:id="@+id/tv_banktype"
+                        style="@style/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/xiala_bai"
+                        android:hint="@string/act_WithdrawalRMBActivity_banktype"
+                        android:paddingRight="6dp"
+                        android:textSize="@dimen/act_textsize"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/et_input"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/act_registered_higth"
+                        android:background="@drawable/et_input"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/icon_zhanghu" />
+
+                        <EditText
+                            android:id="@+id/et_huichuzhanghao"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/act_RechargeRMBActivity_zhanghao" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/act_registered_higth"
+                        android:background="@drawable/et_input"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/icon_money_bi" />
+
+                        <EditText
+                            android:id="@+id/et_price"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/act_RechargeRMBActivity_price"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/act_registered_higth"
+                        android:background="@drawable/et_input"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/icon_men" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/act_RechargeRMBActivity_name" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/act_registered_higth"
+                        android:background="@drawable/et_input"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/act_user_login_phone" />
+
+                        <EditText
+                            android:id="@+id/et_phone"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/act_RechargeRMBActivity_phone"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/act_registered_higth"
+                        android:background="@drawable/et_input"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/icon_note" />
+
+                        <EditText
+                            android:id="@+id/et_miaoshu"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/act_RechargeRMBActivity_shuoming" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_tijiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_queding"
+                    android:text="@string/act_RechargeRMBActivity_tijiao"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/act_RechargeRMBActivity_test2"
-                android:textColor="@color/ac_base_ziti_hui"
-                />
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/act_RechargeRMBActivity_buzhou"
+                    android:textColor="@color/ac_base_ziti_hui" />
+
+                <TextView
+                    android:id="@+id/tv_zhuyi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/act_RechargeRMBActivity_test"
+                    android:textColor="@color/ac_base_ziti_hui" />
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_fanben"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp">
+
+
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/act_RechargeRMBActivity_test_zi6"
+                    android:textColor="@color/ac_base_ziti_hui" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/act_RechargeRMBActivity_test2"
+                    android:textColor="@color/ac_base_ziti_hui" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/act_user_login_kefuphone"
+                    android:textColor="@color/ac_base_ziti_hui"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:gravity="center_horizontal"
-        >
-        <TextView
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/ac_base_ziti_hui"
-            android:text="@string/act_user_login_kefuphone"
-            />
-
-
-    </LinearLayout>
-
-
-</LinearLayout>
-</ScrollView>
+    </ScrollView>
 
 
 </LinearLayout>

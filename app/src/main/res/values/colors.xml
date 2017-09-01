@@ -164,7 +164,7 @@
     <color name="mediumblue">#0000cd</color><!--中兰色 -->
     <color name="darkblue">#00008b</color><!--暗蓝色 -->
     <color name="navy">#000080</color><!--海军色 -->
-    <color name="black">#000000</color><!--黑色 -->
+    <color name="black">#FF000000</color><!--黑色 -->
     <color name="F1F1F1">#F1F1F1</color><!--黑色 -->
     <color name="F0F1F2">#F0F1F2</color><!--黑色 -->
 
@@ -183,9 +183,10 @@
 
 
 
-    <color name="ac_base_backgroud">#0e1820</color>
+    <color name="ac_base_backgroud">#F0F1F2</color>    <!--0e1820-->
+    <color name="ac_base_backgroud_a">#2a313a</color>    <!--0e1820-->
     <color name="ac_base_hint">#0e1821</color>
-    <color name="ac_base_fenGeXian">#242b33</color>
+    <color name="ac_base_fenGeXian">#BDBEC3</color>
     <color name="ac_base_ziti_hui">#8e8f93</color>
     <color name="ac_base_llbackgroud_hui">#373f45</color>
     <color name="ac_base_tab">#213645</color>
@@ -206,8 +207,8 @@
     <color name="ac_user_registerd_hint">#979ca2</color>
     <color name="ac_user_registerd_bankgroud">#78909C</color>
 
-    <color name="ac_mymenu_my_bankgroud">#111c24</color>
-    <color name="ac_mymenu_my_fengexian">#242b33</color>
+    <color name="ac_mymenu_my_bankgroud">#ffffff</color>
+    <color name="ac_mymenu_my_fengexian">#ffffff</color>
 
     <color name="ac_mainTab_bottom">#1d2228</color>
 
@@ -222,6 +223,11 @@
     <color name="D0021B">#D0021B</color>
     <color name="FFA200">#FFA200</color>
     <color name="E4E4E4">#E4E4E4</color>
+    <color name="FFF58703">#FFF58703</color>
+        <color name="BDBEC3">#BDBEC3</color>
+    <color name="F3F3F3">#F3F3F3</color>
+    <color name="FFFFA200">#FFFFA200</color>
+    <color name="FFFFFFFF">#FFFFFFFF</color>
 
 
 

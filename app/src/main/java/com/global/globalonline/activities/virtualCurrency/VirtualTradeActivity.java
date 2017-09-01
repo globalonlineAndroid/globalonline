@@ -70,6 +70,8 @@ public class VirtualTradeActivity extends BaseActivity {
     Button btn_buy,btn_sell;
     @ViewById
     LinearLayout ll_buy,ll_sell;
+    @ViewById
+    View view_tv_mairu_tab,view_tv_maichu_tab,view_tv_chedan;
 
     @ViewById
     ImageView iv_image;
@@ -198,21 +200,34 @@ public class VirtualTradeActivity extends BaseActivity {
             case R.id.tv_mairu_tab:
                 ll_buy.setVisibility(View.VISIBLE);
                 ll_sell.setVisibility(View.GONE);
-                tv_mairu_tab.setBackgroundResource(R.color.ac_base_tab);
-                tv_maichu_tab.setBackgroundResource(R.color.ac_virtual_chunk);
-                tv_chedan.setBackgroundResource(R.color.ac_virtual_chunk);
+                tv_mairu_tab.setTextColor(getResources().getColor(R.color.FFA200));
+                tv_maichu_tab.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+                tv_chedan.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+
+                view_tv_mairu_tab.setBackgroundResource(R.color.FFA200);
+                view_tv_maichu_tab.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
+                view_tv_chedan.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
+
                 break;
             case R.id.tv_maichu_tab:
                 ll_buy.setVisibility(View.GONE);
                 ll_sell.setVisibility(View.VISIBLE);
-                tv_mairu_tab.setBackgroundResource(R.color.ac_virtual_chunk);
-                tv_maichu_tab.setBackgroundResource(R.color.ac_base_tab);
-                tv_chedan.setBackgroundResource(R.color.ac_virtual_chunk);
+                tv_mairu_tab.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+                tv_maichu_tab.setTextColor(getResources().getColor(R.color.FFA200));
+                tv_chedan.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+
+                view_tv_mairu_tab.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
+                view_tv_maichu_tab.setBackgroundResource(R.color.FFA200);
+                view_tv_chedan.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
                 break;
             case R.id.tv_chedan:
-                tv_mairu_tab.setBackgroundResource(R.color.ac_virtual_chunk);
-                tv_maichu_tab.setBackgroundResource(R.color.ac_virtual_chunk);
-                tv_chedan.setBackgroundResource(R.color.ac_base_tab);
+                tv_mairu_tab.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+                tv_maichu_tab.setTextColor(getResources().getColor(R.color.ac_baseAct_cretificationResults_text));
+                tv_chedan.setTextColor(getResources().getColor(R.color.FFA200));
+
+                view_tv_mairu_tab.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
+                view_tv_maichu_tab.setBackgroundResource(R.color.ac_baseAct_cretificationResults_text);
+                view_tv_chedan.setBackgroundResource(R.color.FFA200);
                 MandatoryAdministrationActivity.toActivity(VirtualTradeActivity.this,symbol);
 
                 break;
@@ -266,17 +281,17 @@ public class VirtualTradeActivity extends BaseActivity {
                         String name = GetConfiguration.isZh() ? coinsDetailBean.getName() : coinsDetailBean.getEname();
                         tv_name.setText(name);
                         title.setText(name + " " + getResources().getString(R.string.act_virtualcurrency_title));
-                        tv_price.setText(coinsDetailBean.getPrice());
+                        tv_price.setText("¥"+coinsDetailBean.getPrice());
 
 
                         float zhangfu = Float.parseFloat(coinsDetailBean.getRatio());
                         String str = "";
                         if (zhangfu >= 0) {
                             str = "+" + coinsDetailBean.getRatio() + "%";
-                            tv_zhangfu.setBackgroundResource(R.color.red);
+                            tv_zhangfu.setTextColor(getResources().getColor(R.color.red));
                         } else {
                             str = coinsDetailBean.getRatio() + "%";
-                            tv_zhangfu.setBackgroundResource(R.color.green);
+                            tv_zhangfu.setTextColor(getResources().getColor(R.color.green));
                         }
 
                         tv_zhangfu.setText(str);
@@ -289,8 +304,8 @@ public class VirtualTradeActivity extends BaseActivity {
                         tv_buy_kemaixunibi.setText(buyxunibiStr);
                         //tv_chengjiaoe.setText(coinsDetailBean.getVolume());
                         tv_chengjiaoliang.setText(coinsDetailBean.getVolume());
-                        tv_minprice.setText(coinsDetailBean.getMin_price());
-                        tv_maxprice.setText(coinsDetailBean.getMax_price());
+                        tv_minprice.setText("¥"+coinsDetailBean.getMin_price());
+                        tv_maxprice.setText("¥"+coinsDetailBean.getMax_price());
                         tv_buy.setText(buyPrice);
                         tv_sell.setText(sellPrice);
                         tv_sell_keyongXuNiBi.setText(coinsDetailBean.getCoins_balance());

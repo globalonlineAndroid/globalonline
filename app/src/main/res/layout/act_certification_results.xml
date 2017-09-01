@@ -25,116 +25,122 @@
         <ImageView
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:src="@drawable/icon_suessce"
             />
 
         <LinearLayout
-            android:layout_weight="3"
             android:layout_width="0dp"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/act_baseAct_certificationResults_seucc"
                 android:textColor="@color/seagreen"
+                android:textSize="@dimen/act_renzheng_size"
                 />
+
             <TextView
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/act_renzheng_size"
                 android:text="@string/act_baseAct_certificationResults_tex"
-                android:textColor="@color/ac_baseAct_cretificationResults_text"
-                />
+                android:textColor="@color/ac_baseAct_cretificationResults_text" />
 
             <LinearLayout
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <TextView
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:textSize="@dimen/act_renzheng_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/act_baseAct_certificationResults_name"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
+
                 <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="..."
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:textSize="@dimen/act_renzheng_size"
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <TextView
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:textSize="@dimen/act_renzheng_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/act_baseAct_certificationResults_type"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
+
                 <TextView
                     android:id="@+id/tv_cardtype"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="..."
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:textSize="@dimen/act_renzheng_size"
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <TextView
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:textSize="@dimen/act_renzheng_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/act_baseAct_certificationResults_idCard"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
+
                 <TextView
+                    android:textSize="@dimen/act_renzheng_size"
                     android:id="@+id/tv_cardnumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="..."
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
-                android:visibility="gone"
-                >
-                <TextView
+                android:visibility="gone">
 
+                <TextView
+                    android:textSize="@dimen/act_renzheng_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/act_baseAct_certificationResults_date"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
-                <TextView
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
 
+                <TextView
+                    android:textSize="@dimen/act_renzheng_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="张三"
-                    android:textColor="@color/ac_baseAct_cretificationResults_text"
-                    />
+                    android:text="..."
+                    android:textColor="@color/ac_baseAct_cretificationResults_text" />
 
             </LinearLayout>
 

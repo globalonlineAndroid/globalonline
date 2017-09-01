@@ -49,7 +49,7 @@ public class MyFrament extends Fragment {
 
     @ViewById
     LinearLayout ll_RMBPay,ll_RMBTiXian,ll_XuNiPay,ll_XuNiTiXian,ll_weiTuoManager,ll_jiaoYiLiuShui,ll_shouKuan,
-            ll_fuKuan,ll_renZheng,ll_updateLoginPWD,ll_updateJiaoYiPWD, ll_message,ll_woMen,ll_exit;
+            ll_fuKuan;
 
 
 
@@ -64,7 +64,7 @@ public class MyFrament extends Fragment {
                 tv_ename.setText(MyApplication.userBean.getUsername());
 
 
-                tv_isRenZheng.setText(getResources().getString(R.string.act_base_yirenzheng));
+                //tv_isRenZheng.setText(getResources().getString(R.string.act_base_yirenzheng));
 
             }
 

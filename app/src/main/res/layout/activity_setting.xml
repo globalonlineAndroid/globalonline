@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myxmlns="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ac_base_backgroud"
+    tools:context="com.global.globalonline.activities.setting.SettingActivity">
+    <com.global.globalonline.view.TitleView_
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        myxmlns:titletxt="@string/act_account_pay_title"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_renZheng"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:background="@color/ac_mymenu_my_bankgroud"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_yanz"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal"
+
+                    android:gravity="center_vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/act_myMenu_myact_renzheng"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/act_textsize"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right"
+
+                        >
+                        <TextView
+                            android:id="@+id/tv_isRenZheng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/limegreen"
+                            android:textSize="@dimen/act_textsize"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/youjiantou"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/E4E4E4"/>
+            <LinearLayout
+                android:id="@+id/ll_updateLoginPWD"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="1dp"
+                android:background="@color/ac_mymenu_my_bankgroud"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/my_icon_lock"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="6dp"
+                    android:orientation="horizontal"
+
+                    android:gravity="center_vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/act_myMenu_myact_updateDLPwd"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/act_textsize"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right"
+
+                        >
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/youjiantou"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/E4E4E4"/>
+            <LinearLayout
+            android:id="@+id/ll_updateJiaoYiPWD"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:paddingLeft="10dp"
+            android:background="@color/ac_mymenu_my_bankgroud"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/my_icon_lock"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal"
+
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/act_myMenu_myact_updateJYPwd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/act_textsize"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/youjiantou"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:background="@color/ac_mymenu_my_bankgroud"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal"
+
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/act_myMenu_myact_messge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/act_textsize"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/youjiantou"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_woMen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:background="@color/ac_mymenu_my_bankgroud"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_about"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal"
+
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/act_myMenu_myact_GuanYuWoMen"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/act_textsize"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/youjiantou"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/ac_mymenu_my_bankgroud"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_myMenu_myact_exit"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

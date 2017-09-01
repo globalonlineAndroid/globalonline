@@ -319,7 +319,7 @@
     <string name="act_virtualcurrency_chargeFees_op">To record</string>
     <string name="act_virtualcurrency_chargeFees_keyong">Available COINS：</string>
     <string name="act_virtualcurrency_chargeFees_dongjie">To freeze the currency：</string>
-    <string name="act_virtualcurrency_chargeFees_address">The wallet address：</string>
+    <string name="act_virtualcurrency_chargeFees_address">The wallet address</string>
     <string name="act_virtualcurrency_chargeFees_fuzhi">Cope</string>
     <string name="act_virtualcurrency_chargeFees_miaoshu">Top-up instructions：</string>
     <string name="act_virtualcurrency_chargeFees_text">Important: this site has been support to the same address top-up for many times, we will cost for you after receiving the confirmed three times。</string>

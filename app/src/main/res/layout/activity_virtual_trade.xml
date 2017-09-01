@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/view_titleview"
+        android:background="@color/ac_base_backgroud_a"
         android:gravity="center_vertical"
         android:paddingLeft="6dp"
         android:paddingRight="6dp"
@@ -63,20 +63,18 @@
 
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-
-        android:background="@color/ac_virtual_chunk"
+        android:background="@color/white"
         >
 
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:orientation="horizontal"
 
             >
@@ -99,7 +97,7 @@
                     android:layout_marginLeft="4dp"
                     android:text="..."
                     android:textSize="@dimen/act_textsize"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     />
 
             </LinearLayout>
@@ -117,7 +115,7 @@
                     android:layout_marginLeft="4dp"
                     android:text="..."
                     android:textSize="@dimen/act_textsize"
-                    android:textColor="@color/white"
+                    android:textColor="@color/FFF58703"
                     />
                 <LinearLayout
 
@@ -132,7 +130,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="4dp"
                         android:text="..."
-                        android:textColor="@color/white"
+                        android:textColor="@color/red"
                         />
                 </LinearLayout>
 
@@ -142,7 +140,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@color/ac_base_fenGeXian"
             />
 
@@ -150,8 +148,8 @@
             android:layout_weight="1.3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:orientation="horizontal"
             >
 
@@ -204,7 +202,7 @@
                     android:gravity="top"
                     android:layout_height="0dp"
                     android:text="..."
-                    android:textColor="@color/ac_base_ziti_hui"
+                    android:textColor="@color/black"
                     />
 
 
@@ -231,7 +229,7 @@
                     android:gravity="top"
                     android:layout_height="0dp"
                     android:text="..."
-                    android:textColor="@color/ac_base_ziti_hui"
+                    android:textColor="@color/black"
                     />
 
 
@@ -258,7 +256,7 @@
                     android:gravity="top"
                     android:layout_height="0dp"
                     android:text="..."
-                    android:textColor="@color/ac_base_ziti_hui"
+                    android:textColor="@color/black"
                     />
 
 
@@ -273,8 +271,8 @@
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             >
 
             <LinearLayout
@@ -353,45 +351,91 @@
                 <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="36dp"
+                    android:layout_height="44dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     >
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="match_parent">
                         <TextView
                             android:id="@+id/tv_mairu_tab"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:text="@string/act_virtualcurrency_mairu"
-                            android:textColor="@color/white"
-                            android:background="@color/ac_base_tab"
+                            android:textColor="@color/FFA200"
                             android:textSize="14dp"
                             android:layout_marginRight="2dp"
                             />
+                        <View
+                            android:id="@+id/view_tv_mairu_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/FFA200" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/E4E4E4" />
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="match_parent">
                         <TextView
                             android:id="@+id/tv_maichu_tab"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:text="@string/act_virtualcurrency_sellru"
-                            android:textColor="@color/white"
+                            android:textColor="@color/ac_baseAct_cretificationResults_text"
                             android:textSize="14dp"
-                            android:background="@color/ac_virtual_chunk"
                             android:layout_marginRight="2dp"
                             />
+                        <View
+                            android:id="@+id/view_tv_maichu_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/ac_baseAct_cretificationResults_text" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/E4E4E4" />
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="match_parent">
                         <TextView
                             android:id="@+id/tv_chedan"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:text="@string/act_virtualcurrency_chedan"
-                            android:textColor="@color/white"
+                            android:textColor="@color/ac_baseAct_cretificationResults_text"
                             android:textSize="14dp"
-                            android:background="@color/ac_virtual_chunk"
+
                             />
+                        <View
+                            android:id="@+id/view_tv_chedan"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/ac_baseAct_cretificationResults_text" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/E4E4E4" />
                 </LinearLayout>
 
 
@@ -406,7 +450,7 @@
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:background="@color/ac_virtual_chunk"
+                    android:background="@color/white"
                     >
 
                     <LinearLayout
@@ -422,7 +466,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/act_virtualcurrency_keyong"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 />
 
                             <TextView
@@ -459,7 +503,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_kemai"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <TextView
@@ -481,7 +525,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_mairujiae"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <EditText
@@ -504,7 +548,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_mairunumber"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <EditText
@@ -531,7 +575,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_jine"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <TextView
@@ -539,7 +583,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text="..."
-                            android:textColor="@color/white"
+                            android:textColor="@color/BDBEC3"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -551,7 +595,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_jiaoyipwd"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <EditText
@@ -588,7 +632,7 @@
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:background="@color/ac_virtual_chunk"
+                    android:background="@color/white"
                     >
 
                     <LinearLayout
@@ -605,7 +649,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/act_virtualcurrency_sell_keyong"
                                 android:textSize="14dp"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 />
 
                             <TextView
@@ -645,7 +689,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_kemai"
                             android:textSize="14dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <TextView
@@ -668,7 +712,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_mairujiae"
                             android:textSize="14dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <EditText
@@ -692,7 +736,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_mairunumber"
                             android:textSize="14dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <EditText
@@ -720,7 +764,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_jine"
                             android:textSize="14dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <TextView
@@ -729,7 +773,7 @@
                             android:layout_height="match_parent"
                             android:text="¥178"
                             android:textSize="14dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -742,7 +786,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/act_virtualcurrency_sell_jiaoyipwd"
                             android:textSize="14dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             />
 
                         <EditText
@@ -780,7 +824,7 @@
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:background="@color/ac_virtual_chunk"
+                    android:background="@color/white"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -794,8 +838,8 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_buysell"
-                            android:textColor="@color/white"
-                            android:background="@color/ac_virtual_chunk"
+                            android:textColor="@color/BDBEC3"
+                            android:background="@color/white"
                             android:textSize="14dp"
                             android:layout_marginRight="2dp"
                             />
@@ -805,9 +849,9 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_price"
-                            android:textColor="@color/white"
+                            android:textColor="@color/BDBEC3"
                             android:textSize="14dp"
-                            android:background="@color/ac_virtual_chunk"
+                            android:background="@color/white"
                             android:layout_marginRight="2dp"
                             />
                         <TextView
@@ -816,9 +860,9 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:text="@string/act_virtualcurrency_number"
-                            android:textColor="@color/white"
+                            android:textColor="@color/BDBEC3"
                             android:textSize="14dp"
-                            android:background="@color/ac_virtual_chunk"
+                            android:background="@color/white"
                             />
                     </LinearLayout>
                     <View

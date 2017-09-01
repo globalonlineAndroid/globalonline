@@ -42,9 +42,9 @@ public class ChangeTradePasswordActivity extends BaseActivity {
     @ViewById
     EditText et_trade_pwd, et_trade_repwd,et_yanzhengma;
     @ViewById
-    Button btn_send_code,btn_tijiao;
+    Button btn_tijiao;
     @ViewById
-    TextView tv_phone;
+    TextView tv_phone,btn_send_code;
     CodeBean codeBean;
 
     Map<String, String> stringMap;
@@ -95,7 +95,7 @@ public class ChangeTradePasswordActivity extends BaseActivity {
             public <T> void onResponse(Call<T> call, Response<T> response) {
                 codeBean = (CodeBean) response.body();
                 if(codeBean.getErrorCode().equals("0")){
-                    time = new TimeCount(StaticBase.YANZHENGTIME, 1000,btn_send_code);
+                    time = new TimeCount(StaticBase.YANZHENGTIME, 1000,ChangeTradePasswordActivity.this,btn_send_code);
                     time.start();
                     Toast.makeText(getApplicationContext(),getResources().getString(R.string.act_base_send_code),Toast.LENGTH_SHORT).show();
                 }else {

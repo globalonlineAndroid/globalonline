@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="@string/act_account_pay_zhanghu"
                 android:textSize="@dimen/act_textsize"
                 />
@@ -64,7 +64,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="@string/act_account_pay_bizhong"
                 android:textSize="@dimen/act_textsize"
                 />
@@ -72,7 +72,7 @@
                 android:id="@+id/tv_bizhong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="..."
                 android:textSize="@dimen/act_textsize"
 
@@ -86,7 +86,7 @@
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:background="@color/ac_virtual_chunk"
+        android:background="@drawable/act_ll_biankuang"
         >
         <LinearLayout
             android:layout_marginTop="8dp"
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_account_pay_RMB"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
 
@@ -125,12 +125,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="                "
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="@string/act_account_pay_biNumber"
                 android:textSize="@dimen/act_textsize"
                 />
@@ -155,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/act_account_pay_jiaoyipwd"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/act_textsize"
                 />
 
@@ -197,7 +197,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:text="@string/act_account_pay_shuoming"
             />
 

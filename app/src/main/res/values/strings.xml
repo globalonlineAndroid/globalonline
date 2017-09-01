@@ -47,8 +47,6 @@
     <string name="soft_update_cancel">取消</string>
 
 
-
-
     <!--主页-->
     <string name="act_main_title_home">一起兑币</string>
     <string name="act_main_title_dating">交易大厅</string>
@@ -132,7 +130,7 @@
 
     <string name="act_baseAct_certificationResults_title">实名认证</string>
     <string name="act_baseAct_certificationResults_tex">您的身份信息</string>
-    <string name="act_baseAct_certificationResults_seucc">您已经通过了环球在线审核</string>
+    <string name="act_baseAct_certificationResults_seucc">已通过了环球在线网实名认证</string>
     <string name="act_baseAct_certificationResults_name">姓名:</string>
     <string name="act_baseAct_certificationResults_type">证件类型:</string>
     <string name="act_baseAct_certificationResults_idCard">证件号:</string>
@@ -299,7 +297,7 @@
     <string name="act_virtualcurrency_chargeFees_op">充值记录</string>
     <string name="act_virtualcurrency_chargeFees_keyong">可用比特币：</string>
     <string name="act_virtualcurrency_chargeFees_dongjie">冻结比特币：</string>
-    <string name="act_virtualcurrency_chargeFees_address">钱包地址：</string>
+    <string name="act_virtualcurrency_chargeFees_address">钱包地址</string>
     <string name="act_virtualcurrency_chargeFees_fuzhi">复 制</string>
     <string name="act_virtualcurrency_chargeFees_miaoshu">充值说明：</string>
     <string name="act_virtualcurrency_chargeFees_text">重要提示：本站已经支持往同一地址多次充值，我们将在收到3次确认以后为您充值成功。</string>

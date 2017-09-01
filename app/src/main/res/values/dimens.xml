@@ -6,6 +6,8 @@
     <dimen name="act_login_higth">0dp</dimen>
     <dimen name="act_registered_higth">44dp</dimen>
     <dimen name="act_textsize">14dp</dimen>
+    <dimen name="act_item_size">16dp</dimen>
+    <dimen name="act_renzheng_size">16dp</dimen>
 
     <dimen name="anim_circle_indicator_height">30dp</dimen>
 

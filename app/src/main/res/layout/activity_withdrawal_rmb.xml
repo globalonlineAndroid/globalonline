@@ -32,167 +32,191 @@
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@drawable/et_input"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/act_ll_biankuang"
         >
-
-
-        <TextView
-
-            android:id="@+id/tv_banktype"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/act_WithdrawalRMBActivity_banktype"
-            style="@style/editText"
-            android:paddingRight="6dp"
-            android:drawableRight="@drawable/xiala_bai"
-            />
+            android:layout_height="@dimen/act_registered_higth"
+            android:background="@drawable/et_input"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="14dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
+            <TextView
 
-        >
+                android:id="@+id/tv_banktype"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/act_WithdrawalRMBActivity_banktype"
+                style="@style/editText"
+                android:paddingRight="6dp"
+                android:drawableRight="@drawable/xiala_bai"
+                />
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_price_dz"
-            android:layout_marginRight="8dp"
-            />
-
-        <EditText
-            android:id="@+id/et_cardNum"
-            android:inputType="number"
-            android:maxLength="23"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:paddingRight="6dp"
-            android:hint="@string/act_WithdrawalRMBActivity_bankNumber"
-
-            style="@style/editText"
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_price_dz"
-            android:layout_marginRight="8dp"
-            />
-
-        <EditText
-            android:id="@+id/et_reCardNum"
-            android:inputType="number"
-            android:maxLength="23"
+        </LinearLayout>
+        <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/act_WithdrawalRMBActivity_rebankNumber"
-            style="@style/editText"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_men"
-            android:layout_marginRight="8dp"
+            android:layout_height="6dp"
             />
 
-        <EditText
-            android:id="@+id/et_toName"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/act_WithdrawalRMBActivity_name"
-            style="@style/editText"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
+            android:layout_height="@dimen/act_registered_higth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:background="@color/white"
+            >
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_kaihuzh"
-            android:layout_marginRight="8dp"
-            />
-        <EditText
-            android:id="@+id/et_kaihuhang"
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_price"
+                android:layout_marginRight="8dp"
+                />
+
+            <EditText
+                android:id="@+id/et_cardNum"
+                android:inputType="number"
+                android:maxLength="23"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingRight="6dp"
+                android:hint="@string/act_WithdrawalRMBActivity_bankNumber"
+                style="@style/editText"
+                />
+
+        </LinearLayout>
+        <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/act_WithdrawalRMBActivity_kaihu"
-            style="@style/editText"
-
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="6dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_money_bi"
-            android:layout_marginRight="8dp"
-            />
-        <EditText
-            android:id="@+id/et_price"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/act_WithdrawalRMBActivity_price"
-            android:inputType="numberDecimal"
-            style="@style/editText"
-            />
-    </LinearLayout>
+            android:layout_height="@dimen/act_registered_higth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_price"
+                android:layout_marginRight="8dp"
+                />
 
-    <LinearLayout
-        android:layout_marginTop="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
+            <EditText
+                android:id="@+id/et_reCardNum"
+                android:inputType="number"
+                android:maxLength="23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/act_WithdrawalRMBActivity_rebankNumber"
+                style="@style/editText"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/act_registered_higth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_men"
+                android:layout_marginRight="8dp"
+                />
+
+            <EditText
+                android:id="@+id/et_toName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/act_WithdrawalRMBActivity_name"
+                style="@style/editText"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/act_registered_higth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_kaihuzh"
+                android:layout_marginRight="8dp"
+                />
+            <EditText
+                android:id="@+id/et_kaihuhang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/act_WithdrawalRMBActivity_kaihu"
+                style="@style/editText"
+
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            />
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/act_registered_higth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            >
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_money_bi"
+                android:layout_marginRight="8dp"
+                />
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/act_WithdrawalRMBActivity_price"
+                android:inputType="numberDecimal"
+                style="@style/editText"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/act_registered_higth"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
         >
         <ImageView
             android:layout_width="26dp"
@@ -208,6 +232,7 @@
             android:inputType="textPassword"
             style="@style/editText"
             />
+    </LinearLayout>
     </LinearLayout>
 
 
@@ -229,12 +254,12 @@
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="10dp"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
         android:text="@string/act_RechargeRMBActivity_buzhou"
-        />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/tv_rmntixian"

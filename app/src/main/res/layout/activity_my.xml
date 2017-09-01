@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="@color/ac_user_login"
+    android:background="@color/ac_base_backgroud"
     tools:context=".activities.mainTab.MyFrament">
 
     
@@ -17,24 +17,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:orientation="vertical"
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="120dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
+                android:paddingLeft="20dp"
+                android:background="@drawable/ico_my_backgroud"
                 >
                 <LinearLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp">
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -110,7 +107,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="..."
-                            android:textColor="@color/btn_queding"
+                            android:textColor="@color/white"
                             />
                     </LinearLayout>
 
@@ -122,13 +119,11 @@
 
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
@@ -160,7 +155,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_assets"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -194,25 +189,26 @@
 
 
             </LinearLayout>
-
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <LinearLayout
                 android:id="@+id/ll_RMBPay"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
                 android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
-
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/icon_monin"
                     />
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -231,7 +227,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_RMBPay"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -258,14 +254,12 @@
 
 
                 </LinearLayout>
-
-
-
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
+                android:layout_marginLeft="40dp"
+                android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_RMBTiXian"
                 android:layout_width="match_parent"
@@ -303,7 +297,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_RMBWithdraw"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -337,7 +331,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
+                android:layout_marginLeft="40dp"
+                android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_XuNiPay"
                 android:layout_width="match_parent"
@@ -375,7 +370,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_virtualPay"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -406,10 +401,11 @@
 
 
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_XuNiTiXian"
                 android:layout_width="match_parent"
@@ -447,7 +443,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_virtualWithdraw"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -473,14 +469,21 @@
 
 
             </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:id="@+id/ll_weiTuoManager"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
+
                 android:paddingLeft="10dp"
                 android:background="@color/ac_mymenu_my_bankgroud"
                 >
@@ -511,7 +514,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_entrustManager"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -545,7 +548,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
+                android:layout_marginLeft="40dp"
+                android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_jiaoYiLiuShui"
                 android:layout_width="match_parent"
@@ -583,7 +587,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/act_myMenu_myact_transaction"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/act_textsize"
 
                             />
@@ -609,503 +613,152 @@
 
 
             </LinearLayout>
+        </LinearLayout>
+
 
             <LinearLayout
-                android:id="@+id/ll_shouKuan"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                        android:src="@drawable/icon_turnin"
-                    />
-
-
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <LinearLayout
+                    android:id="@+id/ll_shouKuan"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
-                    android:textSize="@dimen/act_textsize"
                     android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@color/ac_mymenu_my_bankgroud"
                     >
 
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                            android:src="@drawable/icon_turnin"
+                        />
+
+
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
                         android:orientation="horizontal"
+                        android:textSize="@dimen/act_textsize"
+                        android:gravity="center_vertical"
                         >
-                        <TextView
-                            android:layout_width="wrap_content"
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_shoukuan"
-                            android:textColor="@color/white"
-                            />
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/act_myMenu_myact_shoukuan"
+                                android:textColor="@color/black"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="right"
+
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/youjiantou"
+                                />
+
+                        </LinearLayout>
+
+
+
+
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-
-
 
 
 
                 </LinearLayout>
-
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
-            <LinearLayout
-                android:id="@+id/ll_fuKuan"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_turnout"
-                    />
-
-
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@color/E4E4E4"/>
                 <LinearLayout
+                    android:id="@+id/ll_fuKuan"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
-
                     android:gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:paddingLeft="10dp"
+                    android:background="@color/ac_mymenu_my_bankgroud"
                     >
 
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_turnout"
+                        />
+
+
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="6dp"
                         android:orientation="horizontal"
+
+                        android:gravity="center_vertical"
                         >
-                        <TextView
-                            android:layout_width="wrap_content"
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_fukuan"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/act_textsize"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/act_myMenu_myact_fukuan"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/act_textsize"
 
-                            />
+                                />
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_renZheng"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_yanz"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
-                    android:orientation="horizontal"
-
-                    android:gravity="center_vertical"
-                    >
-
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_renzheng"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/act_textsize"
-                            />
+                            android:orientation="horizontal"
+                            android:gravity="right"
 
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/youjiantou"
+                                />
+
+                        </LinearLayout>
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <TextView
-                            android:id="@+id/tv_isRenZheng"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/limegreen"
-                            android:textSize="@dimen/act_textsize"
-                            />
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-
-
 
 
 
                 </LinearLayout>
-
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
-            <LinearLayout
-                android:id="@+id/ll_updateLoginPWD"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="1dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_mima"
-
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
-                    android:orientation="horizontal"
-
-                    android:gravity="center_vertical"
-                    >
-
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_updateDLPwd"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/act_textsize"
-                            />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/ac_mymenu_my_fengexian"/>
-            <LinearLayout
-                android:id="@+id/ll_updateJiaoYiPWD"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_mima"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
-                    android:orientation="horizontal"
-
-                    android:gravity="center_vertical"
-                    >
-
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_updateJYPwd"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/act_textsize"
-                            />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-
-
-
-
-
-                </LinearLayout>
-
-
-
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_message"
-                android:layout_width="match_parent"
-                android:visibility="gone"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
-                    android:orientation="horizontal"
-
-                    android:gravity="center_vertical"
-                    >
-
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_messge"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/act_textsize"
-                            />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-
-
-
-
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_woMen"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_about"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
-                    android:orientation="horizontal"
-
-                    android:gravity="center_vertical"
-                    >
-
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_GuanYuWoMen"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/act_textsize"
-                            />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_exit"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="30dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-                <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="@string/act_myMenu_myact_exit"
-                   android:textColor="@color/red"
-                />
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

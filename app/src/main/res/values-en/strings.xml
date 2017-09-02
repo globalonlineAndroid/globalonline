@@ -38,7 +38,7 @@
     <string name="act_base_weichengjiao">no bargain</string>
     <string name="act_base_chexiao">withdraw</string>
     <string name="act_base_tishi_erweima">Please make sure the qr code is correct</string>
-
+    <string name="act_base_not_data">no data</string>
 
     <string name="soft_update_no">Is the latest version</string>
     <string name="soft_update_title">Software updates</string>
@@ -119,6 +119,8 @@
     <string name="act_myMenu_myact_messge">Messge Center</string>
     <string name="act_myMenu_myact_GuanYuWoMen">About Us</string>
     <string name="act_myMenu_myact_exit">Login Out</string>
+    <string name="act_myMenu_myact_message">System Of Announcement</string>
+    <string name="act_myMenu_myact_setting">Setting</string>
 
 
     <string name="act_user_certification_title">Real Name Authentication</string>
@@ -141,6 +143,8 @@
     <string name="act_mainTab_tradingFloor_chengjiaoliang">Volumenum</string>
     <string name="act_mainTab_tradingFloor_minprice">Lowest Price</string>
     <string name="act_mainTab_tradingFloor_maxprice">Highest Price</string>
+    <string name="act_mainTab_tradingFloor_jiaoyi">Trade sector</string>
+    <string name="act_mainTab_tradingFloor_shiyan">Test area</string>
 
 
     <!--虚拟币交易-->

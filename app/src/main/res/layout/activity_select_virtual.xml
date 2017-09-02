@@ -23,7 +23,9 @@
         android:layout_marginTop="6dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <ListView
             android:id="@+id/lv_trading"
             android:layout_width="match_parent"
@@ -32,6 +34,13 @@
             android:divider="@color/F0F1F2"
             >
         </ListView>
+        <include
+            layout="@layout/act_listview_def_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/layout_empty" />
+        </FrameLayout>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

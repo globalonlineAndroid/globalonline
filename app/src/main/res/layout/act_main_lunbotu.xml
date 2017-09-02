@@ -48,25 +48,27 @@
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="44dp"
         android:background="@color/white"
         android:orientation="horizontal"
         >
         <RelativeLayout
             android:layout_weight="1"
             android:layout_width="0dp"
-
             android:layout_height="match_parent">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="交易区"
+                android:id="@+id/tv_jiaoyi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/act_mainTab_tradingFloor_jiaoyi"
                 style="@style/text_16"
                 android:textColor="@color/F58703"
                 android:textStyle="bold"
                 android:layout_centerInParent="true"
                 />
             <View
+                android:id="@+id/view_tv_jiaoyi"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:layout_alignParentBottom="true"
@@ -86,15 +88,18 @@
 
             android:layout_height="match_parent">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="实验区"
+                android:id="@+id/tv_shiyan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/act_mainTab_tradingFloor_shiyan"
                 style="@style/text_16"
                 android:textStyle="bold"
                 android:textColor="@color/ac_base_ziti_hui"
                 android:layout_centerInParent="true"
                 />
             <View
+                android:id="@+id/view_tv_shiyan"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:layout_alignParentBottom="true"

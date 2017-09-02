@@ -87,8 +87,8 @@ public class TradingFloorAdapter extends BaseAdapter{
         viewHolder.tv_zhangfu.setText(str);
         viewHolder.tv_chengjiaoe.setText(virtualTrading.getTurnover());
         viewHolder.tv_chengjiaoliang.setText(virtualTrading.getVolume());
-        viewHolder.tv_minprice.setText(virtualTrading.getMin_price());
-        viewHolder.tv_mxPrice.setText(virtualTrading.getMax_price());
+        viewHolder.tv_minprice.setText("¥"+virtualTrading.getMin_price());
+        viewHolder.tv_mxPrice.setText("¥"+virtualTrading.getMax_price());
        /* if(virtualTrading.getRatio().indexOf("-") > 0){
             viewHolder.ll_zhangfu.setBackgroundResource(R.color.green);
         }else {

@@ -14,8 +14,10 @@ import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import com.global.globalonline.R;
+import com.global.globalonline.bean.gonggao.GongGaoItemBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by lijl on 2017/8/28.
@@ -45,7 +47,7 @@ public class VerticalTextview extends TextSwitcher implements ViewSwitcher.ViewF
     private OnItemClickListener itemClickListener;
     private Context mContext;
     private int currentId = -1;
-    private ArrayList<String> textList;
+    private ArrayList<GongGaoItemBean> textList;
     private Handler handler;
 
     public VerticalTextview(Context context) {
@@ -56,7 +58,7 @@ public class VerticalTextview extends TextSwitcher implements ViewSwitcher.ViewF
     public VerticalTextview(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-        textList = new ArrayList<String>();
+        textList = new ArrayList<GongGaoItemBean>();
     }
 
     public void setAnimTime(long animDuration) {
@@ -84,7 +86,7 @@ public class VerticalTextview extends TextSwitcher implements ViewSwitcher.ViewF
                     case FLAG_START_AUTO_SCROLL:
                         if (textList.size() > 0) {
                             currentId++;
-                            setText(textList.get(currentId % textList.size()));
+                            setText(textList.get(currentId % textList.size()).getTitle());
                         }
                         handler.sendEmptyMessageDelayed(FLAG_START_AUTO_SCROLL, time);
                         break;
@@ -101,7 +103,7 @@ public class VerticalTextview extends TextSwitcher implements ViewSwitcher.ViewF
      *
      * @param titles
      */
-    public void setTextList(ArrayList<String> titles) {
+    public void setTextList(List<GongGaoItemBean> titles) {
         textList.clear();
         textList.addAll(titles);
         currentId = -1;

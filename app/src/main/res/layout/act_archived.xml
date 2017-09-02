@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:text="@string/act_virtualcurrency_archived_keyong"
             android:textSize="@dimen/act_textsize"
             />
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/act_textsize"
             android:text="@string/act_virtualcurrency_archived_dongjie"
             />
@@ -79,92 +79,101 @@
 
             />
     </LinearLayout>
-
-
     <LinearLayout
-        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/act_ll_biankuang"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
+        android:layout_height="wrap_content">
+        <LinearLayout
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_price"
-            android:layout_marginRight="6dp"
-            />
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/act_registered_higth"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                >
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icon_price"
+                    android:layout_marginRight="6dp"
+                    />
 
-        <EditText
-            android:id="@+id/et_dizhi"
+                <EditText
+                    android:id="@+id/et_dizhi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/act_virtualcurrency_archived_address"
+                    style="@style/editText"
+
+                    />
+            </LinearLayout>
+        <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/act_virtualcurrency_archived_address"
-            style="@style/editText"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/act_registered_higth"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                >
 
-            />
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icon_bi_num"
+                    android:layout_marginRight="6dp"
+                    />
+                <EditText
+                    android:id="@+id/et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/act_virtualcurrency_archived_number"
+                    style="@style/editText"
+                    />
+            </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/act_registered_higth"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                >
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/icon_lock"
+                    android:layout_marginRight="6dp"
+                    />
+                <EditText
+                    android:id="@+id/et_trade_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="@string/act_virtualcurrency_archived_pwd"
+                    style="@style/editText"
+                    />
+            </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
-
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_bi_num"
-            android:layout_marginRight="6dp"
-            />
-        <EditText
-            android:id="@+id/et_number"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="numberDecimal"
-            android:hint="@string/act_virtualcurrency_archived_number"
-            style="@style/editText"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="1dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/act_registered_higth"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        >
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_lock"
-            android:layout_marginRight="6dp"
-            />
-        <EditText
-            android:id="@+id/et_trade_pwd"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPassword"
-            android:hint="@string/act_virtualcurrency_archived_pwd"
-            style="@style/editText"
-            />
-    </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="44dp"
         android:layout_marginTop="20dp"
-        android:padding="8dp"
+
         >
         <Button
             android:id="@+id/btn_tijiao"
@@ -180,7 +189,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/act_virtualcurrency_archived_miaoshu"

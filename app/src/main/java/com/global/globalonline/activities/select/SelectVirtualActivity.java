@@ -50,6 +50,8 @@ public class SelectVirtualActivity extends BaseActivity implements SwipeRefreshL
 
     @AfterViews()
     void init(){
+        lv_trading.setEmptyView(this.findViewById(R.id.layout_empty));
+
         dbHelper = DBHelper.getInstance(SelectVirtualActivity.this);
         type = getIntent().getStringExtra("type");
         initlist();

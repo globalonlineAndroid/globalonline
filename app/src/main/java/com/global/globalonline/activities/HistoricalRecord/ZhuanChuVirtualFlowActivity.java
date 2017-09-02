@@ -59,6 +59,7 @@ public class ZhuanChuVirtualFlowActivity extends BaseActivity {
 
     @AfterViews
     void init(){
+        lv_vdf.setEmptyView(this.findViewById(R.id.layout_empty));
 
         symbol = getIntent().getStringExtra("symbol");
 

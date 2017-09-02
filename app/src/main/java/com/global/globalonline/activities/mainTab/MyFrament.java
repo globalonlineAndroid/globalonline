@@ -12,6 +12,7 @@ import com.global.globalonline.activities.BaseActivie.WebViewActivity;
 import com.global.globalonline.activities.RMB.RechargeRMBActivity_;
 import com.global.globalonline.activities.RMB.WithdrawalRMBActivity_;
 import com.global.globalonline.activities.select.SelectVirtualActivity_;
+import com.global.globalonline.activities.setting.SettingActivity_;
 import com.global.globalonline.activities.user.CertificationActivity_;
 import com.global.globalonline.activities.user.ChangeLoginPasswordActivity_;
 import com.global.globalonline.activities.user.ChangeTradePasswordActivity_;
@@ -45,11 +46,11 @@ import retrofit2.Response;
 public class MyFrament extends Fragment {
 
     @ViewById
-    TextView tv_loginName,tv_ename,tv_isRenZheng,tv_uid,tv_zichan;
+    TextView tv_loginName,tv_ename,tv_uid,tv_zichan;
 
     @ViewById
     LinearLayout ll_RMBPay,ll_RMBTiXian,ll_XuNiPay,ll_XuNiTiXian,ll_weiTuoManager,ll_jiaoYiLiuShui,ll_shouKuan,
-            ll_fuKuan;
+            ll_fuKuan,ll_message,ll_setting;
 
 
 
@@ -76,7 +77,7 @@ public class MyFrament extends Fragment {
     }
 
     @Click({R.id.ll_RMBPay,R.id.ll_RMBTiXian,R.id.ll_XuNiPay,R.id.ll_XuNiTiXian,R.id.ll_weiTuoManager,R.id.ll_jiaoYiLiuShui,R.id.ll_shouKuan
-            ,R.id.ll_fuKuan,R.id.ll_renZheng,R.id.ll_updateLoginPWD,R.id.ll_updateJiaoYiPWD,R.id.ll_message,R.id.ll_woMen,R.id.ll_exit})
+            ,R.id.ll_fuKuan,R.id.ll_renZheng,R.id.ll_updateLoginPWD,R.id.ll_updateJiaoYiPWD,R.id.ll_message,R.id.ll_woMen,R.id.ll_exit,R.id.ll_setting})
     void click(View view){
 
         switch (view.getId()){
@@ -134,6 +135,10 @@ public class MyFrament extends Fragment {
                 ChangeTradePasswordActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_message:
+
+                break;
+            case R.id.ll_setting:
+                SettingActivity_.intent(getActivity()).start();
                 break;
             case R.id.ll_woMen:
                 //AboutUsActivity_.intent(getActivity()).start();

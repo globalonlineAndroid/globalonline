@@ -184,6 +184,12 @@
                     android:divider="@color/ac_base_backgroud"
                     >
                 </ListView>
+                <include
+                    layout="@layout/act_listview_def_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/layout_empty" />
             </LinearLayout>
         </HorizontalScrollView>
 

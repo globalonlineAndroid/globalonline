@@ -60,6 +60,7 @@ public class ZhuanRuVirtualFlowActivity extends BaseActivity {
 
     @AfterViews
     void init(){
+        lv_vdf.setEmptyView(this.findViewById(R.id.layout_empty));
         symbol  = getIntent().getStringExtra("symbol");
         srl_vdf.autoRefresh();
         srl_vdf.setColorSchemeResources(StaticBase.colorResIds);

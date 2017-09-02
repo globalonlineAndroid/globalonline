@@ -138,7 +138,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
 
@@ -198,7 +198,7 @@
             <LinearLayout
                 android:id="@+id/ll_RMBPay"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
@@ -211,7 +211,7 @@
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
@@ -239,6 +239,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="right"
+                        android:paddingRight="10dp"
 
                         >
                         <ImageView
@@ -258,12 +259,12 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="38dp"
                 android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_RMBTiXian"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:paddingLeft="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
@@ -280,7 +281,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
 
@@ -308,6 +309,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
+                        android:paddingRight="10dp"
                         android:gravity="right"
 
                         >
@@ -331,12 +333,12 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="38dp"
                 android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_XuNiPay"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
@@ -353,7 +355,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
 
@@ -382,6 +384,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="right"
+                        android:paddingRight="10dp"
 
                         >
                         <ImageView
@@ -404,12 +407,12 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="38dp"
                     android:background="@color/E4E4E4"/>
             <LinearLayout
                 android:id="@+id/ll_XuNiTiXian"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
@@ -426,7 +429,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
 
@@ -455,6 +458,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="right"
+                        android:paddingRight="10dp"
 
                         >
                         <ImageView
@@ -472,88 +476,89 @@
             </LinearLayout>
 
             <LinearLayout
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/ll_weiTuoManager"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-
-                android:paddingLeft="10dp"
-                android:background="@color/ac_mymenu_my_bankgroud"
-                >
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_weituo"
-                    />
-
-
+                android:layout_height="wrap_content">
                 <LinearLayout
+                    android:id="@+id/ll_weiTuoManager"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="6dp"
+                    android:layout_height="44dp"
                     android:orientation="horizontal"
-
                     android:gravity="center_vertical"
+
+                    android:paddingLeft="10dp"
+                    android:background="@color/ac_mymenu_my_bankgroud"
                     >
 
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_weituo"
+                        />
+
+
                     <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="6dp"
                         android:orientation="horizontal"
+
+                        android:gravity="center_vertical"
                         >
-                        <TextView
-                            android:layout_width="wrap_content"
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/act_myMenu_myact_entrustManager"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/act_textsize"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/act_myMenu_myact_entrustManager"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/act_textsize"
 
-                            />
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/youjiantou"
+                                />
+
+                        </LinearLayout>
+
+
+
+
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="right"
-
-                        >
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/youjiantou"
-                            />
-
-                    </LinearLayout>
-
-
 
 
 
                 </LinearLayout>
-
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="40dp"
-                android:background="@color/E4E4E4"/>
-            <LinearLayout
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="38dp"
+                    android:background="@color/E4E4E4"/>
+                <LinearLayout
                 android:id="@+id/ll_jiaoYiLiuShui"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="44dp"
                 android:paddingLeft="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
@@ -570,7 +575,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:layout_marginLeft="6dp"
                     android:orientation="horizontal"
 
@@ -599,7 +604,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="right"
-
+                        android:paddingRight="10dp"
                         >
                         <ImageView
                             android:layout_width="20dp"
@@ -625,10 +630,9 @@
                 <LinearLayout
                     android:id="@+id/ll_shouKuan"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="10dp"
                     android:paddingLeft="10dp"
                     android:background="@color/ac_mymenu_my_bankgroud"
                     >
@@ -642,7 +646,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="44dp"
                         android:layout_marginLeft="6dp"
                         android:orientation="horizontal"
                         android:textSize="@dimen/act_textsize"
@@ -669,7 +673,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="right"
-
+                            android:paddingRight="10dp"
                             >
                             <ImageView
                                 android:layout_width="20dp"
@@ -691,15 +695,14 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="38dp"
                     android:background="@color/E4E4E4"/>
                 <LinearLayout
                     android:id="@+id/ll_fuKuan"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="44dp"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="1dp"
                     android:paddingLeft="10dp"
                     android:background="@color/ac_mymenu_my_bankgroud"
                     >
@@ -713,7 +716,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="44dp"
                         android:layout_marginLeft="6dp"
                         android:orientation="horizontal"
 
@@ -742,6 +745,147 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="right"
+                            android:paddingRight="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/youjiantou"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/ll_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@color/ac_mymenu_my_bankgroud"
+                    >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_message"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="6dp"
+                        android:orientation="horizontal"
+                        android:textSize="@dimen/act_textsize"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/act_myMenu_myact_message"
+                                android:textColor="@color/black"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/youjiantou"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="38dp"
+                    android:background="@color/E4E4E4"/>
+                <LinearLayout
+                    android:id="@+id/ll_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:paddingLeft="10dp"
+                    android:background="@color/ac_mymenu_my_bankgroud"
+                    >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_setting"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="6dp"
+                        android:orientation="horizontal"
+
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/act_myMenu_myact_setting"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/act_textsize"
+
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="right"
 
                             >
                             <ImageView
@@ -757,6 +901,11 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/ac_base_backgroud"/>
 
 
 

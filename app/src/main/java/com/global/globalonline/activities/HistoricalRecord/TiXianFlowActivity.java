@@ -61,7 +61,7 @@ public class TiXianFlowActivity extends BaseActivity {
 
     @AfterViews
     void init(){
-
+        lv_vdf.setEmptyView(this.findViewById(R.id.layout_empty));
         srl_vdf.autoRefresh();
         srl_vdf.setColorSchemeResources(StaticBase.colorResIds);
 

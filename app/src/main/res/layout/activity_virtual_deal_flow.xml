@@ -20,59 +20,116 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="44dp"
         android:layout_marginTop="6dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         >
-        <TextView
-            android:id="@+id/tv_tab1"
+        <LinearLayout
             android:layout_weight="1"
-            android:gravity="center"
             android:layout_width="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_tab1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/act_historicalRecord_virtualdealflow_tab1"
+                android:textColor="@color/FFA200"
+                android:textSize="14dp"
+                android:layout_marginRight="2dp"
+                />
+            <View
+                android:id="@+id/view_tv_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/FFA200"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0.5dp"
             android:layout_height="match_parent"
-            android:text="@string/act_historicalRecord_virtualdealflow_tab1"
-            android:textColor="@color/white"
-            android:background="@color/ac_base_tab"
-            android:textSize="14dp"
-            android:layout_marginRight="2dp"
-            />
-        <TextView
-            android:id="@+id/tv_tab2"
+            android:background="@color/ac_base_fenGeXian"/>
+        <LinearLayout
             android:layout_weight="1"
-            android:gravity="center"
             android:layout_width="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_tab2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/act_historicalRecord_virtualdealflow_tab2"
+                android:textColor="@color/ac_baseAct_text"
+                android:textSize="14dp"
+                android:layout_marginRight="2dp"
+                />
+            <View
+                android:id="@+id/view_tv_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ac_baseAct_text"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0.5dp"
             android:layout_height="match_parent"
-            android:text="@string/act_historicalRecord_virtualdealflow_tab2"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            android:background="@color/ac_virtual_chunk"
-            android:layout_marginRight="2dp"
-            />
+            android:background="@color/ac_base_fenGeXian"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
         <TextView
             android:id="@+id/tv_tab3"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:text="@string/act_historicalRecord_virtualdealflow_tab3"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_baseAct_text"
             android:textSize="14dp"
-            android:background="@color/ac_virtual_chunk"
+
             android:layout_marginRight="2dp"
             />
+            <View
+                android:id="@+id/view_tv_tab3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ac_baseAct_text"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/ac_base_fenGeXian"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
         <TextView
             android:id="@+id/tv_tab4"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:text="@string/act_historicalRecord_virtualdealflow_tab4"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_baseAct_text"
             android:textSize="14dp"
-            android:background="@color/ac_virtual_chunk"
             android:layout_marginRight="2dp"
             />
+            <View
+                android:id="@+id/view_tv_tab4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/ac_baseAct_text"/>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -84,7 +141,6 @@
 
 
         <HorizontalScrollView
-
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
@@ -275,6 +331,12 @@
                     android:divider="@color/ac_base_backgroud"
                     >
                 </ListView>
+                <include
+                    layout="@layout/act_listview_def_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/layout_empty" />
             </LinearLayout>
         </HorizontalScrollView>
 

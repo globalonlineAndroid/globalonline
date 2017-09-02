@@ -36,6 +36,7 @@
     <string name="act_base_weichengjiao">未成交</string>
     <string name="act_base_chexiao">撤销</string>
     <string name="act_base_tishi_erweima">请确认二维码是否正确</string>
+    <string name="act_base_not_data">还没有数据内容</string>
 
     <!--更新-->
     <string name="soft_update_no">已经是最新版本</string>
@@ -119,6 +120,8 @@
     <string name="act_myMenu_myact_messge">消息中心</string>
     <string name="act_myMenu_myact_GuanYuWoMen">关于我们</string>
     <string name="act_myMenu_myact_exit">安全退出</string>
+    <string name="act_myMenu_myact_message">系统公告</string>
+    <string name="act_myMenu_myact_setting">设置</string>
 
 
     <string name="act_user_certification_title">实名认证</string>
@@ -141,6 +144,8 @@
     <string name="act_mainTab_tradingFloor_chengjiaoliang">成交量</string>
     <string name="act_mainTab_tradingFloor_minprice">最低价</string>
     <string name="act_mainTab_tradingFloor_maxprice">最高价</string>
+    <string name="act_mainTab_tradingFloor_jiaoyi">交易区</string>
+    <string name="act_mainTab_tradingFloor_shiyan">试验区</string>
 
 
     <!--虚拟币交易-->

@@ -213,6 +213,7 @@
     <color name="ac_mainTab_bottom">#1d2228</color>
 
     <color name="ac_baseAct_cretificationResults_text">#8e8f93</color>
+    <color name="ac_baseAct_text">#8e8f93</color>
     <color name="ac_list_item_background">#111c24</color>
 
     <color name="ac_virtual_chunk">#111c24</color>
@@ -224,7 +225,7 @@
     <color name="FFA200">#FFA200</color>
     <color name="E4E4E4">#E4E4E4</color>
     <color name="FFF58703">#FFF58703</color>
-        <color name="BDBEC3">#BDBEC3</color>
+    <color name="BDBEC3">#BDBEC3</color>
     <color name="F3F3F3">#F3F3F3</color>
     <color name="FFFFA200">#FFFFA200</color>
     <color name="FFFFFFFF">#FFFFFFFF</color>

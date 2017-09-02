@@ -60,7 +60,7 @@ public class HisWeiTuoActivity extends BaseActivity {
 
     @AfterViews
     void init(){
-
+        lv_ma_tradingFloor.setEmptyView(this.findViewById(R.id.layout_empty));
         srl_ma_tradingFloor.autoRefresh();
         srl_ma_tradingFloor.setColorSchemeResources(StaticBase.colorResIds);
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);

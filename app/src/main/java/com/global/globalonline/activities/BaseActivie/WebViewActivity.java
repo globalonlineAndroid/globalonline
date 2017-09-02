@@ -37,7 +37,7 @@ public class WebViewActivity extends BaseActivity {
         type = getIntent().getStringExtra("type");
         if(type.equals("guanyu")){
             title.setText(getResources().getString(R.string.act_user_aboutUs_title));
-            url = UrlApi.b ? getResources().getString(R.string.act_base_about) : getResources().getString(R.string.act_base_about_test);
+                    url = UrlApi.b ? getResources().getString(R.string.act_base_about) : getResources().getString(R.string.act_base_about_test);
         }else if(type.equals("fuwuxieyi")){
             title.setText(getResources().getString(R.string.act_base_serviceAgreement_title));
             url = getResources().getString(R.string.act_base_fuwuxieyi);

@@ -1,21 +1,21 @@
 package com.global.globalonline.activities.mainTab;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
-import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.global.globalonline.R;
 import com.global.globalonline.activities.virtualCurrency.VirtualTradeActivity;
 import com.global.globalonline.adapter.mainTab.HomePageAdapter;
 import com.global.globalonline.bean.VirtualListItemBean;
 import com.global.globalonline.bean.VirtualTradingBean;
+import com.global.globalonline.bean.gonggao.GongGaoBean;
+import com.global.globalonline.bean.gonggao.GongGaoItemBean;
+import com.global.globalonline.dao.PullRefreshDao;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
@@ -24,8 +24,7 @@ import com.global.globalonline.service.virtualTrading.VirtualService;
 import com.global.globalonline.tools.GetQuanXian;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
-import com.global.globalonline.view.AutoSwipeRefreshLayout;
-import com.global.globalonline.view.LocalImageHolderView;
+import com.global.globalonline.view.PullRefreshView;
 import com.global.globalonline.view.VerticalTextview;
 import com.global.globalonline.view.infiniteindicator.InfiniteIndicatorLayout;
 import com.global.globalonline.view.infiniteindicator.slideview.BaseSliderView;
@@ -44,14 +43,17 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 @EFragment(R.layout.activity_home_page)
-public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
+public class HomePageFrament extends Fragment{
 
     @ViewById
-    AutoSwipeRefreshLayout srl_tradingFloor;
-    @ViewById
-    ListView lv_tradingFloor;
+    PullRefreshView plf_tradingFloor;
     @ViewById
     InfiniteIndicatorLayout viewPager;
+
+
+    private String block = "1"; //1交易区 2实验区
+    private String gonggao_type = "1" ;//文章类型  1:官方公告 2：业界动态
+
 
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
 
@@ -59,7 +61,7 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
     HomePageAdapter tradingFloorAdapter;
     private static final int REFRESH_COMPLETE = 0X110;
 
-    List<VirtualTradingBean> list = null;
+    List<VirtualTradingBean> list = new ArrayList<>();
     VirtualService virtualService;
     VerticalTextview verticalTextview = null;
 
@@ -73,24 +75,30 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
     @AfterViews()
     void init(){
-
-
-
         //addImgPager();
         //导航显示位置
 
-
-
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
-        //initlist();
-        srl_tradingFloor.autoRefresh();
-        //lv_tradingFloor.addHeaderView(initGuanGao());
-        lv_tradingFloor.addHeaderView(addImgPager());
-        srl_tradingFloor.setColorSchemeResources(R.color.springgreen, R.color.forestgreen, R.color.goldenrod,
-                R.color.indianred,R.color.maroon);
-        srl_tradingFloor.setOnRefreshListener(this);
 
-        lv_tradingFloor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        plf_tradingFloor.audoRefresh();
+
+
+        plf_tradingFloor.pullRefresh(new PullRefreshDao() {
+            @Override
+            public void DownRefresh() {
+                if(plf_tradingFloor.getListView().getHeaderViewsCount() == 0) {
+                    plf_tradingFloor.getListView().addHeaderView(addImgPager());
+                }
+                initlist();
+            }
+
+            @Override
+            public void UpLoading() {
+                Log.e("log", "滑到底部b");
+            }
+        });
+
+        plf_tradingFloor.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //VirtualTradeActivity_.intent(getActivity()).start();
@@ -109,7 +117,8 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         View headerView = View.inflate(getActivity(),R.layout.act_main_lunbotu, null);
         InfiniteIndicatorLayout viewPager = (InfiniteIndicatorLayout)headerView.findViewById(R.id.viewPager);
         VerticalTextview vt_gonggao = (VerticalTextview)headerView.findViewById(R.id.vt_gonggao);
-        init_gonggao(vt_gonggao);
+        get_gonggao_data(vt_gonggao);
+        tab(headerView);
 
         WindowManager wm = getActivity().getWindowManager();
 
@@ -147,23 +156,17 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
     }
 
 
-    @Override
-    public void onRefresh() {
-
-        initlist();
-
-    }
-
     public void initlist(){
 
-        if(list != null){
-            list.clear();
-        }
+
+        tradingFloorAdapter = null;
+
 
         Map<String, String> stringMap = new HashMap<String, String>();
         /*tringMap.put("next_id", "0");
         stringMap.put("perpage", "20");
         stringMap.put("orderby", "1");*/
+        stringMap.put("block",block);
 
         stringMap = MapToParams.getParsMap(stringMap);
 
@@ -173,7 +176,7 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         restService.get(null, "", call, new CallBackService() {
             @Override
             public <T> void onResponse(Call<T> call, Response<T> response) {
-                srl_tradingFloor.setRefreshing(false);
+
                 VirtualListItemBean virtualListItemBean =(VirtualListItemBean) response.body();
                 if(virtualListItemBean.getErrorCode().equals("0")){
 
@@ -182,9 +185,12 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
                         VirtualTradingBean v = virtualListItemBean.getItems().get(i);
                         list.add(v);
                     }
-
-                    tradingFloorAdapter = new HomePageAdapter(getActivity(),list);
-                    lv_tradingFloor.setAdapter(tradingFloorAdapter);
+                    if(tradingFloorAdapter == null) {
+                        tradingFloorAdapter = new HomePageAdapter(getActivity(), list);
+                        plf_tradingFloor.getListView().setAdapter(tradingFloorAdapter);
+                    }else {
+                        tradingFloorAdapter.notifyDataSetChanged();
+                    }
 
                 }else {
                     GetToastUtil.getToads(getActivity(),virtualListItemBean.getMessage());
@@ -193,11 +199,49 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
 
             @Override
             public <T> void onFailure(Call<T> call, Throwable t) {
-                srl_tradingFloor.setRefreshing(false);
+
             }
         });
     }
 
+    public void get_gonggao_data(final VerticalTextview ver){
+
+
+        tradingFloorAdapter = null;
+
+
+        Map<String, String> stringMap = new HashMap<String, String>();
+        /*tringMap.put("next_id", "0");
+        stringMap.put("perpage", "20");
+        stringMap.put("orderby", "1");*/
+        stringMap.put("type",gonggao_type);
+        stringMap.put("count","10");
+
+        stringMap = MapToParams.getParsMap(stringMap);
+
+        Call<GongGaoBean> call = virtualService.get_gonggao(stringMap);
+        RestService restService = new RestServiceImpl();
+
+        restService.get(null, "", call, new CallBackService() {
+            @Override
+            public <T> void onResponse(Call<T> call, Response<T> response) {
+
+                GongGaoBean gong =(GongGaoBean) response.body();
+                if(gong.getErrorCode().equals("0")){
+
+                   init_gonggao_view(ver,gong.getGongGaoItemBeen());
+                }else {
+                    GetToastUtil.getToads(getActivity(),gong.getMessage());
+                }
+            }
+
+            @Override
+            public <T> void onFailure(Call<T> call, Throwable t) {
+
+            }
+        });
+    }
+/*
     public  View initGuanGao(){
 
         WindowManager wm = getActivity().getWindowManager();
@@ -233,20 +277,14 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
                 });
         mConvenientBanner.startTurning(2000);
         return  mConvenientBanner;
-    }
+    }*/
 
 
-    private void init_gonggao(VerticalTextview mTextview){
+    private void init_gonggao_view(VerticalTextview mTextview,final List<GongGaoItemBean> titleList){
 
-        final ArrayList<String> titleList=new ArrayList<String>();
-        titleList.add("公告1");
-        titleList.add("公告2");
-        titleList.add("公告3");
-        titleList.add("公告4");
-        titleList.add("公告5");
-        titleList.add("公告6");
-        titleList.add("公告7");
-        titleList.add("公告8");
+        if (titleList == null || titleList.size() == 0){
+            return;
+        }
         mTextview.setTextList(titleList);
         mTextview.setText(14, 5, getResources().getColor(R.color.ac_base_ziti_hui));//设置属性
         mTextview.setTextStillTime(3000);//设置停留时长间隔
@@ -257,7 +295,7 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
             @Override
             public void onItemClick(int position) {
 
-                Toast.makeText(getActivity(),"我点击了"+titleList.get(position),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"我点击了"+titleList.get(position).getTitle(),Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -266,6 +304,47 @@ public class HomePageFrament extends Fragment implements SwipeRefreshLayout.OnRe
         verticalTextview = mTextview;
 
     }
+
+    private void tab(View view){
+
+        final TextView tv_jiaoyi = (TextView) view.findViewById(R.id.tv_jiaoyi);
+        final TextView tv_shiyan = (TextView) view.findViewById(R.id.tv_shiyan);
+        final View view_tv_jiaoyi = (View) view.findViewById(R.id.view_tv_jiaoyi);
+        final View view_tv_shiyan = (View) view.findViewById(R.id.view_tv_shiyan);
+
+
+        tv_jiaoyi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                block = "1";
+                tv_jiaoyi.setTextColor(getResources().getColor(R.color.F58703));
+                view_tv_jiaoyi.setBackgroundResource(R.color.F58703);
+                tv_shiyan.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                view_tv_shiyan.setBackgroundResource(R.color.ac_base_ziti_hui);
+                tradingFloorAdapter = null;
+
+            }
+        });
+
+        tv_shiyan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                block = "2";
+                tv_jiaoyi.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+                view_tv_jiaoyi.setBackgroundResource(R.color.ac_base_ziti_hui);
+                tv_shiyan.setTextColor(getResources().getColor(R.color.F58703));
+                view_tv_shiyan.setBackgroundResource(R.color.F58703);
+                tradingFloorAdapter = null;
+
+            }
+        });
+
+
+    }
+
+
+
+
 
     @Override
     public void onPause() {

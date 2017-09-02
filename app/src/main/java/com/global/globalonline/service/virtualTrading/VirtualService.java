@@ -5,6 +5,7 @@ import com.global.globalonline.bean.CoinsDetailBean;
 import com.global.globalonline.bean.CoinsEntrustRecordBena;
 import com.global.globalonline.bean.CoinsPaycheckBean;
 import com.global.globalonline.bean.VirtualListItemBean;
+import com.global.globalonline.bean.gonggao.GongGaoBean;
 
 import java.util.Map;
 
@@ -20,6 +21,12 @@ public interface VirtualService {
 
     @GET("index.json")  //获取币种最新行情数据
     Call<VirtualListItemBean> index(@QueryMap Map<String,String> map);
+
+    @GET("index.json")  //获取币种最新行情数据
+    Call<GongGaoBean> get_gonggao(@QueryMap Map<String,String> map);
+
+    @GET("index.json")  //获取币种最新行情数据
+    Call<VirtualListItemBean> index_get_gonggao(@QueryMap Map<String,String> map);
 
     @GET("coins_detail.json")  //某币详情及最新买卖价格（未成交）
     Call<CoinsDetailBean> coins_detail(@QueryMap Map<String,String> map);

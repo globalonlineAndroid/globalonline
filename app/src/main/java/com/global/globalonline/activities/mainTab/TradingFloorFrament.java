@@ -1,17 +1,16 @@
 package com.global.globalonline.activities.mainTab;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.TextView;
 
 import com.global.globalonline.R;
 import com.global.globalonline.activities.virtualCurrency.VirtualTradeActivity;
 import com.global.globalonline.adapter.mainTab.TradingFloorAdapter;
-import com.global.globalonline.base.StaticBase;
 import com.global.globalonline.bean.VirtualListItemBean;
 import com.global.globalonline.bean.VirtualTradingBean;
+import com.global.globalonline.dao.PullRefreshDao;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
 import com.global.globalonline.service.RestService;
@@ -20,9 +19,10 @@ import com.global.globalonline.service.virtualTrading.VirtualService;
 import com.global.globalonline.tools.GetQuanXian;
 import com.global.globalonline.tools.GetToastUtil;
 import com.global.globalonline.tools.MapToParams;
-import com.global.globalonline.view.AutoSwipeRefreshLayout;
+import com.global.globalonline.view.PullRefreshView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -36,14 +36,17 @@ import retrofit2.Response;
 
 
 @EFragment(R.layout.activity_trading_floor)
-public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.OnRefreshListener   {
+public class TradingFloorFrament extends Fragment  {
 
 
     @ViewById
-    AutoSwipeRefreshLayout srl_tradingFloor;
+    PullRefreshView plf_tradingFloor_b;
     @ViewById
-    ListView lv_tradingFloor;
+    TextView tv_jiaoyi,tv_shiyan;
+    @ViewById
+    View view_tv_jiaoyi,view_tv_shiyan;
 
+    private String block = "1"; //1交易区 2实验区
 
 
     TradingFloorAdapter tradingFloorAdapter;
@@ -55,13 +58,22 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
     @AfterViews()
     void init(){
         virtualService = GetRetrofitService.getRestClient(VirtualService.class);
-       // initlist();
-        srl_tradingFloor.autoRefresh();
 
-        srl_tradingFloor.setColorSchemeResources(StaticBase.colorResIds);
-        srl_tradingFloor.setOnRefreshListener(this);
+        plf_tradingFloor_b.audoRefresh();
 
-        lv_tradingFloor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        plf_tradingFloor_b.pullRefresh(new PullRefreshDao() {
+            @Override
+            public void DownRefresh() {
+                initlist();
+            }
+
+            @Override
+            public void UpLoading() {
+
+            }
+        });
+
+        plf_tradingFloor_b.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -74,13 +86,22 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
 
     }
 
-
-    @Override
-    public void onRefresh() {
-
-        initlist();
-
+    @Click({R.id.tv_jiaoyi,R.id.tv_shiyan})
+    void click(View view){
+        switch (view.getId()){
+            case R.id.tv_jiaoyi:
+                block = "1";
+                tabSelect(tv_jiaoyi,view_tv_jiaoyi);
+                break;
+            case R.id.tv_shiyan:
+                block = "2";
+                tabSelect(tv_shiyan,view_tv_shiyan);
+                break;
+        }
     }
+
+
+
 
     public void initlist(){
 
@@ -98,7 +119,6 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
         restService.get(null, "", call, new CallBackService() {
             @Override
             public <T> void onResponse(Call<T> call, Response<T> response) {
-                srl_tradingFloor.setRefreshing(false);
                 VirtualListItemBean virtualListItemBean =(VirtualListItemBean) response.body();
                 if(virtualListItemBean.getErrorCode().equals("0")){
 
@@ -107,9 +127,8 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
                         VirtualTradingBean v = virtualListItemBean.getItems().get(i);
                         list.add(v);
                     }
-
                     tradingFloorAdapter = new TradingFloorAdapter(getActivity(),list);
-                    lv_tradingFloor.setAdapter(tradingFloorAdapter);
+                    plf_tradingFloor_b.getListView().setAdapter(tradingFloorAdapter);
 
                 }else {
                     GetToastUtil.getToads(getActivity(),virtualListItemBean.getMessage());
@@ -118,9 +137,20 @@ public class TradingFloorFrament extends Fragment implements SwipeRefreshLayout.
 
             @Override
             public <T> void onFailure(Call<T> call, Throwable t) {
-                srl_tradingFloor.setRefreshing(false);
             }
         });
+    }
+
+
+    void tabSelect(TextView textView,View view){
+        tv_jiaoyi.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+        view_tv_jiaoyi.setBackgroundResource(R.color.ac_base_ziti_hui);
+        tv_shiyan.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
+        view_tv_shiyan.setBackgroundResource(R.color.ac_base_ziti_hui);
+
+        textView.setTextColor(getResources().getColor(R.color.F58703));
+        view.setBackgroundResource(R.color.F58703);
+
     }
 
 

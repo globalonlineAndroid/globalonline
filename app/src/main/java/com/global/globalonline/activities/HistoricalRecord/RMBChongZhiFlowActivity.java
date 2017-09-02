@@ -33,6 +33,8 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Response;
 
+import static com.global.globalonline.R.id.lv_ma_tradingFloor;
+
 @EActivity(R.layout.activity_rmb_chongzhi_flow)
 public class RMBChongZhiFlowActivity extends BaseActivity {
 
@@ -55,8 +57,9 @@ public class RMBChongZhiFlowActivity extends BaseActivity {
     @AfterViews
     void init(){
 
+        lv_vdf.setEmptyView(this.findViewById(R.id.layout_empty));
 
-       srl_vdf.autoRefresh();
+        srl_vdf.autoRefresh();
         srl_vdf.setColorSchemeResources(StaticBase.colorResIds);
 
         lv_vdf.setOnScrollListener(new AbsListView.OnScrollListener() {

@@ -49,6 +49,9 @@ public class VirtualDealFlowActivity extends BaseActivity {
     TextView tv_tab1,tv_tab2,tv_tab3,tv_tab4;
 
     @ViewById
+    View view_tv_tab1,view_tv_tab2,view_tv_tab3,view_tv_tab4;
+
+    @ViewById
     TextView tv_mairu_tab,tv_maichu_tab;
 
     VirtualDealFlowAdapter maAdapter;
@@ -71,6 +74,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
 
     @AfterViews
     void init(){
+        lv_vdf.setEmptyView(this.findViewById(R.id.layout_empty));
         symbol = getIntent().getStringExtra("symbol");
 
         srl_vdf.setColorSchemeResources(StaticBase.colorResIds);
@@ -127,7 +131,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
     void click(View view) {
         switch (view.getId()) {
             case R.id.tv_tab1:
-                setTextBackgroud(tv_tab1);
+                setTextBackgroud(tv_tab1,view_tv_tab1);
                  types = "1";
                  next_id = "0";
                  type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab1);
@@ -136,7 +140,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
                // initView();
                 break;
             case R.id.tv_tab2:
-                setTextBackgroud(tv_tab2);
+                setTextBackgroud(tv_tab2,view_tv_tab2);
                  types = "2";
                  next_id = "0";
                 type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab2);
@@ -145,7 +149,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
                 // initView();
                 break;
             case R.id.tv_tab3:
-                setTextBackgroud(tv_tab3);
+                setTextBackgroud(tv_tab3,view_tv_tab3);
                 types = "3";
                 next_id = "0";
                 type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab3);
@@ -154,7 +158,7 @@ public class VirtualDealFlowActivity extends BaseActivity {
                 // initView();
                 break;
             case R.id.tv_tab4:
-                setTextBackgroud(tv_tab4);
+                setTextBackgroud(tv_tab4,view_tv_tab4);
                 types = "4";
                 next_id = "0";
                 type = getResources().getString(R.string.act_historicalRecord_virtualdealflow_tab4);
@@ -168,13 +172,21 @@ public class VirtualDealFlowActivity extends BaseActivity {
     }
 
 
-    void setTextBackgroud(TextView tv){
+    void setTextBackgroud(TextView tv,View view){
 
-        tv_tab1.setBackgroundResource(R.color.ac_virtual_chunk);
-        tv_tab2.setBackgroundResource(R.color.ac_virtual_chunk);
-        tv_tab3.setBackgroundResource(R.color.ac_virtual_chunk);
-        tv_tab4.setBackgroundResource(R.color.ac_virtual_chunk);
-        tv.setBackgroundResource(R.color.ac_base_tab);
+        tv_tab1.setTextColor(getResources().getColor(R.color.ac_base_fenGeXian));
+        tv_tab2.setTextColor(getResources().getColor(R.color.ac_base_fenGeXian));
+        tv_tab3.setTextColor(getResources().getColor(R.color.ac_base_fenGeXian));
+        tv_tab4.setTextColor(getResources().getColor(R.color.ac_base_fenGeXian));
+
+        view_tv_tab1.setBackgroundResource(R.color.ac_base_fenGeXian);
+        view_tv_tab2.setBackgroundResource(R.color.ac_base_fenGeXian);
+        view_tv_tab3.setBackgroundResource(R.color.ac_base_fenGeXian);
+        view_tv_tab4.setBackgroundResource(R.color.ac_base_fenGeXian);
+
+
+        tv.setTextColor(getResources().getColor(R.color.FFA200));
+        view.setBackgroundResource(R.color.FFA200);
 
     }
 

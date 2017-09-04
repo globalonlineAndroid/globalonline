@@ -63,6 +63,7 @@ public class GetRetrofitService {
        return  t;
     }
 
+
     public static  <T> T getRestClientNoGson(Class<T> aClass){
 
         /* Interceptor mTokenInterceptor = new Interceptor() {

@@ -10,13 +10,13 @@ import java.util.List;
 
 public class GongGaoBean extends BaseBean {
 
-    List<GongGaoItemBean> gongGaoItemBeen;
+    List<GongGaoItemBean> items;
 
-    public List<GongGaoItemBean> getGongGaoItemBeen() {
-        return gongGaoItemBeen;
+    public List<GongGaoItemBean> getItems() {
+        return items;
     }
 
-    public void setGongGaoItemBeen(List<GongGaoItemBean> gongGaoItemBeen) {
-        this.gongGaoItemBeen = gongGaoItemBeen;
+    public void setItems(List<GongGaoItemBean> items) {
+        this.items = items;
     }
 }

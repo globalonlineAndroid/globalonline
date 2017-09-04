@@ -6,11 +6,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.global.globalonline.R;
+import com.global.globalonline.activities.BaseActivie.WebViewBaseActivity;
 import com.global.globalonline.activities.virtualCurrency.VirtualTradeActivity;
 import com.global.globalonline.adapter.mainTab.HomePageAdapter;
+import com.global.globalonline.base.UrlApi;
 import com.global.globalonline.bean.VirtualListItemBean;
 import com.global.globalonline.bean.VirtualTradingBean;
 import com.global.globalonline.bean.gonggao.GongGaoBean;
@@ -229,7 +230,7 @@ public class HomePageFrament extends Fragment{
                 GongGaoBean gong =(GongGaoBean) response.body();
                 if(gong.getErrorCode().equals("0")){
 
-                   init_gonggao_view(ver,gong.getGongGaoItemBeen());
+                   init_gonggao_view(ver,gong.getItems());
                 }else {
                     GetToastUtil.getToads(getActivity(),gong.getMessage());
                 }
@@ -295,7 +296,8 @@ public class HomePageFrament extends Fragment{
             @Override
             public void onItemClick(int position) {
 
-                Toast.makeText(getActivity(),"我点击了"+titleList.get(position).getTitle(),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(),"我点击了"+titleList.get(position).getTitle(),Toast.LENGTH_SHORT).show();
+                WebViewBaseActivity.toActivity(getActivity(), UrlApi.baseUrlGongGao+titleList.get(position).getId());
 
             }
         });

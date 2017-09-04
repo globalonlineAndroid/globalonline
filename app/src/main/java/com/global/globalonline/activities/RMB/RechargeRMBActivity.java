@@ -138,8 +138,6 @@ public class RechargeRMBActivity extends BaseActivity {
         stringMap.put("mobile", mobile);
         stringMap.put("message", message);
 
-
-
         stringMap = MapToParams.getParsMap(stringMap);
 
         Call<BaseBean> call = baseService.rmb_paycheck_apply(stringMap);

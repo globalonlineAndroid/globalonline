@@ -22,7 +22,7 @@ public interface VirtualService {
     @GET("index.json")  //获取币种最新行情数据
     Call<VirtualListItemBean> index(@QueryMap Map<String,String> map);
 
-    @GET("index.json")  //获取币种最新行情数据
+    @GET("service.json")  //获取公告
     Call<GongGaoBean> get_gonggao(@QueryMap Map<String,String> map);
 
     @GET("index.json")  //获取币种最新行情数据

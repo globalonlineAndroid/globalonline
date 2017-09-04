@@ -39,6 +39,7 @@
     <string name="act_base_chexiao">withdraw</string>
     <string name="act_base_tishi_erweima">Please make sure the qr code is correct</string>
     <string name="act_base_not_data">no data</string>
+    <string name="act_base_gonggao_info">Announcement Info</string>
 
     <string name="soft_update_no">Is the latest version</string>
     <string name="soft_update_title">Software updates</string>

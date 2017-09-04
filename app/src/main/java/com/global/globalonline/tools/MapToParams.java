@@ -1,5 +1,6 @@
 package com.global.globalonline.tools;
 
+import com.global.globalonline.base.GetConfiguration;
 import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.UrlApi;
 import com.global.globalonline.bean.ParsMapBean;
@@ -100,6 +101,11 @@ public class MapToParams {
         if( MyApplication.userBean != null &&!StringUtil.isBlank(MyApplication.userBean.getAuth_key())) {
             parsMap.put("auth_key", MyApplication.userBean.getAuth_key());
         }
+        if(GetConfiguration.isZh()){
+            parsMap.put("lang", "cn");
+        }else {
+            parsMap.put("lang", "en");
+        }
 
         String token = getToken(parsMap);
         //parsMap.put("token",token);
@@ -129,6 +135,12 @@ public class MapToParams {
         if( MyApplication.userBean != null &&!StringUtil.isBlank(MyApplication.userBean.getAuth_key())) {
             parsMap.put("auth_key", MyApplication.userBean.getAuth_key());
         }
+        if(GetConfiguration.isZh()){
+            parsMap.put("lang", "cn");
+        }else {
+            parsMap.put("lang", "en");
+        }
+
         for (int i = 0; i < s.length; i++) {
             parsMap.remove(s[i]);
         }

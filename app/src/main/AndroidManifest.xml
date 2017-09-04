@@ -177,6 +177,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             ></activity>
+        <activity android:name=".activities.BaseActivie.WebViewBaseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            ></activity>
     </application>
 
 </manifest>

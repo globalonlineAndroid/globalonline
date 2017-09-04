@@ -886,7 +886,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="right"
-
+                            android:paddingRight="10dp"
                             >
                             <ImageView
                                 android:layout_width="20dp"

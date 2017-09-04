@@ -25,6 +25,8 @@
                         android:id="@+id/lv_tradingFloor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:dividerHeight="0dp"
+                        android:divider="@color/ac_base_backgroud"
                         >
                     </ListView>
             </com.global.globalonline.view.AutoSwipeRefreshLayout>

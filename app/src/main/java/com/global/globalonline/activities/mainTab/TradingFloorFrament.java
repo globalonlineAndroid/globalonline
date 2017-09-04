@@ -46,13 +46,13 @@ public class TradingFloorFrament extends Fragment  {
     @ViewById
     View view_tv_jiaoyi,view_tv_shiyan;
 
-    private String block = "1"; //1交易区 2实验区
+    private String coin_block = "1"; //1交易区 2实验区
 
 
     TradingFloorAdapter tradingFloorAdapter;
 
 
-    List<VirtualTradingBean> list = null;
+    List<VirtualTradingBean> list = new ArrayList<VirtualTradingBean>();;
     VirtualService virtualService;
 
     @AfterViews()
@@ -64,6 +64,7 @@ public class TradingFloorFrament extends Fragment  {
         plf_tradingFloor_b.pullRefresh(new PullRefreshDao() {
             @Override
             public void DownRefresh() {
+                tradingFloorAdapter = null;
                 initlist();
             }
 
@@ -90,12 +91,14 @@ public class TradingFloorFrament extends Fragment  {
     void click(View view){
         switch (view.getId()){
             case R.id.tv_jiaoyi:
-                block = "1";
+                coin_block = "1";
                 tabSelect(tv_jiaoyi,view_tv_jiaoyi);
+                initlist();
                 break;
             case R.id.tv_shiyan:
-                block = "2";
+                coin_block = "2";
                 tabSelect(tv_shiyan,view_tv_shiyan);
+                initlist();
                 break;
         }
     }
@@ -105,12 +108,9 @@ public class TradingFloorFrament extends Fragment  {
 
     public void initlist(){
 
-        if(list != null){
-            list.clear();
-        }
 
         Map<String, String> stringMap = new HashMap<String, String>();
-
+        stringMap.put("coin_block",coin_block);
         stringMap = MapToParams.getParsMap(stringMap);
 
         Call<VirtualListItemBean> call = virtualService.index(stringMap);
@@ -127,8 +127,12 @@ public class TradingFloorFrament extends Fragment  {
                         VirtualTradingBean v = virtualListItemBean.getItems().get(i);
                         list.add(v);
                     }
-                    tradingFloorAdapter = new TradingFloorAdapter(getActivity(),list);
-                    plf_tradingFloor_b.getListView().setAdapter(tradingFloorAdapter);
+                    if(tradingFloorAdapter == null && list != null && list.size() != 0) {
+                        tradingFloorAdapter = new TradingFloorAdapter(getActivity(), list);
+                        plf_tradingFloor_b.getListView().setAdapter(tradingFloorAdapter);
+                    }else {
+                        tradingFloorAdapter.notifyDataSetChanged();
+                    }
 
                 }else {
                     GetToastUtil.getToads(getActivity(),virtualListItemBean.getMessage());

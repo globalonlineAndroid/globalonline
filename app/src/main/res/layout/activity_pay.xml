@@ -107,10 +107,10 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="6dp"
                 android:background="@drawable/et_input"
-                android:textColor="@color/white"
                 android:paddingLeft="6dp"
                 android:inputType="numberDecimal"
                 android:textSize="@dimen/act_textsize"
+                style="@style/editText"
                 />
         </LinearLayout>
         <LinearLayout
@@ -166,9 +166,9 @@
                 android:background="@drawable/et_input"
                 android:paddingLeft="6dp"
                 android:inputType="textPassword"
-                android:textColor="@color/white"
                 android:layout_marginLeft="6dp"
                 android:textSize="@dimen/act_textsize"
+                style="@style/editText"
                 />
         </LinearLayout>
 

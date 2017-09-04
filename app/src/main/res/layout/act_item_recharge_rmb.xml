@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_base_ziti_hui"
             android:paddingLeft="6dp"
             />
     </LinearLayout>
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_base_ziti_hui"
             android:paddingLeft="6dp"
             />
     </LinearLayout>
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_base_ziti_hui"
             android:paddingLeft="6dp"
             />
     </LinearLayout>
@@ -93,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_base_ziti_hui"
             android:paddingLeft="6dp"
             />
     </LinearLayout>
@@ -116,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:textColor="@color/white"
+            android:textColor="@color/ac_base_ziti_hui"
             android:paddingLeft="6dp"
             />
     </LinearLayout>

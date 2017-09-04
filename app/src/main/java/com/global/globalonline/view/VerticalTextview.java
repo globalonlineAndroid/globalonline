@@ -86,7 +86,8 @@ public class VerticalTextview extends TextSwitcher implements ViewSwitcher.ViewF
                     case FLAG_START_AUTO_SCROLL:
                         if (textList.size() > 0) {
                             currentId++;
-                            setText(textList.get(currentId % textList.size()).getTitle());
+                            String title = textList.get(currentId % textList.size()).getTitle();
+                            setText(title);
                         }
                         handler.sendEmptyMessageDelayed(FLAG_START_AUTO_SCROLL, time);
                         break;

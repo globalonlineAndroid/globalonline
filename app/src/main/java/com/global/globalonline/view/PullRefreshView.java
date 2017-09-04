@@ -72,8 +72,9 @@ public class PullRefreshView extends LinearLayout {
                 if(totalItemCount==lastVisibleItem && scrollState == SCROLL_STATE_IDLE && status == 0){
                     status = 1;
                     Log.e("log", "滑到底部");
-                    pullRefreshDao.UpLoading();
                     srl_tradingFloor.setRefreshing(false);
+                    pullRefreshDao.UpLoading();
+                    //srl_tradingFloor.setRefreshing(false);
 
 
                     status = 0;

@@ -22,76 +22,93 @@
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/act_ll_biankuang"
         >
+        <LinearLayout
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_men"
-            android:layout_marginRight="6dp"
-            />
-
-        <EditText
-            android:id="@+id/et_name"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/editText"
-            android:hint="@string/act_user_certification_name"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        >
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_bus"
-            android:layout_marginRight="6dp"
-            />
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_men"
+                android:layout_marginRight="6dp"
+                />
 
-        <TextView
-            android:id="@+id/et_cardtype"
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/editText"
+                android:hint="@string/act_user_certification_name"
+                />
+        </LinearLayout>
+        <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/editText"
-            android:textSize="14dp"
-            android:drawableRight="@drawable/tiangle"
-            android:hint="@string/act_user_certification_cardtype"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/ac_user_login_phone"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        >
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/icon_sfznum"
-            android:layout_marginRight="6dp"
-            />
-
-        <EditText
-            android:id="@+id/et_card"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/editText"
-            android:hint="@string/act_user_certification_idCard"
-           />
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_bus"
+                android:layout_marginRight="6dp"
+                />
+
+            <TextView
+                android:id="@+id/et_cardtype"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/editText"
+                android:textSize="14dp"
+                android:drawableRight="@drawable/tiangle"
+                android:hint="@string/act_user_certification_cardtype"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/E4E4E4"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_sfznum"
+                android:layout_marginRight="6dp"
+                />
+
+            <EditText
+                android:id="@+id/et_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/editText"
+                android:hint="@string/act_user_certification_idCard"
+               />
+        </LinearLayout>
     </LinearLayout>
 
 

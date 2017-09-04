@@ -278,7 +278,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/act_RechargeRMBActivity_buzhou"
-                    android:textColor="@color/ac_base_ziti_hui" />
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/tv_zhuyi"

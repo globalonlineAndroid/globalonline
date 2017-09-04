@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@color/ac_base_backgroud"
         >
        <ImageView
            android:id="@+id/iv_loding"

@@ -44,22 +44,31 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="16dp" />
-    <TextView
-        android:id="@+id/operation"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:gravity="center_vertical"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textSize="14dp"
-        android:text="中文"
-        android:drawableRight="@drawable/icon_jt_bottom"
-        android:textColor="@color/view_titleview_fanhui"
-        android:layout_alignTop="@+id/title"
+        android:layout_height="match_parent"
         android:layout_alignRight="@+id/add"
         android:layout_alignEnd="@+id/add"
-        />
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/operation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="14dp"
+            android:text="中文"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_marginTop="2dp"
+            android:layout_width="20dp"
+            android:layout_height="10dp"
+            android:background="@drawable/icon_jt_bottom"
+            />
+    </LinearLayout>
 
 </RelativeLayout>

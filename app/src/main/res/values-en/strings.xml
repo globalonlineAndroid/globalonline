@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Global Online</string>
+    <string name="app_name">Exchange Coin</string>
     <string name="view_titleView_fanhui">Return</string>
     <string name="hello">Hello World, QR_DemoActivity!</string>
 
@@ -9,7 +9,7 @@
     <string name="act_base_KLine">http://test.g.t.stupid2brave.com/index.php?r=wap/kline&amp;lang=en&amp;</string>
     <string name="act_base_yirenzheng">Certified</string>
     <string name="scan_tips">Aim the qr code image scanning frame can automatically scan</string>
-    <string name="act_main_title_home">With The Money</string>
+    <string name="act_main_title_home">Exchange Coin</string>
     <string name="act_main_title_dating">Trading Hall</string>
     <string name="act_main_title_my">My</string>
     <string name="act_base_nodata">There is no data for</string>

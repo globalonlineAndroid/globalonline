@@ -43,6 +43,8 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Response;
 
+import static com.global.globalonline.base.UrlApi.t_image_url;
+
 @EFragment(R.layout.activity_home_page)
 public class HomePageFrament extends Fragment{
 
@@ -52,7 +54,7 @@ public class HomePageFrament extends Fragment{
     InfiniteIndicatorLayout viewPager;
 
 
-    private String block = "1"; //1交易区 2实验区
+    private String coin_block = "1"; //1交易区 2实验区
     private String gonggao_type = "1" ;//文章类型  1:官方公告 2：业界动态
 
 
@@ -66,8 +68,8 @@ public class HomePageFrament extends Fragment{
     VirtualService virtualService;
     VerticalTextview verticalTextview = null;
 
-    private String[] images = {"http://www.globalonline.cc/upload/shop/cdfghiklmortvwyz0128.png",
-            "http://www.globalonline.cc/upload/shop/cdfghiklmortvwyz0128.png"
+    private String[] images = {t_image_url+"/upload/shop/cdfghiklmortvwyz0128.png",
+            t_image_url+"/upload/shop/cdfghiklmortvwyz0128.png"
     };
 
 
@@ -167,7 +169,7 @@ public class HomePageFrament extends Fragment{
         /*tringMap.put("next_id", "0");
         stringMap.put("perpage", "20");
         stringMap.put("orderby", "1");*/
-        stringMap.put("block",block);
+        stringMap.put("coin_block",coin_block);
 
         stringMap = MapToParams.getParsMap(stringMap);
 
@@ -318,12 +320,13 @@ public class HomePageFrament extends Fragment{
         tv_jiaoyi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                block = "1";
+                coin_block = "1";
                 tv_jiaoyi.setTextColor(getResources().getColor(R.color.F58703));
                 view_tv_jiaoyi.setBackgroundResource(R.color.F58703);
                 tv_shiyan.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
                 view_tv_shiyan.setBackgroundResource(R.color.ac_base_ziti_hui);
                 tradingFloorAdapter = null;
+                initlist();
 
             }
         });
@@ -331,12 +334,13 @@ public class HomePageFrament extends Fragment{
         tv_shiyan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                block = "2";
+                coin_block = "2";
                 tv_jiaoyi.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
                 view_tv_jiaoyi.setBackgroundResource(R.color.ac_base_ziti_hui);
                 tv_shiyan.setTextColor(getResources().getColor(R.color.F58703));
                 view_tv_shiyan.setBackgroundResource(R.color.F58703);
                 tradingFloorAdapter = null;
+                initlist();
 
             }
         });

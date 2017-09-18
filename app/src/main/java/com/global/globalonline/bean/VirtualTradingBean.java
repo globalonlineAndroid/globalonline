@@ -22,6 +22,7 @@ public class VirtualTradingBean {
     private String   close_price;//收盘价”,
     private String   volume;//成交量”，
     private String   turnover;//成交额”,
+    private String   coin_block;//1交易区2试验区”,
 
     public String getId() {
         return id;
@@ -126,4 +127,12 @@ public class VirtualTradingBean {
     }
 
     private String   ratio;//涨跌幅计算方法：（收盘-开盘）/开盘”
+
+    public String getCoin_block() {
+        return coin_block;
+    }
+
+    public void setCoin_block(String coin_block) {
+        this.coin_block = coin_block;
+    }
 }

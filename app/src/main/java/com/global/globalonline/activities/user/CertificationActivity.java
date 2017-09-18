@@ -11,6 +11,7 @@ import com.global.globalonline.activities.BaseActivie.CertificationResultsActivi
 import com.global.globalonline.base.BaseActivity;
 import com.global.globalonline.base.MyApplication;
 import com.global.globalonline.base.StaticBase;
+import com.global.globalonline.bean.ImageBean;
 import com.global.globalonline.bean.UserBean;
 import com.global.globalonline.service.CallBackService;
 import com.global.globalonline.service.GetRetrofitService;
@@ -42,6 +43,10 @@ public class CertificationActivity extends BaseActivity {
     EditText et_name,et_card;
     @ViewById
     TextView et_cardtype;
+
+    private ImageBean  imageBean_zheng;
+    private ImageBean  imageBean_fan;
+    private ImageBean  imageBean_head;
 
     @AfterViews
     void init(){
@@ -82,6 +87,9 @@ public class CertificationActivity extends BaseActivity {
         stringMap.put("name", name);
         stringMap.put("card_type", card_type);
         stringMap.put("card_id", card);
+        stringMap.put("card_image_opinion", imageBean_zheng != null ? imageBean_zheng.getHttpUrl() : "");
+        stringMap.put("card_image_anti", imageBean_fan != null ? imageBean_fan.getHttpUrl() : "");
+        stringMap.put("card_image_hand", imageBean_head != null ? imageBean_head.getHttpUrl() : "");
 
         stringMap = MapToParams.getParsMap(stringMap);
 

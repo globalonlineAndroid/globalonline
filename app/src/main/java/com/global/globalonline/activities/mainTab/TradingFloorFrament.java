@@ -22,7 +22,6 @@ import com.global.globalonline.tools.MapToParams;
 import com.global.globalonline.view.PullRefreshView;
 
 import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
@@ -87,7 +86,7 @@ public class TradingFloorFrament extends Fragment  {
 
     }
 
-    @Click({R.id.tv_jiaoyi,R.id.tv_shiyan})
+   /* @Click({R.id.tv_jiaoyi,R.id.tv_shiyan})
     void click(View view){
         switch (view.getId()){
             case R.id.tv_jiaoyi:
@@ -101,7 +100,7 @@ public class TradingFloorFrament extends Fragment  {
                 initlist();
                 break;
         }
-    }
+    }*/
 
 
 
@@ -110,7 +109,8 @@ public class TradingFloorFrament extends Fragment  {
 
 
         Map<String, String> stringMap = new HashMap<String, String>();
-        stringMap.put("coin_block",coin_block);
+        //stringMap.put("coin_block",coin_block);
+        stringMap.put("orderby","1");
         stringMap = MapToParams.getParsMap(stringMap);
 
         Call<VirtualListItemBean> call = virtualService.index(stringMap);
@@ -127,7 +127,7 @@ public class TradingFloorFrament extends Fragment  {
                         VirtualTradingBean v = virtualListItemBean.getItems().get(i);
                         list.add(v);
                     }
-                    if(tradingFloorAdapter == null && list != null && list.size() != 0) {
+                    if(tradingFloorAdapter == null ) {
                         tradingFloorAdapter = new TradingFloorAdapter(getActivity(), list);
                         plf_tradingFloor_b.getListView().setAdapter(tradingFloorAdapter);
                     }else {

@@ -3,7 +3,7 @@
     android:shape="rectangle" >
 
     <!-- 填充的颜色：这里设置背景透明 -->
-    <solid android:color="@color/btn_queding"
+    <solid android:color="@color/FFA200"
         />
 
     <!-- 边框的颜色 ：不能和窗口背景色一样-->

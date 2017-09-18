@@ -55,7 +55,7 @@ public class HomePageFrament extends Fragment{
 
 
     private String coin_block = "1"; //1交易区 2实验区
-    private String gonggao_type = "1" ;//文章类型  1:官方公告 2：业界动态
+    private String gonggao_type = "4" ;//文章类型  1:官方公告 2：业界动态
 
 
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
@@ -65,6 +65,7 @@ public class HomePageFrament extends Fragment{
     private static final int REFRESH_COMPLETE = 0X110;
 
     List<VirtualTradingBean> list = new ArrayList<>();
+    List<VirtualTradingBean> list_shiyan = new ArrayList<>();
     VirtualService virtualService;
     VerticalTextview verticalTextview = null;
 
@@ -169,7 +170,8 @@ public class HomePageFrament extends Fragment{
         /*tringMap.put("next_id", "0");
         stringMap.put("perpage", "20");
         stringMap.put("orderby", "1");*/
-        stringMap.put("coin_block",coin_block);
+        //stringMap.put("coin_block",coin_block);
+        stringMap.put("orderby","1");
 
         stringMap = MapToParams.getParsMap(stringMap);
 
@@ -183,17 +185,19 @@ public class HomePageFrament extends Fragment{
                 VirtualListItemBean virtualListItemBean =(VirtualListItemBean) response.body();
                 if(virtualListItemBean.getErrorCode().equals("0")){
 
+
                     list = new ArrayList<VirtualTradingBean>();
+                    list_shiyan = new ArrayList<VirtualTradingBean>();
                     for (int i = 0; i < virtualListItemBean.getItems().size(); i++) {
                         VirtualTradingBean v = virtualListItemBean.getItems().get(i);
-                        list.add(v);
+                        if(v.getCoin_block().equals("1")) {
+                            list.add(v);
+                        }
+                        if(v.getCoin_block().equals("2")) {
+                            list_shiyan.add(v);
+                        }
                     }
-                    if(tradingFloorAdapter == null) {
-                        tradingFloorAdapter = new HomePageAdapter(getActivity(), list);
-                        plf_tradingFloor.getListView().setAdapter(tradingFloorAdapter);
-                    }else {
-                        tradingFloorAdapter.notifyDataSetChanged();
-                    }
+                    initApater();
 
                 }else {
                     GetToastUtil.getToads(getActivity(),virtualListItemBean.getMessage());
@@ -326,7 +330,7 @@ public class HomePageFrament extends Fragment{
                 tv_shiyan.setTextColor(getResources().getColor(R.color.ac_base_ziti_hui));
                 view_tv_shiyan.setBackgroundResource(R.color.ac_base_ziti_hui);
                 tradingFloorAdapter = null;
-                initlist();
+                initApater();
 
             }
         });
@@ -340,7 +344,7 @@ public class HomePageFrament extends Fragment{
                 tv_shiyan.setTextColor(getResources().getColor(R.color.F58703));
                 view_tv_shiyan.setBackgroundResource(R.color.F58703);
                 tradingFloorAdapter = null;
-                initlist();
+                initApater();
 
             }
         });
@@ -348,9 +352,20 @@ public class HomePageFrament extends Fragment{
 
     }
 
-
-
-
+    private void initApater(){
+        List<VirtualTradingBean> list_new = new ArrayList<>();
+        if(coin_block.equals("1")) {
+            list_new = list;
+        }else if(coin_block.equals("2")){
+            list_new = list_shiyan;
+        }
+        if(tradingFloorAdapter == null) {
+            tradingFloorAdapter = new HomePageAdapter(getActivity(), list_new);
+            plf_tradingFloor.getListView().setAdapter(tradingFloorAdapter);
+        }else {
+            tradingFloorAdapter.notifyDataSetChanged();
+        }
+    }
 
     @Override
     public void onPause() {
